@@ -23,6 +23,7 @@
     //在info.plist Set UIViewControllerBasedStatusBarAppearance to NO.
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:NO];
     
+    _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 
     UITapGestureRecognizer * doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doubleTap:)];
     [doubleTap setNumberOfTapsRequired:2];
@@ -62,7 +63,7 @@
     }];
     
     // 马上进入刷新状态
-    [self.tableView.header beginRefreshing];
+    //[self.tableView.header beginRefreshing];
     
 }
 
@@ -71,18 +72,31 @@
 - (void)loadNewData
 {
     NSLog(@"下拉");
+    //结束刷新
     [_tableView.header endRefreshing];
 }
 
 #pragma mark - UITableView
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 10;
+    return 1;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    switch (indexPath.section) {
+        case HomeTableViewSectionTypeSlide:
+            return 100.0f;
+        case HomeTableViewSectionTypeCatagory:
+            return 60.0f;
+        default:
+            return 0.0;
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -93,7 +107,8 @@
     if (cell == nil) {
         
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-        //[cell setSelectionStyle:UITableViewCellSelectionStyleGray];
+        
+        [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     }
     
     cell.textLabel.text = @"Hello";

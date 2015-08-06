@@ -15,6 +15,11 @@
 
 #import "MJRefresh.h"
 
+typedef NS_ENUM(NSInteger, HomeTableViewSectionType){
+    HomeTableViewSectionTypeSlide,
+    HomeTableViewSectionTypeCatagory,
+};
+
 @interface homeViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 
