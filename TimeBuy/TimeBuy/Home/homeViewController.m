@@ -64,6 +64,7 @@
     
     // 马上进入刷新状态
     //[self.tableView.header beginRefreshing];
+    NSLog(@"witdth = %f;height = %f",self.view.bounds.size.width,self.view.bounds.size.height);
     
 }
 
@@ -84,19 +85,80 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    switch (section) {
+        case HomeTableViewSectionTypeSlide:
+            return 1;
+        case HomeTableViewSectionTypeCatagory:
+            return 20;
+        default:
+            return 0;
+    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     switch (indexPath.section) {
         case HomeTableViewSectionTypeSlide:
-            return 100.0f;
+            return 200.0f;
         case HomeTableViewSectionTypeCatagory:
-            return 60.0f;
+            return 90.0f;
         default:
             return 0.0;
     }
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    switch (section) {
+        case HomeTableViewSectionTypeSlide:
+            return 0.0f;
+        case HomeTableViewSectionTypeCatagory:
+            return 100.0f;
+        default:
+            return 0.0;
+    }
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    if (section == HomeTableViewSectionTypeCatagory) {
+        UITableViewCell *sectionCell = [[UITableViewCell alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 80)];
+        sectionCell.backgroundColor = [UIColor whiteColor];
+        //sectionCell.alpha = 0.8f;
+        //sectionCell.textLabel.text = @"偏好选择";
+        //sectionCell.textLabel.textColor = [UIColor blackColor];
+        sectionCell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        
+        UIImageView *iconImgView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 10, 25, 25)];
+        iconImgView.image = [UIImage imageNamed:@"跑图标1"];
+        [sectionCell addSubview:iconImgView];
+        
+        UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(40, 10, 240, 25)];
+        titleLabel.text = @"跑腿 | 勤劳的小蜜蜂";
+        titleLabel.font = [UIFont fontWithName:@"Helvetica-Bold" size:14.0f];
+        titleLabel.textColor = [UIColor blackColor];
+        [sectionCell addSubview:titleLabel];
+        
+        NSString *str = @"如果你想强壮，跑步吧！如果你想健美，跑步吧！\n如果你想聪明，跑步吧！";
+        
+        UILabel *subTitleLabel = [[UILabel alloc] initWithFrame:CGRectMake(40, 32, 300, 50)];
+        subTitleLabel.text = str;
+        subTitleLabel.lineBreakMode = NSLineBreakByWordWrapping;
+        subTitleLabel.numberOfLines = 0;
+        subTitleLabel.font = [UIFont systemFontOfSize:12.0f];
+        subTitleLabel.textColor = [UIColor darkGrayColor];
+        [sectionCell addSubview:subTitleLabel];
+        
+        UILabel *releaseLabel = [[UILabel alloc] initWithFrame:CGRectMake(sectionCell.bounds.size.width - 54, 80, 100, 20)];
+        releaseLabel.text = @"已发布230条";
+        releaseLabel.textColor = [UIColor darkGrayColor];
+        releaseLabel.font = [UIFont systemFontOfSize:11.0f];
+        [sectionCell addSubview:releaseLabel];
+        
+        return sectionCell;
+    }
+    
+    return nil;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -111,13 +173,31 @@
         [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     }
     
-    cell.textLabel.text = @"Hello";
+    //此处有bug
+    switch (indexPath.section) {
+        case HomeTableViewSectionTypeSlide:
+        {
+            UIImageView *pageImgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 200)];
+            pageImgView.image = [UIImage imageNamed:@"倔匠1.png"];
+            [cell addSubview:pageImgView];
+            return cell;
+        }
+        case HomeTableViewSectionTypeCatagory:
+        {
+            UIImageView *portraitImgView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 0, 100, 83)];
+            portraitImgView.image = [UIImage imageNamed:@"周杰伦"];
+            [cell addSubview:portraitImgView];
+            
+            
+            
+            return cell;
+        }
+        default:
+            break;
+    }
+    
+    //cell.textLabel.text = @"Hello";
     return cell;
-}
-
--(NSString*)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{
-    return nil;
 }
 
 #pragma mark - Table view delegate
