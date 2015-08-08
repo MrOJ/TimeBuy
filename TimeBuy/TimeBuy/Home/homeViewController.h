@@ -14,13 +14,17 @@
 #import "UIViewController+MMDrawerController.h"
 
 #import "MJRefresh.h"
+#import "JScrollView+PageControl+AutoScroll.h"
+#import "homeDetailsTableViewCell.h"
+#import "settingViewController.h"
+#import "nearbyViewController.h"
 
 typedef NS_ENUM(NSInteger, HomeTableViewSectionType){
     HomeTableViewSectionTypeSlide,
     HomeTableViewSectionTypeCatagory,
 };
 
-@interface homeViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+@interface homeViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate,JScrollViewViewDelegate>
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @end

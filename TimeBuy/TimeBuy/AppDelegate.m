@@ -19,7 +19,30 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [self initDrawer];
+    
     return YES;
+}
+
+- (void)initDrawer {
+
+    UIStoryboard* mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
+    //homeViewController *homeVC = [[homeViewController alloc] init];
+    //settingViewController *settingVC = [[settingViewController alloc] init];
+    //nearbyViewController *nearbyVC = [[nearbyViewController alloc] init];
+    
+    drawerController = [[MMDrawerController alloc] initWithCenterViewController:[mainStoryboard instantiateViewControllerWithIdentifier:@"center"] leftDrawerViewController:[mainStoryboard instantiateViewControllerWithIdentifier:@"left"]];
+    
+    [drawerController setDrawerVisualStateBlock:[MMDrawerVisualState slideAndScaleVisualStateBlock]];
+    [drawerController setMaximumLeftDrawerWidth:260.0];
+    [drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModePanningNavigationBar];
+    [drawerController setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
+    
+    self.window.rootViewController = drawerController;
+    
+    //self.window.rootViewController = drawerController;
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

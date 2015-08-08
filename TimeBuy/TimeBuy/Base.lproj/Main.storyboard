@@ -45,7 +45,8 @@
         <!--Navigation Controller-->
         <scene sceneID="iq2-Nm-Emd">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1Op-kG-RsK" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ANg-Y7-4bB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController storyboardIdentifier="center" automaticallyAdjustsScrollViewInsets="NO" id="1Op-kG-RsK" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hKJ-QD-76Z">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -56,9 +57,34 @@
                         <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="nzs-6f-d2h"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ANg-Y7-4bB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="312" y="337"/>
+            <point key="canvasLocation" x="252" y="337"/>
+        </scene>
+        <!--Test View Controller-->
+        <scene sceneID="3oa-8a-eK4">
+            <objects>
+                <viewController storyboardIdentifier="left" id="h3N-I7-QOM" customClass="testViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="E5k-Dy-cIg"/>
+                        <viewControllerLayoutGuide type="bottom" id="FbV-iL-6b6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cnZ-3a-nQZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hello" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0nW-bG-hHt">
+                                <rect key="frame" x="139" y="158" width="40" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="80J-jL-nb2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="252" y="1014"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

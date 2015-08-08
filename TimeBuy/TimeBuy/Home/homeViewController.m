@@ -14,8 +14,6 @@
 
 @implementation homeViewController
 
-@synthesize tableView = _tableView;
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
@@ -24,7 +22,7 @@
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:NO];
     
     _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-
+    
     UITapGestureRecognizer * doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doubleTap:)];
     [doubleTap setNumberOfTapsRequired:2];
     [self.view addGestureRecognizer:doubleTap];
@@ -64,7 +62,7 @@
     
     // 马上进入刷新状态
     //[self.tableView.header beginRefreshing];
-    NSLog(@"witdth = %f;height = %f",self.view.bounds.size.width,self.view.bounds.size.height);
+    //NSLog(@"witdth = %f;height = %f",self.view.bounds.size.width,self.view.bounds.size.height);
     
 }
 
@@ -113,7 +111,7 @@
         case HomeTableViewSectionTypeSlide:
             return 0.0f;
         case HomeTableViewSectionTypeCatagory:
-            return 100.0f;
+            return 110.0f;
         default:
             return 0.0;
     }
@@ -149,7 +147,7 @@
         subTitleLabel.textColor = [UIColor darkGrayColor];
         [sectionCell addSubview:subTitleLabel];
         
-        UILabel *releaseLabel = [[UILabel alloc] initWithFrame:CGRectMake(sectionCell.bounds.size.width - 54, 80, 100, 20)];
+        UILabel *releaseLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.view.bounds.size.width - 80, 80, 100, 20)];
         releaseLabel.text = @"已发布230条";
         releaseLabel.textColor = [UIColor darkGrayColor];
         releaseLabel.font = [UIFont systemFontOfSize:11.0f];
@@ -163,41 +161,101 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
+    NSUInteger row=[indexPath row];
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (cell == nil) {
-        
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-        
-        [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
-    }
-    
-    //此处有bug
     switch (indexPath.section) {
         case HomeTableViewSectionTypeSlide:
         {
-            UIImageView *pageImgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 200)];
-            pageImgView.image = [UIImage imageNamed:@"倔匠1.png"];
-            [cell addSubview:pageImgView];
+            //需要对每个cell进行标识，不然刷新会有问题
+            NSString *CellTableIdentifier=[[NSString alloc]initWithFormat:@"extentedCell%lu-%lu",(unsigned long)indexPath.section,(unsigned long)row];
+            
+            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellTableIdentifier];
+            if (cell == nil) {
+                
+                cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellTableIdentifier];
+                
+            }
+            
+            //自动推送图片
+            JScrollView_PageControl_AutoScroll *view = [[JScrollView_PageControl_AutoScroll alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 200)];
+            view.autoScrollDelayTime = 6.0f;
+            view.delegate = self;
+            
+            UIImageView *pageImgView1 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 200)];
+            pageImgView1.image = [UIImage imageNamed:@"推送.png"];
+            
+            UIImageView *pageImgView2 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 200)];
+            pageImgView2.image = [UIImage imageNamed:@"周杰伦.png"];
+            
+            NSMutableArray *viewsArray = [[NSMutableArray alloc] initWithObjects:pageImgView1,pageImgView2, nil];
+            [view setViewsArray:viewsArray];
+            
+            [cell addSubview:view];
+            [view shouldAutoShow:YES];
+            
             return cell;
         }
         case HomeTableViewSectionTypeCatagory:
         {
+            NSString *CellTableIdentifier=[[NSString alloc]initWithFormat:@"extentedCell%lu-%lu",(unsigned long)indexPath.section,(unsigned long)row];
+            homeDetailsTableViewCell *cell = (homeDetailsTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellTableIdentifier];
+            
+            if (cell == nil) {
+                
+                cell.contentView.frame = cell.bounds;
+                cell.contentView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
+                
+                cell = [[[NSBundle mainBundle] loadNibNamed:@"homeDetailsTableViewCell" owner:self options:nil] lastObject];
+            }
+            
+            //cell.nameLabel.text = @"123";
+            
+            [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+            
+            return cell;
+            
+            /*
             UIImageView *portraitImgView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 0, 100, 83)];
             portraitImgView.image = [UIImage imageNamed:@"周杰伦"];
             [cell addSubview:portraitImgView];
             
+            UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(125, 0, 80, 20)];
+            nameLabel.text = @"周老师";
+            nameLabel.font = [UIFont systemFontOfSize:12.0f];
+            nameLabel.textColor = [UIColor colorWithRed:77.0f / 255.0f green:100.0f / 255.0f blue:138.0f / 255.0f alpha:1];
+            [cell addSubview:nameLabel];
             
+            UIImageView *likeImgView = [[UIImageView alloc] initWithFrame:CGRectMake(170, 5, 10, 10)];
+            likeImgView.image = [UIImage imageNamed:@"爱心1"];
+            [cell addSubview:likeImgView];
+            UILabel *likeLabel = [[UILabel alloc] initWithFrame:CGRectMake(183, 2, 30, 15)];
+            likeLabel.text = @"14";
+            likeLabel.font = [UIFont systemFontOfSize:12.0f];
+            likeLabel.textColor = [UIColor colorWithRed:231.0f / 255.0f green:154.0f / 255.0f blue:154.0f / 255.0f alpha:1];
+            [cell addSubview:likeLabel];
+            
+            UILabel *numLabel = [[UILabel alloc] initWithFrame:CGRectMake(203, 2, 50, 15)];
+            numLabel.text = @"约 12";
+            numLabel.font = [UIFont systemFontOfSize:12.0f];
+            numLabel.textColor = [UIColor colorWithRed:168.0f / 255.0f green:227.0f / 255.0f blue:243.0f / 255.0f alpha:1];
+            [cell addSubview:numLabel];
+            
+            UILabel *timeLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.view.bounds.size.width - 60, 2, 80, 15)];
+            timeLabel.text = @"1分钟前";
+            timeLabel.font = [UIFont systemFontOfSize:12.0f];
+            timeLabel.textColor = [UIColor darkGrayColor];
+            [cell addSubview:timeLabel];
             
             return cell;
+            */
+            
         }
         default:
-            break;
+            return nil;
     }
     
     //cell.textLabel.text = @"Hello";
-    return cell;
+    return nil;
 }
 
 #pragma mark - Table view delegate
@@ -209,18 +267,23 @@
 
 #pragma mark - Button Handlers
 -(void)setupLeftMenuButton{
+    
     /*
     MMDrawerBarButtonItem * leftDrawerButton = [[MMDrawerBarButtonItem alloc] initWithTarget:self action:@selector(leftDrawerButtonPress:)];
     [self.navigationItem setLeftBarButtonItem:leftDrawerButton animated:YES];
     */
+    
     
     UIView *contentView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
     UIButton *button = [[UIButton alloc] initWithFrame:contentView.bounds];
     [button setBackgroundImage:[UIImage imageNamed:@"个人设置1"] forState:UIControlStateNormal];
     [button addTarget:self action:@selector(leftDrawerButtonPress:) forControlEvents:UIControlEventTouchUpInside];
     [contentView addSubview:button];
-    UIBarButtonItem *barButtonItem = [[UIBarButtonItem alloc] initWithCustomView:contentView];
+    
+    MMDrawerBarButtonItem *barButtonItem = [[MMDrawerBarButtonItem alloc] initWithCustomView:contentView];
+    //UIBarButtonItem *barButtonItem = [[UIBarButtonItem alloc] initWithCustomView:contentView];
     self.navigationItem.leftBarButtonItem = barButtonItem;
+    
 }
 
 -(void)setupRightMenuButton{

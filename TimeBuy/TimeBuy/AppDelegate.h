@@ -8,7 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
+#import "MMDrawerController.h"
+#import "MMDrawerVisualState.h"
+
+#import "homeViewController.h"
+#import "settingViewController.h"
+#import "nearbyViewController.h"
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
+{
+    @private
+    MMDrawerController *drawerController;
+}
 
 @property (strong, nonatomic) UIWindow *window;
 

@@ -34,7 +34,6 @@
 		182CDB531B737F50005FE865 /* 跑图标1@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 182CDB441B737F50005FE865 /* 跑图标1@3x.png */; };
 		182CDB581B737F65005FE865 /* 蔡依林.png in Resources */ = {isa = PBXBuildFile; fileRef = 182CDB541B737F65005FE865 /* 蔡依林.png */; };
 		182CDB591B737F65005FE865 /* 高挺.png in Resources */ = {isa = PBXBuildFile; fileRef = 182CDB551B737F65005FE865 /* 高挺.png */; };
-		182CDB5A1B737F65005FE865 /* 倔匠1.png in Resources */ = {isa = PBXBuildFile; fileRef = 182CDB561B737F65005FE865 /* 倔匠1.png */; };
 		182CDB5B1B737F65005FE865 /* 周杰伦.png in Resources */ = {isa = PBXBuildFile; fileRef = 182CDB571B737F65005FE865 /* 周杰伦.png */; };
 		182CDB8B1B7392DB005FE865 /* MJRefreshAutoFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 182CDB5F1B7392DB005FE865 /* MJRefreshAutoFooter.m */; };
 		182CDB8C1B7392DB005FE865 /* MJRefreshBackFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 182CDB611B7392DB005FE865 /* MJRefreshBackFooter.m */; };
@@ -56,6 +55,15 @@
 		182CDB9C1B7392DB005FE865 /* UIScrollView+MJRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 182CDB861B7392DB005FE865 /* UIScrollView+MJRefresh.m */; };
 		182CDB9D1B7392DB005FE865 /* UIView+MJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 182CDB881B7392DB005FE865 /* UIView+MJExtension.m */; };
 		182CDB9E1B7392DB005FE865 /* homeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182CDB8A1B7392DB005FE865 /* homeViewController.m */; };
+		182CDBA21B75C73C005FE865 /* homeDetailsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 182CDBA01B75C73C005FE865 /* homeDetailsTableViewCell.m */; };
+		182CDBA31B75C73C005FE865 /* homeDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 182CDBA11B75C73C005FE865 /* homeDetailsTableViewCell.xib */; };
+		182CDBA51B75D763005FE865 /* 推送.png in Resources */ = {isa = PBXBuildFile; fileRef = 182CDBA41B75D763005FE865 /* 推送.png */; };
+		182CDBAD1B7617A1005FE865 /* JScrollView+PageControl+AutoScroll.m in Sources */ = {isa = PBXBuildFile; fileRef = 182CDBAC1B7617A1005FE865 /* JScrollView+PageControl+AutoScroll.m */; };
+		182CDBB41B763441005FE865 /* settingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182CDBB21B763441005FE865 /* settingViewController.m */; };
+		182CDBB51B763441005FE865 /* settingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 182CDBB31B763441005FE865 /* settingViewController.xib */; };
+		182CDBB91B763569005FE865 /* nearbyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182CDBB71B763569005FE865 /* nearbyViewController.m */; };
+		182CDBBA1B763569005FE865 /* nearbyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 182CDBB81B763569005FE865 /* nearbyViewController.xib */; };
+		182CDBBD1B7644B4005FE865 /* testViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182CDBBC1B7644B4005FE865 /* testViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,7 +114,6 @@
 		182CDB441B737F50005FE865 /* 跑图标1@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "跑图标1@3x.png"; sourceTree = "<group>"; };
 		182CDB541B737F65005FE865 /* 蔡依林.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "蔡依林.png"; sourceTree = "<group>"; };
 		182CDB551B737F65005FE865 /* 高挺.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "高挺.png"; sourceTree = "<group>"; };
-		182CDB561B737F65005FE865 /* 倔匠1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "倔匠1.png"; sourceTree = "<group>"; };
 		182CDB571B737F65005FE865 /* 周杰伦.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "周杰伦.png"; sourceTree = "<group>"; };
 		182CDB5E1B7392DB005FE865 /* MJRefreshAutoFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJRefreshAutoFooter.h; sourceTree = "<group>"; };
 		182CDB5F1B7392DB005FE865 /* MJRefreshAutoFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MJRefreshAutoFooter.m; sourceTree = "<group>"; };
@@ -148,6 +155,20 @@
 		182CDB881B7392DB005FE865 /* UIView+MJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MJExtension.m"; sourceTree = "<group>"; };
 		182CDB891B7392DB005FE865 /* homeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = homeViewController.h; sourceTree = "<group>"; };
 		182CDB8A1B7392DB005FE865 /* homeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = homeViewController.m; sourceTree = "<group>"; };
+		182CDB9F1B75C73C005FE865 /* homeDetailsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = homeDetailsTableViewCell.h; sourceTree = "<group>"; };
+		182CDBA01B75C73C005FE865 /* homeDetailsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = homeDetailsTableViewCell.m; sourceTree = "<group>"; };
+		182CDBA11B75C73C005FE865 /* homeDetailsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = homeDetailsTableViewCell.xib; sourceTree = "<group>"; };
+		182CDBA41B75D763005FE865 /* 推送.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "推送.png"; sourceTree = "<group>"; };
+		182CDBAB1B7617A1005FE865 /* JScrollView+PageControl+AutoScroll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JScrollView+PageControl+AutoScroll.h"; sourceTree = "<group>"; };
+		182CDBAC1B7617A1005FE865 /* JScrollView+PageControl+AutoScroll.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JScrollView+PageControl+AutoScroll.m"; sourceTree = "<group>"; };
+		182CDBB11B763441005FE865 /* settingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = settingViewController.h; sourceTree = "<group>"; };
+		182CDBB21B763441005FE865 /* settingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = settingViewController.m; sourceTree = "<group>"; };
+		182CDBB31B763441005FE865 /* settingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = settingViewController.xib; sourceTree = "<group>"; };
+		182CDBB61B763569005FE865 /* nearbyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nearbyViewController.h; sourceTree = "<group>"; };
+		182CDBB71B763569005FE865 /* nearbyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = nearbyViewController.m; sourceTree = "<group>"; };
+		182CDBB81B763569005FE865 /* nearbyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = nearbyViewController.xib; sourceTree = "<group>"; };
+		182CDBBB1B7644B4005FE865 /* testViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testViewController.h; sourceTree = "<group>"; };
+		182CDBBC1B7644B4005FE865 /* testViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = testViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,10 +251,22 @@
 		182CDB251B723C7D005FE865 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				182CDBAA1B7617A1005FE865 /* PageControl+ScrollView */,
 				182CDB5C1B7392DB005FE865 /* MJRefresh */,
 				182CDB261B723C8A005FE865 /* MMDrawerController */,
 				182CDB891B7392DB005FE865 /* homeViewController.h */,
 				182CDB8A1B7392DB005FE865 /* homeViewController.m */,
+				182CDB9F1B75C73C005FE865 /* homeDetailsTableViewCell.h */,
+				182CDBA01B75C73C005FE865 /* homeDetailsTableViewCell.m */,
+				182CDBA11B75C73C005FE865 /* homeDetailsTableViewCell.xib */,
+				182CDBBB1B7644B4005FE865 /* testViewController.h */,
+				182CDBBC1B7644B4005FE865 /* testViewController.m */,
+				182CDBB11B763441005FE865 /* settingViewController.h */,
+				182CDBB21B763441005FE865 /* settingViewController.m */,
+				182CDBB31B763441005FE865 /* settingViewController.xib */,
+				182CDBB61B763569005FE865 /* nearbyViewController.h */,
+				182CDBB71B763569005FE865 /* nearbyViewController.m */,
+				182CDBB81B763569005FE865 /* nearbyViewController.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -265,9 +298,9 @@
 		182CDB351B737F25005FE865 /* home */ = {
 			isa = PBXGroup;
 			children = (
+				182CDBA41B75D763005FE865 /* 推送.png */,
 				182CDB541B737F65005FE865 /* 蔡依林.png */,
 				182CDB551B737F65005FE865 /* 高挺.png */,
-				182CDB561B737F65005FE865 /* 倔匠1.png */,
 				182CDB571B737F65005FE865 /* 周杰伦.png */,
 				182CDB361B737F50005FE865 /* 爱心1.png */,
 				182CDB371B737F50005FE865 /* 爱心1@2x.png */,
@@ -381,6 +414,15 @@
 			path = Header;
 			sourceTree = "<group>";
 		};
+		182CDBAA1B7617A1005FE865 /* PageControl+ScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				182CDBAB1B7617A1005FE865 /* JScrollView+PageControl+AutoScroll.h */,
+				182CDBAC1B7617A1005FE865 /* JScrollView+PageControl+AutoScroll.m */,
+			);
+			path = "PageControl+ScrollView";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -468,13 +510,15 @@
 				182CDB4B1B737F50005FE865 /* 个人设置1.png in Resources */,
 				182CDB0F1B72286F005FE865 /* LaunchScreen.xib in Resources */,
 				182CDB4A1B737F50005FE865 /* 附近的人1@3x.png in Resources */,
+				182CDBB51B763441005FE865 /* settingViewController.xib in Resources */,
 				182CDB0C1B72286F005FE865 /* Images.xcassets in Resources */,
 				182CDB471B737F50005FE865 /* 爱心1@3x.png in Resources */,
 				182CDB531B737F50005FE865 /* 跑图标1@3x.png in Resources */,
+				182CDBA51B75D763005FE865 /* 推送.png in Resources */,
 				182CDB581B737F65005FE865 /* 蔡依林.png in Resources */,
 				182CDB4F1B737F50005FE865 /* 男符号1@2x.png in Resources */,
 				182CDB4D1B737F50005FE865 /* 个人设置1@3x.png in Resources */,
-				182CDB5A1B737F65005FE865 /* 倔匠1.png in Resources */,
+				182CDBBA1B763569005FE865 /* nearbyViewController.xib in Resources */,
 				182CDB451B737F50005FE865 /* 爱心1.png in Resources */,
 				182CDB521B737F50005FE865 /* 跑图标1@2x.png in Resources */,
 				182CDB491B737F50005FE865 /* 附近的人1@2x.png in Resources */,
@@ -484,6 +528,7 @@
 				182CDB501B737F50005FE865 /* 男符号1@3x.png in Resources */,
 				182CDB5B1B737F65005FE865 /* 周杰伦.png in Resources */,
 				182CDB461B737F50005FE865 /* 爱心1@2x.png in Resources */,
+				182CDBA31B75C73C005FE865 /* homeDetailsTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,14 +559,19 @@
 				182CDB941B7392DB005FE865 /* MJRefreshBackNormalFooter.m in Sources */,
 				182CDB301B723C8A005FE865 /* MMDrawerBarButtonItem.m in Sources */,
 				182CDB8D1B7392DB005FE865 /* MJRefreshComponent.m in Sources */,
+				182CDBA21B75C73C005FE865 /* homeDetailsTableViewCell.m in Sources */,
 				182CDB911B7392DB005FE865 /* MJRefreshAutoNormalFooter.m in Sources */,
+				182CDBB41B763441005FE865 /* settingViewController.m in Sources */,
 				182CDB041B72286F005FE865 /* AppDelegate.m in Sources */,
 				182CDB901B7392DB005FE865 /* MJRefreshAutoGifFooter.m in Sources */,
 				182CDB8C1B7392DB005FE865 /* MJRefreshBackFooter.m in Sources */,
 				182CDB011B72286F005FE865 /* main.m in Sources */,
 				182CDB8E1B7392DB005FE865 /* MJRefreshFooter.m in Sources */,
+				182CDBB91B763569005FE865 /* nearbyViewController.m in Sources */,
 				182CDB9C1B7392DB005FE865 /* UIScrollView+MJRefresh.m in Sources */,
 				182CDB9A1B7392DB005FE865 /* MJRefreshConst.m in Sources */,
+				182CDBBD1B7644B4005FE865 /* testViewController.m in Sources */,
+				182CDBAD1B7617A1005FE865 /* JScrollView+PageControl+AutoScroll.m in Sources */,
 				182CDB931B7392DB005FE865 /* MJRefreshBackGifFooter.m in Sources */,
 				182CDB8F1B7392DB005FE865 /* MJRefreshHeader.m in Sources */,
 				182CDB971B7392DB005FE865 /* MJRefreshNormalHeader.m in Sources */,
@@ -722,6 +772,7 @@
 				182CDB201B722870005FE865 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		182CDB211B722870005FE865 /* Build configuration list for PBXNativeTarget "TimeBuyTests" */ = {
 			isa = XCConfigurationList;
@@ -730,6 +781,7 @@
 				182CDB231B722870005FE865 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
