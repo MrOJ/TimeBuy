@@ -7,8 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MMDrawerController.h"
+#import "UIViewController+MMDrawerController.h"
+#import "profilesViewController.h"
 
 @interface settingViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>
+{
+    UIView *shadowView;
+}
 
 @property (strong, nonatomic) IBOutlet UITableView *settingTableView;
+@property (strong, nonatomic) NSArray *menuArray;
 @end

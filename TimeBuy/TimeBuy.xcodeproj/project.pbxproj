@@ -59,11 +59,34 @@
 		182CDBA31B75C73C005FE865 /* homeDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 182CDBA11B75C73C005FE865 /* homeDetailsTableViewCell.xib */; };
 		182CDBA51B75D763005FE865 /* 推送.png in Resources */ = {isa = PBXBuildFile; fileRef = 182CDBA41B75D763005FE865 /* 推送.png */; };
 		182CDBAD1B7617A1005FE865 /* JScrollView+PageControl+AutoScroll.m in Sources */ = {isa = PBXBuildFile; fileRef = 182CDBAC1B7617A1005FE865 /* JScrollView+PageControl+AutoScroll.m */; };
-		182CDBB41B763441005FE865 /* settingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182CDBB21B763441005FE865 /* settingViewController.m */; };
-		182CDBB51B763441005FE865 /* settingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 182CDBB31B763441005FE865 /* settingViewController.xib */; };
-		182CDBB91B763569005FE865 /* nearbyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182CDBB71B763569005FE865 /* nearbyViewController.m */; };
-		182CDBBA1B763569005FE865 /* nearbyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 182CDBB81B763569005FE865 /* nearbyViewController.xib */; };
-		182CDBBD1B7644B4005FE865 /* testViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182CDBBC1B7644B4005FE865 /* testViewController.m */; };
+		182CDBF01B772312005FE865 /* portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 182CDBEF1B772312005FE865 /* portrait.png */; };
+		182CDC091B772E59005FE865 /* 个人信息.png in Resources */ = {isa = PBXBuildFile; fileRef = 182CDBF11B772E59005FE865 /* 个人信息.png */; };
+		182CDC0A1B772E59005FE865 /* 个人信息@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 182CDBF21B772E59005FE865 /* 个人信息@2x.png */; };
+		182CDC0B1B772E59005FE865 /* 个人信息@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 182CDBF31B772E59005FE865 /* 个人信息@3x.png */; };
+		182CDC0C1B772E59005FE865 /* 退出登录.png in Resources */ = {isa = PBXBuildFile; fileRef = 182CDBF41B772E59005FE865 /* 退出登录.png */; };
+		182CDC0D1B772E59005FE865 /* 退出登录@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 182CDBF51B772E59005FE865 /* 退出登录@2x.png */; };
+		182CDC0E1B772E59005FE865 /* 退出登录@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 182CDBF61B772E59005FE865 /* 退出登录@3x.png */; };
+		182CDC0F1B772E59005FE865 /* 我的发布.png in Resources */ = {isa = PBXBuildFile; fileRef = 182CDBF71B772E59005FE865 /* 我的发布.png */; };
+		182CDC101B772E59005FE865 /* 我的发布@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 182CDBF81B772E59005FE865 /* 我的发布@2x.png */; };
+		182CDC111B772E59005FE865 /* 我的发布@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 182CDBF91B772E59005FE865 /* 我的发布@3x.png */; };
+		182CDC121B772E59005FE865 /* 我的日程.png in Resources */ = {isa = PBXBuildFile; fileRef = 182CDBFA1B772E59005FE865 /* 我的日程.png */; };
+		182CDC131B772E59005FE865 /* 我的日程@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 182CDBFB1B772E59005FE865 /* 我的日程@2x.png */; };
+		182CDC141B772E59005FE865 /* 我的日程@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 182CDBFC1B772E59005FE865 /* 我的日程@3x.png */; };
+		182CDC151B772E59005FE865 /* 我的消息.png in Resources */ = {isa = PBXBuildFile; fileRef = 182CDBFD1B772E59005FE865 /* 我的消息.png */; };
+		182CDC161B772E59005FE865 /* 我的消息@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 182CDBFE1B772E59005FE865 /* 我的消息@2x.png */; };
+		182CDC171B772E59005FE865 /* 我的消息@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 182CDBFF1B772E59005FE865 /* 我的消息@3x.png */; };
+		182CDC181B772E59005FE865 /* 我的足迹.png in Resources */ = {isa = PBXBuildFile; fileRef = 182CDC001B772E59005FE865 /* 我的足迹.png */; };
+		182CDC191B772E59005FE865 /* 我的足迹@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 182CDC011B772E59005FE865 /* 我的足迹@2x.png */; };
+		182CDC1A1B772E59005FE865 /* 我的足迹@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 182CDC021B772E59005FE865 /* 我的足迹@3x.png */; };
+		182CDC1B1B772E59005FE865 /* 系统设置.png in Resources */ = {isa = PBXBuildFile; fileRef = 182CDC031B772E59005FE865 /* 系统设置.png */; };
+		182CDC1C1B772E59005FE865 /* 系统设置@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 182CDC041B772E59005FE865 /* 系统设置@2x.png */; };
+		182CDC1D1B772E59005FE865 /* 系统设置@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 182CDC051B772E59005FE865 /* 系统设置@3x.png */; };
+		182CDC1E1B772E59005FE865 /* 支付方式.png in Resources */ = {isa = PBXBuildFile; fileRef = 182CDC061B772E59005FE865 /* 支付方式.png */; };
+		182CDC1F1B772E59005FE865 /* 支付方式@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 182CDC071B772E59005FE865 /* 支付方式@2x.png */; };
+		182CDC201B772E59005FE865 /* 支付方式@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 182CDC081B772E59005FE865 /* 支付方式@3x.png */; };
+		182CDC291B774070005FE865 /* nearbyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182CDC251B774070005FE865 /* nearbyViewController.m */; };
+		182CDC2A1B774070005FE865 /* settingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182CDC281B774070005FE865 /* settingViewController.m */; };
+		182CDC2D1B77421F005FE865 /* profilesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182CDC2C1B77421F005FE865 /* profilesViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -161,14 +184,37 @@
 		182CDBA41B75D763005FE865 /* 推送.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "推送.png"; sourceTree = "<group>"; };
 		182CDBAB1B7617A1005FE865 /* JScrollView+PageControl+AutoScroll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JScrollView+PageControl+AutoScroll.h"; sourceTree = "<group>"; };
 		182CDBAC1B7617A1005FE865 /* JScrollView+PageControl+AutoScroll.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JScrollView+PageControl+AutoScroll.m"; sourceTree = "<group>"; };
-		182CDBB11B763441005FE865 /* settingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = settingViewController.h; sourceTree = "<group>"; };
-		182CDBB21B763441005FE865 /* settingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = settingViewController.m; sourceTree = "<group>"; };
-		182CDBB31B763441005FE865 /* settingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = settingViewController.xib; sourceTree = "<group>"; };
-		182CDBB61B763569005FE865 /* nearbyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nearbyViewController.h; sourceTree = "<group>"; };
-		182CDBB71B763569005FE865 /* nearbyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = nearbyViewController.m; sourceTree = "<group>"; };
-		182CDBB81B763569005FE865 /* nearbyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = nearbyViewController.xib; sourceTree = "<group>"; };
-		182CDBBB1B7644B4005FE865 /* testViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testViewController.h; sourceTree = "<group>"; };
-		182CDBBC1B7644B4005FE865 /* testViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = testViewController.m; sourceTree = "<group>"; };
+		182CDBEF1B772312005FE865 /* portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = portrait.png; sourceTree = "<group>"; };
+		182CDBF11B772E59005FE865 /* 个人信息.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "个人信息.png"; sourceTree = "<group>"; };
+		182CDBF21B772E59005FE865 /* 个人信息@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "个人信息@2x.png"; sourceTree = "<group>"; };
+		182CDBF31B772E59005FE865 /* 个人信息@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "个人信息@3x.png"; sourceTree = "<group>"; };
+		182CDBF41B772E59005FE865 /* 退出登录.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "退出登录.png"; sourceTree = "<group>"; };
+		182CDBF51B772E59005FE865 /* 退出登录@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "退出登录@2x.png"; sourceTree = "<group>"; };
+		182CDBF61B772E59005FE865 /* 退出登录@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "退出登录@3x.png"; sourceTree = "<group>"; };
+		182CDBF71B772E59005FE865 /* 我的发布.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "我的发布.png"; sourceTree = "<group>"; };
+		182CDBF81B772E59005FE865 /* 我的发布@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "我的发布@2x.png"; sourceTree = "<group>"; };
+		182CDBF91B772E59005FE865 /* 我的发布@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "我的发布@3x.png"; sourceTree = "<group>"; };
+		182CDBFA1B772E59005FE865 /* 我的日程.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "我的日程.png"; sourceTree = "<group>"; };
+		182CDBFB1B772E59005FE865 /* 我的日程@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "我的日程@2x.png"; sourceTree = "<group>"; };
+		182CDBFC1B772E59005FE865 /* 我的日程@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "我的日程@3x.png"; sourceTree = "<group>"; };
+		182CDBFD1B772E59005FE865 /* 我的消息.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "我的消息.png"; sourceTree = "<group>"; };
+		182CDBFE1B772E59005FE865 /* 我的消息@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "我的消息@2x.png"; sourceTree = "<group>"; };
+		182CDBFF1B772E59005FE865 /* 我的消息@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "我的消息@3x.png"; sourceTree = "<group>"; };
+		182CDC001B772E59005FE865 /* 我的足迹.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "我的足迹.png"; sourceTree = "<group>"; };
+		182CDC011B772E59005FE865 /* 我的足迹@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "我的足迹@2x.png"; sourceTree = "<group>"; };
+		182CDC021B772E59005FE865 /* 我的足迹@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "我的足迹@3x.png"; sourceTree = "<group>"; };
+		182CDC031B772E59005FE865 /* 系统设置.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "系统设置.png"; sourceTree = "<group>"; };
+		182CDC041B772E59005FE865 /* 系统设置@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "系统设置@2x.png"; sourceTree = "<group>"; };
+		182CDC051B772E59005FE865 /* 系统设置@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "系统设置@3x.png"; sourceTree = "<group>"; };
+		182CDC061B772E59005FE865 /* 支付方式.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "支付方式.png"; sourceTree = "<group>"; };
+		182CDC071B772E59005FE865 /* 支付方式@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "支付方式@2x.png"; sourceTree = "<group>"; };
+		182CDC081B772E59005FE865 /* 支付方式@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "支付方式@3x.png"; sourceTree = "<group>"; };
+		182CDC241B774070005FE865 /* nearbyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nearbyViewController.h; sourceTree = "<group>"; };
+		182CDC251B774070005FE865 /* nearbyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = nearbyViewController.m; sourceTree = "<group>"; };
+		182CDC271B774070005FE865 /* settingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = settingViewController.h; sourceTree = "<group>"; };
+		182CDC281B774070005FE865 /* settingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = settingViewController.m; sourceTree = "<group>"; };
+		182CDC2B1B77421F005FE865 /* profilesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = profilesViewController.h; sourceTree = "<group>"; };
+		182CDC2C1B77421F005FE865 /* profilesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = profilesViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -216,6 +262,8 @@
 				182CDB0B1B72286F005FE865 /* Images.xcassets */,
 				182CDB0D1B72286F005FE865 /* LaunchScreen.xib */,
 				182CDB251B723C7D005FE865 /* Home */,
+				182CDC261B774070005FE865 /* Setting */,
+				182CDC231B774070005FE865 /* Nearby */,
 				182CDAFE1B72286F005FE865 /* Supporting Files */,
 			);
 			path = TimeBuy;
@@ -259,14 +307,6 @@
 				182CDB9F1B75C73C005FE865 /* homeDetailsTableViewCell.h */,
 				182CDBA01B75C73C005FE865 /* homeDetailsTableViewCell.m */,
 				182CDBA11B75C73C005FE865 /* homeDetailsTableViewCell.xib */,
-				182CDBBB1B7644B4005FE865 /* testViewController.h */,
-				182CDBBC1B7644B4005FE865 /* testViewController.m */,
-				182CDBB11B763441005FE865 /* settingViewController.h */,
-				182CDBB21B763441005FE865 /* settingViewController.m */,
-				182CDBB31B763441005FE865 /* settingViewController.xib */,
-				182CDBB61B763569005FE865 /* nearbyViewController.h */,
-				182CDBB71B763569005FE865 /* nearbyViewController.m */,
-				182CDBB81B763569005FE865 /* nearbyViewController.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -290,6 +330,7 @@
 		182CDB341B737F25005FE865 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				182CDBBE1B7722D8005FE865 /* setting */,
 				182CDB351B737F25005FE865 /* home */,
 			);
 			path = Image;
@@ -423,6 +464,58 @@
 			path = "PageControl+ScrollView";
 			sourceTree = "<group>";
 		};
+		182CDBBE1B7722D8005FE865 /* setting */ = {
+			isa = PBXGroup;
+			children = (
+				182CDBEF1B772312005FE865 /* portrait.png */,
+				182CDBF11B772E59005FE865 /* 个人信息.png */,
+				182CDBF21B772E59005FE865 /* 个人信息@2x.png */,
+				182CDBF31B772E59005FE865 /* 个人信息@3x.png */,
+				182CDBF41B772E59005FE865 /* 退出登录.png */,
+				182CDBF51B772E59005FE865 /* 退出登录@2x.png */,
+				182CDBF61B772E59005FE865 /* 退出登录@3x.png */,
+				182CDBF71B772E59005FE865 /* 我的发布.png */,
+				182CDBF81B772E59005FE865 /* 我的发布@2x.png */,
+				182CDBF91B772E59005FE865 /* 我的发布@3x.png */,
+				182CDBFA1B772E59005FE865 /* 我的日程.png */,
+				182CDBFB1B772E59005FE865 /* 我的日程@2x.png */,
+				182CDBFC1B772E59005FE865 /* 我的日程@3x.png */,
+				182CDBFD1B772E59005FE865 /* 我的消息.png */,
+				182CDBFE1B772E59005FE865 /* 我的消息@2x.png */,
+				182CDBFF1B772E59005FE865 /* 我的消息@3x.png */,
+				182CDC001B772E59005FE865 /* 我的足迹.png */,
+				182CDC011B772E59005FE865 /* 我的足迹@2x.png */,
+				182CDC021B772E59005FE865 /* 我的足迹@3x.png */,
+				182CDC031B772E59005FE865 /* 系统设置.png */,
+				182CDC041B772E59005FE865 /* 系统设置@2x.png */,
+				182CDC051B772E59005FE865 /* 系统设置@3x.png */,
+				182CDC061B772E59005FE865 /* 支付方式.png */,
+				182CDC071B772E59005FE865 /* 支付方式@2x.png */,
+				182CDC081B772E59005FE865 /* 支付方式@3x.png */,
+			);
+			path = setting;
+			sourceTree = "<group>";
+		};
+		182CDC231B774070005FE865 /* Nearby */ = {
+			isa = PBXGroup;
+			children = (
+				182CDC241B774070005FE865 /* nearbyViewController.h */,
+				182CDC251B774070005FE865 /* nearbyViewController.m */,
+			);
+			path = Nearby;
+			sourceTree = "<group>";
+		};
+		182CDC261B774070005FE865 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				182CDC271B774070005FE865 /* settingViewController.h */,
+				182CDC281B774070005FE865 /* settingViewController.m */,
+				182CDC2B1B77421F005FE865 /* profilesViewController.h */,
+				182CDC2C1B77421F005FE865 /* profilesViewController.m */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -503,30 +596,53 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				182CDC0E1B772E59005FE865 /* 退出登录@3x.png in Resources */,
 				182CDB0A1B72286F005FE865 /* Main.storyboard in Resources */,
 				182CDB4C1B737F50005FE865 /* 个人设置1@2x.png in Resources */,
 				182CDB991B7392DB005FE865 /* MJRefresh.bundle in Resources */,
+				182CDC0F1B772E59005FE865 /* 我的发布.png in Resources */,
 				182CDB511B737F50005FE865 /* 跑图标1.png in Resources */,
 				182CDB4B1B737F50005FE865 /* 个人设置1.png in Resources */,
+				182CDC191B772E59005FE865 /* 我的足迹@2x.png in Resources */,
+				182CDC0B1B772E59005FE865 /* 个人信息@3x.png in Resources */,
+				182CDC0C1B772E59005FE865 /* 退出登录.png in Resources */,
 				182CDB0F1B72286F005FE865 /* LaunchScreen.xib in Resources */,
+				182CDBF01B772312005FE865 /* portrait.png in Resources */,
 				182CDB4A1B737F50005FE865 /* 附近的人1@3x.png in Resources */,
-				182CDBB51B763441005FE865 /* settingViewController.xib in Resources */,
+				182CDC0D1B772E59005FE865 /* 退出登录@2x.png in Resources */,
 				182CDB0C1B72286F005FE865 /* Images.xcassets in Resources */,
+				182CDC091B772E59005FE865 /* 个人信息.png in Resources */,
 				182CDB471B737F50005FE865 /* 爱心1@3x.png in Resources */,
 				182CDB531B737F50005FE865 /* 跑图标1@3x.png in Resources */,
 				182CDBA51B75D763005FE865 /* 推送.png in Resources */,
+				182CDC1E1B772E59005FE865 /* 支付方式.png in Resources */,
 				182CDB581B737F65005FE865 /* 蔡依林.png in Resources */,
+				182CDC1A1B772E59005FE865 /* 我的足迹@3x.png in Resources */,
+				182CDC1B1B772E59005FE865 /* 系统设置.png in Resources */,
 				182CDB4F1B737F50005FE865 /* 男符号1@2x.png in Resources */,
+				182CDC1D1B772E59005FE865 /* 系统设置@3x.png in Resources */,
+				182CDC121B772E59005FE865 /* 我的日程.png in Resources */,
+				182CDC201B772E59005FE865 /* 支付方式@3x.png in Resources */,
+				182CDC131B772E59005FE865 /* 我的日程@2x.png in Resources */,
 				182CDB4D1B737F50005FE865 /* 个人设置1@3x.png in Resources */,
-				182CDBBA1B763569005FE865 /* nearbyViewController.xib in Resources */,
+				182CDC181B772E59005FE865 /* 我的足迹.png in Resources */,
 				182CDB451B737F50005FE865 /* 爱心1.png in Resources */,
+				182CDC111B772E59005FE865 /* 我的发布@3x.png in Resources */,
+				182CDC161B772E59005FE865 /* 我的消息@2x.png in Resources */,
 				182CDB521B737F50005FE865 /* 跑图标1@2x.png in Resources */,
+				182CDC1C1B772E59005FE865 /* 系统设置@2x.png in Resources */,
 				182CDB491B737F50005FE865 /* 附近的人1@2x.png in Resources */,
 				182CDB591B737F65005FE865 /* 高挺.png in Resources */,
+				182CDC0A1B772E59005FE865 /* 个人信息@2x.png in Resources */,
 				182CDB4E1B737F50005FE865 /* 男符号1.png in Resources */,
+				182CDC101B772E59005FE865 /* 我的发布@2x.png in Resources */,
+				182CDC1F1B772E59005FE865 /* 支付方式@2x.png in Resources */,
 				182CDB481B737F50005FE865 /* 附近的人1.png in Resources */,
+				182CDC141B772E59005FE865 /* 我的日程@3x.png in Resources */,
+				182CDC151B772E59005FE865 /* 我的消息.png in Resources */,
 				182CDB501B737F50005FE865 /* 男符号1@3x.png in Resources */,
 				182CDB5B1B737F65005FE865 /* 周杰伦.png in Resources */,
+				182CDC171B772E59005FE865 /* 我的消息@3x.png in Resources */,
 				182CDB461B737F50005FE865 /* 爱心1@2x.png in Resources */,
 				182CDBA31B75C73C005FE865 /* homeDetailsTableViewCell.xib in Resources */,
 			);
@@ -551,9 +667,11 @@
 				182CDB921B7392DB005FE865 /* MJRefreshAutoStateFooter.m in Sources */,
 				182CDB951B7392DB005FE865 /* MJRefreshBackStateFooter.m in Sources */,
 				182CDB331B723C8A005FE865 /* UIViewController+MMDrawerController.m in Sources */,
+				182CDC291B774070005FE865 /* nearbyViewController.m in Sources */,
 				182CDB981B7392DB005FE865 /* MJRefreshStateHeader.m in Sources */,
 				182CDB311B723C8A005FE865 /* MMDrawerController.m in Sources */,
 				182CDB9D1B7392DB005FE865 /* UIView+MJExtension.m in Sources */,
+				182CDC2A1B774070005FE865 /* settingViewController.m in Sources */,
 				182CDB961B7392DB005FE865 /* MJRefreshGifHeader.m in Sources */,
 				182CDB9B1B7392DB005FE865 /* UIScrollView+MJExtension.m in Sources */,
 				182CDB941B7392DB005FE865 /* MJRefreshBackNormalFooter.m in Sources */,
@@ -561,18 +679,16 @@
 				182CDB8D1B7392DB005FE865 /* MJRefreshComponent.m in Sources */,
 				182CDBA21B75C73C005FE865 /* homeDetailsTableViewCell.m in Sources */,
 				182CDB911B7392DB005FE865 /* MJRefreshAutoNormalFooter.m in Sources */,
-				182CDBB41B763441005FE865 /* settingViewController.m in Sources */,
 				182CDB041B72286F005FE865 /* AppDelegate.m in Sources */,
 				182CDB901B7392DB005FE865 /* MJRefreshAutoGifFooter.m in Sources */,
 				182CDB8C1B7392DB005FE865 /* MJRefreshBackFooter.m in Sources */,
 				182CDB011B72286F005FE865 /* main.m in Sources */,
 				182CDB8E1B7392DB005FE865 /* MJRefreshFooter.m in Sources */,
-				182CDBB91B763569005FE865 /* nearbyViewController.m in Sources */,
 				182CDB9C1B7392DB005FE865 /* UIScrollView+MJRefresh.m in Sources */,
 				182CDB9A1B7392DB005FE865 /* MJRefreshConst.m in Sources */,
-				182CDBBD1B7644B4005FE865 /* testViewController.m in Sources */,
 				182CDBAD1B7617A1005FE865 /* JScrollView+PageControl+AutoScroll.m in Sources */,
 				182CDB931B7392DB005FE865 /* MJRefreshBackGifFooter.m in Sources */,
+				182CDC2D1B77421F005FE865 /* profilesViewController.m in Sources */,
 				182CDB8F1B7392DB005FE865 /* MJRefreshHeader.m in Sources */,
 				182CDB971B7392DB005FE865 /* MJRefreshNormalHeader.m in Sources */,
 				182CDB9E1B7392DB005FE865 /* homeViewController.m in Sources */,

@@ -14,6 +14,13 @@
 
 @implementation homeViewController
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:YES];
+    
+    //NSLog(@"home view appear");
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
@@ -273,7 +280,6 @@
     [self.navigationItem setLeftBarButtonItem:leftDrawerButton animated:YES];
     */
     
-    
     UIView *contentView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
     UIButton *button = [[UIButton alloc] initWithFrame:contentView.bounds];
     [button setBackgroundImage:[UIImage imageNamed:@"个人设置1"] forState:UIControlStateNormal];
@@ -297,13 +303,15 @@
     [button setBackgroundImage:[UIImage imageNamed:@"附近的人1"] forState:UIControlStateNormal];
     [button addTarget:self action:@selector(rightDrawerButtonPress:) forControlEvents:UIControlEventTouchUpInside];
     [contentView addSubview:button];
-    UIBarButtonItem *barButtonItem = [[UIBarButtonItem alloc] initWithCustomView:contentView];
+    
+    MMDrawerBarButtonItem *barButtonItem = [[MMDrawerBarButtonItem alloc] initWithCustomView:contentView];
     self.navigationItem.rightBarButtonItem = barButtonItem;
 }
 
 #pragma mark - Button Handlers
 -(void)leftDrawerButtonPress:(id)sender{
     [self.mm_drawerController toggleDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
+    [self.mm_drawerController setShowsShadow:NO];
 }
 
 -(void)rightDrawerButtonPress:(id)sender{

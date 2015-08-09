@@ -1,18 +1,18 @@
 //
-//  testViewController.m
+//  profilesViewController.m
 //  TimeBuy
 //
-//  Created by Mr.OJ on 15/8/8.
+//  Created by Mr.OJ on 15/8/9.
 //  Copyright (c) 2015年 Mr.OJ. All rights reserved.
 //
 
-#import "testViewController.h"
+#import "profilesViewController.h"
 
-@interface testViewController ()
+@interface profilesViewController ()
 
 @end
 
-@implementation testViewController
+@implementation profilesViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

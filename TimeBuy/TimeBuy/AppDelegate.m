@@ -28,20 +28,15 @@
 - (void)initDrawer {
 
     UIStoryboard* mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
-    //homeViewController *homeVC = [[homeViewController alloc] init];
-    //settingViewController *settingVC = [[settingViewController alloc] init];
-    //nearbyViewController *nearbyVC = [[nearbyViewController alloc] init];
     
-    drawerController = [[MMDrawerController alloc] initWithCenterViewController:[mainStoryboard instantiateViewControllerWithIdentifier:@"center"] leftDrawerViewController:[mainStoryboard instantiateViewControllerWithIdentifier:@"left"]];
+    drawerController = [[MMDrawerController alloc] initWithCenterViewController:[mainStoryboard instantiateViewControllerWithIdentifier:@"center"] leftDrawerViewController:[mainStoryboard instantiateViewControllerWithIdentifier:@"left"] rightDrawerViewController:[mainStoryboard instantiateViewControllerWithIdentifier:@"right"]];
     
-    [drawerController setDrawerVisualStateBlock:[MMDrawerVisualState slideAndScaleVisualStateBlock]];
-    [drawerController setMaximumLeftDrawerWidth:260.0];
+    [drawerController setDrawerVisualStateBlock:[MMDrawerVisualState slideVisualStateBlock]];
+    [drawerController setMaximumLeftDrawerWidth:240];
     [drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModePanningNavigationBar];
     [drawerController setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
     
     self.window.rootViewController = drawerController;
-    
-    //self.window.rootViewController = drawerController;
     
 }
 
