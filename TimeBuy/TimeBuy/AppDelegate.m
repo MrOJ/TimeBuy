@@ -25,20 +25,68 @@
     return YES;
 }
 
+
 - (void)initDrawer {
 
     UIStoryboard* mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle: nil];
     
-    drawerController = [[MMDrawerController alloc] initWithCenterViewController:[mainStoryboard instantiateViewControllerWithIdentifier:@"center"] leftDrawerViewController:[mainStoryboard instantiateViewControllerWithIdentifier:@"left"] rightDrawerViewController:[mainStoryboard instantiateViewControllerWithIdentifier:@"right"]];
+    settingViewController *leftMenu = (settingViewController *)[mainStoryboard
+                                                                instantiateViewControllerWithIdentifier: @"left"];
     
-    [drawerController setDrawerVisualStateBlock:[MMDrawerVisualState slideVisualStateBlock]];
-    [drawerController setMaximumLeftDrawerWidth:240];
-    [drawerController setOpenDrawerGestureModeMask:MMOpenDrawerGestureModePanningNavigationBar];
-    [drawerController setCloseDrawerGestureModeMask:MMCloseDrawerGestureModeAll];
+    nearbyViewController *rightMenu = (nearbyViewController *)[mainStoryboard
+                                                               instantiateViewControllerWithIdentifier: @"right"];
     
-    self.window.rootViewController = drawerController;
+    [SlideNavigationController sharedInstance].rightMenu = rightMenu;
+    [SlideNavigationController sharedInstance].leftMenu = leftMenu;
+    [SlideNavigationController sharedInstance].menuRevealAnimationDuration = 0.3;
+    
+    
+    UIButton *button  = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
+    [button setImage:[UIImage imageNamed:@"个人设置1"] forState:UIControlStateNormal];
+    [button addTarget:[SlideNavigationController sharedInstance] action:@selector(toggleLeftMenu) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
+    [SlideNavigationController sharedInstance].leftBarButtonItem = leftBarButtonItem;
+    
+    UIButton *button2  = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 30, 45)];
+    [button2 setImage:[UIImage imageNamed:@"附近的人1"] forState:UIControlStateNormal];
+    [button2 addTarget:[SlideNavigationController sharedInstance] action:@selector(toggleRightMenu) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button2];
+    [SlideNavigationController sharedInstance].rightBarButtonItem = rightBarButtonItem;
+    
+    
+    shadowView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height)];
+    shadowView.backgroundColor = [UIColor blackColor];
+    shadowView.alpha = 0.45f;
+    [[SlideNavigationController sharedInstance].view addSubview:shadowView];
+    shadowView.hidden = YES;
+    
+    [[NSNotificationCenter defaultCenter] addObserverForName:SlideNavigationControllerDidClose object:nil queue:nil usingBlock:^(NSNotification *note) {
+        NSString *menu = note.userInfo[@"menu"];
+        NSLog(@"Closed %@", menu);
+        shadowView.hidden = YES;
+        
+    }];
+    
+    [[NSNotificationCenter defaultCenter] addObserverForName:SlideNavigationControllerDidOpen object:nil queue:nil usingBlock:^(NSNotification *note) {
+        NSString *menu = note.userInfo[@"menu"];
+        NSLog(@"Opened %@", menu);
+        
+        shadowView.hidden = NO;
+        
+        if ([menu isEqualToString:@"left"]) {
+
+        }
+        
+    }];
+    
+    [[NSNotificationCenter defaultCenter] addObserverForName:SlideNavigationControllerDidReveal object:nil queue:nil usingBlock:^(NSNotification *note) {
+        NSString *menu = note.userInfo[@"menu"];
+        NSLog(@"Revealed %@", menu);
+        
+    }];
     
 }
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

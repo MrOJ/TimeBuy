@@ -23,7 +23,9 @@
     */
     
     self.view.backgroundColor = [UIColor whiteColor];
-    
+    //[[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    //[self.navigationItem setHidesBackButton:YES];
+    /*
     UIColor * barColor = [UIColor
                           colorWithRed:48.0/255.0
                           green:47.0/255.0
@@ -31,22 +33,20 @@
                           alpha:1.0];
     [self.navigationController.navigationBar setBarTintColor:barColor];
     
-    UIButton *backButton = [[UIButton alloc] initWithFrame:CGRectMake(10, 10, 60, 25)];
+    backButton = [[UIButton alloc] initWithFrame:CGRectMake(5, 10, 60, 25)];
     //[backButton setImage:[UIImage imageNamed:@"箭头9x17px"] forState:UIControlStateNormal];
     [backButton setTitle:@"返回" forState:UIControlStateNormal];
     [backButton addTarget:self action:@selector(back:) forControlEvents:UIControlEventTouchUpInside];
     [self.navigationController.navigationBar addSubview:backButton];
+    */
     
 }
 
-- (void)back:(id)sender {
-    //[self.navigationController popViewControllerAnimated:YES];
-    //[self.navigationController popToRootViewControllerAnimated:YES];
+- (void)back:(id)sender
+{
+    [self.navigationController popToRootViewControllerAnimated:YES];
     
-    homeViewController *homeVC = [[homeViewController alloc] init];
-    
-    [self.navigationController popToViewController:homeVC animated:YES];
-    
+    [backButton removeFromSuperview];
     
 }
 

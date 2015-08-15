@@ -42,10 +42,10 @@
             </objects>
             <point key="canvasLocation" x="694" y="337"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Slide Navigation Controller-->
         <scene sceneID="iq2-Nm-Emd">
             <objects>
-                <navigationController storyboardIdentifier="center" automaticallyAdjustsScrollViewInsets="NO" id="1Op-kG-RsK" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="center" automaticallyAdjustsScrollViewInsets="NO" id="1Op-kG-RsK" customClass="SlideNavigationController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hKJ-QD-76Z">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -129,7 +129,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="80J-jL-nb2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="784" y="990"/>
+            <point key="canvasLocation" x="704" y="1002"/>
         </scene>
         <!--Nearby View Controller-->
         <scene sceneID="u89-xP-xqU">
@@ -144,7 +144,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="nearby" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2gR-WS-sFw">
-                                <rect key="frame" x="122" y="235" width="76" height="40"/>
+                                <rect key="frame" x="173" y="237" width="76" height="40"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -155,7 +155,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mxg-Ja-99C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="252" y="1621"/>
+            <point key="canvasLocation" x="704" y="1677"/>
         </scene>
     </scenes>
     <resources>

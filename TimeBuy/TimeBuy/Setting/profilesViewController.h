@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MMDrawerController.h"
-#import "UIViewController+MMDrawerController.h"
 #import "homeViewController.h"
 
 @interface profilesViewController : UIViewController
+{
+    UIButton *backButton;
+}
 
 @end

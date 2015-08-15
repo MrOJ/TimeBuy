@@ -7,12 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MMDrawerController.h"
-#import "UIViewController+MMDrawerController.h"
-#import "profilesViewController.h"
 
-#import "MMDrawerController+Subclass.h"
-#import "MMDrawerController.h"
+#import "SlideNavigationController.h"
+
+#import "profilesViewController.h"
 
 @interface settingViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>
 {

@@ -21,25 +21,23 @@
 {
     [super viewWillAppear:YES];
     
-    //NSLog(@"left view appear");
+    NSLog(@"left view appear");
     //[[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationSlide];
+    
+    /*
     shadowView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height)];
     shadowView.backgroundColor = [UIColor blackColor];
     shadowView.alpha = 0.45f;
-    [self.mm_drawerController.centerViewController.view addSubview:shadowView];
-    
-    //[self.mm_drawerController.centerViewController.navigationItem setHidesBackButton:YES];
-    //NSLog(@"%@",self.mm_drawerController.centerViewController.navigationItem.leftBarButtonItem);
-    
+    */
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:YES];
     
-    //NSLog(@"left view disappear");
+    NSLog(@"left view disappear");
     //[[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationSlide];
-    [shadowView removeFromSuperview];
+    //[shadowView removeFromSuperview];
 }
 
 - (void)viewDidLoad {
@@ -112,23 +110,11 @@
     switch (indexPath.row) {
         case 0:
         {
-            profilesViewController *profilesVC = [[profilesViewController alloc] init];
+            profilesViewController *vc = [[profilesViewController alloc] init];
             
-            [self.navigationController pushViewController:profilesVC animated:YES];
-            UINavigationController * nav = [[UINavigationController alloc] initWithRootViewController:profilesVC];
-            
-            
-            [self.mm_drawerController
-             setCenterViewController:nav
-             withCloseAnimation:YES
-             completion:nil];
-            
-            
-            //[self.mm_drawerController setRestorationIdentifier:<#(NSString *)#>]
-            
-            //[self.mm_drawerController setCenterViewController:nav];
-            
-            //[self.mm_drawerController.navigationController pushViewController:profilesVC animated:YES];
+            [[SlideNavigationController sharedInstance] popToRootAndSwitchToViewController:vc
+                                                                     withSlideOutAnimation:YES
+                                                                             andCompletion:nil];
         }
             break;
             

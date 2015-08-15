@@ -7,11 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MMDrawerController.h"
-#import "MMDrawerBarButtonItem.h"
-#import "MMDrawerController+Subclass.h"
-#import "MMDrawerVisualState.h"
-#import "UIViewController+MMDrawerController.h"
 
 #import "MJRefresh.h"
 #import "JScrollView+PageControl+AutoScroll.h"
@@ -19,12 +14,14 @@
 #import "settingViewController.h"
 #import "nearbyViewController.h"
 
+#import "SlideNavigationController.h"
+
 typedef NS_ENUM(NSInteger, HomeTableViewSectionType){
     HomeTableViewSectionTypeSlide,
     HomeTableViewSectionTypeCatagory,
 };
 
-@interface homeViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate,JScrollViewViewDelegate>
+@interface homeViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate,JScrollViewViewDelegate,SlideNavigationControllerDelegate>
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @end

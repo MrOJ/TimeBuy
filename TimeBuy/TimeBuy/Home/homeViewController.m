@@ -26,28 +26,18 @@
     // Do any additional setup after loading the view, typically from a nib.
     //[[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationNone];
     //在info.plist Set UIViewControllerBasedStatusBarAppearance to NO.
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:nil action:nil];
+    self.navigationItem.backBarButtonItem = item;
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:NO];
-    
-    _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    
-    UITapGestureRecognizer * doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doubleTap:)];
-    [doubleTap setNumberOfTapsRequired:2];
-    [self.view addGestureRecognizer:doubleTap];
-    
-    UITapGestureRecognizer * twoFingerDoubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(twoFingerDoubleTap:)];
-    [twoFingerDoubleTap setNumberOfTapsRequired:2];
-    [twoFingerDoubleTap setNumberOfTouchesRequired:2];
-    [self.view addGestureRecognizer:twoFingerDoubleTap];
-    
-    
-    [self setupLeftMenuButton];
-    [self setupRightMenuButton];
     
     //设置顶部bar的颜色(在storyboard中设置的key设置为：navigationController.navigationBar.barTintColor)
     UIColor * barColor = [UIColor
                           colorWithRed:48.0/255.0
                           green:47.0/255.0
-                         blue:52.0/255.0
+                          blue:52.0/255.0
                           alpha:1.0];
     [self.navigationController.navigationBar setBarTintColor:barColor];
     
@@ -60,6 +50,22 @@
     [titleView addSubview:title];
     [self.navigationItem setTitleView:titleView];
     
+    _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
+    /*
+    UIButton *button  = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
+    [button setImage:[UIImage imageNamed:@"个人设置1"] forState:UIControlStateNormal];
+    [button addTarget:[SlideNavigationController sharedInstance] action:@selector(toggleLeftMenu) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
+    [SlideNavigationController sharedInstance].leftBarButtonItem = leftBarButtonItem;
+    
+    UIButton *button2  = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 30, 45)];
+    [button2 setImage:[UIImage imageNamed:@"附近的人1"] forState:UIControlStateNormal];
+    [button2 addTarget:[SlideNavigationController sharedInstance] action:@selector(toggleRightMenu) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button2];
+    [SlideNavigationController sharedInstance].rightBarButtonItem = rightBarButtonItem;
+    */
+    
     __weak __typeof(self) weakSelf = self;
     
     // 设置回调（一旦进入刷新状态就会调用这个refreshingBlock）
@@ -70,7 +76,24 @@
     // 马上进入刷新状态
     //[self.tableView.header beginRefreshing];
     //NSLog(@"witdth = %f;height = %f",self.view.bounds.size.width,self.view.bounds.size.height);
+    [SlideNavigationController sharedInstance].enableShadow = NO;
     
+    float offset = self.view.bounds.size.width;
+    [SlideNavigationController sharedInstance].portraitSlideOffset = offset - 260.0f;
+    
+    
+}
+
+#pragma mark - SlideNavigationController Methods -
+
+- (BOOL)slideNavigationControllerShouldDisplayLeftMenu
+{
+    return YES;
+}
+
+- (BOOL)slideNavigationControllerShouldDisplayRightMenu
+{
+    return YES;
 }
 
 #pragma mark - 数据处理相关
@@ -270,60 +293,6 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-}
-
-#pragma mark - Button Handlers
--(void)setupLeftMenuButton{
-    
-    /*
-    MMDrawerBarButtonItem * leftDrawerButton = [[MMDrawerBarButtonItem alloc] initWithTarget:self action:@selector(leftDrawerButtonPress:)];
-    [self.navigationItem setLeftBarButtonItem:leftDrawerButton animated:YES];
-    */
-    
-    UIView *contentView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
-    UIButton *button = [[UIButton alloc] initWithFrame:contentView.bounds];
-    [button setBackgroundImage:[UIImage imageNamed:@"个人设置1"] forState:UIControlStateNormal];
-    [button addTarget:self action:@selector(leftDrawerButtonPress:) forControlEvents:UIControlEventTouchUpInside];
-    [contentView addSubview:button];
-    
-    MMDrawerBarButtonItem *barButtonItem = [[MMDrawerBarButtonItem alloc] initWithCustomView:contentView];
-    //UIBarButtonItem *barButtonItem = [[UIBarButtonItem alloc] initWithCustomView:contentView];
-    self.navigationItem.leftBarButtonItem = barButtonItem;
-    
-}
-
--(void)setupRightMenuButton{
-    /*
-    MMDrawerBarButtonItem * rightDrawerButton = [[MMDrawerBarButtonItem alloc] initWithTarget:self action:@selector(rightDrawerButtonPress:)];
-    [self.navigationItem setRightBarButtonItem:rightDrawerButton animated:YES];
-    */
-    
-    UIView *contentView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 20, 25)];
-    UIButton *button = [[UIButton alloc] initWithFrame:contentView.bounds];
-    [button setBackgroundImage:[UIImage imageNamed:@"附近的人1"] forState:UIControlStateNormal];
-    [button addTarget:self action:@selector(rightDrawerButtonPress:) forControlEvents:UIControlEventTouchUpInside];
-    [contentView addSubview:button];
-    
-    MMDrawerBarButtonItem *barButtonItem = [[MMDrawerBarButtonItem alloc] initWithCustomView:contentView];
-    self.navigationItem.rightBarButtonItem = barButtonItem;
-}
-
-#pragma mark - Button Handlers
--(void)leftDrawerButtonPress:(id)sender{
-    [self.mm_drawerController toggleDrawerSide:MMDrawerSideLeft animated:YES completion:nil];
-    [self.mm_drawerController setShowsShadow:NO];
-}
-
--(void)rightDrawerButtonPress:(id)sender{
-    [self.mm_drawerController toggleDrawerSide:MMDrawerSideRight animated:YES completion:nil];
-}
-
--(void)doubleTap:(UITapGestureRecognizer*)gesture{
-    [self.mm_drawerController bouncePreviewForDrawerSide:MMDrawerSideLeft completion:nil];
-}
-
--(void)twoFingerDoubleTap:(UITapGestureRecognizer*)gesture{
-    [self.mm_drawerController bouncePreviewForDrawerSide:MMDrawerSideRight completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -13,10 +13,6 @@
 		182CDB0C1B72286F005FE865 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 182CDB0B1B72286F005FE865 /* Images.xcassets */; };
 		182CDB0F1B72286F005FE865 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 182CDB0D1B72286F005FE865 /* LaunchScreen.xib */; };
 		182CDB1B1B722870005FE865 /* TimeBuyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 182CDB1A1B722870005FE865 /* TimeBuyTests.m */; };
-		182CDB301B723C8A005FE865 /* MMDrawerBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 182CDB281B723C8A005FE865 /* MMDrawerBarButtonItem.m */; };
-		182CDB311B723C8A005FE865 /* MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182CDB2B1B723C8A005FE865 /* MMDrawerController.m */; };
-		182CDB321B723C8A005FE865 /* MMDrawerVisualState.m in Sources */ = {isa = PBXBuildFile; fileRef = 182CDB2D1B723C8A005FE865 /* MMDrawerVisualState.m */; };
-		182CDB331B723C8A005FE865 /* UIViewController+MMDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182CDB2F1B723C8A005FE865 /* UIViewController+MMDrawerController.m */; };
 		182CDB451B737F50005FE865 /* 爱心1.png in Resources */ = {isa = PBXBuildFile; fileRef = 182CDB361B737F50005FE865 /* 爱心1.png */; };
 		182CDB461B737F50005FE865 /* 爱心1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 182CDB371B737F50005FE865 /* 爱心1@2x.png */; };
 		182CDB471B737F50005FE865 /* 爱心1@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 182CDB381B737F50005FE865 /* 爱心1@3x.png */; };
@@ -87,6 +83,14 @@
 		182CDC291B774070005FE865 /* nearbyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182CDC251B774070005FE865 /* nearbyViewController.m */; };
 		182CDC2A1B774070005FE865 /* settingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182CDC281B774070005FE865 /* settingViewController.m */; };
 		182CDC2D1B77421F005FE865 /* profilesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182CDC2C1B77421F005FE865 /* profilesViewController.m */; };
+		18FFE5B91B7F49AE004FBC82 /* SlideNavigationContorllerAnimatorFade.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FFE5AB1B7F49AE004FBC82 /* SlideNavigationContorllerAnimatorFade.m */; };
+		18FFE5BA1B7F49AE004FBC82 /* SlideNavigationContorllerAnimatorScale.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FFE5AD1B7F49AE004FBC82 /* SlideNavigationContorllerAnimatorScale.m */; };
+		18FFE5BB1B7F49AE004FBC82 /* SlideNavigationContorllerAnimatorScaleAndFade.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FFE5AF1B7F49AE004FBC82 /* SlideNavigationContorllerAnimatorScaleAndFade.m */; };
+		18FFE5BC1B7F49AE004FBC82 /* SlideNavigationContorllerAnimatorSlide.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FFE5B11B7F49AE004FBC82 /* SlideNavigationContorllerAnimatorSlide.m */; };
+		18FFE5BD1B7F49AE004FBC82 /* SlideNavigationContorllerAnimatorSlideAndFade.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FFE5B31B7F49AE004FBC82 /* SlideNavigationContorllerAnimatorSlideAndFade.m */; };
+		18FFE5BE1B7F49AE004FBC82 /* menu-button.png in Resources */ = {isa = PBXBuildFile; fileRef = 18FFE5B51B7F49AE004FBC82 /* menu-button.png */; };
+		18FFE5BF1B7F49AE004FBC82 /* menu-button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18FFE5B61B7F49AE004FBC82 /* menu-button@2x.png */; };
+		18FFE5C01B7F49AE004FBC82 /* SlideNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FFE5B81B7F49AE004FBC82 /* SlideNavigationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,15 +115,6 @@
 		182CDB141B722870005FE865 /* TimeBuyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TimeBuyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		182CDB191B722870005FE865 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		182CDB1A1B722870005FE865 /* TimeBuyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeBuyTests.m; sourceTree = "<group>"; };
-		182CDB271B723C8A005FE865 /* MMDrawerBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerBarButtonItem.h; sourceTree = "<group>"; };
-		182CDB281B723C8A005FE865 /* MMDrawerBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerBarButtonItem.m; sourceTree = "<group>"; };
-		182CDB291B723C8A005FE865 /* MMDrawerController+Subclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MMDrawerController+Subclass.h"; sourceTree = "<group>"; };
-		182CDB2A1B723C8A005FE865 /* MMDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerController.h; sourceTree = "<group>"; };
-		182CDB2B1B723C8A005FE865 /* MMDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerController.m; sourceTree = "<group>"; };
-		182CDB2C1B723C8A005FE865 /* MMDrawerVisualState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDrawerVisualState.h; sourceTree = "<group>"; };
-		182CDB2D1B723C8A005FE865 /* MMDrawerVisualState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDrawerVisualState.m; sourceTree = "<group>"; };
-		182CDB2E1B723C8A005FE865 /* UIViewController+MMDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MMDrawerController.h"; sourceTree = "<group>"; };
-		182CDB2F1B723C8A005FE865 /* UIViewController+MMDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MMDrawerController.m"; sourceTree = "<group>"; };
 		182CDB361B737F50005FE865 /* 爱心1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "爱心1.png"; sourceTree = "<group>"; };
 		182CDB371B737F50005FE865 /* 爱心1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "爱心1@2x.png"; sourceTree = "<group>"; };
 		182CDB381B737F50005FE865 /* 爱心1@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "爱心1@3x.png"; sourceTree = "<group>"; };
@@ -215,6 +210,21 @@
 		182CDC281B774070005FE865 /* settingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = settingViewController.m; sourceTree = "<group>"; };
 		182CDC2B1B77421F005FE865 /* profilesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = profilesViewController.h; sourceTree = "<group>"; };
 		182CDC2C1B77421F005FE865 /* profilesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = profilesViewController.m; sourceTree = "<group>"; };
+		18FFE5A91B7F49AE004FBC82 /* SlideNavigationContorllerAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideNavigationContorllerAnimator.h; sourceTree = "<group>"; };
+		18FFE5AA1B7F49AE004FBC82 /* SlideNavigationContorllerAnimatorFade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideNavigationContorllerAnimatorFade.h; sourceTree = "<group>"; };
+		18FFE5AB1B7F49AE004FBC82 /* SlideNavigationContorllerAnimatorFade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideNavigationContorllerAnimatorFade.m; sourceTree = "<group>"; };
+		18FFE5AC1B7F49AE004FBC82 /* SlideNavigationContorllerAnimatorScale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideNavigationContorllerAnimatorScale.h; sourceTree = "<group>"; };
+		18FFE5AD1B7F49AE004FBC82 /* SlideNavigationContorllerAnimatorScale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideNavigationContorllerAnimatorScale.m; sourceTree = "<group>"; };
+		18FFE5AE1B7F49AE004FBC82 /* SlideNavigationContorllerAnimatorScaleAndFade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideNavigationContorllerAnimatorScaleAndFade.h; sourceTree = "<group>"; };
+		18FFE5AF1B7F49AE004FBC82 /* SlideNavigationContorllerAnimatorScaleAndFade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideNavigationContorllerAnimatorScaleAndFade.m; sourceTree = "<group>"; };
+		18FFE5B01B7F49AE004FBC82 /* SlideNavigationContorllerAnimatorSlide.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideNavigationContorllerAnimatorSlide.h; sourceTree = "<group>"; };
+		18FFE5B11B7F49AE004FBC82 /* SlideNavigationContorllerAnimatorSlide.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideNavigationContorllerAnimatorSlide.m; sourceTree = "<group>"; };
+		18FFE5B21B7F49AE004FBC82 /* SlideNavigationContorllerAnimatorSlideAndFade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideNavigationContorllerAnimatorSlideAndFade.h; sourceTree = "<group>"; };
+		18FFE5B31B7F49AE004FBC82 /* SlideNavigationContorllerAnimatorSlideAndFade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideNavigationContorllerAnimatorSlideAndFade.m; sourceTree = "<group>"; };
+		18FFE5B51B7F49AE004FBC82 /* menu-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu-button.png"; sourceTree = "<group>"; };
+		18FFE5B61B7F49AE004FBC82 /* menu-button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu-button@2x.png"; sourceTree = "<group>"; };
+		18FFE5B71B7F49AE004FBC82 /* SlideNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideNavigationController.h; sourceTree = "<group>"; };
+		18FFE5B81B7F49AE004FBC82 /* SlideNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideNavigationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,6 +266,7 @@
 		182CDAFD1B72286F005FE865 /* TimeBuy */ = {
 			isa = PBXGroup;
 			children = (
+				18FFE5A61B7F49AE004FBC82 /* SlideMenu */,
 				182CDB021B72286F005FE865 /* AppDelegate.h */,
 				182CDB031B72286F005FE865 /* AppDelegate.m */,
 				182CDB081B72286F005FE865 /* Main.storyboard */,
@@ -301,7 +312,6 @@
 			children = (
 				182CDBAA1B7617A1005FE865 /* PageControl+ScrollView */,
 				182CDB5C1B7392DB005FE865 /* MJRefresh */,
-				182CDB261B723C8A005FE865 /* MMDrawerController */,
 				182CDB891B7392DB005FE865 /* homeViewController.h */,
 				182CDB8A1B7392DB005FE865 /* homeViewController.m */,
 				182CDB9F1B75C73C005FE865 /* homeDetailsTableViewCell.h */,
@@ -309,22 +319,6 @@
 				182CDBA11B75C73C005FE865 /* homeDetailsTableViewCell.xib */,
 			);
 			path = Home;
-			sourceTree = "<group>";
-		};
-		182CDB261B723C8A005FE865 /* MMDrawerController */ = {
-			isa = PBXGroup;
-			children = (
-				182CDB271B723C8A005FE865 /* MMDrawerBarButtonItem.h */,
-				182CDB281B723C8A005FE865 /* MMDrawerBarButtonItem.m */,
-				182CDB291B723C8A005FE865 /* MMDrawerController+Subclass.h */,
-				182CDB2A1B723C8A005FE865 /* MMDrawerController.h */,
-				182CDB2B1B723C8A005FE865 /* MMDrawerController.m */,
-				182CDB2C1B723C8A005FE865 /* MMDrawerVisualState.h */,
-				182CDB2D1B723C8A005FE865 /* MMDrawerVisualState.m */,
-				182CDB2E1B723C8A005FE865 /* UIViewController+MMDrawerController.h */,
-				182CDB2F1B723C8A005FE865 /* UIViewController+MMDrawerController.m */,
-			);
-			path = MMDrawerController;
 			sourceTree = "<group>";
 		};
 		182CDB341B737F25005FE865 /* Image */ = {
@@ -516,6 +510,52 @@
 			path = Setting;
 			sourceTree = "<group>";
 		};
+		18FFE5A61B7F49AE004FBC82 /* SlideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				18FFE5A71B7F49AE004FBC82 /* Source */,
+			);
+			path = SlideMenu;
+			sourceTree = "<group>";
+		};
+		18FFE5A71B7F49AE004FBC82 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				18FFE5A81B7F49AE004FBC82 /* Animations */,
+				18FFE5B41B7F49AE004FBC82 /* Assets */,
+				18FFE5B71B7F49AE004FBC82 /* SlideNavigationController.h */,
+				18FFE5B81B7F49AE004FBC82 /* SlideNavigationController.m */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		18FFE5A81B7F49AE004FBC82 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				18FFE5A91B7F49AE004FBC82 /* SlideNavigationContorllerAnimator.h */,
+				18FFE5AA1B7F49AE004FBC82 /* SlideNavigationContorllerAnimatorFade.h */,
+				18FFE5AB1B7F49AE004FBC82 /* SlideNavigationContorllerAnimatorFade.m */,
+				18FFE5AC1B7F49AE004FBC82 /* SlideNavigationContorllerAnimatorScale.h */,
+				18FFE5AD1B7F49AE004FBC82 /* SlideNavigationContorllerAnimatorScale.m */,
+				18FFE5AE1B7F49AE004FBC82 /* SlideNavigationContorllerAnimatorScaleAndFade.h */,
+				18FFE5AF1B7F49AE004FBC82 /* SlideNavigationContorllerAnimatorScaleAndFade.m */,
+				18FFE5B01B7F49AE004FBC82 /* SlideNavigationContorllerAnimatorSlide.h */,
+				18FFE5B11B7F49AE004FBC82 /* SlideNavigationContorllerAnimatorSlide.m */,
+				18FFE5B21B7F49AE004FBC82 /* SlideNavigationContorllerAnimatorSlideAndFade.h */,
+				18FFE5B31B7F49AE004FBC82 /* SlideNavigationContorllerAnimatorSlideAndFade.m */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		18FFE5B41B7F49AE004FBC82 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				18FFE5B51B7F49AE004FBC82 /* menu-button.png */,
+				18FFE5B61B7F49AE004FBC82 /* menu-button@2x.png */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -607,6 +647,7 @@
 				182CDC0B1B772E59005FE865 /* 个人信息@3x.png in Resources */,
 				182CDC0C1B772E59005FE865 /* 退出登录.png in Resources */,
 				182CDB0F1B72286F005FE865 /* LaunchScreen.xib in Resources */,
+				18FFE5BF1B7F49AE004FBC82 /* menu-button@2x.png in Resources */,
 				182CDBF01B772312005FE865 /* portrait.png in Resources */,
 				182CDB4A1B737F50005FE865 /* 附近的人1@3x.png in Resources */,
 				182CDC0D1B772E59005FE865 /* 退出登录@2x.png in Resources */,
@@ -642,6 +683,7 @@
 				182CDC151B772E59005FE865 /* 我的消息.png in Resources */,
 				182CDB501B737F50005FE865 /* 男符号1@3x.png in Resources */,
 				182CDB5B1B737F65005FE865 /* 周杰伦.png in Resources */,
+				18FFE5BE1B7F49AE004FBC82 /* menu-button.png in Resources */,
 				182CDC171B772E59005FE865 /* 我的消息@3x.png in Resources */,
 				182CDB461B737F50005FE865 /* 爱心1@2x.png in Resources */,
 				182CDBA31B75C73C005FE865 /* homeDetailsTableViewCell.xib in Resources */,
@@ -662,20 +704,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				182CDB321B723C8A005FE865 /* MMDrawerVisualState.m in Sources */,
+				18FFE5B91B7F49AE004FBC82 /* SlideNavigationContorllerAnimatorFade.m in Sources */,
 				182CDB8B1B7392DB005FE865 /* MJRefreshAutoFooter.m in Sources */,
 				182CDB921B7392DB005FE865 /* MJRefreshAutoStateFooter.m in Sources */,
 				182CDB951B7392DB005FE865 /* MJRefreshBackStateFooter.m in Sources */,
-				182CDB331B723C8A005FE865 /* UIViewController+MMDrawerController.m in Sources */,
 				182CDC291B774070005FE865 /* nearbyViewController.m in Sources */,
 				182CDB981B7392DB005FE865 /* MJRefreshStateHeader.m in Sources */,
-				182CDB311B723C8A005FE865 /* MMDrawerController.m in Sources */,
 				182CDB9D1B7392DB005FE865 /* UIView+MJExtension.m in Sources */,
 				182CDC2A1B774070005FE865 /* settingViewController.m in Sources */,
+				18FFE5BA1B7F49AE004FBC82 /* SlideNavigationContorllerAnimatorScale.m in Sources */,
 				182CDB961B7392DB005FE865 /* MJRefreshGifHeader.m in Sources */,
+				18FFE5BD1B7F49AE004FBC82 /* SlideNavigationContorllerAnimatorSlideAndFade.m in Sources */,
 				182CDB9B1B7392DB005FE865 /* UIScrollView+MJExtension.m in Sources */,
 				182CDB941B7392DB005FE865 /* MJRefreshBackNormalFooter.m in Sources */,
-				182CDB301B723C8A005FE865 /* MMDrawerBarButtonItem.m in Sources */,
 				182CDB8D1B7392DB005FE865 /* MJRefreshComponent.m in Sources */,
 				182CDBA21B75C73C005FE865 /* homeDetailsTableViewCell.m in Sources */,
 				182CDB911B7392DB005FE865 /* MJRefreshAutoNormalFooter.m in Sources */,
@@ -685,10 +726,13 @@
 				182CDB011B72286F005FE865 /* main.m in Sources */,
 				182CDB8E1B7392DB005FE865 /* MJRefreshFooter.m in Sources */,
 				182CDB9C1B7392DB005FE865 /* UIScrollView+MJRefresh.m in Sources */,
+				18FFE5BB1B7F49AE004FBC82 /* SlideNavigationContorllerAnimatorScaleAndFade.m in Sources */,
+				18FFE5C01B7F49AE004FBC82 /* SlideNavigationController.m in Sources */,
 				182CDB9A1B7392DB005FE865 /* MJRefreshConst.m in Sources */,
 				182CDBAD1B7617A1005FE865 /* JScrollView+PageControl+AutoScroll.m in Sources */,
 				182CDB931B7392DB005FE865 /* MJRefreshBackGifFooter.m in Sources */,
 				182CDC2D1B77421F005FE865 /* profilesViewController.m in Sources */,
+				18FFE5BC1B7F49AE004FBC82 /* SlideNavigationContorllerAnimatorSlide.m in Sources */,
 				182CDB8F1B7392DB005FE865 /* MJRefreshHeader.m in Sources */,
 				182CDB971B7392DB005FE865 /* MJRefreshNormalHeader.m in Sources */,
 				182CDB9E1B7392DB005FE865 /* homeViewController.m in Sources */,
