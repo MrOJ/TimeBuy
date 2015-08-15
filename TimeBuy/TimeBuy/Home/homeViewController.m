@@ -18,7 +18,7 @@
 {
     [super viewWillAppear:YES];
     
-    //NSLog(@"home view appear");
+    NSLog(@"home view appear");
 }
 
 - (void)viewDidLoad {

@@ -11,6 +11,9 @@
 #import "UIViewController+MMDrawerController.h"
 #import "profilesViewController.h"
 
+#import "MMDrawerController+Subclass.h"
+#import "MMDrawerController.h"
+
 @interface settingViewController : UIViewController <UITableViewDataSource,UITableViewDelegate>
 {
     UIView *shadowView;

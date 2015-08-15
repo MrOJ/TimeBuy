@@ -114,7 +114,21 @@
         {
             profilesViewController *profilesVC = [[profilesViewController alloc] init];
             
-            [self.mm_drawerController setCenterViewController:profilesVC];
+            [self.navigationController pushViewController:profilesVC animated:YES];
+            UINavigationController * nav = [[UINavigationController alloc] initWithRootViewController:profilesVC];
+            
+            
+            [self.mm_drawerController
+             setCenterViewController:nav
+             withCloseAnimation:YES
+             completion:nil];
+            
+            
+            //[self.mm_drawerController setRestorationIdentifier:<#(NSString *)#>]
+            
+            //[self.mm_drawerController setCenterViewController:nav];
+            
+            //[self.mm_drawerController.navigationController pushViewController:profilesVC animated:YES];
         }
             break;
             
