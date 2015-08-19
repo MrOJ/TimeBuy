@@ -7,7 +7,7 @@
 //
 
 
-// 目前使用的库MMDrawerController
+// 目前使用的库iOS-Slide-Menu
 #import "AppDelegate.h"
 
 @interface AppDelegate ()

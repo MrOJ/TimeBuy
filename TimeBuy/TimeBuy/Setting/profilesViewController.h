@@ -9,9 +9,19 @@
 #import <UIKit/UIKit.h>
 #import "homeViewController.h"
 
-@interface profilesViewController : UIViewController
-{
-    UIButton *backButton;
-}
+#import "modifyNameViewController.h"
+#import "modifySexViewController.h"
+#import "modifyAgeViewController.h"
+#import "occupationViewController.h"
+#import "adressViewController.h"
+#import "telephoneViewController.h"
+#import "signatureViewController.h"
+
+@interface profilesViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+
+@property (nonatomic, strong) UITableView *myTableView;
+@property (nonatomic, strong) NSArray *titleArray1;
+@property (nonatomic, strong) NSArray *titleArray2;
+@property (nonatomic, strong) NSArray *detailsArray;
 
 @end

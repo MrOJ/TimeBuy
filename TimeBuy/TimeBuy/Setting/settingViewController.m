@@ -111,6 +111,7 @@
         case 0:
         {
             profilesViewController *vc = [[profilesViewController alloc] init];
+            //vc.navigationItem.title = @"我的信息";
             
             [[SlideNavigationController sharedInstance] popToRootAndSwitchToViewController:vc
                                                                      withSlideOutAnimation:YES
