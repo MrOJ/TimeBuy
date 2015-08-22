@@ -15,6 +15,7 @@
 @implementation telephoneViewController
 
 @synthesize telTableView;
+@synthesize telephone;
 
 - (void)viewDidLoad {
     [super viewDidLoad];

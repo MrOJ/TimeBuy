@@ -14,11 +14,13 @@
 
 @implementation modifyAgeViewController
 
+@synthesize age;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.navigationController.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],NSForegroundColorAttributeName,[UIFont systemFontOfSize:20.0f], NSFontAttributeName, nil];
-    self.navigationItem.title = @"性别";
+    self.navigationItem.title = @"年龄";
     
 }
 

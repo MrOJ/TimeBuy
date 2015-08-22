@@ -155,7 +155,7 @@
         switch (indexPath.row) {
             case 0:
             {
-                adressViewController *addressVC = [[adressViewController alloc] init];
+                addressViewController *addressVC = [[addressViewController alloc] init];
                 [self.navigationController pushViewController:addressVC animated:YES];
                 break;
             }

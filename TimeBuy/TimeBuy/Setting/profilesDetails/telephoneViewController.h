@@ -11,4 +11,7 @@
 @interface telephoneViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
 
 @property (strong, nonatomic) IBOutlet UITableView *telTableView;
+
+@property (strong, nonatomic) NSString *telephone;
+
 @end

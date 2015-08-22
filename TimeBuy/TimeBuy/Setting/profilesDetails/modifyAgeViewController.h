@@ -12,4 +12,7 @@
 
 @property (strong, nonatomic) IBOutlet UIView *ageView;
 @property (strong, nonatomic) IBOutlet UITextField *ageTextField;
+
+@property (strong, nonatomic) NSString *age;
+
 @end

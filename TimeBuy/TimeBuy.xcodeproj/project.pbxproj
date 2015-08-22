@@ -91,8 +91,8 @@
 		18A9B8221B822106000D8A3A /* modifyAgeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A9B8201B822106000D8A3A /* modifyAgeViewController.xib */; };
 		18A9B8261B849605000D8A3A /* occupationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A9B8241B849605000D8A3A /* occupationViewController.m */; };
 		18A9B8271B849605000D8A3A /* occupationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A9B8251B849605000D8A3A /* occupationViewController.xib */; };
-		18A9B82B1B849693000D8A3A /* adressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A9B8291B849693000D8A3A /* adressViewController.m */; };
-		18A9B82C1B849693000D8A3A /* adressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A9B82A1B849693000D8A3A /* adressViewController.xib */; };
+		18A9B82B1B849693000D8A3A /* addressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A9B8291B849693000D8A3A /* addressViewController.m */; };
+		18A9B82C1B849693000D8A3A /* addressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A9B82A1B849693000D8A3A /* addressViewController.xib */; };
 		18A9B8301B849971000D8A3A /* telephoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A9B82E1B849971000D8A3A /* telephoneViewController.m */; };
 		18A9B8311B849971000D8A3A /* telephoneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A9B82F1B849971000D8A3A /* telephoneViewController.xib */; };
 		18A9B8351B849AFB000D8A3A /* signatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A9B8331B849AFB000D8A3A /* signatureViewController.m */; };
@@ -236,9 +236,9 @@
 		18A9B8231B849605000D8A3A /* occupationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = occupationViewController.h; sourceTree = "<group>"; };
 		18A9B8241B849605000D8A3A /* occupationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = occupationViewController.m; sourceTree = "<group>"; };
 		18A9B8251B849605000D8A3A /* occupationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = occupationViewController.xib; sourceTree = "<group>"; };
-		18A9B8281B849693000D8A3A /* adressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = adressViewController.h; sourceTree = "<group>"; };
-		18A9B8291B849693000D8A3A /* adressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = adressViewController.m; sourceTree = "<group>"; };
-		18A9B82A1B849693000D8A3A /* adressViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = adressViewController.xib; sourceTree = "<group>"; };
+		18A9B8281B849693000D8A3A /* addressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = addressViewController.h; sourceTree = "<group>"; };
+		18A9B8291B849693000D8A3A /* addressViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = addressViewController.m; sourceTree = "<group>"; };
+		18A9B82A1B849693000D8A3A /* addressViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = addressViewController.xib; sourceTree = "<group>"; };
 		18A9B82D1B849971000D8A3A /* telephoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = telephoneViewController.h; sourceTree = "<group>"; };
 		18A9B82E1B849971000D8A3A /* telephoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = telephoneViewController.m; sourceTree = "<group>"; };
 		18A9B82F1B849971000D8A3A /* telephoneViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = telephoneViewController.xib; sourceTree = "<group>"; };
@@ -561,9 +561,9 @@
 				18A9B8231B849605000D8A3A /* occupationViewController.h */,
 				18A9B8241B849605000D8A3A /* occupationViewController.m */,
 				18A9B8251B849605000D8A3A /* occupationViewController.xib */,
-				18A9B8281B849693000D8A3A /* adressViewController.h */,
-				18A9B8291B849693000D8A3A /* adressViewController.m */,
-				18A9B82A1B849693000D8A3A /* adressViewController.xib */,
+				18A9B8281B849693000D8A3A /* addressViewController.h */,
+				18A9B8291B849693000D8A3A /* addressViewController.m */,
+				18A9B82A1B849693000D8A3A /* addressViewController.xib */,
 				18A9B82D1B849971000D8A3A /* telephoneViewController.h */,
 				18A9B82E1B849971000D8A3A /* telephoneViewController.m */,
 				18A9B82F1B849971000D8A3A /* telephoneViewController.xib */,
@@ -702,7 +702,7 @@
 			files = (
 				182CDC0E1B772E59005FE865 /* 退出登录@3x.png in Resources */,
 				182CDB0A1B72286F005FE865 /* Main.storyboard in Resources */,
-				18A9B82C1B849693000D8A3A /* adressViewController.xib in Resources */,
+				18A9B82C1B849693000D8A3A /* addressViewController.xib in Resources */,
 				18A9B8271B849605000D8A3A /* occupationViewController.xib in Resources */,
 				182CDB4C1B737F50005FE865 /* 个人设置1@2x.png in Resources */,
 				182CDB991B7392DB005FE865 /* MJRefresh.bundle in Resources */,
@@ -789,7 +789,7 @@
 				182CDB961B7392DB005FE865 /* MJRefreshGifHeader.m in Sources */,
 				18A9B8211B822106000D8A3A /* modifyAgeViewController.m in Sources */,
 				18FFE5BD1B7F49AE004FBC82 /* SlideNavigationContorllerAnimatorSlideAndFade.m in Sources */,
-				18A9B82B1B849693000D8A3A /* adressViewController.m in Sources */,
+				18A9B82B1B849693000D8A3A /* addressViewController.m in Sources */,
 				18A9B8351B849AFB000D8A3A /* signatureViewController.m in Sources */,
 				182CDB9B1B7392DB005FE865 /* UIScrollView+MJExtension.m in Sources */,
 				182CDB941B7392DB005FE865 /* MJRefreshBackNormalFooter.m in Sources */,

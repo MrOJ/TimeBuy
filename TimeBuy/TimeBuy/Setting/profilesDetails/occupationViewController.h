@@ -10,4 +10,6 @@
 
 @interface occupationViewController : UIViewController
 
+@property (nonatomic, strong) NSString *occupation;
+
 @end

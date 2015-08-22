@@ -6,13 +6,15 @@
 //  Copyright (c) 2015年 Mr.OJ. All rights reserved.
 //
 
-#import "adressViewController.h"
+#import "addressViewController.h"
 
-@interface adressViewController ()
+@interface addressViewController ()
 
 @end
 
-@implementation adressViewController
+@implementation addressViewController
+
+@synthesize address;
 
 - (void)viewDidLoad {
     [super viewDidLoad];

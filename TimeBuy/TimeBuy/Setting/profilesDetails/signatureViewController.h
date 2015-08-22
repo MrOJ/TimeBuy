@@ -10,4 +10,6 @@
 
 @interface signatureViewController : UIViewController
 
+@property (strong, nonatomic) NSString *signature;
+
 @end

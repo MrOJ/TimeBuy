@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface adressViewController : UIViewController
+@interface addressViewController : UIViewController
+
+@property (nonatomic, strong) NSString *address;
 
 @end
