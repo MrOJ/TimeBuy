@@ -81,9 +81,6 @@
 		18A9B8311B849971000D8A3A /* telephoneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A9B82F1B849971000D8A3A /* telephoneViewController.xib */; };
 		18A9B8351B849AFB000D8A3A /* signatureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A9B8331B849AFB000D8A3A /* signatureViewController.m */; };
 		18A9B8361B849AFB000D8A3A /* signatureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18A9B8341B849AFB000D8A3A /* signatureViewController.xib */; };
-		18FD06CD1B8DC89F006545AC /* 背景.png in Resources */ = {isa = PBXBuildFile; fileRef = 18FD06A21B8DC89F006545AC /* 背景.png */; };
-		18FD06CE1B8DC89F006545AC /* 背景@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18FD06A31B8DC89F006545AC /* 背景@2x.png */; };
-		18FD06CF1B8DC89F006545AC /* 背景@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18FD06A41B8DC89F006545AC /* 背景@3x.png */; };
 		18FD06D01B8DC89F006545AC /* 蔡依林.png in Resources */ = {isa = PBXBuildFile; fileRef = 18FD06A51B8DC89F006545AC /* 蔡依林.png */; };
 		18FD06D31B8DC89F006545AC /* 高挺.png in Resources */ = {isa = PBXBuildFile; fileRef = 18FD06A81B8DC89F006545AC /* 高挺.png */; };
 		18FD06D41B8DC89F006545AC /* 个人设置1.png in Resources */ = {isa = PBXBuildFile; fileRef = 18FD06A91B8DC89F006545AC /* 个人设置1.png */; };
@@ -103,9 +100,6 @@
 		18FD06EE1B8DC89F006545AC /* QQ1.png in Resources */ = {isa = PBXBuildFile; fileRef = 18FD06C31B8DC89F006545AC /* QQ1.png */; };
 		18FD06EF1B8DC89F006545AC /* QQ1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18FD06C41B8DC89F006545AC /* QQ1@2x.png */; };
 		18FD06F01B8DC89F006545AC /* QQ1@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18FD06C51B8DC89F006545AC /* QQ1@3x.png */; };
-		18FD06F11B8DC89F006545AC /* timebuy1.png in Resources */ = {isa = PBXBuildFile; fileRef = 18FD06C61B8DC89F006545AC /* timebuy1.png */; };
-		18FD06F21B8DC89F006545AC /* timebuy1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18FD06C71B8DC89F006545AC /* timebuy1@2x.png */; };
-		18FD06F31B8DC89F006545AC /* timebuy1@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18FD06C81B8DC89F006545AC /* timebuy1@3x.png */; };
 		18FD06F41B8DC89F006545AC /* zisu10.1.png in Resources */ = {isa = PBXBuildFile; fileRef = 18FD06C91B8DC89F006545AC /* zisu10.1.png */; };
 		18FD06FD1B8DCE96006545AC /* showImg3.png in Resources */ = {isa = PBXBuildFile; fileRef = 18FD06F91B8DCE96006545AC /* showImg3.png */; };
 		18FD06FE1B8DCE96006545AC /* showImg4.png in Resources */ = {isa = PBXBuildFile; fileRef = 18FD06FA1B8DCE96006545AC /* showImg4.png */; };
@@ -136,6 +130,30 @@
 		18FD07301B8E8F9F006545AC /* qiuzhu.png in Resources */ = {isa = PBXBuildFile; fileRef = 18FD071B1B8E8F9F006545AC /* qiuzhu.png */; };
 		18FD07311B8E8F9F006545AC /* qiuzhu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18FD071C1B8E8F9F006545AC /* qiuzhu@2x.png */; };
 		18FD07321B8E8F9F006545AC /* qiuzhu@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18FD071D1B8E8F9F006545AC /* qiuzhu@3x.png */; };
+		18FD07361B8F1E68006545AC /* registerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FD07341B8F1E68006545AC /* registerViewController.m */; };
+		18FD07371B8F1E68006545AC /* registerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18FD07351B8F1E68006545AC /* registerViewController.xib */; };
+		18FD073B1B8F226B006545AC /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 18FD07381B8F226B006545AC /* back.png */; };
+		18FD073C1B8F226B006545AC /* back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18FD07391B8F226B006545AC /* back@2x.png */; };
+		18FD073D1B8F226B006545AC /* back@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18FD073A1B8F226B006545AC /* back@3x.png */; };
+		18FD07411B8F2F63006545AC /* forgetPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FD073F1B8F2F63006545AC /* forgetPwdViewController.m */; };
+		18FD07421B8F2F63006545AC /* forgetPwdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18FD07401B8F2F63006545AC /* forgetPwdViewController.xib */; };
+		18FD074A1B8F3484006545AC /* 背景.png in Resources */ = {isa = PBXBuildFile; fileRef = 18FD07471B8F3484006545AC /* 背景.png */; };
+		18FD074B1B8F3484006545AC /* 背景@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18FD07481B8F3484006545AC /* 背景@2x.png */; };
+		18FD074C1B8F3484006545AC /* 背景@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18FD07491B8F3484006545AC /* 背景@3x.png */; };
+		18FD07561B8F3AE5006545AC /* timebuy1.png in Resources */ = {isa = PBXBuildFile; fileRef = 18FD07531B8F3AE5006545AC /* timebuy1.png */; };
+		18FD07571B8F3AE5006545AC /* timebuy1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18FD07541B8F3AE5006545AC /* timebuy1@2x.png */; };
+		18FD07581B8F3AE5006545AC /* timebuy1@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18FD07551B8F3AE5006545AC /* timebuy1@3x.png */; };
+		18FD07791B8F449F006545AC /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FD07781B8F449F006545AC /* MBProgressHUD.m */; };
+		18FD077E1B8F47CF006545AC /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FD077D1B8F47CF006545AC /* NSString+MD5.m */; };
+		18FD07931B8F49A6006545AC /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FD07811B8F49A6006545AC /* AFHTTPRequestOperation.m */; };
+		18FD07941B8F49A6006545AC /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FD07831B8F49A6006545AC /* AFHTTPRequestOperationManager.m */; };
+		18FD07951B8F49A6006545AC /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FD07851B8F49A6006545AC /* AFHTTPSessionManager.m */; };
+		18FD07961B8F49A6006545AC /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FD07881B8F49A6006545AC /* AFNetworkReachabilityManager.m */; };
+		18FD07971B8F49A6006545AC /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FD078A1B8F49A6006545AC /* AFSecurityPolicy.m */; };
+		18FD07981B8F49A6006545AC /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FD078C1B8F49A6006545AC /* AFURLConnectionOperation.m */; };
+		18FD07991B8F49A6006545AC /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FD078E1B8F49A6006545AC /* AFURLRequestSerialization.m */; };
+		18FD079A1B8F49A6006545AC /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FD07901B8F49A6006545AC /* AFURLResponseSerialization.m */; };
+		18FD079B1B8F49A6006545AC /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FD07921B8F49A6006545AC /* AFURLSessionManager.m */; };
 		18FFE5B91B7F49AE004FBC82 /* SlideNavigationContorllerAnimatorFade.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FFE5AB1B7F49AE004FBC82 /* SlideNavigationContorllerAnimatorFade.m */; };
 		18FFE5BA1B7F49AE004FBC82 /* SlideNavigationContorllerAnimatorScale.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FFE5AD1B7F49AE004FBC82 /* SlideNavigationContorllerAnimatorScale.m */; };
 		18FFE5BB1B7F49AE004FBC82 /* SlideNavigationContorllerAnimatorScaleAndFade.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FFE5AF1B7F49AE004FBC82 /* SlideNavigationContorllerAnimatorScaleAndFade.m */; };
@@ -270,9 +288,6 @@
 		18A9B8321B849AFB000D8A3A /* signatureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = signatureViewController.h; sourceTree = "<group>"; };
 		18A9B8331B849AFB000D8A3A /* signatureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = signatureViewController.m; sourceTree = "<group>"; };
 		18A9B8341B849AFB000D8A3A /* signatureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = signatureViewController.xib; sourceTree = "<group>"; };
-		18FD06A21B8DC89F006545AC /* 背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "背景.png"; sourceTree = "<group>"; };
-		18FD06A31B8DC89F006545AC /* 背景@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "背景@2x.png"; sourceTree = "<group>"; };
-		18FD06A41B8DC89F006545AC /* 背景@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "背景@3x.png"; sourceTree = "<group>"; };
 		18FD06A51B8DC89F006545AC /* 蔡依林.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "蔡依林.png"; sourceTree = "<group>"; };
 		18FD06A81B8DC89F006545AC /* 高挺.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "高挺.png"; sourceTree = "<group>"; };
 		18FD06A91B8DC89F006545AC /* 个人设置1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "个人设置1.png"; sourceTree = "<group>"; };
@@ -292,9 +307,6 @@
 		18FD06C31B8DC89F006545AC /* QQ1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QQ1.png; sourceTree = "<group>"; };
 		18FD06C41B8DC89F006545AC /* QQ1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QQ1@2x.png"; sourceTree = "<group>"; };
 		18FD06C51B8DC89F006545AC /* QQ1@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QQ1@3x.png"; sourceTree = "<group>"; };
-		18FD06C61B8DC89F006545AC /* timebuy1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = timebuy1.png; sourceTree = "<group>"; };
-		18FD06C71B8DC89F006545AC /* timebuy1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "timebuy1@2x.png"; sourceTree = "<group>"; };
-		18FD06C81B8DC89F006545AC /* timebuy1@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "timebuy1@3x.png"; sourceTree = "<group>"; };
 		18FD06C91B8DC89F006545AC /* zisu10.1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zisu10.1.png; sourceTree = "<group>"; };
 		18FD06F91B8DCE96006545AC /* showImg3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = showImg3.png; sourceTree = "<group>"; };
 		18FD06FA1B8DCE96006545AC /* showImg4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = showImg4.png; sourceTree = "<group>"; };
@@ -325,6 +337,44 @@
 		18FD071B1B8E8F9F006545AC /* qiuzhu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qiuzhu.png; sourceTree = "<group>"; };
 		18FD071C1B8E8F9F006545AC /* qiuzhu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qiuzhu@2x.png"; sourceTree = "<group>"; };
 		18FD071D1B8E8F9F006545AC /* qiuzhu@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qiuzhu@3x.png"; sourceTree = "<group>"; };
+		18FD07331B8F1E68006545AC /* registerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = registerViewController.h; sourceTree = "<group>"; };
+		18FD07341B8F1E68006545AC /* registerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = registerViewController.m; sourceTree = "<group>"; };
+		18FD07351B8F1E68006545AC /* registerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = registerViewController.xib; sourceTree = "<group>"; };
+		18FD07381B8F226B006545AC /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		18FD07391B8F226B006545AC /* back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@2x.png"; sourceTree = "<group>"; };
+		18FD073A1B8F226B006545AC /* back@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back@3x.png"; sourceTree = "<group>"; };
+		18FD073E1B8F2F63006545AC /* forgetPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = forgetPwdViewController.h; sourceTree = "<group>"; };
+		18FD073F1B8F2F63006545AC /* forgetPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = forgetPwdViewController.m; sourceTree = "<group>"; };
+		18FD07401B8F2F63006545AC /* forgetPwdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = forgetPwdViewController.xib; sourceTree = "<group>"; };
+		18FD07471B8F3484006545AC /* 背景.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "背景.png"; sourceTree = "<group>"; };
+		18FD07481B8F3484006545AC /* 背景@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "背景@2x.png"; sourceTree = "<group>"; };
+		18FD07491B8F3484006545AC /* 背景@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "背景@3x.png"; sourceTree = "<group>"; };
+		18FD07531B8F3AE5006545AC /* timebuy1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = timebuy1.png; sourceTree = "<group>"; };
+		18FD07541B8F3AE5006545AC /* timebuy1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "timebuy1@2x.png"; sourceTree = "<group>"; };
+		18FD07551B8F3AE5006545AC /* timebuy1@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "timebuy1@3x.png"; sourceTree = "<group>"; };
+		18FD07771B8F449F006545AC /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		18FD07781B8F449F006545AC /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		18FD077C1B8F47CF006545AC /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
+		18FD077D1B8F47CF006545AC /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
+		18FD07801B8F49A6006545AC /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		18FD07811B8F49A6006545AC /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		18FD07821B8F49A6006545AC /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
+		18FD07831B8F49A6006545AC /* AFHTTPRequestOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperationManager.m; sourceTree = "<group>"; };
+		18FD07841B8F49A6006545AC /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		18FD07851B8F49A6006545AC /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
+		18FD07861B8F49A6006545AC /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		18FD07871B8F49A6006545AC /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		18FD07881B8F49A6006545AC /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		18FD07891B8F49A6006545AC /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
+		18FD078A1B8F49A6006545AC /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
+		18FD078B1B8F49A6006545AC /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		18FD078C1B8F49A6006545AC /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		18FD078D1B8F49A6006545AC /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLRequestSerialization.h; sourceTree = "<group>"; };
+		18FD078E1B8F49A6006545AC /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLRequestSerialization.m; sourceTree = "<group>"; };
+		18FD078F1B8F49A6006545AC /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLResponseSerialization.h; sourceTree = "<group>"; };
+		18FD07901B8F49A6006545AC /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
+		18FD07911B8F49A6006545AC /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
+		18FD07921B8F49A6006545AC /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
 		18FFE5A91B7F49AE004FBC82 /* SlideNavigationContorllerAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideNavigationContorllerAnimator.h; sourceTree = "<group>"; };
 		18FFE5AA1B7F49AE004FBC82 /* SlideNavigationContorllerAnimatorFade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SlideNavigationContorllerAnimatorFade.h; sourceTree = "<group>"; };
 		18FFE5AB1B7F49AE004FBC82 /* SlideNavigationContorllerAnimatorFade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SlideNavigationContorllerAnimatorFade.m; sourceTree = "<group>"; };
@@ -390,6 +440,8 @@
 		182CDAFD1B72286F005FE865 /* TimeBuy */ = {
 			isa = PBXGroup;
 			children = (
+				18FD077F1B8F49A6006545AC /* AFNetworking */,
+				18FD07761B8F448A006545AC /* MBProgressHUD */,
 				181231731B8B498F007E06B7 /* userConfiguration */,
 				18FFE5A61B7F49AE004FBC82 /* SlideMenu */,
 				182CDB021B72286F005FE865 /* AppDelegate.h */,
@@ -435,6 +487,7 @@
 		182CDB251B723C7D005FE865 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				18FD077B1B8F47CF006545AC /* MD5 */,
 				182CDBAA1B7617A1005FE865 /* PageControl+ScrollView */,
 				182CDB5C1B7392DB005FE865 /* MJRefresh */,
 				182CDB891B7392DB005FE865 /* homeViewController.h */,
@@ -445,6 +498,12 @@
 				181231491B8B460A007E06B7 /* loginViewController.h */,
 				1812314A1B8B460A007E06B7 /* loginViewController.m */,
 				1812314B1B8B460A007E06B7 /* loginViewController.xib */,
+				18FD07331B8F1E68006545AC /* registerViewController.h */,
+				18FD07341B8F1E68006545AC /* registerViewController.m */,
+				18FD07351B8F1E68006545AC /* registerViewController.xib */,
+				18FD073E1B8F2F63006545AC /* forgetPwdViewController.h */,
+				18FD073F1B8F2F63006545AC /* forgetPwdViewController.m */,
+				18FD07401B8F2F63006545AC /* forgetPwdViewController.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -461,19 +520,22 @@
 		182CDB351B737F25005FE865 /* home */ = {
 			isa = PBXGroup;
 			children = (
+				18FD07471B8F3484006545AC /* 背景.png */,
+				18FD07481B8F3484006545AC /* 背景@2x.png */,
+				18FD07491B8F3484006545AC /* 背景@3x.png */,
 				18FD07011B8DD567006545AC /* 1首页底图.png */,
 				18FD06F91B8DCE96006545AC /* showImg3.png */,
 				18FD06FA1B8DCE96006545AC /* showImg4.png */,
 				18FD06FB1B8DCE96006545AC /* showImg2.png */,
 				18FD06FC1B8DCE96006545AC /* showImg.png */,
-				18FD06A21B8DC89F006545AC /* 背景.png */,
-				18FD06A31B8DC89F006545AC /* 背景@2x.png */,
-				18FD06A41B8DC89F006545AC /* 背景@3x.png */,
 				18FD06A51B8DC89F006545AC /* 蔡依林.png */,
 				18FD06A81B8DC89F006545AC /* 高挺.png */,
 				18FD07091B8E8F9F006545AC /* 爱心1.png */,
 				18FD070A1B8E8F9F006545AC /* 爱心1@2x.png */,
 				18FD070B1B8E8F9F006545AC /* 爱心1@3x.png */,
+				18FD07381B8F226B006545AC /* back.png */,
+				18FD07391B8F226B006545AC /* back@2x.png */,
+				18FD073A1B8F226B006545AC /* back@3x.png */,
 				18FD070C1B8E8F9F006545AC /* 男符号1.png */,
 				18FD070D1B8E8F9F006545AC /* 男符号1@2x.png */,
 				18FD070E1B8E8F9F006545AC /* 男符号1@3x.png */,
@@ -512,9 +574,9 @@
 				18FD06C31B8DC89F006545AC /* QQ1.png */,
 				18FD06C41B8DC89F006545AC /* QQ1@2x.png */,
 				18FD06C51B8DC89F006545AC /* QQ1@3x.png */,
-				18FD06C61B8DC89F006545AC /* timebuy1.png */,
-				18FD06C71B8DC89F006545AC /* timebuy1@2x.png */,
-				18FD06C81B8DC89F006545AC /* timebuy1@3x.png */,
+				18FD07531B8F3AE5006545AC /* timebuy1.png */,
+				18FD07541B8F3AE5006545AC /* timebuy1@2x.png */,
+				18FD07551B8F3AE5006545AC /* timebuy1@3x.png */,
 				18FD06C91B8DC89F006545AC /* zisu10.1.png */,
 			);
 			path = home;
@@ -703,6 +765,50 @@
 			path = profilesDetails;
 			sourceTree = "<group>";
 		};
+		18FD07761B8F448A006545AC /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				18FD07771B8F449F006545AC /* MBProgressHUD.h */,
+				18FD07781B8F449F006545AC /* MBProgressHUD.m */,
+			);
+			name = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		18FD077B1B8F47CF006545AC /* MD5 */ = {
+			isa = PBXGroup;
+			children = (
+				18FD077C1B8F47CF006545AC /* NSString+MD5.h */,
+				18FD077D1B8F47CF006545AC /* NSString+MD5.m */,
+			);
+			path = MD5;
+			sourceTree = "<group>";
+		};
+		18FD077F1B8F49A6006545AC /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				18FD07801B8F49A6006545AC /* AFHTTPRequestOperation.h */,
+				18FD07811B8F49A6006545AC /* AFHTTPRequestOperation.m */,
+				18FD07821B8F49A6006545AC /* AFHTTPRequestOperationManager.h */,
+				18FD07831B8F49A6006545AC /* AFHTTPRequestOperationManager.m */,
+				18FD07841B8F49A6006545AC /* AFHTTPSessionManager.h */,
+				18FD07851B8F49A6006545AC /* AFHTTPSessionManager.m */,
+				18FD07861B8F49A6006545AC /* AFNetworking.h */,
+				18FD07871B8F49A6006545AC /* AFNetworkReachabilityManager.h */,
+				18FD07881B8F49A6006545AC /* AFNetworkReachabilityManager.m */,
+				18FD07891B8F49A6006545AC /* AFSecurityPolicy.h */,
+				18FD078A1B8F49A6006545AC /* AFSecurityPolicy.m */,
+				18FD078B1B8F49A6006545AC /* AFURLConnectionOperation.h */,
+				18FD078C1B8F49A6006545AC /* AFURLConnectionOperation.m */,
+				18FD078D1B8F49A6006545AC /* AFURLRequestSerialization.h */,
+				18FD078E1B8F49A6006545AC /* AFURLRequestSerialization.m */,
+				18FD078F1B8F49A6006545AC /* AFURLResponseSerialization.h */,
+				18FD07901B8F49A6006545AC /* AFURLResponseSerialization.m */,
+				18FD07911B8F49A6006545AC /* AFURLSessionManager.h */,
+				18FD07921B8F49A6006545AC /* AFURLSessionManager.m */,
+			);
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
 		18FFE5A61B7F49AE004FBC82 /* SlideMenu */ = {
 			isa = PBXGroup;
 			children = (
@@ -831,17 +937,19 @@
 			files = (
 				18FD07061B8DF6F7006545AC /* 附近的人1.png in Resources */,
 				18FD06E51B8DC89F006545AC /* 周杰伦.png in Resources */,
+				18FD074C1B8F3484006545AC /* 背景@3x.png in Resources */,
 				18FD06FE1B8DCE96006545AC /* showImg4.png in Resources */,
-				18FD06CD1B8DC89F006545AC /* 背景.png in Resources */,
 				182CDC0E1B772E59005FE865 /* 退出登录@3x.png in Resources */,
 				182CDB0A1B72286F005FE865 /* Main.storyboard in Resources */,
 				18A9B82C1B849693000D8A3A /* addressViewController.xib in Resources */,
 				18FD07261B8E8F9F006545AC /* 女@3x.png in Resources */,
 				18FD07291B8E8F9F006545AC /* 组局(1)@3x.png in Resources */,
+				18FD07581B8F3AE5006545AC /* timebuy1@3x.png in Resources */,
 				18A9B8271B849605000D8A3A /* occupationViewController.xib in Resources */,
 				18FD072A1B8E8F9F006545AC /* gongyi.png in Resources */,
 				18FD06FF1B8DCE96006545AC /* showImg2.png in Resources */,
 				18FD06D31B8DC89F006545AC /* 高挺.png in Resources */,
+				18FD074A1B8F3484006545AC /* 背景.png in Resources */,
 				182CDB991B7392DB005FE865 /* MJRefresh.bundle in Resources */,
 				18FD06DD1B8DC89F006545AC /* 微信1@2x.png in Resources */,
 				18FD06DE1B8DC89F006545AC /* 微信1@3x.png in Resources */,
@@ -849,14 +957,13 @@
 				18FD07301B8E8F9F006545AC /* qiuzhu.png in Resources */,
 				182CDC0F1B772E59005FE865 /* 我的发布.png in Resources */,
 				18FD07081B8DF6F7006545AC /* 附近的人1@3x.png in Resources */,
+				18FD07561B8F3AE5006545AC /* timebuy1.png in Resources */,
 				182CDC191B772E59005FE865 /* 我的足迹@2x.png in Resources */,
 				18FD07281B8E8F9F006545AC /* 组局(1)@2x.png in Resources */,
 				18FD06D41B8DC89F006545AC /* 个人设置1.png in Resources */,
 				182CDC0B1B772E59005FE865 /* 个人信息@3x.png in Resources */,
 				18FD072B1B8E8F9F006545AC /* gongyi@2x.png in Resources */,
-				18FD06F31B8DC89F006545AC /* timebuy1@3x.png in Resources */,
 				1812314D1B8B460A007E06B7 /* loginViewController.xib in Resources */,
-				18FD06CF1B8DC89F006545AC /* 背景@3x.png in Resources */,
 				182CDC0C1B772E59005FE865 /* 退出登录.png in Resources */,
 				18FD06D01B8DC89F006545AC /* 蔡依林.png in Resources */,
 				18FD06FD1B8DCE96006545AC /* showImg3.png in Resources */,
@@ -866,21 +973,24 @@
 				18FD06EF1B8DC89F006545AC /* QQ1@2x.png in Resources */,
 				18FFE5BF1B7F49AE004FBC82 /* menu-button@2x.png in Resources */,
 				18FD072D1B8E8F9F006545AC /* paotui.png in Resources */,
+				18FD07421B8F2F63006545AC /* forgetPwdViewController.xib in Resources */,
 				18FD071F1B8E8F9F006545AC /* 爱心1@2x.png in Resources */,
 				182CDBF01B772312005FE865 /* portrait.png in Resources */,
 				18A9B81D1B80B594000D8A3A /* modifySexViewController.xib in Resources */,
+				18FD073B1B8F226B006545AC /* back.png in Resources */,
 				18FD071E1B8E8F9F006545AC /* 爱心1.png in Resources */,
 				18A9B8311B849971000D8A3A /* telephoneViewController.xib in Resources */,
 				182CDC0D1B772E59005FE865 /* 退出登录@2x.png in Resources */,
+				18FD07571B8F3AE5006545AC /* timebuy1@2x.png in Resources */,
 				18FD06DC1B8DC89F006545AC /* 微信1.png in Resources */,
 				18FD07211B8E8F9F006545AC /* 男符号1.png in Resources */,
 				182CDB0C1B72286F005FE865 /* Images.xcassets in Resources */,
 				182CDC091B772E59005FE865 /* 个人信息.png in Resources */,
 				182CDC1E1B772E59005FE865 /* 支付方式.png in Resources */,
+				18FD074B1B8F3484006545AC /* 背景@2x.png in Resources */,
 				182CDC1A1B772E59005FE865 /* 我的足迹@3x.png in Resources */,
 				18FD06E01B8DC89F006545AC /* 新浪1@2x.png in Resources */,
 				18FD07021B8DD567006545AC /* 1首页底图.png in Resources */,
-				18FD06CE1B8DC89F006545AC /* 背景@2x.png in Resources */,
 				18FD07001B8DCE96006545AC /* showImg.png in Resources */,
 				182CDC1B1B772E59005FE865 /* 系统设置.png in Resources */,
 				182CDC1D1B772E59005FE865 /* 系统设置@3x.png in Resources */,
@@ -901,19 +1011,20 @@
 				18A9B8221B822106000D8A3A /* modifyAgeViewController.xib in Resources */,
 				18FD072C1B8E8F9F006545AC /* gongyi@3x.png in Resources */,
 				18FD06D51B8DC89F006545AC /* 个人设置1@2x.png in Resources */,
+				18FD073C1B8F226B006545AC /* back@2x.png in Resources */,
 				18FD06F01B8DC89F006545AC /* QQ1@3x.png in Resources */,
 				18FD06E21B8DC89F006545AC /* 支付宝1.png in Resources */,
-				18FD06F11B8DC89F006545AC /* timebuy1.png in Resources */,
 				18FD06E11B8DC89F006545AC /* 新浪1@3x.png in Resources */,
 				18FD07321B8E8F9F006545AC /* qiuzhu@3x.png in Resources */,
 				182CDC101B772E59005FE865 /* 我的发布@2x.png in Resources */,
+				18FD073D1B8F226B006545AC /* back@3x.png in Resources */,
 				18FD06DF1B8DC89F006545AC /* 新浪1.png in Resources */,
+				18FD07371B8F1E68006545AC /* registerViewController.xib in Resources */,
 				18FD072F1B8E8F9F006545AC /* paotui@3x.png in Resources */,
 				182CDC1F1B772E59005FE865 /* 支付方式@2x.png in Resources */,
 				18FD06E41B8DC89F006545AC /* 支付宝1@3x.png in Resources */,
 				18A9B8361B849AFB000D8A3A /* signatureViewController.xib in Resources */,
 				182CDC141B772E59005FE865 /* 我的日程@3x.png in Resources */,
-				18FD06F21B8DC89F006545AC /* timebuy1@2x.png in Resources */,
 				18FD06DB1B8DC89F006545AC /* 推送.png in Resources */,
 				18FD06D61B8DC89F006545AC /* 个人设置1@3x.png in Resources */,
 				182CDC151B772E59005FE865 /* 我的消息.png in Resources */,
@@ -943,9 +1054,11 @@
 			files = (
 				18FFE5B91B7F49AE004FBC82 /* SlideNavigationContorllerAnimatorFade.m in Sources */,
 				18A9B8171B80B353000D8A3A /* modifyNameViewController.m in Sources */,
+				18FD07931B8F49A6006545AC /* AFHTTPRequestOperation.m in Sources */,
 				181231761B8B49BC007E06B7 /* userConfiguration.m in Sources */,
 				182CDB8B1B7392DB005FE865 /* MJRefreshAutoFooter.m in Sources */,
 				182CDB921B7392DB005FE865 /* MJRefreshAutoStateFooter.m in Sources */,
+				18FD07971B8F49A6006545AC /* AFSecurityPolicy.m in Sources */,
 				182CDB951B7392DB005FE865 /* MJRefreshBackStateFooter.m in Sources */,
 				182CDC291B774070005FE865 /* nearbyViewController.m in Sources */,
 				182CDB981B7392DB005FE865 /* MJRefreshStateHeader.m in Sources */,
@@ -956,10 +1069,14 @@
 				182CDB961B7392DB005FE865 /* MJRefreshGifHeader.m in Sources */,
 				18A9B8211B822106000D8A3A /* modifyAgeViewController.m in Sources */,
 				18FFE5BD1B7F49AE004FBC82 /* SlideNavigationContorllerAnimatorSlideAndFade.m in Sources */,
+				18FD07411B8F2F63006545AC /* forgetPwdViewController.m in Sources */,
 				18A9B82B1B849693000D8A3A /* addressViewController.m in Sources */,
+				18FD07991B8F49A6006545AC /* AFURLRequestSerialization.m in Sources */,
 				18A9B8351B849AFB000D8A3A /* signatureViewController.m in Sources */,
 				1812314C1B8B460A007E06B7 /* loginViewController.m in Sources */,
+				18FD079A1B8F49A6006545AC /* AFURLResponseSerialization.m in Sources */,
 				182CDB9B1B7392DB005FE865 /* UIScrollView+MJExtension.m in Sources */,
+				18FD07791B8F449F006545AC /* MBProgressHUD.m in Sources */,
 				182CDB941B7392DB005FE865 /* MJRefreshBackNormalFooter.m in Sources */,
 				182CDB8D1B7392DB005FE865 /* MJRefreshComponent.m in Sources */,
 				182CDBA21B75C73C005FE865 /* homeDetailsTableViewCell.m in Sources */,
@@ -968,6 +1085,8 @@
 				182CDB901B7392DB005FE865 /* MJRefreshAutoGifFooter.m in Sources */,
 				182CDB8C1B7392DB005FE865 /* MJRefreshBackFooter.m in Sources */,
 				182CDB011B72286F005FE865 /* main.m in Sources */,
+				18FD07361B8F1E68006545AC /* registerViewController.m in Sources */,
+				18FD07961B8F49A6006545AC /* AFNetworkReachabilityManager.m in Sources */,
 				182CDB8E1B7392DB005FE865 /* MJRefreshFooter.m in Sources */,
 				182CDB9C1B7392DB005FE865 /* UIScrollView+MJRefresh.m in Sources */,
 				18FFE5BB1B7F49AE004FBC82 /* SlideNavigationContorllerAnimatorScaleAndFade.m in Sources */,
@@ -976,8 +1095,13 @@
 				182CDBAD1B7617A1005FE865 /* JScrollView+PageControl+AutoScroll.m in Sources */,
 				182CDB931B7392DB005FE865 /* MJRefreshBackGifFooter.m in Sources */,
 				182CDC2D1B77421F005FE865 /* profilesViewController.m in Sources */,
+				18FD07951B8F49A6006545AC /* AFHTTPSessionManager.m in Sources */,
 				18FFE5BC1B7F49AE004FBC82 /* SlideNavigationContorllerAnimatorSlide.m in Sources */,
+				18FD079B1B8F49A6006545AC /* AFURLSessionManager.m in Sources */,
+				18FD07981B8F49A6006545AC /* AFURLConnectionOperation.m in Sources */,
 				182CDB8F1B7392DB005FE865 /* MJRefreshHeader.m in Sources */,
+				18FD07941B8F49A6006545AC /* AFHTTPRequestOperationManager.m in Sources */,
+				18FD077E1B8F47CF006545AC /* NSString+MD5.m in Sources */,
 				18A9B8261B849605000D8A3A /* occupationViewController.m in Sources */,
 				182CDB971B7392DB005FE865 /* MJRefreshNormalHeader.m in Sources */,
 				182CDB9E1B7392DB005FE865 /* homeViewController.m in Sources */,

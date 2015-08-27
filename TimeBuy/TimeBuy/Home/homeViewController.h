@@ -18,6 +18,7 @@
 #import "SlideNavigationController.h"
 
 #import "loginViewController.h"
+#import "registerViewController.h"
 
 typedef NS_ENUM(NSInteger, HomeTableViewSectionType){
     HomeTableViewSectionTypeSlide,

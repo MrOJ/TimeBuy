@@ -8,7 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "JScrollView+PageControl+AutoScroll.h"
+#import "MBProgressHUD.h"
+#import "AFNetworking.h"
 
-@interface loginViewController : UIViewController<JScrollViewViewDelegate>
+@interface loginViewController : UIViewController<JScrollViewViewDelegate,UITextFieldDelegate>
+{
+    UITextField *phoneTextField;
+    UITextField *passwordTextField;
+}
 
 @end

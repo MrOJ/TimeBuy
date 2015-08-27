@@ -17,11 +17,11 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="背景.png" translatesAutoresizingMaskIntoConstraints="NO" id="Mep-lm-YZO">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timebuy1.png" translatesAutoresizingMaskIntoConstraints="NO" id="2KK-GC-Bzo">
-                    <rect key="frame" x="40" y="85" width="240" height="76"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timebuy1@3x.png" translatesAutoresizingMaskIntoConstraints="NO" id="2KK-GC-Bzo">
+                    <rect key="frame" x="28" y="85" width="265" height="74"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="240" id="F1G-EO-Ueo"/>
-                        <constraint firstAttribute="height" constant="76" id="bMr-VA-4ye"/>
+                        <constraint firstAttribute="width" constant="265" id="F1G-EO-Ueo"/>
+                        <constraint firstAttribute="height" constant="74" id="bMr-VA-4ye"/>
                     </constraints>
                 </imageView>
             </subviews>
@@ -38,8 +38,8 @@
         </view>
     </objects>
     <resources>
-        <image name="timebuy1.png" width="472" height="147"/>
-        <image name="背景.png" width="621" height="1104"/>
+        <image name="timebuy1@3x.png" width="684" height="180"/>
+        <image name="背景.png" width="125" height="222"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

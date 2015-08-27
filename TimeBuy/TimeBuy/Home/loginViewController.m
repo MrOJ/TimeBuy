@@ -50,7 +50,7 @@
     // set View2
     UIColor *color = [UIColor whiteColor];
     
-    UITextField *phoneTextField = [[UITextField alloc] initWithFrame:CGRectMake(40, 0, [UIScreen mainScreen].bounds.size.width - 40 * 2, 45)];
+    phoneTextField = [[UITextField alloc] initWithFrame:CGRectMake(40, 0, [UIScreen mainScreen].bounds.size.width - 40 * 2, 45)];
     phoneTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"手机号" attributes:@{NSForegroundColorAttributeName: color}];
     phoneTextField.backgroundColor = [UIColor clearColor];
     phoneTextField.textAlignment = NSTextAlignmentCenter;
@@ -59,8 +59,12 @@
     phoneTextField.layer.borderWidth = 1.0f;
     phoneTextField.layer.borderColor = [UIColor whiteColor].CGColor;
     phoneTextField.layer.cornerRadius = 45.0f / 2;
+    //phoneTextField.layer.opacity = 0.7f;
+    phoneTextField.keyboardType = UIKeyboardTypeNumberPad;
+    phoneTextField.delegate = self;
     
-    UITextField *passwordTextField = [[UITextField alloc] initWithFrame:CGRectMake(40, 0 + 45 + 14, [UIScreen mainScreen].bounds.size.width - 40 * 2, 45)];
+    
+    passwordTextField = [[UITextField alloc] initWithFrame:CGRectMake(40, 0 + 45 + 14, [UIScreen mainScreen].bounds.size.width - 40 * 2, 45)];
     passwordTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"密码" attributes:@{NSForegroundColorAttributeName: color}];
     passwordTextField.backgroundColor = [UIColor clearColor];
     passwordTextField.textAlignment = NSTextAlignmentCenter;
@@ -69,12 +73,17 @@
     passwordTextField.layer.borderWidth = 1.0f;
     passwordTextField.layer.borderColor = [UIColor whiteColor].CGColor;
     passwordTextField.layer.cornerRadius = 45.0f / 2;
+    //passwordTextField.layer.opacity = 0.7f;
+    passwordTextField.delegate = self;
+    passwordTextField.secureTextEntry = YES;
     
     UIButton *loginButton = [[UIButton alloc] initWithFrame:CGRectMake(40, 0 + (45 + 14) * 2, [UIScreen mainScreen].bounds.size.width - 40 * 2, 45)];
     [loginButton setTitle:@"登录" forState:UIControlStateNormal];
-    loginButton.backgroundColor = [UIColor colorWithRed:64.0f / 255.0f green:76.0f / 255.0f blue:74.0f / 255.0f alpha:1];
+    [loginButton setTitleColor:[UIColor colorWithRed:41.0f / 255.0 green:135.0f / 255.0 blue:157.0f / 255.0 alpha:1] forState:UIControlStateNormal];
+    loginButton.backgroundColor = [UIColor whiteColor];
     [loginButton addTarget:self action:@selector(login:) forControlEvents:UIControlEventTouchUpInside];
     loginButton.layer.masksToBounds = YES;
+    loginButton.layer.opacity = 0.7f;
     //loginButton.layer.borderWidth = 1.0f;
     //loginButton.layer.borderColor = [UIColor whiteColor].CGColor;
     loginButton.layer.cornerRadius = 45.0f / 2;
@@ -108,20 +117,52 @@
     
 }
 
+#pragma mark - TextField delegate
+//点击return取消键盘
+- (BOOL)textFieldShouldReturn:(UITextField *) textField {
+    
+    [textField resignFirstResponder];
+    
+    return YES;
+}
+
+// 点击编辑区以外的地方 取消键盘
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+    if (![phoneTextField isExclusiveTouch] || ![passwordTextField isExclusiveTouch]) {
+        [phoneTextField resignFirstResponder];
+        [passwordTextField resignFirstResponder];
+    }
+}
+
+//传送状态 0 - 登录成功； 1 - 忘记密码；  2 - 新用户注册
 // 登录
 - (void)login:(id)sender {
 
     [self dismissViewControllerAnimated:YES completion:nil];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"passState"
+                                                        object:self
+                                                      userInfo:@{@"state":@"0"}];
 }
 
 //忘记密码
 - (void)forgetPwd:(id)sender {
     
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"passState"
+                                                        object:self
+                                                      userInfo:@{@"state":@"1"}];
 }
 
 //新用户注册
 - (void)newUser:(id)sender {
     
+    [self dismissViewControllerAnimated:YES completion:nil];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"passState"
+                                                        object:self
+                                                      userInfo:@{@"state":@"2"}];
 }
 
 

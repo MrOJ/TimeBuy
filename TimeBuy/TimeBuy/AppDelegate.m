@@ -47,7 +47,7 @@
     UIBarButtonItem *leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
     [SlideNavigationController sharedInstance].leftBarButtonItem = leftBarButtonItem;
     
-    UIButton *button2  = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
+    UIButton *button2  = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
     [button2 setImage:[UIImage imageNamed:@"附近的人1"] forState:UIControlStateNormal];
     [button2 addTarget:[SlideNavigationController sharedInstance] action:@selector(toggleRightMenu) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button2];

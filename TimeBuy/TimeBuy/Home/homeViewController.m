@@ -79,20 +79,6 @@
     _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     _tableView.backgroundColor = [UIColor groupTableViewBackgroundColor];
     
-    /*
-    UIButton *button  = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
-    [button setImage:[UIImage imageNamed:@"个人设置1"] forState:UIControlStateNormal];
-    [button addTarget:[SlideNavigationController sharedInstance] action:@selector(toggleLeftMenu) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem *leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
-    [SlideNavigationController sharedInstance].leftBarButtonItem = leftBarButtonItem;
-    
-    UIButton *button2  = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 30, 45)];
-    [button2 setImage:[UIImage imageNamed:@"附近的人1"] forState:UIControlStateNormal];
-    [button2 addTarget:[SlideNavigationController sharedInstance] action:@selector(toggleRightMenu) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem *rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button2];
-    [SlideNavigationController sharedInstance].rightBarButtonItem = rightBarButtonItem;
-    */
-    
     __weak __typeof(self) weakSelf = self;
     
     // 设置回调（一旦进入刷新状态就会调用这个refreshingBlock）
@@ -108,6 +94,39 @@
     float offset = self.view.bounds.size.width;
     [SlideNavigationController sharedInstance].portraitSlideOffset = offset - 250.0f;
     
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(recState:) name:@"passState" object:nil];
+    
+}
+
+- (void)recState:(NSNotification *)notification {
+    NSDictionary *getDic = [notification userInfo];
+    NSString *getState = [getDic objectForKey:@"state"];
+    
+    NSLog(@"state = %@", getState);
+    
+    switch ([getState integerValue]) {
+        case 0:
+        {
+            
+        }
+            break;
+            
+        case 1:
+        {
+            
+        }
+            break;
+            
+        case 2:
+        {
+            registerViewController *registerVC = [[registerViewController alloc] init];
+            [self.navigationController presentViewController:registerVC animated:YES completion:nil];
+        }
+            break;
+        default:
+            break;
+    }
     
 }
 
