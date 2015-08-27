@@ -13,12 +13,21 @@
 #import "homeDetailsTableViewCell.h"
 #import "settingViewController.h"
 #import "nearbyViewController.h"
+#import "userConfiguration.h"
 
 #import "SlideNavigationController.h"
 
+#import "loginViewController.h"
+
 typedef NS_ENUM(NSInteger, HomeTableViewSectionType){
     HomeTableViewSectionTypeSlide,
-    HomeTableViewSectionTypeCatagory,
+    HomeTableViewSectionTypeCatagory
+};
+
+typedef NS_ENUM(NSInteger, HomeTableViewRowType){
+    HomeTableViewRowTypeSlide,
+    HomeTableViewRowTypeCatagory,
+    HomeTableViewRowTypeSelects
 };
 
 @interface homeViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate,JScrollViewViewDelegate,SlideNavigationControllerDelegate>

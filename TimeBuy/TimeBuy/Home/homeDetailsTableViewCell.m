@@ -10,7 +10,10 @@
 
 @implementation homeDetailsTableViewCell
 
+@synthesize portraitImgView;
 @synthesize msgImgView;
+@synthesize msgImgView2;
+@synthesize msgImgView3;
 @synthesize nameLabel;
 @synthesize likeLabel;
 @synthesize numLabel;
@@ -25,6 +28,11 @@
     if (self)
     {
         self.contentView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
+        
+        //self.portraitImgView.layer.masksToBounds = YES;
+        //self.portraitImgView.layer.cornerRadius = self.portraitImgView.bounds.size.height / 2;
+        
+        
     }
     return self;
 }

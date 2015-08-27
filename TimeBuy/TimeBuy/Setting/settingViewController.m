@@ -24,6 +24,9 @@
     NSLog(@"left view appear");
     //[[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationSlide];
     
+    //[SlideNavigationController sharedInstance].rightBarButtonItem.width  = 0.01;
+
+    
     /*
     shadowView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height)];
     shadowView.backgroundColor = [UIColor blackColor];

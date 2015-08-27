@@ -10,7 +10,11 @@
 
 @interface homeDetailsTableViewCell : UITableViewCell
 
+@property (strong, nonatomic) IBOutlet UIImageView *portraitImgView;
+
 @property (strong, nonatomic) IBOutlet UIImageView *msgImgView;
+@property (strong, nonatomic) IBOutlet UIImageView *msgImgView2;
+@property (strong, nonatomic) IBOutlet UIImageView *msgImgView3;
 @property (strong, nonatomic) IBOutlet UILabel *nameLabel;
 @property (strong, nonatomic) IBOutlet UILabel *likeLabel;
 @property (strong, nonatomic) IBOutlet UILabel *numLabel;

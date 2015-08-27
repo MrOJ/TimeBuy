@@ -19,6 +19,20 @@
     [super viewWillAppear:YES];
     
     NSLog(@"home view appear");
+    
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:YES];
+    
+    if (![userConfiguration getBoolValueForConfigurationKey:Launched]) {
+        loginViewController *loginVC = [[loginViewController alloc] init];
+        [self.navigationController presentViewController:loginVC animated:YES completion:nil];
+    }
+    
+    [userConfiguration setApplicationStartupDefaults];
+    
 }
 
 - (void)viewDidLoad {
@@ -26,6 +40,18 @@
     // Do any additional setup after loading the view, typically from a nib.
     //[[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationNone];
     //在info.plist Set UIViewControllerBasedStatusBarAppearance to NO.
+    
+    
+    //清空本地数据
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSDictionary *dict = [defaults dictionaryRepresentation];
+    for (id key in dict) {
+        [defaults removeObjectForKey:key];
+    }
+    
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:nil action:nil];
     self.navigationItem.backBarButtonItem = item;
@@ -51,6 +77,7 @@
     [self.navigationItem setTitleView:titleView];
     
     _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    _tableView.backgroundColor = [UIColor groupTableViewBackgroundColor];
     
     /*
     UIButton *button  = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
@@ -79,7 +106,7 @@
     [SlideNavigationController sharedInstance].enableShadow = NO;
     
     float offset = self.view.bounds.size.width;
-    [SlideNavigationController sharedInstance].portraitSlideOffset = offset - 260.0f;
+    [SlideNavigationController sharedInstance].portraitSlideOffset = offset - 250.0f;
     
     
 }
@@ -108,45 +135,39 @@
 #pragma mark - UITableView
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 2;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    switch (section) {
-        case HomeTableViewSectionTypeSlide:
-            return 1;
-        case HomeTableViewSectionTypeCatagory:
-            return 20;
-        default:
-            return 0;
-    }
+    return 10;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    switch (indexPath.section) {
-        case HomeTableViewSectionTypeSlide:
-            return 200.0f;
-        case HomeTableViewSectionTypeCatagory:
-            return 90.0f;
+    
+    switch (indexPath.row) {
+        case HomeTableViewRowTypeSlide:
+            return 188.f;
+            break;
+        case HomeTableViewRowTypeCatagory:
+            return 112.0f;
+            break;
         default:
-            return 0.0;
+            return 277.0f;
+            break;
     }
+    
+    return 0.0;
+    
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    switch (section) {
-        case HomeTableViewSectionTypeSlide:
-            return 0.0f;
-        case HomeTableViewSectionTypeCatagory:
-            return 110.0f;
-        default:
-            return 0.0;
-    }
+    return 0.0f;
 }
 
+/*
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     if (section == HomeTableViewSectionTypeCatagory) {
@@ -188,11 +209,106 @@
     
     return nil;
 }
+*/
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSUInteger row=[indexPath row];
     
+    //需要对每个cell进行标识，不然刷新会有问题
+    NSString *CellTableIdentifier=[[NSString alloc]initWithFormat:@"extentedCell%lu-%lu",(unsigned long)indexPath.section,(unsigned long)row];
+    
+    switch (indexPath.row) {
+        case HomeTableViewRowTypeSlide:
+        {
+            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellTableIdentifier];
+            if (cell == nil) {
+                
+                cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellTableIdentifier];
+                
+            }
+            
+            //自动推送图片
+            JScrollView_PageControl_AutoScroll *view = [[JScrollView_PageControl_AutoScroll alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 188)];
+            view.autoScrollDelayTime = 5.0f;
+            view.delegate = self;
+            
+            UIImageView *pageImgView1 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 188)];
+            pageImgView1.image = [UIImage imageNamed:@"推送.png"];
+            
+            UIImageView *pageImgView2 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 188)];
+            pageImgView2.image = [UIImage imageNamed:@"zisu10.1.png"];
+            
+            UIImageView *pageImgView3 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 188)];
+            pageImgView3.image = [UIImage imageNamed:@"1首页底图.png"];
+            
+            NSMutableArray *viewsArray = [[NSMutableArray alloc] initWithObjects:pageImgView3,pageImgView1,pageImgView2, nil];
+            [view setViewsArray:viewsArray];
+            
+            [cell addSubview:view];
+            [view shouldAutoShow:YES];
+            
+            return cell;
+            break;
+        }
+        case HomeTableViewRowTypeCatagory:
+        {
+            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellTableIdentifier];
+            if (cell == nil) {
+                
+                cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellTableIdentifier];
+            }
+            
+            cell.backgroundColor = [UIColor groupTableViewBackgroundColor];
+            
+            UIView *catagoryView = [[UIView alloc] initWithFrame:CGRectMake(0, 10, self.view.bounds.size.width, 102)];
+            catagoryView.backgroundColor = [UIColor whiteColor];
+            [cell addSubview:catagoryView];
+            
+            NSArray *logoImageName = [[NSArray alloc] initWithObjects:@"qiuzhu",@"组局(1)",@"paotui",@"gongyi(1)", nil];
+            NSArray *logoTitle = [[NSArray alloc] initWithObjects:@"求助",@"组局",@"跑腿",@"公益", nil];
+            
+            for (int i = 0; i < 4 ; i++) {
+                UIButton *logoButton = [[UIButton alloc] initWithFrame:CGRectMake(23 + i * (50 + 43), 13, 50, 50)];
+                [logoButton setImage:[UIImage imageNamed:[logoImageName objectAtIndex:i]] forState:UIControlStateNormal];
+                [catagoryView addSubview:logoButton];
+                
+                UILabel *logoLabel = [[UILabel alloc] initWithFrame:CGRectMake(32 + i * (34 +59), 71, 34, 18)];
+                logoLabel.text = [logoTitle objectAtIndex:i];
+                logoLabel.font = [UIFont systemFontOfSize:17.0f];
+                [catagoryView addSubview:logoLabel];
+            }
+            
+            return cell;
+            break;
+        }
+            
+        default:
+        {
+            NSString *CellTableIdentifier=[[NSString alloc]initWithFormat:@"extentedCell%lu-%lu",(unsigned long)indexPath.section,(unsigned long)row];
+            homeDetailsTableViewCell *cell = (homeDetailsTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellTableIdentifier];
+            
+            if (cell == nil) {
+                
+                cell.contentView.frame = cell.bounds;
+                cell.contentView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
+                
+                cell = [[[NSBundle mainBundle] loadNibNamed:@"homeDetailsTableViewCell" owner:self options:nil] lastObject];
+            }
+            
+            //cell.nameLabel.text = @"123";
+            cell.portraitImgView.layer.masksToBounds = YES;
+            cell.portraitImgView.layer.cornerRadius = cell.portraitImgView.bounds.size.height / 2;
+            
+            [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+            
+            return cell;
+            
+            break;
+        }
+    }
+    
+    /*
     switch (indexPath.section) {
         case HomeTableViewSectionTypeSlide:
         {
@@ -207,14 +323,14 @@
             }
             
             //自动推送图片
-            JScrollView_PageControl_AutoScroll *view = [[JScrollView_PageControl_AutoScroll alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 200)];
+            JScrollView_PageControl_AutoScroll *view = [[JScrollView_PageControl_AutoScroll alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 158)];
             view.autoScrollDelayTime = 6.0f;
             view.delegate = self;
             
-            UIImageView *pageImgView1 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 200)];
-            pageImgView1.image = [UIImage imageNamed:@"推送.png"];
+            UIImageView *pageImgView1 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 158)];
+            pageImgView1.image = [UIImage imageNamed:@"倔匠1.png"];
             
-            UIImageView *pageImgView2 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 200)];
+            UIImageView *pageImgView2 = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 158)];
             pageImgView2.image = [UIImage imageNamed:@"周杰伦.png"];
             
             NSMutableArray *viewsArray = [[NSMutableArray alloc] initWithObjects:pageImgView1,pageImgView2, nil];
@@ -227,64 +343,50 @@
         }
         case HomeTableViewSectionTypeCatagory:
         {
-            NSString *CellTableIdentifier=[[NSString alloc]initWithFormat:@"extentedCell%lu-%lu",(unsigned long)indexPath.section,(unsigned long)row];
-            homeDetailsTableViewCell *cell = (homeDetailsTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellTableIdentifier];
             
-            if (cell == nil) {
+            // row attribute
+            if (indexPath.row == 0) {
+                // 分类信息
+                UIView *catagoryView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 90)];
+                catagoryView.backgroundColor = [UIColor blackColor];
                 
-                cell.contentView.frame = cell.bounds;
-                cell.contentView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
+                NSString *CellTableIdentifier=[[NSString alloc]initWithFormat:@"extentedCell%lu-%lu",(unsigned long)indexPath.section,(unsigned long)row];
                 
-                cell = [[[NSBundle mainBundle] loadNibNamed:@"homeDetailsTableViewCell" owner:self options:nil] lastObject];
+                UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellTableIdentifier];
+                
+                if (!cell) {
+                    
+                    [cell addSubview:catagoryView];
+                    
+                }
+                
+                return cell;
+                
+            } else {
+                NSString *CellTableIdentifier=[[NSString alloc]initWithFormat:@"extentedCell%lu-%lu",(unsigned long)indexPath.section,(unsigned long)row];
+                homeDetailsTableViewCell *cell = (homeDetailsTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellTableIdentifier];
+                
+                if (cell == nil) {
+                    
+                    cell.contentView.frame = cell.bounds;
+                    cell.contentView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
+                    
+                    cell = [[[NSBundle mainBundle] loadNibNamed:@"homeDetailsTableViewCell" owner:self options:nil] lastObject];
+                }
+                
+                //cell.nameLabel.text = @"123";
+                
+                [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+                
+                return cell;
             }
-            
-            //cell.nameLabel.text = @"123";
-            
-            [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
-            
-            return cell;
-            
-            /*
-            UIImageView *portraitImgView = [[UIImageView alloc] initWithFrame:CGRectMake(10, 0, 100, 83)];
-            portraitImgView.image = [UIImage imageNamed:@"周杰伦"];
-            [cell addSubview:portraitImgView];
-            
-            UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(125, 0, 80, 20)];
-            nameLabel.text = @"周老师";
-            nameLabel.font = [UIFont systemFontOfSize:12.0f];
-            nameLabel.textColor = [UIColor colorWithRed:77.0f / 255.0f green:100.0f / 255.0f blue:138.0f / 255.0f alpha:1];
-            [cell addSubview:nameLabel];
-            
-            UIImageView *likeImgView = [[UIImageView alloc] initWithFrame:CGRectMake(170, 5, 10, 10)];
-            likeImgView.image = [UIImage imageNamed:@"爱心1"];
-            [cell addSubview:likeImgView];
-            UILabel *likeLabel = [[UILabel alloc] initWithFrame:CGRectMake(183, 2, 30, 15)];
-            likeLabel.text = @"14";
-            likeLabel.font = [UIFont systemFontOfSize:12.0f];
-            likeLabel.textColor = [UIColor colorWithRed:231.0f / 255.0f green:154.0f / 255.0f blue:154.0f / 255.0f alpha:1];
-            [cell addSubview:likeLabel];
-            
-            UILabel *numLabel = [[UILabel alloc] initWithFrame:CGRectMake(203, 2, 50, 15)];
-            numLabel.text = @"约 12";
-            numLabel.font = [UIFont systemFontOfSize:12.0f];
-            numLabel.textColor = [UIColor colorWithRed:168.0f / 255.0f green:227.0f / 255.0f blue:243.0f / 255.0f alpha:1];
-            [cell addSubview:numLabel];
-            
-            UILabel *timeLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.view.bounds.size.width - 60, 2, 80, 15)];
-            timeLabel.text = @"1分钟前";
-            timeLabel.font = [UIFont systemFontOfSize:12.0f];
-            timeLabel.textColor = [UIColor darkGrayColor];
-            [cell addSubview:timeLabel];
-            
-            return cell;
-            */
             
         }
         default:
             return nil;
     }
+    */
     
-    //cell.textLabel.text = @"Hello";
     return nil;
 }
 

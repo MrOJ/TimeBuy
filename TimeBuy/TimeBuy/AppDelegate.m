@@ -47,7 +47,7 @@
     UIBarButtonItem *leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
     [SlideNavigationController sharedInstance].leftBarButtonItem = leftBarButtonItem;
     
-    UIButton *button2  = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 30, 45)];
+    UIButton *button2  = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 40, 40)];
     [button2 setImage:[UIImage imageNamed:@"附近的人1"] forState:UIControlStateNormal];
     [button2 addTarget:[SlideNavigationController sharedInstance] action:@selector(toggleRightMenu) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button2];
@@ -65,11 +65,15 @@
         NSLog(@"Closed %@", menu);
         shadowView.hidden = YES;
         
+        [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationSlide];
     }];
     
     [[NSNotificationCenter defaultCenter] addObserverForName:SlideNavigationControllerDidOpen object:nil queue:nil usingBlock:^(NSNotification *note) {
         NSString *menu = note.userInfo[@"menu"];
         NSLog(@"Opened %@", menu);
+        
+        [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationSlide];
+        //[SlideNavigationController sharedInstance].rightBarButtonItem.width  = 0.01;
         
         shadowView.hidden = NO;
         
