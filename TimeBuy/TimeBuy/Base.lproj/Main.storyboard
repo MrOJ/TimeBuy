@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="1Op-kG-RsK">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Home View Controller-->
@@ -72,23 +73,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="left" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="RTn-bg-BV2">
-                                <rect key="frame" x="0.0" y="148" width="320" height="421"/>
-                                <color key="backgroundColor" red="0.039215686274509803" green="0.027450980392156862" blue="0.10196078431372549" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="h3N-I7-QOM" id="o94-VL-ykc"/>
-                                    <outlet property="delegate" destination="h3N-I7-QOM" id="Zpg-wg-JuP"/>
-                                </connections>
-                            </tableView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ur0-yE-TXN">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="148"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.79999999999999982" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="背景.png" translatesAutoresizingMaskIntoConstraints="NO" id="ykp-6j-aRq">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ur0-yE-TXN">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="个人设置1.png" translatesAutoresizingMaskIntoConstraints="NO" id="QvO-rk-F4F">
-                                        <rect key="frame" x="23" y="31" width="39" height="39"/>
+                                        <rect key="frame" x="23" y="21" width="39" height="39"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="黄小名" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yya-Wm-1Ue">
                                         <rect key="frame" x="70" y="21" width="42" height="13"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -102,22 +98,28 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="约 14" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qSM-Qd-BB5">
-                                        <rect key="frame" x="159" y="21" width="50" height="13"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                        <color key="textColor" red="0.6588235294" green="0.89019607840000003" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <rect key="frame" x="156" y="21" width="50" height="13"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sez-ds-mvZ">
                                         <rect key="frame" x="39" y="88" width="32" height="32"/>
-                                        <state key="normal" image="我的发布.png">
+                                        <state key="normal" image="fabu.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="release:" destination="h3N-I7-QOM" eventType="touchUpInside" id="W93-hO-dAL"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CsT-P1-CRl">
                                         <rect key="frame" x="178" y="88" width="32" height="32"/>
-                                        <state key="normal" image="系统设置.png">
+                                        <state key="normal" image="xitongshezhi.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="setting:" destination="h3N-I7-QOM" eventType="touchUpInside" id="RPz-ND-eTE"/>
+                                        </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="男符号1.png" translatesAutoresizingMaskIntoConstraints="NO" id="WBN-hg-HvW">
                                         <rect key="frame" x="71" y="44" width="34" height="13"/>
@@ -130,17 +132,144 @@
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="学生" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mnN-WA-NY3">
                                         <rect key="frame" x="111" y="44" width="40" height="13"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kkf-eY-oN5">
+                                        <rect key="frame" x="0.0" y="148" width="249" height="1"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lkn-CX-3Ze">
+                                        <rect key="frame" x="0.0" y="208" width="249" height="1"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3Pd-36-MBU">
+                                        <rect key="frame" x="0.0" y="268" width="249" height="1"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yo1-2T-23V">
+                                        <rect key="frame" x="0.0" y="328" width="249" height="1"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0YC-dc-KUR">
+                                        <rect key="frame" x="0.0" y="388" width="249" height="1"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z5q-5I-QDO">
+                                        <rect key="frame" x="0.0" y="448" width="249" height="1"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gerenxiaoxi.png" translatesAutoresizingMaskIntoConstraints="NO" id="ftz-il-DwJ">
+                                        <rect key="frame" x="23" y="165" width="23" height="23"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="wodezuji.png" translatesAutoresizingMaskIntoConstraints="NO" id="xQC-Fh-KbL">
+                                        <rect key="frame" x="23" y="227" width="23" height="23"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="wodexiaoxi.png" translatesAutoresizingMaskIntoConstraints="NO" id="JiS-DJ-yrn">
+                                        <rect key="frame" x="23" y="289" width="23" height="23"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="wodericheng.png" translatesAutoresizingMaskIntoConstraints="NO" id="47I-gA-gnq">
+                                        <rect key="frame" x="23" y="350" width="23" height="23"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="zhifufangshi.png" translatesAutoresizingMaskIntoConstraints="NO" id="0Vc-Wm-dG8">
+                                        <rect key="frame" x="23" y="411" width="23" height="23"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tuichudenglu.png" translatesAutoresizingMaskIntoConstraints="NO" id="nux-M1-Atk">
+                                        <rect key="frame" x="23" y="471" width="23" height="23"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGc-DM-cQ0">
+                                        <rect key="frame" x="0.0" y="148" width="241" height="61"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="个人信息">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="information:" destination="h3N-I7-QOM" eventType="touchUpInside" id="rhq-pv-dIx"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d6J-BF-PTG">
+                                        <rect key="frame" x="0.0" y="208" width="241" height="61"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="我的足迹">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="myTravel:" destination="h3N-I7-QOM" eventType="touchUpInside" id="vrJ-1F-EPR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="luZ-2h-wCY">
+                                        <rect key="frame" x="0.0" y="328" width="241" height="61"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="我的日程">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="mySchedule:" destination="h3N-I7-QOM" eventType="touchUpInside" id="v2A-Kr-pfw"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aun-7G-2ls">
+                                        <rect key="frame" x="0.0" y="388" width="241" height="61"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="支付方式">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="payWay:" destination="h3N-I7-QOM" eventType="touchUpInside" id="dPo-yC-mRF"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I5W-84-MXm">
+                                        <rect key="frame" x="0.0" y="448" width="241" height="61"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="退出登录">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="logout:" destination="h3N-I7-QOM" eventType="touchUpInside" id="a7G-vX-r8o"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zfu-sq-CdX">
+                                        <rect key="frame" x="0.0" y="268" width="241" height="61"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="我的消息">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="myNotice:" destination="h3N-I7-QOM" eventType="touchUpInside" id="23d-wa-Wgg"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.14117647058823529" green="0.13333333333333333" blue="0.18431372549019609" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="FbV-iL-6b6" firstAttribute="top" secondItem="ur0-yE-TXN" secondAttribute="bottom" id="CpB-a8-dvU"/>
+                            <constraint firstItem="ykp-6j-aRq" firstAttribute="leading" secondItem="cnZ-3a-nQZ" secondAttribute="leadingMargin" constant="-16" id="FXw-Zp-CVJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ur0-yE-TXN" secondAttribute="trailing" constant="-16" id="LzP-Ns-LYI"/>
+                            <constraint firstItem="FbV-iL-6b6" firstAttribute="top" secondItem="ykp-6j-aRq" secondAttribute="bottom" id="MEo-AG-dKM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ykp-6j-aRq" secondAttribute="trailing" constant="-16" id="Tbg-Bx-r7w"/>
+                            <constraint firstItem="ur0-yE-TXN" firstAttribute="leading" secondItem="cnZ-3a-nQZ" secondAttribute="leadingMargin" constant="-16" id="miJ-Zx-ERZ"/>
+                            <constraint firstItem="ykp-6j-aRq" firstAttribute="top" secondItem="cnZ-3a-nQZ" secondAttribute="topMargin" id="o62-BF-iTz"/>
+                            <constraint firstItem="ur0-yE-TXN" firstAttribute="top" secondItem="cnZ-3a-nQZ" secondAttribute="topMargin" id="ob9-Nf-FAv"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8wp-R9-9Gp"/>
+                    <connections>
+                        <outlet property="informationButton" destination="eGc-DM-cQ0" id="kmc-Tw-Nk3"/>
+                        <outlet property="logoutButton" destination="I5W-84-MXm" id="gB0-cI-ukB"/>
+                        <outlet property="myNoticeButton" destination="zfu-sq-CdX" id="0vW-LE-T9K"/>
+                        <outlet property="myScheduleButton" destination="luZ-2h-wCY" id="o0U-g3-EGU"/>
+                        <outlet property="myTravelButton" destination="d6J-BF-PTG" id="0wK-Sv-Tt6"/>
+                        <outlet property="payButton" destination="Aun-7G-2ls" id="QJH-py-GbP"/>
+                        <outlet property="releaseButton" destination="sez-ds-mvZ" id="yiw-Nr-wGl"/>
+                        <outlet property="settingButton" destination="CsT-P1-CRl" id="aXz-Hz-nlF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="80J-jL-nb2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -174,11 +303,18 @@
         </scene>
     </scenes>
     <resources>
+        <image name="fabu.png" width="45" height="46"/>
+        <image name="gerenxiaoxi.png" width="45" height="45"/>
+        <image name="tuichudenglu.png" width="46" height="46"/>
+        <image name="wodericheng.png" width="46" height="46"/>
+        <image name="wodexiaoxi.png" width="45" height="46"/>
+        <image name="wodezuji.png" width="45" height="45"/>
+        <image name="xitongshezhi.png" width="45" height="45"/>
+        <image name="zhifufangshi.png" width="46" height="46"/>
         <image name="个人设置1.png" width="50" height="50"/>
-        <image name="我的发布.png" width="21" height="20"/>
         <image name="爱心1.png" width="12" height="11"/>
         <image name="男符号1.png" width="25" height="10"/>
-        <image name="系统设置.png" width="22" height="22"/>
+        <image name="背景.png" width="125" height="222"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

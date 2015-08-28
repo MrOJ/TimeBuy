@@ -57,7 +57,11 @@
 }
 
 - (IBAction)back:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    [self dismissViewControllerAnimated:NO completion:nil];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"passState"
+                                                        object:self
+                                                      userInfo:@{@"state":@"4"}];
 }
 
 - (IBAction)getVerify:(id)sender {
@@ -74,17 +78,27 @@
     {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"注册失败" message:@"输入不能为空" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
         [alert show];
-    } else if ([self.passwordTextField.text length] < 6) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"注册失败" message:@"请输入6~16位数字或字幕，区分大小写" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-        [alert show];
-        [passwordTextField becomeFirstResponder];
     } else if (![self isMobileNumber:phoneTextField.text]){
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"注册失败" message:@"请输入正确的手机号码" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
         [alert show];
         [phoneTextField becomeFirstResponder];
+    } else if ([self.passwordTextField.text length] < 6) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"注册失败" message:@"请输入6~16位数字或字幕，区分大小写" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [alert show];
+        [passwordTextField becomeFirstResponder];
     } else {
+        //[activityIndicatorView startAnimating];
+        HUD = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        
+        // Regiser for HUD callbacks so we can remove it from the window at the right time
+        HUD.delegate = self;
         //上传至服务器
         AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+        manager.requestSerializer = [AFJSONRequestSerializer serializer];
+        manager.responseSerializer = [AFJSONResponseSerializer serializer];
+        [manager.requestSerializer setValue:@"d6089681f79c7627bbac829307e041a7" forHTTPHeaderField:@"x-timebuy-sid"];
+        [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+        [manager.requestSerializer setValue:@"application/json; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
         
         //2.设置登录参数
         NSDictionary *dict = @{ @"phone":phoneTextField.text,
@@ -93,15 +107,43 @@
         //};
         
         //3.请求
-        
-        [manager POST:@"http://192.168.8.102:8080/timebuy/reg/user" parameters:dict success: ^(AFHTTPRequestOperation *operation, id responseObject) {
+        [manager GET:@"http://192.168.8.102:8080/timebuy/reg/user" parameters:dict success: ^(AFHTTPRequestOperation *operation, id responseObject) {
             NSLog(@"GET --> %@", responseObject); //自动返回主线程
-
+            
+            //[activityIndicatorView stopAnimating];
+            [HUD hide:YES];
+            
+            NSString *getStatus = [NSString stringWithFormat:@"%@",[responseObject objectForKey:@"success"]];
+            if ([getStatus isEqualToString:@"1"]) {
+                HUD = [[MBProgressHUD alloc] initWithView:self.view];
+                [self.view addSubview:HUD];
+                HUD.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"37x-Checkmark.png"]];
+                HUD.mode = MBProgressHUDModeCustomView;
+                
+                HUD.delegate = self;
+                HUD.labelText = @"注册成功";
+                [HUD show:YES];
+                [HUD hide:YES afterDelay:2];
+            } else {
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"注册失败" message:@"连接服务器失败" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+                [alert show];
+            }
+            
         } failure: ^(AFHTTPRequestOperation *operation, NSError *error) {
             NSLog(@"%@", error);
+            [HUD hide:YES];
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"注册失败" message:@"请检查网络设置" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+            [alert show];
         }];
         
     }
+}
+
+#pragma mark - MBProgressHUDDelegate
+- (void)hudWasHidden:(MBProgressHUD *)hud {
+    // Remove HUD from screen when the HUD was hidded
+    [HUD removeFromSuperview];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)setTextFieldStyle:(UITextField *)textField withString:(NSString *)str {

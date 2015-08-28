@@ -11,7 +11,10 @@
 #import "MBProgressHUD.h"
 #import "AFNetworking.h"
 
-@interface registerViewController : UIViewController<UITextFieldDelegate>
+@interface registerViewController : UIViewController<UITextFieldDelegate,MBProgressHUDDelegate>
+{
+    MBProgressHUD *HUD;
+}
 
 @property (strong, nonatomic) IBOutlet UIButton *backButton;
 @property (strong, nonatomic) IBOutlet UITextField *phoneTextField;

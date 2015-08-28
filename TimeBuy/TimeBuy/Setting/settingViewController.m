@@ -14,8 +14,17 @@
 
 @implementation settingViewController
 
-@synthesize settingTableView;
-@synthesize menuArray;
+//@synthesize settingTableView;
+//@synthesize menuArray;
+
+@synthesize releaseButton;
+@synthesize settingButton;
+@synthesize informationButton;
+@synthesize myTravelButton;
+@synthesize myNoticeButton;
+@synthesize myScheduleButton;
+@synthesize payButton;
+@synthesize logoutButton;
 
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -49,13 +58,13 @@
     
     self.view.backgroundColor = [UIColor colorWithRed:10.0f / 255.0f green:7.0f / 255.0f blue:26.0f / 255.0f alpha:1];
     
-    self.settingTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    //self.settingTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
-    menuArray = [[NSArray alloc] initWithObjects:@"个人信息",@"我的足迹",@"我的消息",@"我的日程",@"支付方式",@"退出登录", nil];
+    //menuArray = [[NSArray alloc] initWithObjects:@"个人信息",@"我的足迹",@"我的消息",@"我的日程",@"支付方式",@"退出登录", nil];
 }
 
+/*
 #pragma mark - Table View
-
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;
@@ -126,7 +135,56 @@
             break;
     }
 }
+*/
 
+#pragma mark button
+//发布信息
+- (IBAction)release:(id)sender {
+    
+}
+
+//设置
+- (IBAction)setting:(id)sender {
+    [[SlideNavigationController sharedInstance] popToRootViewControllerAnimated:YES];
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"hello" message:@"连接服务器失败" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+    [alert show];
+}
+
+//个人信息
+- (IBAction)information:(id)sender {
+    profilesViewController *vc = [[profilesViewController alloc] init];
+    //vc.navigationItem.title = @"我的信息";
+    
+    [[SlideNavigationController sharedInstance] popToRootAndSwitchToViewController:vc
+                                                             withSlideOutAnimation:YES
+                                                                     andCompletion:nil];
+}
+
+//我的行程
+- (IBAction)myTravel:(id)sender {
+    
+}
+
+//我的消息
+- (IBAction)myNotice:(id)sender {
+    
+}
+
+//我的日程
+- (IBAction)mySchedule:(id)sender {
+    
+}
+
+//支付方式
+- (IBAction)payWay:(id)sender {
+    
+}
+
+//退出登录
+- (IBAction)logout:(id)sender {
+    
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

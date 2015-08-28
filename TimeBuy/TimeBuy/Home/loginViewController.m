@@ -134,15 +134,18 @@
     }
 }
 
-//传送状态 0 - 登录成功； 1 - 忘记密码；  2 - 新用户注册
+//传送状态 0 - 登录成功； 1 - 忘记密码；  2 - 新用户注册 4 - 返回
 // 登录
 - (void)login:(id)sender {
 
-    [self dismissViewControllerAnimated:YES completion:nil];
     
+    [self dismissViewControllerAnimated:YES completion:nil];
+    /*
     [[NSNotificationCenter defaultCenter] postNotificationName:@"passState"
                                                         object:self
                                                       userInfo:@{@"state":@"0"}];
+    */
+    [self verifyLogin];
 }
 
 //忘记密码
@@ -165,6 +168,54 @@
                                                       userInfo:@{@"state":@"2"}];
 }
 
+- (void)verifyLogin {
+    HUD = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    
+    // Regiser for HUD callbacks so we can remove it from the window at the right time
+    HUD.delegate = self;
+    //上传至服务器
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    [manager.requestSerializer setValue:@"d6089681f79c7627bbac829307e041a7" forHTTPHeaderField:@"x-timebuy-sid"];
+    [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    [manager.requestSerializer setValue:@"application/json; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
+    
+    //2.设置登录参数
+    NSDictionary *dict = @{ @"phone":phoneTextField.text,
+                            @"password":[passwordTextField.text MD5]};
+    
+    //3.请求
+    [manager GET:@"http://192.168.8.102:8080/timebuy/login/user" parameters:dict success: ^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"GET --> %@", responseObject); //自动返回主线程
+        
+        
+        //[activityIndicatorView stopAnimating];
+        [HUD hide:YES];
+        
+        NSString *getStatus = [NSString stringWithFormat:@"%@",[responseObject objectForKey:@"success"]];
+        if ([getStatus isEqualToString:@"1"]) {
+            HUD = [[MBProgressHUD alloc] initWithView:self.view];
+            [self.view addSubview:HUD];
+            HUD.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"37x-Checkmark.png"]];
+            HUD.mode = MBProgressHUDModeCustomView;
+            
+            HUD.delegate = self;
+            HUD.labelText = @"登录成功";
+            [HUD show:YES];
+            [HUD hide:YES afterDelay:2];
+        } else {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"登录失败" message:@"连接服务器失败" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+            [alert show];
+        }
+        
+    } failure: ^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"%@", error);
+        [HUD hide:YES];
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"登录失败" message:@"请检查网络设置" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+        [alert show];
+    }];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -17,7 +17,7 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="背景.png" translatesAutoresizingMaskIntoConstraints="NO" id="Mep-lm-YZO">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timebuy1@3x.png" translatesAutoresizingMaskIntoConstraints="NO" id="2KK-GC-Bzo">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo200x56-01.png" translatesAutoresizingMaskIntoConstraints="NO" id="2KK-GC-Bzo">
                     <rect key="frame" x="28" y="85" width="265" height="74"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="265" id="F1G-EO-Ueo"/>
@@ -38,7 +38,7 @@
         </view>
     </objects>
     <resources>
-        <image name="timebuy1@3x.png" width="684" height="180"/>
+        <image name="logo200x56-01.png" width="833" height="233"/>
         <image name="背景.png" width="125" height="222"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

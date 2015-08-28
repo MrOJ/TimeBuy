@@ -53,6 +53,10 @@
 
 - (IBAction)back:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"passState"
+                                                        object:self
+                                                      userInfo:@{@"state":@"4"}];
 }
 
 - (IBAction)getVerify:(id)sender {

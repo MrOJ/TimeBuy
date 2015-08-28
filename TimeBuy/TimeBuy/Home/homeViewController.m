@@ -59,6 +59,7 @@
     
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:NO];
     
+    /*
     //设置顶部bar的颜色(在storyboard中设置的key设置为：navigationController.navigationBar.barTintColor)
     UIColor * barColor = [UIColor
                           colorWithRed:48.0/255.0
@@ -66,6 +67,9 @@
                           blue:52.0/255.0
                           alpha:1.0];
     [self.navigationController.navigationBar setBarTintColor:barColor];
+    */
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"导航条375x64"] forBarMetrics:UIBarMetricsDefault];
+    self.navigationController.navigationBar.translucent = NO;
     
     UIView *titleView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 80, 30)];
     UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 80, 30)];
@@ -92,7 +96,7 @@
     [SlideNavigationController sharedInstance].enableShadow = NO;
     
     float offset = self.view.bounds.size.width;
-    [SlideNavigationController sharedInstance].portraitSlideOffset = offset - 250.0f;
+    [SlideNavigationController sharedInstance].portraitSlideOffset = offset - 249.0f;
     
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(recState:) name:@"passState" object:nil];
@@ -124,6 +128,12 @@
             [self.navigationController presentViewController:registerVC animated:YES completion:nil];
         }
             break;
+        case 4:
+        {
+            
+            loginViewController *loginVC = [[loginViewController alloc] init];
+            [self.navigationController presentViewController:loginVC animated:NO completion:nil];
+        }
         default:
             break;
     }

@@ -11,10 +11,14 @@
 #import "MBProgressHUD.h"
 #import "AFNetworking.h"
 
-@interface loginViewController : UIViewController<JScrollViewViewDelegate,UITextFieldDelegate>
+#import "NSString+MD5.h"
+
+@interface loginViewController : UIViewController<JScrollViewViewDelegate,UITextFieldDelegate,MBProgressHUDDelegate>
 {
     UITextField *phoneTextField;
     UITextField *passwordTextField;
+    
+    MBProgressHUD *HUD;
 }
 
 @end
