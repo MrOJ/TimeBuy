@@ -137,7 +137,6 @@
 //传送状态 0 - 登录成功； 1 - 忘记密码；  2 - 新用户注册 4 - 返回
 // 登录
 - (void)login:(id)sender {
-
     
     [self dismissViewControllerAnimated:YES completion:nil];
     /*
