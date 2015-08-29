@@ -17,7 +17,11 @@
 #import "telephoneViewController.h"
 #import "signatureViewController.h"
 
-@interface profilesViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+#import "VPImageCropperViewController.h"
+
+#define ORIGINAL_MAX_WIDTH 640.0f
+
+@interface profilesViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,UIImagePickerControllerDelegate,VPImageCropperDelegate,UIActionSheetDelegate,UINavigationControllerDelegate>
 
 @property (nonatomic, strong) UITableView *myTableView;
 @property (nonatomic, strong) NSArray *titleArray1;

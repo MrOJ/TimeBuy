@@ -82,7 +82,7 @@
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"注册失败" message:@"请输入正确的手机号码" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
         [alert show];
         [phoneTextField becomeFirstResponder];
-    } else if ([self.passwordTextField.text length] < 6) {
+    } else if ([self.passwordTextField.text length] < 6 && [self.passwordTextField.text length] > 16) {
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"注册失败" message:@"请输入6~16位数字或字幕，区分大小写" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
         [alert show];
         [passwordTextField becomeFirstResponder];
@@ -114,7 +114,10 @@
             [HUD hide:YES];
             
             NSString *getStatus = [NSString stringWithFormat:@"%@",[responseObject objectForKey:@"success"]];
+            NSString *getCode = [NSString stringWithFormat:@"%@",[responseObject objectForKey:@"code"]];
             if ([getStatus isEqualToString:@"1"]) {
+                [self dismissViewControllerAnimated:YES completion:nil];
+                
                 HUD = [[MBProgressHUD alloc] initWithView:self.view];
                 [self.view addSubview:HUD];
                 HUD.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"37x-Checkmark.png"]];
@@ -124,6 +127,11 @@
                 HUD.labelText = @"注册成功";
                 [HUD show:YES];
                 [HUD hide:YES afterDelay:2];
+                
+                [userConfiguration setStringValueForConfigurationKey:phoneTextField.text withValue:@"user"];
+                
+            }  else if ([getStatus isEqualToString:@"0"] && [getCode isEqualToString:@"2002"]) {
+                [self showErrorWithTitle:@"注册失败" WithMessage:@"用户名已存在"];
             } else {
                 UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"注册失败" message:@"连接服务器失败" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
                 [alert show];
@@ -143,7 +151,7 @@
 - (void)hudWasHidden:(MBProgressHUD *)hud {
     // Remove HUD from screen when the HUD was hidded
     [HUD removeFromSuperview];
-    [self dismissViewControllerAnimated:YES completion:nil];
+    //[self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)setTextFieldStyle:(UITextField *)textField withString:(NSString *)str {
@@ -207,6 +215,12 @@
     {
         return NO;
     }
+}
+
+-(void)showErrorWithTitle:(NSString *)titile WithMessage:(NSString *)msg
+{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:titile message:msg delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+    [alert show];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -102,7 +102,6 @@
     newUserButton.titleLabel.font = [UIFont systemFontOfSize:13.0f];
     [loginView2 addSubview:newUserButton];
     
-    
     [loginView2 addSubview:phoneTextField];
     [loginView2 addSubview:passwordTextField];
     [loginView2 addSubview:loginButton];
@@ -138,13 +137,20 @@
 // 登录
 - (void)login:(id)sender {
     
-    [self dismissViewControllerAnimated:YES completion:nil];
-    /*
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"passState"
-                                                        object:self
-                                                      userInfo:@{@"state":@"0"}];
-    */
-    [self verifyLogin];
+    //[self dismissViewControllerAnimated:YES completion:nil];
+    if ([phoneTextField.text length]== 0) {
+        [self showErrorWithTitle:@"登录失败" WithMessage:@"手机号码不能为空"];
+        //[phoneTextField becomeFirstResponder];
+    } else if (![self isMobileNumber:[phoneTextField text]]) {
+        [self showErrorWithTitle:@"登录失败" WithMessage:@"手机号码格式不正确"];
+        [phoneTextField becomeFirstResponder];
+    } else if ([passwordTextField.text length] == 0) {
+        [self showErrorWithTitle:@"登录失败" WithMessage:@"密码不能为空"];
+        [passwordTextField becomeFirstResponder];
+    } else {
+        [self verifyLogin];
+    }
+    
 }
 
 //忘记密码
@@ -168,8 +174,8 @@
 }
 
 - (void)verifyLogin {
-    HUD = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     
+    HUD = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     // Regiser for HUD callbacks so we can remove it from the window at the right time
     HUD.delegate = self;
     //上传至服务器
@@ -188,32 +194,106 @@
     [manager GET:@"http://192.168.8.102:8080/timebuy/login/user" parameters:dict success: ^(AFHTTPRequestOperation *operation, id responseObject) {
         NSLog(@"GET --> %@", responseObject); //自动返回主线程
         
-        
         //[activityIndicatorView stopAnimating];
         [HUD hide:YES];
         
         NSString *getStatus = [NSString stringWithFormat:@"%@",[responseObject objectForKey:@"success"]];
-        if ([getStatus isEqualToString:@"1"]) {
+        NSString *getCode = [NSString stringWithFormat:@"%@",[responseObject objectForKey:@"code"]];
+        if ([getStatus isEqualToString:@"1"] && [getCode isEqualToString:@"1000"]) {
+            
+            [self dismissViewControllerAnimated:YES completion:nil];
+            
             HUD = [[MBProgressHUD alloc] initWithView:self.view];
             [self.view addSubview:HUD];
             HUD.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"37x-Checkmark.png"]];
             HUD.mode = MBProgressHUDModeCustomView;
-            
             HUD.delegate = self;
             HUD.labelText = @"登录成功";
             [HUD show:YES];
-            [HUD hide:YES afterDelay:2];
+            [HUD hide:YES afterDelay:3];
+            
+            [userConfiguration setStringValueForConfigurationKey:phoneTextField.text withValue:@"user"];
+            
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"passState"
+                                                                object:self
+                                                              userInfo:@{@"state":@"0"}];
+            
+        } else if ([getStatus isEqualToString:@"0"] && [getCode isEqualToString:@"2003"]) {
+            [self showErrorWithTitle:@"登录失败" WithMessage:@"用户名不存在"];
+        } else if ([getStatus isEqualToString:@"0"] && [getCode isEqualToString:@"2004"]) {
+            [self showErrorWithTitle:@"登录失败" WithMessage:@"密码错误"];
         } else {
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"登录失败" message:@"连接服务器失败" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-            [alert show];
+            [self showErrorWithTitle:@"登录失败" WithMessage:@"系统错误"];
         }
         
     } failure: ^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"%@", error);
         [HUD hide:YES];
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"登录失败" message:@"请检查网络设置" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-        [alert show];
+        [self showErrorWithTitle:@"登录失败" WithMessage:@"网络连接失败，请检查网络设置"];
     }];
+}
+
+#pragma mark - MBProgressHUDDelegate
+- (void)hudWasHidden:(MBProgressHUD *)hud {
+    // Remove HUD from screen when the HUD was hidded
+    [HUD removeFromSuperview];
+    //[self dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(void)showErrorWithTitle:(NSString *)titile WithMessage:(NSString *)msg
+{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:titile message:msg delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+    [alert show];
+}
+
+//判断手机号码是否正确
+- (BOOL)isMobileNumber:(NSString *)mobileNum
+{
+    /**
+     * 手机号码
+     * 移动：134[0-8],135,136,137,138,139,150,151,157,158,159,182,187,188
+     * 联通：130,131,132,152,155,156,185,186
+     * 电信：133,1349,153,180,189
+     */
+    NSString * MOBILE = @"^1(3[0-9]|5[0-35-9]|8[025-9])\\d{8}$";
+    /**
+     10         * 中国移动：China Mobile
+     11         * 134[0-8],135,136,137,138,139,150,151,157,158,159,182,187,188
+     12         */
+    NSString * CM = @"^1(34[0-8]|(3[5-9]|5[017-9]|8[278])\\d)\\d{7}$";
+    /**
+     15         * 中国联通：China Unicom
+     16         * 130,131,132,152,155,156,185,186
+     17         */
+    NSString * CU = @"^1(3[0-2]|5[256]|8[56])\\d{8}$";
+    /**
+     20         * 中国电信：China Telecom
+     21         * 133,1349,153,180,189
+     22         */
+    NSString * CT = @"^1((33|53|8[09])[0-9]|349)\\d{7}$";
+    /**
+     25         * 大陆地区固话及小灵通
+     26         * 区号：010,020,021,022,023,024,025,027,028,029
+     27         * 号码：七位或八位
+     28         */
+    // NSString * PHS = @"^0(10|2[0-5789]|\\d{3})\\d{7,8}$";
+    
+    NSPredicate *regextestmobile = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", MOBILE];
+    NSPredicate *regextestcm = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", CM];
+    NSPredicate *regextestcu = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", CU];
+    NSPredicate *regextestct = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", CT];
+    
+    if (([regextestmobile evaluateWithObject:mobileNum] == YES)
+        || ([regextestcm evaluateWithObject:mobileNum] == YES)
+        || ([regextestct evaluateWithObject:mobileNum] == YES)
+        || ([regextestcu evaluateWithObject:mobileNum] == YES))
+    {
+        return YES;
+    }
+    else
+    {
+        return NO;
+    }
 }
 
 - (void)didReceiveMemoryWarning {

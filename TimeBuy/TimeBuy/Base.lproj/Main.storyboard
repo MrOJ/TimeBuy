@@ -73,15 +73,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.79999999999999982" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="背景.png" translatesAutoresizingMaskIntoConstraints="NO" id="ykp-6j-aRq">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.79999999999999982" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="个人设置背景250x667.png" translatesAutoresizingMaskIntoConstraints="NO" id="ykp-6j-aRq">
+                                <rect key="frame" x="0.0" y="0.0" width="250" height="568"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="2mr-xN-tWD"/>
+                                </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ur0-yE-TXN">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="个人设置1.png" translatesAutoresizingMaskIntoConstraints="NO" id="QvO-rk-F4F">
-                                        <rect key="frame" x="23" y="21" width="39" height="39"/>
-                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="黄小名" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yya-Wm-1Ue">
                                         <rect key="frame" x="70" y="21" width="42" height="13"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
@@ -156,10 +156,6 @@
                                         <rect key="frame" x="0.0" y="388" width="249" height="1"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z5q-5I-QDO">
-                                        <rect key="frame" x="0.0" y="448" width="249" height="1"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </view>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="gerenxiaoxi.png" translatesAutoresizingMaskIntoConstraints="NO" id="ftz-il-DwJ">
                                         <rect key="frame" x="23" y="165" width="23" height="23"/>
                                     </imageView>
@@ -172,11 +168,8 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="wodericheng.png" translatesAutoresizingMaskIntoConstraints="NO" id="47I-gA-gnq">
                                         <rect key="frame" x="23" y="350" width="23" height="23"/>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="zhifufangshi.png" translatesAutoresizingMaskIntoConstraints="NO" id="0Vc-Wm-dG8">
-                                        <rect key="frame" x="23" y="411" width="23" height="23"/>
-                                    </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tuichudenglu.png" translatesAutoresizingMaskIntoConstraints="NO" id="nux-M1-Atk">
-                                        <rect key="frame" x="23" y="471" width="23" height="23"/>
+                                        <rect key="frame" x="23" y="407" width="23" height="23"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGc-DM-cQ0">
                                         <rect key="frame" x="0.0" y="148" width="241" height="61"/>
@@ -211,28 +204,6 @@
                                             <action selector="mySchedule:" destination="h3N-I7-QOM" eventType="touchUpInside" id="v2A-Kr-pfw"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aun-7G-2ls">
-                                        <rect key="frame" x="0.0" y="388" width="241" height="61"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <state key="normal" title="支付方式">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="payWay:" destination="h3N-I7-QOM" eventType="touchUpInside" id="dPo-yC-mRF"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I5W-84-MXm">
-                                        <rect key="frame" x="0.0" y="448" width="241" height="61"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <state key="normal" title="退出登录">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="logout:" destination="h3N-I7-QOM" eventType="touchUpInside" id="a7G-vX-r8o"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zfu-sq-CdX">
                                         <rect key="frame" x="0.0" y="268" width="241" height="61"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
@@ -244,31 +215,50 @@
                                             <action selector="myNotice:" destination="h3N-I7-QOM" eventType="touchUpInside" id="23d-wa-Wgg"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I5W-84-MXm">
+                                        <rect key="frame" x="1" y="388" width="241" height="61"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="退出登录">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="logout:" destination="h3N-I7-QOM" eventType="touchUpInside" id="a7G-vX-r8o"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="portrait.png" translatesAutoresizingMaskIntoConstraints="NO" id="QvO-rk-F4F">
+                                        <rect key="frame" x="23" y="21" width="39" height="39"/>
+                                    </imageView>
                                 </subviews>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ykp-6j-aRq" firstAttribute="leading" secondItem="ur0-yE-TXN" secondAttribute="leading" id="3pd-Ll-MOM"/>
+                            <constraint firstItem="ykp-6j-aRq" firstAttribute="bottom" secondItem="FbV-iL-6b6" secondAttribute="top" id="Bmc-mq-SLr"/>
                             <constraint firstItem="FbV-iL-6b6" firstAttribute="top" secondItem="ur0-yE-TXN" secondAttribute="bottom" id="CpB-a8-dvU"/>
-                            <constraint firstItem="ykp-6j-aRq" firstAttribute="leading" secondItem="cnZ-3a-nQZ" secondAttribute="leadingMargin" constant="-16" id="FXw-Zp-CVJ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ur0-yE-TXN" secondAttribute="trailing" constant="-16" id="LzP-Ns-LYI"/>
-                            <constraint firstItem="FbV-iL-6b6" firstAttribute="top" secondItem="ykp-6j-aRq" secondAttribute="bottom" id="MEo-AG-dKM"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ykp-6j-aRq" secondAttribute="trailing" constant="-16" id="Tbg-Bx-r7w"/>
+                            <constraint firstItem="ykp-6j-aRq" firstAttribute="top" secondItem="ur0-yE-TXN" secondAttribute="top" id="bcs-yK-vee"/>
                             <constraint firstItem="ur0-yE-TXN" firstAttribute="leading" secondItem="cnZ-3a-nQZ" secondAttribute="leadingMargin" constant="-16" id="miJ-Zx-ERZ"/>
-                            <constraint firstItem="ykp-6j-aRq" firstAttribute="top" secondItem="cnZ-3a-nQZ" secondAttribute="topMargin" id="o62-BF-iTz"/>
                             <constraint firstItem="ur0-yE-TXN" firstAttribute="top" secondItem="cnZ-3a-nQZ" secondAttribute="topMargin" id="ob9-Nf-FAv"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8wp-R9-9Gp"/>
                     <connections>
+                        <outlet property="aboutLabel" destination="qSM-Qd-BB5" id="zS7-eP-E1S"/>
                         <outlet property="informationButton" destination="eGc-DM-cQ0" id="kmc-Tw-Nk3"/>
+                        <outlet property="likeLabel" destination="Yz3-Se-Cdn" id="ICW-LF-Dze"/>
                         <outlet property="logoutButton" destination="I5W-84-MXm" id="gB0-cI-ukB"/>
                         <outlet property="myNoticeButton" destination="zfu-sq-CdX" id="0vW-LE-T9K"/>
                         <outlet property="myScheduleButton" destination="luZ-2h-wCY" id="o0U-g3-EGU"/>
                         <outlet property="myTravelButton" destination="d6J-BF-PTG" id="0wK-Sv-Tt6"/>
-                        <outlet property="payButton" destination="Aun-7G-2ls" id="QJH-py-GbP"/>
+                        <outlet property="nicknameLabel" destination="yya-Wm-1Ue" id="u2y-1B-o17"/>
+                        <outlet property="portaitImg" destination="QvO-rk-F4F" id="vV8-kf-p19"/>
+                        <outlet property="professionLabel" destination="mnN-WA-NY3" id="eAM-JU-vTT"/>
                         <outlet property="releaseButton" destination="sez-ds-mvZ" id="yiw-Nr-wGl"/>
                         <outlet property="settingButton" destination="CsT-P1-CRl" id="aXz-Hz-nlF"/>
+                        <outlet property="sexImg" destination="WBN-hg-HvW" id="tkI-tI-mPE"/>
+                        <outlet property="sexLabel" destination="Cxc-2h-hyn" id="K5U-3i-Ozz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="80J-jL-nb2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -305,16 +295,15 @@
     <resources>
         <image name="fabu.png" width="45" height="46"/>
         <image name="gerenxiaoxi.png" width="45" height="45"/>
+        <image name="portrait.png" width="180" height="180"/>
         <image name="tuichudenglu.png" width="46" height="46"/>
         <image name="wodericheng.png" width="46" height="46"/>
         <image name="wodexiaoxi.png" width="45" height="46"/>
         <image name="wodezuji.png" width="45" height="45"/>
         <image name="xitongshezhi.png" width="45" height="45"/>
-        <image name="zhifufangshi.png" width="46" height="46"/>
-        <image name="个人设置1.png" width="50" height="50"/>
+        <image name="个人设置背景250x667.png" width="500" height="1335"/>
         <image name="爱心1.png" width="12" height="11"/>
         <image name="男符号1.png" width="25" height="10"/>
-        <image name="背景.png" width="125" height="222"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

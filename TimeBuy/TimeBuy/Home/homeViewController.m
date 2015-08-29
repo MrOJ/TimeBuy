@@ -26,9 +26,15 @@
 {
     [super viewDidAppear:YES];
     
-    if (![userConfiguration getBoolValueForConfigurationKey:Launched]) {
-        loginViewController *loginVC = [[loginViewController alloc] init];
-        [self.navigationController presentViewController:loginVC animated:YES completion:nil];
+    NSLog(@"lanched = %d",[userConfiguration getBoolValueForConfigurationKey:Launched]);
+    NSLog(@"user = %@",[userConfiguration getStringValueForConfigurationKey:@"user"]);
+    NSLog(@"in state = %@", getState);
+    
+    if (![userConfiguration getBoolValueForConfigurationKey:Launched] || [[userConfiguration getStringValueForConfigurationKey:@"user"] isEqualToString:@""]) {
+        if (![getState isEqualToString:@"2"] && ![getState isEqualToString:@"1"]) {
+            loginViewController *loginVC = [[loginViewController alloc] init];
+            [self.navigationController presentViewController:loginVC animated:YES completion:nil];
+        }
     }
     
     [userConfiguration setApplicationStartupDefaults];
@@ -41,7 +47,7 @@
     //[[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationNone];
     //在info.plist Set UIViewControllerBasedStatusBarAppearance to NO.
     
-    
+    /*
     //清空本地数据
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSDictionary *dict = [defaults dictionaryRepresentation];
@@ -50,7 +56,7 @@
     }
     
     [[NSUserDefaults standardUserDefaults] synchronize];
-    
+    */
     
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStylePlain target:nil action:nil];
@@ -105,9 +111,9 @@
 
 - (void)recState:(NSNotification *)notification {
     NSDictionary *getDic = [notification userInfo];
-    NSString *getState = [getDic objectForKey:@"state"];
+    getState = [getDic objectForKey:@"state"];
     
-    NSLog(@"state = %@", getState);
+    NSLog(@"get state = %@", getState);
     
     switch ([getState integerValue]) {
         case 0:
@@ -423,7 +429,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    //testViewController *testVC = [[testViewController alloc] init];
+    //[self.navigationController pushViewController:testVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

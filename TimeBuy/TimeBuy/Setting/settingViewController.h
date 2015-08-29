@@ -11,6 +11,8 @@
 #import "SlideNavigationController.h"
 
 #import "profilesViewController.h"
+#import "systemSetting/systemSettingView.h"
+#import "releaseInfoViewController.h"
 
 @interface settingViewController : UIViewController
 {
@@ -19,13 +21,20 @@
 
 //@property (strong, nonatomic) IBOutlet UITableView *settingTableView;
 //@property (strong, nonatomic) NSArray *menuArray;
+@property (strong, nonatomic) IBOutlet UIImageView *portaitImg;
+@property (strong, nonatomic) IBOutlet UILabel *nicknameLabel;
+@property (strong, nonatomic) IBOutlet UILabel *likeLabel;
+@property (strong, nonatomic) IBOutlet UILabel *aboutLabel;
+@property (strong, nonatomic) IBOutlet UIImageView *sexImg;
+@property (strong, nonatomic) IBOutlet UILabel *sexLabel;
+@property (strong, nonatomic) IBOutlet UILabel *professionLabel;
+
 @property (strong, nonatomic) IBOutlet UIButton *releaseButton;
 @property (strong, nonatomic) IBOutlet UIButton *settingButton;
 @property (strong, nonatomic) IBOutlet UIButton *informationButton;
 @property (strong, nonatomic) IBOutlet UIButton *myTravelButton;
 @property (strong, nonatomic) IBOutlet UIButton *myNoticeButton;
 @property (strong, nonatomic) IBOutlet UIButton *myScheduleButton;
-@property (strong, nonatomic) IBOutlet UIButton *payButton;
 @property (strong, nonatomic) IBOutlet UIButton *logoutButton;
 
 - (IBAction)release:(id)sender;
@@ -34,7 +43,6 @@
 - (IBAction)myTravel:(id)sender;
 - (IBAction)myNotice:(id)sender;
 - (IBAction)mySchedule:(id)sender;
-- (IBAction)payWay:(id)sender;
 - (IBAction)logout:(id)sender;
 
 @end

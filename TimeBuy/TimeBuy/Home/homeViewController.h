@@ -16,9 +16,12 @@
 #import "userConfiguration.h"
 
 #import "SlideNavigationController.h"
+#import "KLCPopup.h"
 
 #import "loginViewController.h"
 #import "registerViewController.h"
+
+//#import "testViewController.h"
 
 typedef NS_ENUM(NSInteger, HomeTableViewSectionType){
     HomeTableViewSectionTypeSlide,
@@ -32,6 +35,9 @@ typedef NS_ENUM(NSInteger, HomeTableViewRowType){
 };
 
 @interface homeViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate,JScrollViewViewDelegate,SlideNavigationControllerDelegate>
+{
+    NSString *getState;
+}
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @end

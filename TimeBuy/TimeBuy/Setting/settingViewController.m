@@ -17,13 +17,19 @@
 //@synthesize settingTableView;
 //@synthesize menuArray;
 
+@synthesize portaitImg;
+@synthesize nicknameLabel;
+@synthesize aboutLabel;
+@synthesize sexImg;
+@synthesize sexLabel;
+@synthesize professionLabel;
+
 @synthesize releaseButton;
 @synthesize settingButton;
 @synthesize informationButton;
 @synthesize myTravelButton;
 @synthesize myNoticeButton;
 @synthesize myScheduleButton;
-@synthesize payButton;
 @synthesize logoutButton;
 
 - (void)viewWillAppear:(BOOL)animated
@@ -35,12 +41,6 @@
     
     //[SlideNavigationController sharedInstance].rightBarButtonItem.width  = 0.01;
 
-    
-    /*
-    shadowView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height)];
-    shadowView.backgroundColor = [UIColor blackColor];
-    shadowView.alpha = 0.45f;
-    */
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -59,8 +59,8 @@
     self.view.backgroundColor = [UIColor colorWithRed:10.0f / 255.0f green:7.0f / 255.0f blue:26.0f / 255.0f alpha:1];
     
     //self.settingTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    
-    //menuArray = [[NSArray alloc] initWithObjects:@"个人信息",@"我的足迹",@"我的消息",@"我的日程",@"支付方式",@"退出登录", nil];
+    portaitImg.layer.masksToBounds = YES;
+    portaitImg.layer.cornerRadius = portaitImg.bounds.size.height / 2;
 }
 
 /*
@@ -140,6 +140,11 @@
 #pragma mark button
 //发布信息
 - (IBAction)release:(id)sender {
+    releaseInfoViewController *releaseInfoVC = [[releaseInfoViewController alloc] init];
+    
+    [[SlideNavigationController sharedInstance] popToRootAndSwitchToViewController:releaseInfoVC
+                                                             withSlideOutAnimation:YES
+                                                                     andCompletion:nil];
     
 }
 
@@ -147,8 +152,12 @@
 - (IBAction)setting:(id)sender {
     [[SlideNavigationController sharedInstance] popToRootViewControllerAnimated:YES];
     
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"hello" message:@"连接服务器失败" delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-    [alert show];
+    systemSettingView *systemSetting = [[systemSettingView alloc] initWithFrame:CGRectMake(10, 163, 355, 311)];
+    [systemSetting initSubViews];
+
+    
+    KLCPopup *popup = [KLCPopup popupWithContentView:systemSetting showType:KLCPopupShowTypeGrowIn dismissType:KLCPopupDismissTypeGrowOut maskType:KLCPopupMaskTypeDimmed dismissOnBackgroundTouch:YES dismissOnContentTouch:NO];
+    [popup show];
 }
 
 //个人信息
@@ -173,11 +182,6 @@
 
 //我的日程
 - (IBAction)mySchedule:(id)sender {
-    
-}
-
-//支付方式
-- (IBAction)payWay:(id)sender {
     
 }
 

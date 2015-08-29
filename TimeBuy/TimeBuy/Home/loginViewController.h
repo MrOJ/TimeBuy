@@ -10,7 +10,7 @@
 #import "JScrollView+PageControl+AutoScroll.h"
 #import "MBProgressHUD.h"
 #import "AFNetworking.h"
-
+#import "userConfiguration.h"
 #import "NSString+MD5.h"
 
 @interface loginViewController : UIViewController<JScrollViewViewDelegate,UITextFieldDelegate,MBProgressHUDDelegate>

@@ -10,6 +10,7 @@
 #import "NSString+MD5.h"
 #import "MBProgressHUD.h"
 #import "AFNetworking.h"
+#import "userConfiguration.h"
 
 @interface registerViewController : UIViewController<UITextFieldDelegate,MBProgressHUDDelegate>
 {
