@@ -15,6 +15,7 @@
 @implementation modifyAgeViewController
 
 @synthesize age;
+@synthesize ageTextField;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -22,6 +23,7 @@
     self.navigationController.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],NSForegroundColorAttributeName,[UIFont systemFontOfSize:20.0f], NSFontAttributeName, nil];
     self.navigationItem.title = @"年龄";
     
+    ageTextField.text = age;
 }
 
 - (void)didReceiveMemoryWarning {

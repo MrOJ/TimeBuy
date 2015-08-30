@@ -16,6 +16,7 @@
 #import "addressViewController.h"
 #import "telephoneViewController.h"
 #import "signatureViewController.h"
+#import "userConfiguration.h"
 
 #import "VPImageCropperViewController.h"
 
@@ -26,6 +27,7 @@
 @property (nonatomic, strong) UITableView *myTableView;
 @property (nonatomic, strong) NSArray *titleArray1;
 @property (nonatomic, strong) NSArray *titleArray2;
-@property (nonatomic, strong) NSArray *detailsArray;
+@property (nonatomic, strong) NSMutableArray *detailsArray;
+@property (nonatomic, strong) NSArray *keysArray;
 
 @end

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -17,7 +17,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UqN-yN-FhP">
-                    <rect key="frame" x="0.0" y="79" width="320" height="45"/>
+                    <rect key="frame" x="0.0" y="22" width="320" height="45"/>
                     <subviews>
                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b5g-qU-zUf">
                             <rect key="frame" x="15" y="7" width="290" height="30"/>
@@ -27,19 +27,19 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="45" id="1KN-lg-j3X"/>
-                        <constraint firstItem="b5g-qU-zUf" firstAttribute="leading" secondItem="UqN-yN-FhP" secondAttribute="leading" constant="15" id="8HG-in-ZDb"/>
-                        <constraint firstItem="b5g-qU-zUf" firstAttribute="top" secondItem="UqN-yN-FhP" secondAttribute="top" constant="7" id="Ufq-LR-PE0"/>
-                        <constraint firstAttribute="trailing" secondItem="b5g-qU-zUf" secondAttribute="trailing" constant="15" id="cev-uy-W2V"/>
-                        <constraint firstAttribute="bottom" secondItem="b5g-qU-zUf" secondAttribute="bottom" constant="8" id="htX-U7-HKP"/>
+                        <constraint firstAttribute="trailing" secondItem="b5g-qU-zUf" secondAttribute="trailing" constant="15" id="6ve-l5-rHK"/>
+                        <constraint firstAttribute="bottom" secondItem="b5g-qU-zUf" secondAttribute="bottom" constant="8" id="JMC-Te-hhu"/>
+                        <constraint firstItem="b5g-qU-zUf" firstAttribute="top" secondItem="UqN-yN-FhP" secondAttribute="top" constant="7" id="KhJ-wo-5WV"/>
+                        <constraint firstAttribute="height" constant="45" id="ONW-ID-JEf"/>
+                        <constraint firstItem="b5g-qU-zUf" firstAttribute="leading" secondItem="UqN-yN-FhP" secondAttribute="leading" constant="15" id="h6s-lM-BYh"/>
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+            <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="UqN-yN-FhP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="5YU-e6-dau"/>
-                <constraint firstItem="UqN-yN-FhP" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="79" id="QJm-Eo-rEr"/>
-                <constraint firstAttribute="trailing" secondItem="UqN-yN-FhP" secondAttribute="trailing" id="QQp-zF-5GL"/>
+                <constraint firstItem="UqN-yN-FhP" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="22" id="BVn-dw-iKL"/>
+                <constraint firstAttribute="trailing" secondItem="UqN-yN-FhP" secondAttribute="trailing" id="GOg-uX-k1e"/>
+                <constraint firstItem="UqN-yN-FhP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="t9S-8m-gue"/>
             </constraints>
             <point key="canvasLocation" x="329" y="315"/>
         </view>

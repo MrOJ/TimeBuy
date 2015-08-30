@@ -27,10 +27,10 @@
     [super viewDidAppear:YES];
     
     NSLog(@"lanched = %d",[userConfiguration getBoolValueForConfigurationKey:Launched]);
-    NSLog(@"user = %@",[userConfiguration getStringValueForConfigurationKey:@"user"]);
-    NSLog(@"in state = %@", getState);
+    NSLog(@"user = %@",[userConfiguration getStringValueForConfigurationKey:@"userId"]);
+    //NSLog(@"in state = %@", getState);
     
-    if (![userConfiguration getBoolValueForConfigurationKey:Launched] || [[userConfiguration getStringValueForConfigurationKey:@"user"] isEqualToString:@""]) {
+    if ([[userConfiguration getStringValueForConfigurationKey:@"userId"] isEqualToString:@""]) {
         if (![getState isEqualToString:@"2"] && ![getState isEqualToString:@"1"]) {
             loginViewController *loginVC = [[loginViewController alloc] init];
             [self.navigationController presentViewController:loginVC animated:YES completion:nil];

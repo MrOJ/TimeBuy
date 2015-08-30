@@ -15,7 +15,7 @@
 @implementation profilesViewController
 
 @synthesize myTableView;
-@synthesize titleArray1,titleArray2,detailsArray;
+@synthesize titleArray1,titleArray2,detailsArray,keysArray;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -35,9 +35,16 @@
     titleArray1 = [[NSArray alloc] initWithObjects:@"头像",@"名字",@"性别",@"年龄",@"职业", nil];
     titleArray2 = [[NSArray alloc] initWithObjects:@"地址",@"电话",@"个性签名", nil];
     
-    detailsArray = [[NSArray alloc] initWithObjects:@" ",@"黄小名",@"男",@"22",@"学生",@"杭州",@"187123456789",@"人生只有一次", nil];
+    keysArray = [[NSArray alloc] initWithObjects:@"headIcon", @"nickname", @"sex", @"birthDay", @"profession", @"address", @"phone",@"signature", nil];
     
+    detailsArray = [[NSMutableArray alloc] init];
     
+    for (NSString *str in keysArray) {
+        //NSLog(@"~~%@ = %@",str,[userConfiguration getStringValueForConfigurationKey:str]);
+        [detailsArray addObject:[userConfiguration getStringValueForConfigurationKey:str]];
+    }
+    
+    //NSLog(@"%@", detailsArray);
     //[self getUserProfiles:[userConfiguration getStringValueForConfigurationKey:@"user"]];
     
 }
@@ -116,9 +123,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSInteger row = indexPath.row;
     if (indexPath.section == 0) {
 
-        switch (indexPath.row) {
+        switch (row) {
             case 0:
             {
                 UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil
@@ -133,6 +141,7 @@
             case 1:
             {
                 modifyNameViewController *modifyNameVC = [[modifyNameViewController alloc] init];
+                modifyNameVC.name = [detailsArray objectAtIndex:row];
                 [self.navigationController pushViewController:modifyNameVC animated:YES];
                 break;
             }
@@ -140,6 +149,7 @@
             {
                 
                 modifySexViewController *modifySexVC = [[modifySexViewController alloc] init];
+                modifySexVC.sex = [detailsArray objectAtIndex:row];
                 [self.navigationController pushViewController:modifySexVC animated:YES];
                 
                 break;
@@ -148,6 +158,7 @@
             {
                 
                 modifyAgeViewController *modifyAgeVC = [[modifyAgeViewController alloc] init];
+                modifyAgeVC.age = [detailsArray objectAtIndex:row];
                 [self.navigationController pushViewController:modifyAgeVC animated:YES];
                 
                 break;
@@ -155,6 +166,7 @@
             case 4:
             {
                 occupationViewController *occupationVC = [[occupationViewController alloc] init];
+                occupationVC.occupation = [detailsArray objectAtIndex:row];
                 [self.navigationController pushViewController:occupationVC animated:YES];
                 
                 break;
@@ -168,18 +180,21 @@
             case 0:
             {
                 addressViewController *addressVC = [[addressViewController alloc] init];
+                addressVC.address = [detailsArray objectAtIndex:indexPath.section * 5 + indexPath.row];
                 [self.navigationController pushViewController:addressVC animated:YES];
                 break;
             }
             case 1:
             {
                 telephoneViewController *telephoneVC = [[telephoneViewController alloc] init];
+                telephoneVC.telephone = [detailsArray objectAtIndex:indexPath.section * 5 + indexPath.row];
                 [self.navigationController pushViewController:telephoneVC animated:YES];
                 break;
             }
             case 2:
             {
                 signatureViewController *signatureVC = [[signatureViewController alloc] init];
+                signatureVC.signature = [detailsArray objectAtIndex:indexPath.section * 5 + indexPath.row];
                 [self.navigationController pushViewController:signatureVC animated:YES];
                 break;
             }

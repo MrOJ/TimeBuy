@@ -187,8 +187,35 @@
 
 //退出登录
 - (IBAction)logout:(id)sender {
+    [[SlideNavigationController sharedInstance] popToRootViewControllerAnimated:YES];
     
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil message:@"确定要退出登录" delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+    alert.delegate = self;
+    [alert show];
 }
+
+#pragma mark alertDelegate
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    NSLog(@"clickButtonAtIndex:%ld",(long)buttonIndex);
+    if (buttonIndex == 1) {
+        
+        
+        //清空本地数据
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        NSDictionary *dict = [defaults dictionaryRepresentation];
+        for (id key in dict) {
+            [defaults removeObjectForKey:key];
+        }
+        
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        
+        
+        loginViewController *loginVC = [[loginViewController alloc] init];
+        [[SlideNavigationController sharedInstance] presentViewController:loginVC animated:YES completion:nil];
+    }
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

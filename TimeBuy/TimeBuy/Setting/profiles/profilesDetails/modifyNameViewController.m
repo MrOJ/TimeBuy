@@ -26,6 +26,8 @@
     nameView.layer.borderColor = (__bridge CGColorRef)([UIColor darkGrayColor]);
     nameView.layer.borderWidth = 1.0f;
     nameView.layer.masksToBounds = YES;
+    
+    nameTextField.text = name;
 }
 
 - (void)didReceiveMemoryWarning {

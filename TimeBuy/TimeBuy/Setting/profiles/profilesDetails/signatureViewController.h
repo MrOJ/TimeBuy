@@ -10,6 +10,7 @@
 
 @interface signatureViewController : UIViewController
 
+@property (strong, nonatomic) IBOutlet UITextView *signatureTextField;
 @property (strong, nonatomic) NSString *signature;
 
 @end

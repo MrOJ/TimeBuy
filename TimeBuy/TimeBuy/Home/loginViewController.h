@@ -19,6 +19,9 @@
     UITextField *passwordTextField;
     
     MBProgressHUD *HUD;
+    MBProgressHUD *HUDinSuccess;
 }
+
+@property (nonatomic, strong) NSData *getData;
 
 @end

@@ -869,9 +869,9 @@
 		18AD5F101B91494A00E63C2D /* profiles */ = {
 			isa = PBXGroup;
 			children = (
-				18AD5F111B91494A00E63C2D /* profilesDetails */,
 				18AD5F271B91494A00E63C2D /* profilesViewController.h */,
 				18AD5F281B91494A00E63C2D /* profilesViewController.m */,
+				18AD5F111B91494A00E63C2D /* profilesDetails */,
 			);
 			path = profiles;
 			sourceTree = "<group>";

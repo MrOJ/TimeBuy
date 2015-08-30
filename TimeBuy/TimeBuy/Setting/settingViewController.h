@@ -14,7 +14,7 @@
 #import "systemSetting/systemSettingView.h"
 #import "releaseInfoViewController.h"
 
-@interface settingViewController : UIViewController
+@interface settingViewController : UIViewController <UIAlertViewDelegate>
 {
     UIView *shadowView;
 }

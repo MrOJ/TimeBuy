@@ -15,6 +15,7 @@
 @interface registerViewController : UIViewController<UITextFieldDelegate,MBProgressHUDDelegate>
 {
     MBProgressHUD *HUD;
+    MBProgressHUD *HUDinSuccess;
 }
 
 @property (strong, nonatomic) IBOutlet UIButton *backButton;

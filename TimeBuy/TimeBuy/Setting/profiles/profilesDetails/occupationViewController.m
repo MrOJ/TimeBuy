@@ -15,12 +15,15 @@
 @implementation occupationViewController
 
 @synthesize occupation;
+@synthesize occupationTextField;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.navigationController.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],NSForegroundColorAttributeName,[UIFont systemFontOfSize:20.0f], NSFontAttributeName, nil];
     self.navigationItem.title = @"职业";
+    
+    occupationTextField.text = occupation;
 }
 
 - (void)didReceiveMemoryWarning {

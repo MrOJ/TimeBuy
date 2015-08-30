@@ -14,6 +14,8 @@
 
 @implementation loginViewController
 
+@synthesize getData;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
@@ -178,6 +180,7 @@
     HUD = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     // Regiser for HUD callbacks so we can remove it from the window at the right time
     HUD.delegate = self;
+    //[HUD show:YES];
     //上传至服务器
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
@@ -201,22 +204,37 @@
         NSString *getCode = [NSString stringWithFormat:@"%@",[responseObject objectForKey:@"code"]];
         if ([getStatus isEqualToString:@"1"] && [getCode isEqualToString:@"1000"]) {
             
-            [self dismissViewControllerAnimated:YES completion:nil];
+            //[self dismissViewControllerAnimated:YES completion:nil];
             
-            HUD = [[MBProgressHUD alloc] initWithView:self.view];
-            [self.view addSubview:HUD];
-            HUD.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"37x-Checkmark.png"]];
-            HUD.mode = MBProgressHUDModeCustomView;
-            HUD.delegate = self;
-            HUD.labelText = @"登录成功";
-            [HUD show:YES];
-            [HUD hide:YES afterDelay:3];
+            HUDinSuccess = [[MBProgressHUD alloc] initWithView:self.view];
+            [self.view addSubview:HUDinSuccess];
+            HUDinSuccess.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"37x-Checkmark.png"]];
+            HUDinSuccess.mode = MBProgressHUDModeCustomView;
+            HUDinSuccess.delegate = self;
+            HUDinSuccess.labelText = @"登录成功";
+            [HUDinSuccess show:YES];
+            [HUDinSuccess hide:YES afterDelay:1];
             
-            [userConfiguration setStringValueForConfigurationKey:phoneTextField.text withValue:@"user"];
+            // 将得到的数据存在本地
+            getData = [responseObject objectForKey:@"data"];
+            
+            [self storeInUserDefault:@"headIcon"];
+            [self storeInUserDefault:@"userId"];
+            [self storeInUserDefault:@"nickname"];
+            [self storeInUserDefault:@"sex"];
+            [self storeInUserDefault:@"age"];
+            [self storeInUserDefault:@"profession"];
+            [self storeInUserDefault:@"address"];
+            [self storeInUserDefault:@"phone"];
+            [self storeInUserDefault:@"birthDay"];
+            [self storeInUserDefault:@"signature"];
             
             [[NSNotificationCenter defaultCenter] postNotificationName:@"passState"
                                                                 object:self
                                                               userInfo:@{@"state":@"0"}];
+            
+            
+            
             
         } else if ([getStatus isEqualToString:@"0"] && [getCode isEqualToString:@"2003"]) {
             [self showErrorWithTitle:@"登录失败" WithMessage:@"用户名不存在"];
@@ -236,14 +254,34 @@
 #pragma mark - MBProgressHUDDelegate
 - (void)hudWasHidden:(MBProgressHUD *)hud {
     // Remove HUD from screen when the HUD was hidded
-    [HUD removeFromSuperview];
-    //[self dismissViewControllerAnimated:YES completion:nil];
+    [hud removeFromSuperview];
+    if ([hud isEqual:HUDinSuccess]) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
+    //[HUDinSuccess removeFromSuperview];
+    
 }
 
 -(void)showErrorWithTitle:(NSString *)titile WithMessage:(NSString *)msg
 {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:titile message:msg delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
     [alert show];
+}
+
+//数据存入本地
+- (void)storeInUserDefault:(NSString *)target
+{
+    NSString *getStr = @"";
+    if ([[getData valueForKey:target] isKindOfClass:[NSString class]]) {
+        getStr = [NSString stringWithFormat:@"%@",[getData valueForKey:target]];
+    } else {
+        getStr = [(NSNumber *)[getData valueForKey:target] stringValue];
+        
+    }
+    
+    //NSLog(@"%@ = %@",target,getStr);
+    
+    [userConfiguration setStringValueForConfigurationKey:target withValue:getStr];
 }
 
 //判断手机号码是否正确

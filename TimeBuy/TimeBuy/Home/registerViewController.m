@@ -118,17 +118,18 @@
             if ([getStatus isEqualToString:@"1"]) {
                 [self dismissViewControllerAnimated:YES completion:nil];
                 
-                HUD = [[MBProgressHUD alloc] initWithView:self.view];
-                [self.view addSubview:HUD];
-                HUD.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"37x-Checkmark.png"]];
-                HUD.mode = MBProgressHUDModeCustomView;
+                HUDinSuccess = [[MBProgressHUD alloc] initWithView:self.view];
+                [self.view addSubview:HUDinSuccess];
+                HUDinSuccess.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"37x-Checkmark.png"]];
+                HUDinSuccess.mode = MBProgressHUDModeCustomView;
                 
-                HUD.delegate = self;
-                HUD.labelText = @"注册成功";
-                [HUD show:YES];
-                [HUD hide:YES afterDelay:2];
                 
-                [userConfiguration setStringValueForConfigurationKey:phoneTextField.text withValue:@"user"];
+                HUDinSuccess.delegate = self;
+                HUDinSuccess.labelText = @"注册成功";
+                [HUDinSuccess show:YES];
+                [HUDinSuccess hide:YES afterDelay:1];
+                
+                [userConfiguration setStringValueForConfigurationKey:@"user" withValue:phoneTextField.text];
                 
             }  else if ([getStatus isEqualToString:@"0"] && [getCode isEqualToString:@"2002"]) {
                 [self showErrorWithTitle:@"注册失败" WithMessage:@"用户名已存在"];
@@ -150,7 +151,11 @@
 #pragma mark - MBProgressHUDDelegate
 - (void)hudWasHidden:(MBProgressHUD *)hud {
     // Remove HUD from screen when the HUD was hidded
-    [HUD removeFromSuperview];
+    [hud removeFromSuperview];
+    
+    if ([hud isEqual:HUDinSuccess]) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
     //[self dismissViewControllerAnimated:YES completion:nil];
 }
 

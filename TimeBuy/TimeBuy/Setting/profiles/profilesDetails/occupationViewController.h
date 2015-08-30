@@ -11,5 +11,6 @@
 @interface occupationViewController : UIViewController
 
 @property (nonatomic, strong) NSString *occupation;
+@property (strong, nonatomic) IBOutlet UITextField *occupationTextField;
 
 @end
