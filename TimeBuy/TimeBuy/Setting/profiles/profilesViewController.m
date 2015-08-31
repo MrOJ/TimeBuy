@@ -32,20 +32,87 @@
     //myTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.view addSubview:myTableView];
     
-    titleArray1 = [[NSArray alloc] initWithObjects:@"头像",@"名字",@"性别",@"年龄",@"职业", nil];
+    titleArray1 = [[NSArray alloc] initWithObjects:@"头像",@"名字",@"性别",@"生日",@"职业", nil];
     titleArray2 = [[NSArray alloc] initWithObjects:@"地址",@"电话",@"个性签名", nil];
     
-    keysArray = [[NSArray alloc] initWithObjects:@"headIcon", @"nickname", @"sex", @"birthDay", @"profession", @"address", @"phone",@"signature", nil];
+    keysArray = [[NSArray alloc] initWithObjects:@"headIcon", @"nickName", @"sex", @"birthDay", @"profession", @"address", @"phone",@"signature", nil];
     
     detailsArray = [[NSMutableArray alloc] init];
     
     for (NSString *str in keysArray) {
-        //NSLog(@"~~%@ = %@",str,[userConfiguration getStringValueForConfigurationKey:str]);
+        //NSLog(@"~~%@",[userConfiguration getStringValueForConfigurationKey:str]);
         [detailsArray addObject:[userConfiguration getStringValueForConfigurationKey:str]];
     }
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(recModify:) name:@"passModify" object:nil];
+    
     //NSLog(@"%@", detailsArray);
-    //[self getUserProfiles:[userConfiguration getStringValueForConfigurationKey:@"user"]];
+    //[self getUserProfiles:[userConfiguration getStringValueForConfigurationKey:@"phone"]];
+    
+    nameStr = [detailsArray objectAtIndex:1];
+    sexStr = [detailsArray objectAtIndex:2];
+    //ageStr = [detailsArray objectAtIndex:3];
+    occupationStr = [detailsArray objectAtIndex:4];
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateStyle:NSDateFormatterMediumStyle];
+    [formatter setTimeStyle:NSDateFormatterShortStyle];
+    [formatter setDateFormat:@"YYYY-MM-dd"]; // ----------设置你想要的格式,hh与HH的区别:分别表示12小时制,24小时制
+    //时间戳转换
+    NSDate *confromTimesp = [NSDate dateWithTimeIntervalSince1970:[[detailsArray objectAtIndex:3] integerValue]];
+    NSString *confromTimespStr = [formatter stringFromDate:confromTimesp];
+    ageStr = confromTimespStr;
+    
+}
+
+- (void)recModify:(NSNotification *)notification
+{
+    NSDictionary *getDic = [notification userInfo];
+    getType = [getDic objectForKey:@"type"];
+    getValue = [getDic objectForKey:@"value"];
+    
+    NSLog(@"type = %@, value = %@",getType,getValue);
+    
+    if ([getType isEqualToString:@"name"]) {
+        
+        nameStr = getValue;
+        
+        profilesTableViewCell *cell= (profilesTableViewCell *)[myTableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0]];
+        cell.subTextLabel.text = getValue;
+        
+    } else if ([getType isEqualToString:@"sex"]) {
+        
+        sexStr = getValue;
+        
+        profilesTableViewCell *cell= (profilesTableViewCell *)[myTableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:2 inSection:0]];
+        
+        if ([getValue isEqualToString:@"0"]) {
+            cell.subTextLabel.text = @"男";
+        } else {
+            cell.subTextLabel.text = @"女";
+        }
+        
+    } else if ([getType isEqualToString:@"age"]) {
+        
+        ageStr = getValue;
+        
+        profilesTableViewCell *cell= (profilesTableViewCell *)[myTableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:3 inSection:0]];
+        cell.subTextLabel.text = getValue;
+        
+    } else if ([getType isEqualToString:@"occupation"]) {
+        
+        occupationStr = getValue;
+        
+        profilesTableViewCell *cell= (profilesTableViewCell *)[myTableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:4 inSection:0]];
+        cell.subTextLabel.text = getValue;
+        
+    } else if ([getType isEqualToString:@"address"]) {
+        
+    } else if ([getType isEqualToString:@"signature"]) {
+        
+    } else if ([getType isEqualToString:@"phone"]) {
+        
+    }
     
 }
 
@@ -80,8 +147,9 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *CellTableIdentifier=[[NSString alloc] initWithFormat:@"cell"];
+    NSString *CellTableIdentifier=[[NSString alloc]initWithFormat:@"extentedCell%lu-%lu",(unsigned long)indexPath.section,(unsigned long)indexPath.row];
     
+    /*
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellTableIdentifier];
     if (cell == nil) {
         
@@ -89,36 +157,102 @@
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         
     }
+    */
     
     if (indexPath.section == 0) {
-        cell.textLabel.text = [titleArray1 objectAtIndex:indexPath.row];
+        
         if (indexPath.row == 0) {
+            
+            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellTableIdentifier];
+            if (cell == nil) {
+                
+                cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellTableIdentifier];
+                cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+                
+            }
+            
+            cell.textLabel.text = [titleArray1 objectAtIndex:indexPath.row];
+            
             UIImageView *portraitView = [[UIImageView alloc] initWithFrame:CGRectMake(self.view.bounds.size.width - 100, 10, 60, 60)];
             portraitView.image = [UIImage imageNamed:@"portrait.png"];
             portraitView.layer.masksToBounds = YES;
             portraitView.layer.cornerRadius = portraitView.bounds.size.height / 2;
             [cell addSubview:portraitView];
-        } else {
+            
+            return cell;
+            
+        } else if (indexPath.row == 2) {
+            
+            profilesTableViewCell *cell = (profilesTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellTableIdentifier];
+            
+            if (cell == nil) {
+                
+                cell.contentView.frame = cell.bounds;
+                cell.contentView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
+                cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+                cell = [[[NSBundle mainBundle] loadNibNamed:@"profilesTableViewCell" owner:self options:nil] lastObject];
+            }
+            
+            /*
             UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.view.bounds.size.width - 240, 10, 200, 30)];
             titleLabel.textColor = [UIColor lightGrayColor];
             titleLabel.textAlignment = NSTextAlignmentRight;
-            titleLabel.text = [detailsArray objectAtIndex:indexPath.section * 5 + indexPath.row];
-            [cell addSubview:titleLabel];
+            */
+            
+            if ([[detailsArray objectAtIndex:indexPath.section * 5 + indexPath.row] isEqualToString:@"0"]) {
+                cell.subTextLabel.text = @"男";
+            } else {
+                cell.subTextLabel.text = @"女";
+            }
+            
+            cell.textLabel.text = [titleArray1 objectAtIndex:indexPath.row];
+            
+            return cell;
+        } else {
+            
+            profilesTableViewCell *cell = (profilesTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellTableIdentifier];
+            
+            if (cell == nil) {
+                
+                cell.contentView.frame = cell.bounds;
+                cell.contentView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
+                cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+                cell = [[[NSBundle mainBundle] loadNibNamed:@"profilesTableViewCell" owner:self options:nil] lastObject];
+            }
+            
+            if (indexPath.row == 3) {
+                cell.subTextLabel.text = ageStr;
+            } else {
+                cell.subTextLabel.text = [detailsArray objectAtIndex:indexPath.section * 5 + indexPath.row];
+            }
+            
+            cell.textLabel.text = [titleArray1 objectAtIndex:indexPath.row];
+            
+            return cell;
         }
         
     } else if (indexPath.section == 1) {
-        cell.textLabel.text = [titleArray2 objectAtIndex:indexPath.row];
         
-        UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(self.view.bounds.size.width - 240, 10, 200, 30)];
-        titleLabel.textColor = [UIColor lightGrayColor];
-        titleLabel.textAlignment = NSTextAlignmentRight;
-        titleLabel.text = [detailsArray objectAtIndex:indexPath.section * 5 + indexPath.row];
-        [cell addSubview:titleLabel];
+        profilesTableViewCell *cell = (profilesTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellTableIdentifier];
+        
+        if (cell == nil) {
+            
+            cell.contentView.frame = cell.bounds;
+            cell.contentView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            cell = [[[NSBundle mainBundle] loadNibNamed:@"profilesTableViewCell" owner:self options:nil] lastObject];
+        }
+        
+        cell.textLabel.text = [titleArray2 objectAtIndex:indexPath.row];
+        cell.subTextLabel.text =[detailsArray objectAtIndex:indexPath.section * 5 + indexPath.row];
+        
+        return cell;
     }
     
     //cell.textLabel.text = @"Hello";
     
-    return cell;
+    //return cell;
+    return nil;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -141,7 +275,7 @@
             case 1:
             {
                 modifyNameViewController *modifyNameVC = [[modifyNameViewController alloc] init];
-                modifyNameVC.name = [detailsArray objectAtIndex:row];
+                modifyNameVC.name = nameStr;
                 [self.navigationController pushViewController:modifyNameVC animated:YES];
                 break;
             }
@@ -149,7 +283,7 @@
             {
                 
                 modifySexViewController *modifySexVC = [[modifySexViewController alloc] init];
-                modifySexVC.sex = [detailsArray objectAtIndex:row];
+                modifySexVC.sex = sexStr;
                 [self.navigationController pushViewController:modifySexVC animated:YES];
                 
                 break;
@@ -158,7 +292,7 @@
             {
                 
                 modifyAgeViewController *modifyAgeVC = [[modifyAgeViewController alloc] init];
-                modifyAgeVC.age = [detailsArray objectAtIndex:row];
+                modifyAgeVC.age = ageStr;
                 [self.navigationController pushViewController:modifyAgeVC animated:YES];
                 
                 break;
@@ -166,7 +300,7 @@
             case 4:
             {
                 occupationViewController *occupationVC = [[occupationViewController alloc] init];
-                occupationVC.occupation = [detailsArray objectAtIndex:row];
+                occupationVC.occupation = occupationStr;
                 [self.navigationController pushViewController:occupationVC animated:YES];
                 
                 break;

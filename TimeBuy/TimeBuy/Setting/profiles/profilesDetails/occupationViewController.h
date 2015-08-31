@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface occupationViewController : UIViewController
+@interface occupationViewController : UIViewController<UITextFieldDelegate>
 
 @property (nonatomic, strong) NSString *occupation;
 @property (strong, nonatomic) IBOutlet UITextField *occupationTextField;

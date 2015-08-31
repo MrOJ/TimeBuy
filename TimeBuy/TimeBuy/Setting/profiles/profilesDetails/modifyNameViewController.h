@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface modifyNameViewController : UIViewController
+@interface modifyNameViewController : UIViewController<UITextFieldDelegate>
 
 @property (strong, nonatomic) IBOutlet UIView *nameView;
 @property (strong, nonatomic) IBOutlet UITextField *nameTextField;

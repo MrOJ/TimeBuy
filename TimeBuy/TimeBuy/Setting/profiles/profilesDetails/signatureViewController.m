@@ -15,7 +15,7 @@
 @implementation signatureViewController
 
 @synthesize signature;
-@synthesize signatureTextField;
+@synthesize signatureTextView;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -23,7 +23,33 @@
     self.navigationController.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],NSForegroundColorAttributeName,[UIFont systemFontOfSize:20.0f], NSFontAttributeName, nil];
     self.navigationItem.title = @"个性签名";
     
-    signatureTextField.text = signature;
+    signatureTextView.text = signature;
+    signatureTextView.delegate = self;
+    
+    UIBarButtonItem *registerButton = [[UIBarButtonItem alloc] initWithTitle:@"确定" style:UIBarButtonItemStylePlain target:self action:@selector(save:)];
+    self.navigationItem.rightBarButtonItem = registerButton;
+    self.navigationItem.rightBarButtonItem.enabled = NO;
+}
+
+- (void)save:(id)sender {
+    [self.navigationController popViewControllerAnimated:YES];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"passModify"
+                                                        object:self
+                                                      userInfo:@{@"type":@"signature",@"value":signatureTextView.text}];
+}
+
+#pragma mark - TextView delegate
+- (void)textViewDidBeginEditing:(UITextView *)textView
+{
+    self.navigationItem.rightBarButtonItem.enabled = YES;
+}
+
+// 点击编辑区以外的地方 取消键盘
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+    if (![signatureTextView isExclusiveTouch]) {
+        [signatureTextView resignFirstResponder];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

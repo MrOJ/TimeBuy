@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface signatureViewController : UIViewController
+@interface signatureViewController : UIViewController<UITextViewDelegate>
 
-@property (strong, nonatomic) IBOutlet UITextView *signatureTextField;
+@property (strong, nonatomic) IBOutlet UITextView *signatureTextView;
 @property (strong, nonatomic) NSString *signature;
 
 @end

@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface modifySexViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
+{
+    NSInteger currentRow;
+}
 
 @property (nonatomic, strong) NSString* sex;
 @property (strong, nonatomic) IBOutlet UITableView *sexTableView;

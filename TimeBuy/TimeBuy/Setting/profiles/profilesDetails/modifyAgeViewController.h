@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface modifyAgeViewController : UIViewController
+@interface modifyAgeViewController : UIViewController<UITextFieldDelegate>
 
 @property (strong, nonatomic) IBOutlet UIView *ageView;
 @property (strong, nonatomic) IBOutlet UITextField *ageTextField;

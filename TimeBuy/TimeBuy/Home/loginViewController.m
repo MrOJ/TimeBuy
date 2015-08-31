@@ -124,6 +124,19 @@
     
     [textField resignFirstResponder];
     
+    if ([phoneTextField.text length]== 0) {
+        [self showErrorWithTitle:@"登录失败" WithMessage:@"手机号码不能为空"];
+        //[phoneTextField becomeFirstResponder];
+    } else if (![self isMobileNumber:[phoneTextField text]]) {
+        [self showErrorWithTitle:@"登录失败" WithMessage:@"手机号码格式不正确"];
+        [phoneTextField becomeFirstResponder];
+    } else if ([passwordTextField.text length] == 0) {
+        [self showErrorWithTitle:@"登录失败" WithMessage:@"密码不能为空"];
+        [passwordTextField becomeFirstResponder];
+    } else {
+        [self verifyLogin];
+    }
+    
     return YES;
 }
 
@@ -202,6 +215,7 @@
         
         NSString *getStatus = [NSString stringWithFormat:@"%@",[responseObject objectForKey:@"success"]];
         NSString *getCode = [NSString stringWithFormat:@"%@",[responseObject objectForKey:@"code"]];
+        //NSString *getMsg = [NSString stringwith]
         if ([getStatus isEqualToString:@"1"] && [getCode isEqualToString:@"1000"]) {
             
             //[self dismissViewControllerAnimated:YES completion:nil];
@@ -220,7 +234,7 @@
             
             [self storeInUserDefault:@"headIcon"];
             [self storeInUserDefault:@"userId"];
-            [self storeInUserDefault:@"nickname"];
+            [self storeInUserDefault:@"nickName"];
             [self storeInUserDefault:@"sex"];
             [self storeInUserDefault:@"age"];
             [self storeInUserDefault:@"profession"];
@@ -273,13 +287,15 @@
 {
     NSString *getStr = @"";
     if ([[getData valueForKey:target] isKindOfClass:[NSString class]]) {
-        getStr = [NSString stringWithFormat:@"%@",[getData valueForKey:target]];
+        NSString *str = [NSString stringWithFormat:@"%@",[getData valueForKey:target]];
+        getStr = [NSString stringWithString:[str stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+        
     } else {
         getStr = [(NSNumber *)[getData valueForKey:target] stringValue];
         
     }
     
-    //NSLog(@"%@ = %@",target,getStr);
+    NSLog(@"%@ = %@",target,getStr);
     
     [userConfiguration setStringValueForConfigurationKey:target withValue:getStr];
 }

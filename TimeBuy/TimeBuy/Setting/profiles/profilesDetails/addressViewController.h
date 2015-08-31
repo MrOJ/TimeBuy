@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface addressViewController : UIViewController
+@interface addressViewController : UIViewController<UITextFieldDelegate>
 
 @property (nonatomic, strong) NSString *address;
 
