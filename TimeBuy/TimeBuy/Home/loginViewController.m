@@ -191,16 +191,15 @@
 - (void)verifyLogin {
     
     HUD = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    // Regiser for HUD callbacks so we can remove it from the window at the right time
     HUD.delegate = self;
-    //[HUD show:YES];
+    
     //上传至服务器
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     manager.requestSerializer = [AFJSONRequestSerializer serializer];
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
     [manager.requestSerializer setValue:@"d6089681f79c7627bbac829307e041a7" forHTTPHeaderField:@"x-timebuy-sid"];
     [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
-    [manager.requestSerializer setValue:@"application/json; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
+    [manager.requestSerializer setValue:@"application/json; charset=uft-8" forHTTPHeaderField:@"Content-Type"];
     
     //2.设置登录参数
     NSDictionary *dict = @{ @"phone":phoneTextField.text,
@@ -209,13 +208,10 @@
     //3.请求
     [manager GET:@"http://192.168.8.102:8080/timebuy/login/user" parameters:dict success: ^(AFHTTPRequestOperation *operation, id responseObject) {
         NSLog(@"GET --> %@", responseObject); //自动返回主线程
-        
-        //[activityIndicatorView stopAnimating];
         [HUD hide:YES];
         
         NSString *getStatus = [NSString stringWithFormat:@"%@",[responseObject objectForKey:@"success"]];
         NSString *getCode = [NSString stringWithFormat:@"%@",[responseObject objectForKey:@"code"]];
-        //NSString *getMsg = [NSString stringwith]
         if ([getStatus isEqualToString:@"1"] && [getCode isEqualToString:@"1000"]) {
             
             //[self dismissViewControllerAnimated:YES completion:nil];

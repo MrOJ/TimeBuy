@@ -20,10 +20,11 @@
 #import "profilesTableViewCell.h"
 
 #import "VPImageCropperViewController.h"
+#import "MBProgressHUD.h"
 
 #define ORIGINAL_MAX_WIDTH 640.0f
 
-@interface profilesViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,UIImagePickerControllerDelegate,VPImageCropperDelegate,UIActionSheetDelegate,UINavigationControllerDelegate>
+@interface profilesViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,UIImagePickerControllerDelegate,VPImageCropperDelegate,UIActionSheetDelegate,UINavigationControllerDelegate,MBProgressHUDDelegate>
 {
     NSString *getType;
     NSString *getValue;
@@ -35,6 +36,9 @@
     NSString *addressStr;
     NSString *phoneStr;
     NSString *signatuStr;
+    
+    MBProgressHUD *HUD;
+    MBProgressHUD *HUDinSuccess;
 }
 
 @property (nonatomic, strong) UITableView *myTableView;

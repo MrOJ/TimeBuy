@@ -10,8 +10,5 @@
 
 @interface profilesTableViewCell : UITableViewCell
 
-- (void)initSubviews;
-
-@property (nonatomic, strong) UILabel *subTextLabel;
-
+@property (strong, nonatomic) IBOutlet UILabel *subTextLabel;
 @end

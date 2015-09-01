@@ -102,7 +102,8 @@
 		189DD3891B9472B00083B52C /* b21c8701a18b87d600927607010828381e30fdd2.jpg.png in Resources */ = {isa = PBXBuildFile; fileRef = 189DD37A1B9472B00083B52C /* b21c8701a18b87d600927607010828381e30fdd2.jpg.png */; };
 		189DD38A1B9472B00083B52C /* b21c8701a18b87d600927607010828381e30fdd2.jpg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 189DD37B1B9472B00083B52C /* b21c8701a18b87d600927607010828381e30fdd2.jpg@2x.png */; };
 		189DD38B1B9472B00083B52C /* b21c8701a18b87d600927607010828381e30fdd2.jpg@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 189DD37C1B9472B00083B52C /* b21c8701a18b87d600927607010828381e30fdd2.jpg@3x.png */; };
-		189DD3931B94976D0083B52C /* profilesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 189DD3921B94976D0083B52C /* profilesTableViewCell.m */; };
+		189DD3971B95B69D0083B52C /* profilesTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 189DD3951B95B69D0083B52C /* profilesTableViewCell.m */; };
+		189DD3981B95B69D0083B52C /* profilesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 189DD3961B95B69D0083B52C /* profilesTableViewCell.xib */; };
 		18AD5F0A1B9147FA00E63C2D /* KLCPopup.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AD5F091B9147FA00E63C2D /* KLCPopup.m */; };
 		18AD5F291B91494A00E63C2D /* addressViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AD5F131B91494A00E63C2D /* addressViewController.m */; };
 		18AD5F2A1B91494A00E63C2D /* addressViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18AD5F141B91494A00E63C2D /* addressViewController.xib */; };
@@ -344,8 +345,9 @@
 		189DD37A1B9472B00083B52C /* b21c8701a18b87d600927607010828381e30fdd2.jpg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = b21c8701a18b87d600927607010828381e30fdd2.jpg.png; sourceTree = "<group>"; };
 		189DD37B1B9472B00083B52C /* b21c8701a18b87d600927607010828381e30fdd2.jpg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "b21c8701a18b87d600927607010828381e30fdd2.jpg@2x.png"; sourceTree = "<group>"; };
 		189DD37C1B9472B00083B52C /* b21c8701a18b87d600927607010828381e30fdd2.jpg@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "b21c8701a18b87d600927607010828381e30fdd2.jpg@3x.png"; sourceTree = "<group>"; };
-		189DD3911B94976D0083B52C /* profilesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = profilesTableViewCell.h; sourceTree = "<group>"; };
-		189DD3921B94976D0083B52C /* profilesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = profilesTableViewCell.m; sourceTree = "<group>"; };
+		189DD3941B95B69D0083B52C /* profilesTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = profilesTableViewCell.h; sourceTree = "<group>"; };
+		189DD3951B95B69D0083B52C /* profilesTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = profilesTableViewCell.m; sourceTree = "<group>"; };
+		189DD3961B95B69D0083B52C /* profilesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = profilesTableViewCell.xib; sourceTree = "<group>"; };
 		18AD5F081B9147FA00E63C2D /* KLCPopup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLCPopup.h; sourceTree = "<group>"; };
 		18AD5F091B9147FA00E63C2D /* KLCPopup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLCPopup.m; sourceTree = "<group>"; };
 		18AD5F121B91494A00E63C2D /* addressViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = addressViewController.h; sourceTree = "<group>"; };
@@ -935,8 +937,9 @@
 			children = (
 				18AD5F271B91494A00E63C2D /* profilesViewController.h */,
 				18AD5F281B91494A00E63C2D /* profilesViewController.m */,
-				189DD3911B94976D0083B52C /* profilesTableViewCell.h */,
-				189DD3921B94976D0083B52C /* profilesTableViewCell.m */,
+				189DD3941B95B69D0083B52C /* profilesTableViewCell.h */,
+				189DD3951B95B69D0083B52C /* profilesTableViewCell.m */,
+				189DD3961B95B69D0083B52C /* profilesTableViewCell.xib */,
 				18AD5F111B91494A00E63C2D /* profilesDetails */,
 			);
 			path = profiles;
@@ -1257,6 +1260,7 @@
 				18FD06E01B8DC89F006545AC /* 新浪1@2x.png in Resources */,
 				18741F681B9081D90090DEA5 /* wodezuji.png in Resources */,
 				18741F511B9081D90090DEA5 /* fabu@2x.png in Resources */,
+				189DD3981B95B69D0083B52C /* profilesTableViewCell.xib in Resources */,
 				18741F5F1B9081D90090DEA5 /* tuichudenglu.png in Resources */,
 				18741F561B9081D90090DEA5 /* guanyutimebuy.png in Resources */,
 				18741F1B1B9072290090DEA5 /* logo200x56-01.png in Resources */,
@@ -1367,7 +1371,7 @@
 				18AD5F2D1B91494A00E63C2D /* modifyNameViewController.m in Sources */,
 				182CDB9C1B7392DB005FE865 /* UIScrollView+MJRefresh.m in Sources */,
 				18FFE5BB1B7F49AE004FBC82 /* SlideNavigationContorllerAnimatorScaleAndFade.m in Sources */,
-				189DD3931B94976D0083B52C /* profilesTableViewCell.m in Sources */,
+				189DD3971B95B69D0083B52C /* profilesTableViewCell.m in Sources */,
 				18FFE5C01B7F49AE004FBC82 /* SlideNavigationController.m in Sources */,
 				182CDB9A1B7392DB005FE865 /* MJRefreshConst.m in Sources */,
 				182CDBAD1B7617A1005FE865 /* JScrollView+PageControl+AutoScroll.m in Sources */,

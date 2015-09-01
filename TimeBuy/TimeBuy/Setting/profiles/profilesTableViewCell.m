@@ -9,21 +9,11 @@
 #import "profilesTableViewCell.h"
 
 @implementation profilesTableViewCell
-
 @synthesize subTextLabel;
 
 - (void)awakeFromNib {
     // Initialization code
-}
-
-- (void)initSubviews
-{
-    subTextLabel = [[UILabel alloc] initWithFrame:CGRectMake([UIScreen mainScreen].bounds.size.width - 240, 10, 200, 30)];
-    subTextLabel.textColor = [UIColor lightGrayColor];
-    subTextLabel.textAlignment = NSTextAlignmentRight;
-    [self addSubview:subTextLabel];
-    
-    self.selectionStyle = UITableViewCellAccessoryDisclosureIndicator;
+    self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

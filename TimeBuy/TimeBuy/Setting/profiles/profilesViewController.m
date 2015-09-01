@@ -63,6 +63,11 @@
     NSString *confromTimespStr = [formatter stringFromDate:confromTimesp];
     ageStr = confromTimespStr;
     
+    addressStr = [detailsArray objectAtIndex:5];
+    phoneStr = [detailsArray objectAtIndex:6];
+    signatuStr = [detailsArray objectAtIndex:7];
+    
+    [self updateProfiles];
 }
 
 - (void)recModify:(NSNotification *)notification
@@ -107,11 +112,20 @@
         cell.subTextLabel.text = getValue;
         
     } else if ([getType isEqualToString:@"address"]) {
+        addressStr = getValue;
         
+        profilesTableViewCell *cell= (profilesTableViewCell *)[myTableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:1]];
+        cell.subTextLabel.text = getValue;
     } else if ([getType isEqualToString:@"signature"]) {
+        signatuStr = getValue;
         
+        profilesTableViewCell *cell= (profilesTableViewCell *)[myTableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:2 inSection:1]];
+        cell.subTextLabel.text = getValue;
     } else if ([getType isEqualToString:@"phone"]) {
+        phoneStr = getValue;
         
+        profilesTableViewCell *cell= (profilesTableViewCell *)[myTableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:1]];
+        cell.subTextLabel.text = getValue;
     }
     
 }
@@ -199,10 +213,10 @@
             titleLabel.textAlignment = NSTextAlignmentRight;
             */
             
-            if ([[detailsArray objectAtIndex:indexPath.section * 5 + indexPath.row] isEqualToString:@"0"]) {
-                cell.subTextLabel.text = @"男";
-            } else {
+            if ([[detailsArray objectAtIndex:indexPath.section * 5 + indexPath.row] isEqualToString:@"1"]) {
                 cell.subTextLabel.text = @"女";
+            } else {
+                cell.subTextLabel.text = @"男";
             }
             
             cell.textLabel.text = [titleArray1 objectAtIndex:indexPath.row];
@@ -314,21 +328,21 @@
             case 0:
             {
                 addressViewController *addressVC = [[addressViewController alloc] init];
-                addressVC.address = [detailsArray objectAtIndex:indexPath.section * 5 + indexPath.row];
+                addressVC.address = addressStr;
                 [self.navigationController pushViewController:addressVC animated:YES];
                 break;
             }
             case 1:
             {
                 telephoneViewController *telephoneVC = [[telephoneViewController alloc] init];
-                telephoneVC.telephone = [detailsArray objectAtIndex:indexPath.section * 5 + indexPath.row];
+                telephoneVC.telephone = phoneStr;
                 [self.navigationController pushViewController:telephoneVC animated:YES];
                 break;
             }
             case 2:
             {
                 signatureViewController *signatureVC = [[signatureViewController alloc] init];
-                signatureVC.signature = [detailsArray objectAtIndex:indexPath.section * 5 + indexPath.row];
+                signatureVC.signature = signatuStr;
                 [self.navigationController pushViewController:signatureVC animated:YES];
                 break;
             }
@@ -569,6 +583,87 @@
     } failure: ^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"%@", error);
     }];
+}
+
+- (void)updateProfiles
+{
+    HUD = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    HUD.delegate = self;
+    
+    //上传至服务器
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    [manager.requestSerializer setValue:@"d6089681f79c7627bbac829307e041a7" forHTTPHeaderField:@"x-timebuy-sid"];
+    [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    [manager.requestSerializer setValue:@"application/json; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
+    
+    //2.设置登录参数
+
+    NSDictionary *dict = @{ @"userId":[userConfiguration getStringValueForConfigurationKey:@"userId"],
+                            @"headIcon":@"123",
+                            @"nickName":nameStr,
+                            @"sex":sexStr,
+                            @"birthDay":@"2011-9-16",
+                            @"profession":occupationStr,
+                            @"address":addressStr,
+                            @"phone":phoneStr,
+                            @"signature":signatuStr};
+
+    /*
+    NSDictionary *dict = @{ @"userId":@"27",
+                            @"headIcon":@"123",
+                            @"nickName":@"oj",
+                            @"sex":@"0",
+                            @"birthDay":@"2011-10-2",
+                            @"profession":@"123",
+                            @"address":@"111",
+                            @"phone":@"18767122229",
+                            @"signature":@"hello"};
+    */
+    
+    //3.请求
+    [manager GET:@"http://192.168.8.102:8080/timebuy/user/update" parameters:dict success: ^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"GET --> %@", responseObject); //自动返回主线程
+        
+        [HUD hide:YES];
+        NSString *getStatus = [NSString stringWithFormat:@"%@",[responseObject objectForKey:@"success"]];
+        NSString *getCode = [NSString stringWithFormat:@"%@",[responseObject objectForKey:@"code"]];
+        if ([getStatus isEqualToString:@"1"] && [getCode isEqualToString:@"1000"]) {
+            
+            HUDinSuccess = [[MBProgressHUD alloc] initWithView:self.view];
+            [self.view addSubview:HUDinSuccess];
+            HUDinSuccess.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"37x-Checkmark.png"]];
+            HUDinSuccess.mode = MBProgressHUDModeCustomView;
+            HUDinSuccess.delegate = self;
+            HUDinSuccess.labelText = @"修改成功";
+            [HUDinSuccess show:YES];
+            [HUDinSuccess hide:YES afterDelay:1];
+            
+        } else if ([getStatus isEqualToString:@"0"] && [getCode isEqualToString:@"2005"]) {
+            [self showErrorWithTitle:@"修改失败" WithMessage:@"错误"];
+        } else {
+            [self showErrorWithTitle:@"修改失败" WithMessage:@"系统错误"];
+        }
+        
+    } failure: ^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"%@", error);
+        [HUD hide:YES];
+        [self showErrorWithTitle:@"修改失败" WithMessage:@"网络连接失败，请检查网络设置"];
+    }];
+}
+
+#pragma mark - MBProgressHUDDelegate
+- (void)hudWasHidden:(MBProgressHUD *)hud {
+    // Remove HUD from screen when the HUD was hidded
+    [hud removeFromSuperview];
+    
+}
+
+-(void)showErrorWithTitle:(NSString *)titile WithMessage:(NSString *)msg
+{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:titile message:msg delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+    [alert show];
 }
 
 - (void)didReceiveMemoryWarning {
