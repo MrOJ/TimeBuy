@@ -26,6 +26,10 @@
     self.navigationController.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],NSForegroundColorAttributeName,[UIFont systemFontOfSize:24.0f], NSFontAttributeName, nil];
     self.navigationItem.title = @"个人信息";
     
+    UIBarButtonItem *registerButton = [[UIBarButtonItem alloc] initWithTitle:@"保存" style:UIBarButtonItemStylePlain target:self action:@selector(save:)];
+    self.navigationItem.rightBarButtonItem = registerButton;
+    self.navigationItem.rightBarButtonItem.enabled = NO;
+    
     myTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height) style:UITableViewStyleGrouped];
     myTableView.delegate = self;
     myTableView.dataSource = self;
@@ -46,9 +50,6 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(recModify:) name:@"passModify" object:nil];
     
-    //NSLog(@"%@", detailsArray);
-    //[self getUserProfiles:[userConfiguration getStringValueForConfigurationKey:@"phone"]];
-    
     nameStr = [detailsArray objectAtIndex:1];
     sexStr = [detailsArray objectAtIndex:2];
     //ageStr = [detailsArray objectAtIndex:3];
@@ -59,7 +60,8 @@
     [formatter setTimeStyle:NSDateFormatterShortStyle];
     [formatter setDateFormat:@"YYYY-MM-dd"]; // ----------设置你想要的格式,hh与HH的区别:分别表示12小时制,24小时制
     //时间戳转换
-    NSDate *confromTimesp = [NSDate dateWithTimeIntervalSince1970:[[detailsArray objectAtIndex:3] integerValue]];
+    NSString * newString = [[detailsArray objectAtIndex:3] substringWithRange:NSMakeRange(0, [[detailsArray objectAtIndex:3] length] - 3)];
+    NSDate *confromTimesp = [NSDate dateWithTimeIntervalSince1970:[newString integerValue]];
     NSString *confromTimespStr = [formatter stringFromDate:confromTimesp];
     ageStr = confromTimespStr;
     
@@ -67,6 +69,10 @@
     phoneStr = [detailsArray objectAtIndex:6];
     signatuStr = [detailsArray objectAtIndex:7];
     
+    
+}
+
+- (void)save:(id)sender {
     [self updateProfiles];
 }
 
@@ -75,6 +81,8 @@
     NSDictionary *getDic = [notification userInfo];
     getType = [getDic objectForKey:@"type"];
     getValue = [getDic objectForKey:@"value"];
+    
+    self.navigationItem.rightBarButtonItem.enabled = YES;
     
     NSLog(@"type = %@, value = %@",getType,getValue);
     
@@ -604,7 +612,7 @@
                             @"headIcon":@"123",
                             @"nickName":nameStr,
                             @"sex":sexStr,
-                            @"birthDay":@"2011-9-16",
+                            @"birthDay":ageStr,
                             @"profession":occupationStr,
                             @"address":addressStr,
                             @"phone":phoneStr,

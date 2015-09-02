@@ -1,17 +1,21 @@
 //
-//  releaseDetailsTableViewCell.m
+//  details2TableViewCell.m
 //  TimeBuy
 //
-//  Created by Mr.OJ on 15/8/29.
+//  Created by Mr.OJ on 15/9/2.
 //  Copyright (c) 2015年 Mr.OJ. All rights reserved.
 //
 
-#import "releaseDetailsTableViewCell.h"
+#import "details2TableViewCell.h"
 
-@implementation releaseDetailsTableViewCell
+@implementation details2TableViewCell
+
+@synthesize myTitleLabel;
+@synthesize myDetailLabel;
 
 - (void)awakeFromNib {
     // Initialization code
+    self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
