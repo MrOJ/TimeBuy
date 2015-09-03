@@ -40,7 +40,6 @@
     [SlideNavigationController sharedInstance].leftMenu = leftMenu;
     [SlideNavigationController sharedInstance].menuRevealAnimationDuration = 0.3;
     
-    
     UIButton *button  = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
     [button setImage:[UIImage imageNamed:@"个人设置1"] forState:UIControlStateNormal];
     [button addTarget:[SlideNavigationController sharedInstance] action:@selector(toggleLeftMenu) forControlEvents:UIControlEventTouchUpInside];
@@ -52,7 +51,6 @@
     [button2 addTarget:[SlideNavigationController sharedInstance] action:@selector(toggleRightMenu) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button2];
     [SlideNavigationController sharedInstance].rightBarButtonItem = rightBarButtonItem;
-    
     
     shadowView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height)];
     shadowView.backgroundColor = [UIColor blackColor];

@@ -29,16 +29,65 @@
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(recModify:) name:@"passModifyInRelease" object:nil];
     
+    row = -1;
+    
     placeStr = @"杭州小和山";
     startTimeStr = @"2015-10-02";
     finishTimeStr = @"2015-10-02";
     priceStr = @"10.0";
     phoneStr = @"18767122229";
     
+    shadowView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height - 275 + 64)];
+    shadowView.backgroundColor = [UIColor blackColor];
+    shadowView.alpha = 0.45f;
+    //[self.navigationController.view addSubview:shadowView];
+    
+    UITapGestureRecognizer*tapGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(Actiondo:)];
+    
+    [shadowView addGestureRecognizer:tapGesture];
+    
+    datePicker = [[UIDatePicker alloc] initWithFrame:CGRectMake(0, [UIScreen mainScreen].bounds.size.height - 275, [UIScreen mainScreen].bounds.size.width, 275)];
+    datePicker.datePickerMode = UIDatePickerModeDateAndTime;
+    datePicker.minuteInterval = 30;
+    datePicker.backgroundColor = [UIColor whiteColor];
+    NSDate *minDate = [NSDate date];
+    datePicker.minimumDate = minDate;
+    [datePicker addTarget:self action:@selector(dateChanged:) forControlEvents:UIControlEventValueChanged ];
+    
+    //[shadowView addSubview:datePicker];
+    
+    //UIView *testView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 100)];
+    //testView.backgroundColor = [UIColor blackColor];
+    
+    //[datePicker addSubview:testView];
 }
 
 - (void)send:(id)sender {
     [self sendMgs];
+}
+
+- (void)dateChanged:(id)sender {
+    UIDatePicker* control = (UIDatePicker*)sender;
+    NSDate* date = control.date;
+    //NSLog(@"%@",date);
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyy-MM-dd HH:mm"];
+    NSString *curDateTime = [formatter stringFromDate:date];
+    
+    if (row == 2) {
+        startTimeStr = curDateTime;
+        
+        detailsTableViewCell *cell= (detailsTableViewCell *)[releaseTableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:2 inSection:0]];
+        cell.timeLabel.text = curDateTime;
+        
+    } else {
+        finishTimeStr = curDateTime;
+        
+        detailsTableViewCell *cell= (detailsTableViewCell *)[releaseTableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:3 inSection:0]];
+        cell.timeLabel.text = curDateTime;
+    }
+    
 }
 
 - (void)recModify:(NSNotification *)notification
@@ -69,6 +118,12 @@
         cell.myDetailLabel.text = getValue;
     }
     //self.navigationItem.rightBarButtonItem.enabled = YES;
+}
+
+//点击阴影取消事件
+-(void)Actiondo:(id)sender{
+    [shadowView removeFromSuperview];
+    [datePicker removeFromSuperview];
 }
 
 #pragma mark - tableViewDelegate
@@ -246,13 +301,43 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    switch (indexPath.row) {
+    row = indexPath.row;
+    
+    switch (row) {
         case 1:
         {
             placeViewController *placeVC = [[placeViewController alloc] init];
             placeVC.place = @"杭州小和山";
             
             [self.navigationController pushViewController:placeVC animated:YES];
+            break;
+        }
+        case 2:
+        {
+            [self.view addSubview:datePicker];
+            [self.navigationController.view addSubview:shadowView];
+            
+            NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+            [formatter setDateFormat:@"yyyy-MM-dd HH:mm"];
+            NSString *curDateTime = [formatter stringFromDate:[NSDate date]];
+            
+            detailsTableViewCell *cell= (detailsTableViewCell *)[releaseTableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:2 inSection:0]];
+            cell.timeLabel.text = curDateTime;
+            
+            break;
+        }
+        case 3:
+        {
+            [self.view addSubview:datePicker];
+            [self.navigationController.view addSubview:shadowView];
+            
+            NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+            [formatter setDateFormat:@"yyyy-MM-dd HH:mm"];
+            NSString *curDateTime = [formatter stringFromDate:[NSDate date]];
+            
+            detailsTableViewCell *cell= (detailsTableViewCell *)[releaseTableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:3 inSection:0]];
+            cell.timeLabel.text = curDateTime;
+            
             break;
         }
         case 4:
@@ -273,6 +358,13 @@
         }
         default:
             break;
+    }
+}
+
+// 点击编辑区以外的地方 取消键盘
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+    if ([shadowView isExclusiveTouch]) {
+        NSLog(@"hello");
     }
 }
 

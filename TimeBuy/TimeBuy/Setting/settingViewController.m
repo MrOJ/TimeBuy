@@ -40,7 +40,14 @@
     //[[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationSlide];
     
     //[SlideNavigationController sharedInstance].rightBarButtonItem.width  = 0.01;
-
+    
+    /*
+    shadowView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height)];
+    shadowView.backgroundColor = [UIColor blackColor];
+    shadowView.alpha = 0.45f;
+    [[SlideNavigationController sharedInstance].view addSubview:shadowView];
+    shadowView.hidden = NO;
+    */
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -50,6 +57,7 @@
     NSLog(@"left view disappear");
     //[[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationSlide];
     //[shadowView removeFromSuperview];
+    //shadowView.hidden = YES;
 }
 
 - (void)viewDidLoad {
@@ -61,6 +69,7 @@
     //self.settingTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     portaitImg.layer.masksToBounds = YES;
     portaitImg.layer.cornerRadius = portaitImg.bounds.size.height / 2;
+    
 }
 
 /*
@@ -143,18 +152,18 @@
     releaseInfoViewController *releaseInfoVC = [[releaseInfoViewController alloc] init];
     
     [[SlideNavigationController sharedInstance] popToRootAndSwitchToViewController:releaseInfoVC
-                                                             withSlideOutAnimation:YES
+                                                             withSlideOutAnimation:NO
                                                                      andCompletion:nil];
     
 }
 
 //设置
 - (IBAction)setting:(id)sender {
+    
     [[SlideNavigationController sharedInstance] popToRootViewControllerAnimated:YES];
     
     systemSettingView *systemSetting = [[systemSettingView alloc] initWithFrame:CGRectMake(10, 163, 355, 311)];
     [systemSetting initSubViews];
-
     
     KLCPopup *popup = [KLCPopup popupWithContentView:systemSetting showType:KLCPopupShowTypeGrowIn dismissType:KLCPopupDismissTypeGrowOut maskType:KLCPopupMaskTypeDimmed dismissOnBackgroundTouch:YES dismissOnContentTouch:NO];
     [popup show];
@@ -162,11 +171,12 @@
 
 //个人信息
 - (IBAction)information:(id)sender {
+    
     profilesViewController *vc = [[profilesViewController alloc] init];
     //vc.navigationItem.title = @"我的信息";
     
     [[SlideNavigationController sharedInstance] popToRootAndSwitchToViewController:vc
-                                                             withSlideOutAnimation:YES
+                                                             withSlideOutAnimation:NO
                                                                      andCompletion:nil];
 }
 

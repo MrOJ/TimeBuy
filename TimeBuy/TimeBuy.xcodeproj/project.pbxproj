@@ -23,6 +23,8 @@
 		180E1CF61B972AB8002DBF2B /* priceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 180E1CF41B972AB8002DBF2B /* priceViewController.xib */; };
 		180E1CFA1B972AC9002DBF2B /* phoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180E1CF81B972AC9002DBF2B /* phoneViewController.m */; };
 		180E1CFB1B972AC9002DBF2B /* phoneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 180E1CF91B972AC9002DBF2B /* phoneViewController.xib */; };
+		180E1D061B982403002DBF2B /* slidePush.m in Sources */ = {isa = PBXBuildFile; fileRef = 180E1D051B982403002DBF2B /* slidePush.m */; };
+		180E1D091B982584002DBF2B /* myTravelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180E1D081B982584002DBF2B /* myTravelViewController.m */; };
 		1812314C1B8B460A007E06B7 /* loginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1812314A1B8B460A007E06B7 /* loginViewController.m */; };
 		1812314D1B8B460A007E06B7 /* loginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1812314B1B8B460A007E06B7 /* loginViewController.xib */; };
 		181231761B8B49BC007E06B7 /* userConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 181231751B8B49BC007E06B7 /* userConfiguration.m */; };
@@ -257,6 +259,10 @@
 		180E1CF71B972AC9002DBF2B /* phoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = phoneViewController.h; sourceTree = "<group>"; };
 		180E1CF81B972AC9002DBF2B /* phoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = phoneViewController.m; sourceTree = "<group>"; };
 		180E1CF91B972AC9002DBF2B /* phoneViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = phoneViewController.xib; sourceTree = "<group>"; };
+		180E1D041B982403002DBF2B /* slidePush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = slidePush.h; sourceTree = "<group>"; };
+		180E1D051B982403002DBF2B /* slidePush.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = slidePush.m; sourceTree = "<group>"; };
+		180E1D071B982584002DBF2B /* myTravelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = myTravelViewController.h; path = ../../../../../../../../Documents/myTravelViewController.h; sourceTree = "<group>"; };
+		180E1D081B982584002DBF2B /* myTravelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = myTravelViewController.m; path = ../../../../../../../../Documents/myTravelViewController.m; sourceTree = "<group>"; };
 		181231491B8B460A007E06B7 /* loginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loginViewController.h; sourceTree = "<group>"; };
 		1812314A1B8B460A007E06B7 /* loginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loginViewController.m; sourceTree = "<group>"; };
 		1812314B1B8B460A007E06B7 /* loginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = loginViewController.xib; sourceTree = "<group>"; };
@@ -616,6 +622,8 @@
 				182CDB021B72286F005FE865 /* AppDelegate.h */,
 				182CDB031B72286F005FE865 /* AppDelegate.m */,
 				182CDB081B72286F005FE865 /* Main.storyboard */,
+				180E1D041B982403002DBF2B /* slidePush.h */,
+				180E1D051B982403002DBF2B /* slidePush.m */,
 				182CDB0B1B72286F005FE865 /* Images.xcassets */,
 				182CDB0D1B72286F005FE865 /* LaunchScreen.xib */,
 				182CDB251B723C7D005FE865 /* Home */,
@@ -994,6 +1002,8 @@
 		18AD5F0E1B91494A00E63C2D /* myTravel */ = {
 			isa = PBXGroup;
 			children = (
+				180E1D071B982584002DBF2B /* myTravelViewController.h */,
+				180E1D081B982584002DBF2B /* myTravelViewController.m */,
 			);
 			path = myTravel;
 			sourceTree = "<group>";
@@ -1456,12 +1466,14 @@
 				189DD3971B95B69D0083B52C /* profilesTableViewCell.m in Sources */,
 				180E1CF01B972AA9002DBF2B /* placeViewController.m in Sources */,
 				18FFE5C01B7F49AE004FBC82 /* SlideNavigationController.m in Sources */,
+				180E1D061B982403002DBF2B /* slidePush.m in Sources */,
 				182CDB9A1B7392DB005FE865 /* MJRefreshConst.m in Sources */,
 				182CDBAD1B7617A1005FE865 /* JScrollView+PageControl+AutoScroll.m in Sources */,
 				18AD5F0A1B9147FA00E63C2D /* KLCPopup.m in Sources */,
 				18AD5F351B91494A00E63C2D /* telephoneViewController.m in Sources */,
 				182CDB931B7392DB005FE865 /* MJRefreshBackGifFooter.m in Sources */,
 				18AD5F6F1B91DF6800E63C2D /* VPImageCropperViewController.m in Sources */,
+				180E1D091B982584002DBF2B /* myTravelViewController.m in Sources */,
 				18AD5F331B91494A00E63C2D /* signatureViewController.m in Sources */,
 				18FD07951B8F49A6006545AC /* AFHTTPSessionManager.m in Sources */,
 				18FFE5BC1B7F49AE004FBC82 /* SlideNavigationContorllerAnimatorSlide.m in Sources */,

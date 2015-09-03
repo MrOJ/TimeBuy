@@ -26,8 +26,8 @@
 {
     [super viewDidAppear:YES];
     
-    NSLog(@"lanched = %d",[userConfiguration getBoolValueForConfigurationKey:Launched]);
-    NSLog(@"user = %@",[userConfiguration getStringValueForConfigurationKey:@"userId"]);
+    //NSLog(@"lanched = %d",[userConfiguration getBoolValueForConfigurationKey:Launched]);
+    //NSLog(@"user = %@",[userConfiguration getStringValueForConfigurationKey:@"userId"]);
     //NSLog(@"in state = %@", getState);
     
     if ([[userConfiguration getStringValueForConfigurationKey:@"userId"] isEqualToString:@""]) {
@@ -103,7 +103,6 @@
     
     float offset = self.view.bounds.size.width;
     [SlideNavigationController sharedInstance].portraitSlideOffset = offset - 249.0f;
-    
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(recState:) name:@"passState" object:nil];
     

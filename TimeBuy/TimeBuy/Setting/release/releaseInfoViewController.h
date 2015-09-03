@@ -35,6 +35,10 @@
     
     MBProgressHUD *HUD;
     MBProgressHUD *HUDinSuccess;
+    
+    UIView *shadowView;
+    
+    NSInteger row;
 }
 
 @property (strong, nonatomic) IBOutlet UITableView *releaseTableView;
