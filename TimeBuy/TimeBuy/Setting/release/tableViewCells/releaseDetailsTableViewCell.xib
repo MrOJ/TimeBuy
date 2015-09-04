@@ -26,14 +26,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iCW-Wj-HgK">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iCW-Wj-HgK">
                                 <rect key="frame" x="220" y="166" width="90" height="90"/>
-                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="90" id="0Rh-9a-6JQ"/>
                                     <constraint firstAttribute="height" constant="90" id="c8r-Ak-97D"/>
                                 </constraints>
-                                <state key="normal" title="Button">
+                                <state key="normal" image="addImg.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -86,6 +86,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="addImg.png" width="127" height="124"/>
         <image name="showImg2.png" width="750" height="562"/>
     </resources>
 </document>

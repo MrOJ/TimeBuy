@@ -12,6 +12,8 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    
+    self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

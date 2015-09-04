@@ -16,6 +16,7 @@
 
 @synthesize myTableView;
 @synthesize titleArray1,titleArray2,detailsArray,keysArray;
+@synthesize myPortraitImg;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -69,6 +70,7 @@
     phoneStr = [detailsArray objectAtIndex:6];
     signatuStr = [detailsArray objectAtIndex:7];
     
+    myPortraitImg = [UIImage imageNamed:@"portrait.png"];
     
 }
 
@@ -196,7 +198,7 @@
             cell.textLabel.text = [titleArray1 objectAtIndex:indexPath.row];
             
             UIImageView *portraitView = [[UIImageView alloc] initWithFrame:CGRectMake(self.view.bounds.size.width - 100, 10, 60, 60)];
-            portraitView.image = [UIImage imageNamed:@"portrait.png"];
+            portraitView.image = myPortraitImg;
             portraitView.layer.masksToBounds = YES;
             portraitView.layer.cornerRadius = portraitView.bounds.size.height / 2;
             [cell addSubview:portraitView];
@@ -412,9 +414,33 @@
     //[[UIView appearanceWhenContainedIn:[UIAlertController class], nil] setTintColor:[UIColor lightGrayColor]];
 }
 
+
 #pragma mark VPImageCropperDelegate
 // callback when cropping finished
 - (void)imageCropper:(VPImageCropperViewController *)cropperViewController didFinished:(UIImage *)editedImage {
+    NSLog(@"图片选择成功");
+    
+    //上传图片接口
+    
+    myPortraitImg = editedImage;
+    
+    UITableViewCell *cell= (UITableViewCell *)[myTableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+    for (UIView *view in cell.subviews) {
+        if ([view isKindOfClass:[UIImageView class]]) {
+            NSLog(@"view = %@",view);
+            [view removeFromSuperview];
+        }
+    }
+    UIImageView *portraitView = [[UIImageView alloc] initWithFrame:CGRectMake(self.view.bounds.size.width - 100, 10, 60, 60)];
+    portraitView.image = myPortraitImg;
+    portraitView.layer.masksToBounds = YES;
+    portraitView.layer.cornerRadius = portraitView.bounds.size.height / 2;
+    [cell addSubview:portraitView];
+    
+    [cropperViewController dismissViewControllerAnimated:YES completion:^{
+        
+    }];
+
     
 }
 
@@ -423,6 +449,7 @@
     [cropperViewController dismissViewControllerAnimated:YES completion:^{
     }];
 }
+
 
 #pragma mark - UIImagePickerControllerDelegate
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {

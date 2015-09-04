@@ -41,6 +41,7 @@
     MBProgressHUD *HUDinSuccess;
 }
 
+@property (nonatomic, strong) UIImage *myPortraitImg;
 @property (nonatomic, strong) UITableView *myTableView;
 @property (nonatomic, strong) NSArray *titleArray1;
 @property (nonatomic, strong) NSArray *titleArray2;

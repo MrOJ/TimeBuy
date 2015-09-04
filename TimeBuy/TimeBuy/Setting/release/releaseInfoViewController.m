@@ -32,8 +32,8 @@
     row = -1;
     
     placeStr = @"杭州小和山";
-    startTimeStr = @"2015-10-02";
-    finishTimeStr = @"2015-10-02";
+    startTimeStr = @"";
+    finishTimeStr = @"";
     priceStr = @"10.0";
     phoneStr = @"18767122229";
     
@@ -154,7 +154,7 @@
             return 270.0f;
             break;
         case 6:
-            return 144.0f;
+            return 47.0f;
             break;
         default:
             return 47.0f;
