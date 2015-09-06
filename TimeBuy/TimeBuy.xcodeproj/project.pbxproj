@@ -24,7 +24,6 @@
 		180E1CFA1B972AC9002DBF2B /* phoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180E1CF81B972AC9002DBF2B /* phoneViewController.m */; };
 		180E1CFB1B972AC9002DBF2B /* phoneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 180E1CF91B972AC9002DBF2B /* phoneViewController.xib */; };
 		180E1D061B982403002DBF2B /* slidePush.m in Sources */ = {isa = PBXBuildFile; fileRef = 180E1D051B982403002DBF2B /* slidePush.m */; };
-		180E1D091B982584002DBF2B /* myTravelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180E1D081B982584002DBF2B /* myTravelViewController.m */; };
 		180E1D0D1B99B497002DBF2B /* addImg.png in Resources */ = {isa = PBXBuildFile; fileRef = 180E1D0A1B99B497002DBF2B /* addImg.png */; };
 		180E1D0E1B99B497002DBF2B /* addImg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 180E1D0B1B99B497002DBF2B /* addImg@2x.png */; };
 		180E1D0F1B99B497002DBF2B /* addImg@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 180E1D0C1B99B497002DBF2B /* addImg@3x.png */; };
@@ -39,8 +38,17 @@
 		180E1D261B99CD65002DBF2B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 180E1D251B99CD65002DBF2B /* libz.dylib */; };
 		180E1D281B99CD74002DBF2B /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 180E1D271B99CD74002DBF2B /* libstdc++.6.0.9.dylib */; };
 		180E1D2A1B99CD7A002DBF2B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 180E1D291B99CD7A002DBF2B /* Security.framework */; };
-		180E1D471B9C4F43002DBF2B /* AMapSearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 180E1D451B9C4F43002DBF2B /* AMapSearchKit.framework */; };
-		180E1D481B9C4F43002DBF2B /* MAMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 180E1D461B9C4F43002DBF2B /* MAMapKit.framework */; };
+		180E1D2E1B9B2428002DBF2B /* showDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180E1D2C1B9B2428002DBF2B /* showDetailsViewController.m */; };
+		180E1D2F1B9B2428002DBF2B /* showDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 180E1D2D1B9B2428002DBF2B /* showDetailsViewController.xib */; };
+		180E1D331B9B2459002DBF2B /* messageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180E1D311B9B2459002DBF2B /* messageViewController.m */; };
+		180E1D341B9B2459002DBF2B /* messageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 180E1D321B9B2459002DBF2B /* messageViewController.xib */; };
+		180E1D391B9B2537002DBF2B /* IBActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 180E1D381B9B2537002DBF2B /* IBActionSheet.m */; };
+		180E1D3E1B9B26AB002DBF2B /* myTravelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180E1D3C1B9B26AB002DBF2B /* myTravelViewController.m */; };
+		180E1D3F1B9B26AB002DBF2B /* myTravelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 180E1D3D1B9B26AB002DBF2B /* myTravelViewController.xib */; };
+		180E1D431B9B26EC002DBF2B /* nearbyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180E1D411B9B26EC002DBF2B /* nearbyViewController.m */; };
+		180E1D441B9B26EC002DBF2B /* nearbyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 180E1D421B9B26EC002DBF2B /* nearbyViewController.xib */; };
+		180E1D4B1B9C6FDF002DBF2B /* AMapSearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 180E1D491B9C6FDE002DBF2B /* AMapSearchKit.framework */; };
+		180E1D4C1B9C6FDF002DBF2B /* MAMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 180E1D4A1B9C6FDE002DBF2B /* MAMapKit.framework */; };
 		1812314C1B8B460A007E06B7 /* loginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1812314A1B8B460A007E06B7 /* loginViewController.m */; };
 		1812314D1B8B460A007E06B7 /* loginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1812314B1B8B460A007E06B7 /* loginViewController.xib */; };
 		181231761B8B49BC007E06B7 /* userConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 181231751B8B49BC007E06B7 /* userConfiguration.m */; };
@@ -74,7 +82,6 @@
 		182CDBA31B75C73C005FE865 /* homeDetailsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 182CDBA11B75C73C005FE865 /* homeDetailsTableViewCell.xib */; };
 		182CDBAD1B7617A1005FE865 /* JScrollView+PageControl+AutoScroll.m in Sources */ = {isa = PBXBuildFile; fileRef = 182CDBAC1B7617A1005FE865 /* JScrollView+PageControl+AutoScroll.m */; };
 		182CDBF01B772312005FE865 /* portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 182CDBEF1B772312005FE865 /* portrait.png */; };
-		182CDC291B774070005FE865 /* nearbyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182CDC251B774070005FE865 /* nearbyViewController.m */; };
 		182CDC2A1B774070005FE865 /* settingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182CDC281B774070005FE865 /* settingViewController.m */; };
 		18741F1B1B9072290090DEA5 /* logo200x56-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 18741F1A1B9072290090DEA5 /* logo200x56-01.png */; };
 		18741F221B9074DD0090DEA5 /* 导航条320x64.png in Resources */ = {isa = PBXBuildFile; fileRef = 18741F1C1B9074DD0090DEA5 /* 导航条320x64.png */; };
@@ -277,8 +284,6 @@
 		180E1CF91B972AC9002DBF2B /* phoneViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = phoneViewController.xib; sourceTree = "<group>"; };
 		180E1D041B982403002DBF2B /* slidePush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = slidePush.h; sourceTree = "<group>"; };
 		180E1D051B982403002DBF2B /* slidePush.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = slidePush.m; sourceTree = "<group>"; };
-		180E1D071B982584002DBF2B /* myTravelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = myTravelViewController.h; path = ../../../../../../../../Documents/myTravelViewController.h; sourceTree = "<group>"; };
-		180E1D081B982584002DBF2B /* myTravelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = myTravelViewController.m; path = ../../../../../../../../Documents/myTravelViewController.m; sourceTree = "<group>"; };
 		180E1D0A1B99B497002DBF2B /* addImg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addImg.png; sourceTree = "<group>"; };
 		180E1D0B1B99B497002DBF2B /* addImg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "addImg@2x.png"; sourceTree = "<group>"; };
 		180E1D0C1B99B497002DBF2B /* addImg@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "addImg@3x.png"; sourceTree = "<group>"; };
@@ -293,8 +298,22 @@
 		180E1D251B99CD65002DBF2B /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		180E1D271B99CD74002DBF2B /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "usr/lib/libstdc++.6.0.9.dylib"; sourceTree = SDKROOT; };
 		180E1D291B99CD7A002DBF2B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		180E1D451B9C4F43002DBF2B /* AMapSearchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AMapSearchKit.framework; path = TimeBuy/AMapSearchKit.framework; sourceTree = "<group>"; };
-		180E1D461B9C4F43002DBF2B /* MAMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MAMapKit.framework; path = TimeBuy/MAMapKit.framework; sourceTree = "<group>"; };
+		180E1D2B1B9B2428002DBF2B /* showDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = showDetailsViewController.h; sourceTree = "<group>"; };
+		180E1D2C1B9B2428002DBF2B /* showDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = showDetailsViewController.m; sourceTree = "<group>"; };
+		180E1D2D1B9B2428002DBF2B /* showDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = showDetailsViewController.xib; sourceTree = "<group>"; };
+		180E1D301B9B2459002DBF2B /* messageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = messageViewController.h; sourceTree = "<group>"; };
+		180E1D311B9B2459002DBF2B /* messageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = messageViewController.m; sourceTree = "<group>"; };
+		180E1D321B9B2459002DBF2B /* messageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = messageViewController.xib; sourceTree = "<group>"; };
+		180E1D371B9B2537002DBF2B /* IBActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBActionSheet.h; sourceTree = "<group>"; };
+		180E1D381B9B2537002DBF2B /* IBActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBActionSheet.m; sourceTree = "<group>"; };
+		180E1D3B1B9B26AB002DBF2B /* myTravelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myTravelViewController.h; sourceTree = "<group>"; };
+		180E1D3C1B9B26AB002DBF2B /* myTravelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myTravelViewController.m; sourceTree = "<group>"; };
+		180E1D3D1B9B26AB002DBF2B /* myTravelViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = myTravelViewController.xib; sourceTree = "<group>"; };
+		180E1D401B9B26EC002DBF2B /* nearbyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nearbyViewController.h; sourceTree = "<group>"; };
+		180E1D411B9B26EC002DBF2B /* nearbyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = nearbyViewController.m; sourceTree = "<group>"; };
+		180E1D421B9B26EC002DBF2B /* nearbyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = nearbyViewController.xib; sourceTree = "<group>"; };
+		180E1D491B9C6FDE002DBF2B /* AMapSearchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AMapSearchKit.framework; path = TimeBuy/AMapSearchKit.framework; sourceTree = "<group>"; };
+		180E1D4A1B9C6FDE002DBF2B /* MAMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MAMapKit.framework; path = TimeBuy/MAMapKit.framework; sourceTree = "<group>"; };
 		181231491B8B460A007E06B7 /* loginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loginViewController.h; sourceTree = "<group>"; };
 		1812314A1B8B460A007E06B7 /* loginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loginViewController.m; sourceTree = "<group>"; };
 		1812314B1B8B460A007E06B7 /* loginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = loginViewController.xib; sourceTree = "<group>"; };
@@ -357,8 +376,6 @@
 		182CDBAB1B7617A1005FE865 /* JScrollView+PageControl+AutoScroll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "JScrollView+PageControl+AutoScroll.h"; sourceTree = "<group>"; };
 		182CDBAC1B7617A1005FE865 /* JScrollView+PageControl+AutoScroll.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "JScrollView+PageControl+AutoScroll.m"; sourceTree = "<group>"; };
 		182CDBEF1B772312005FE865 /* portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = portrait.png; sourceTree = "<group>"; };
-		182CDC241B774070005FE865 /* nearbyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nearbyViewController.h; sourceTree = "<group>"; };
-		182CDC251B774070005FE865 /* nearbyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = nearbyViewController.m; sourceTree = "<group>"; };
 		182CDC271B774070005FE865 /* settingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = settingViewController.h; sourceTree = "<group>"; };
 		182CDC281B774070005FE865 /* settingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = settingViewController.m; sourceTree = "<group>"; };
 		18741F1A1B9072290090DEA5 /* logo200x56-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo200x56-01.png"; sourceTree = "<group>"; };
@@ -564,8 +581,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				180E1D471B9C4F43002DBF2B /* AMapSearchKit.framework in Frameworks */,
-				180E1D481B9C4F43002DBF2B /* MAMapKit.framework in Frameworks */,
+				180E1D4B1B9C6FDF002DBF2B /* AMapSearchKit.framework in Frameworks */,
+				180E1D4C1B9C6FDF002DBF2B /* MAMapKit.framework in Frameworks */,
 				180E1D2A1B99CD7A002DBF2B /* Security.framework in Frameworks */,
 				180E1D281B99CD74002DBF2B /* libstdc++.6.0.9.dylib in Frameworks */,
 				180E1D261B99CD65002DBF2B /* libz.dylib in Frameworks */,
@@ -630,8 +647,8 @@
 		180E1D101B99CC8D002DBF2B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				180E1D451B9C4F43002DBF2B /* AMapSearchKit.framework */,
-				180E1D461B9C4F43002DBF2B /* MAMapKit.framework */,
+				180E1D491B9C6FDE002DBF2B /* AMapSearchKit.framework */,
+				180E1D4A1B9C6FDE002DBF2B /* MAMapKit.framework */,
 				180E1D291B99CD7A002DBF2B /* Security.framework */,
 				180E1D271B99CD74002DBF2B /* libstdc++.6.0.9.dylib */,
 				180E1D251B99CD65002DBF2B /* libz.dylib */,
@@ -644,6 +661,25 @@
 				180E1D171B99CD10002DBF2B /* UIKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		180E1D361B9B2537002DBF2B /* IBActionSheet */ = {
+			isa = PBXGroup;
+			children = (
+				180E1D371B9B2537002DBF2B /* IBActionSheet.h */,
+				180E1D381B9B2537002DBF2B /* IBActionSheet.m */,
+			);
+			path = IBActionSheet;
+			sourceTree = "<group>";
+		};
+		180E1D3A1B9B257A002DBF2B /* myTravel */ = {
+			isa = PBXGroup;
+			children = (
+				180E1D3B1B9B26AB002DBF2B /* myTravelViewController.h */,
+				180E1D3C1B9B26AB002DBF2B /* myTravelViewController.m */,
+				180E1D3D1B9B26AB002DBF2B /* myTravelViewController.xib */,
+			);
+			path = myTravel;
 			sourceTree = "<group>";
 		};
 		181231731B8B498F007E06B7 /* userConfiguration */ = {
@@ -737,6 +773,9 @@
 				182CDBA01B75C73C005FE865 /* homeDetailsTableViewCell.m */,
 				182CDB9F1B75C73C005FE865 /* homeDetailsTableViewCell.h */,
 				182CDBA11B75C73C005FE865 /* homeDetailsTableViewCell.xib */,
+				180E1D2B1B9B2428002DBF2B /* showDetailsViewController.h */,
+				180E1D2C1B9B2428002DBF2B /* showDetailsViewController.m */,
+				180E1D2D1B9B2428002DBF2B /* showDetailsViewController.xib */,
 				181231491B8B460A007E06B7 /* loginViewController.h */,
 				1812314A1B8B460A007E06B7 /* loginViewController.m */,
 				1812314B1B8B460A007E06B7 /* loginViewController.xib */,
@@ -982,8 +1021,9 @@
 		182CDC231B774070005FE865 /* Nearby */ = {
 			isa = PBXGroup;
 			children = (
-				182CDC241B774070005FE865 /* nearbyViewController.h */,
-				182CDC251B774070005FE865 /* nearbyViewController.m */,
+				180E1D401B9B26EC002DBF2B /* nearbyViewController.h */,
+				180E1D411B9B26EC002DBF2B /* nearbyViewController.m */,
+				180E1D421B9B26EC002DBF2B /* nearbyViewController.xib */,
 			);
 			path = Nearby;
 			sourceTree = "<group>";
@@ -996,7 +1036,7 @@
 				18AD5F391B9149FC00E63C2D /* systemSetting */,
 				18AD5F381B9149FC00E63C2D /* release */,
 				18AD5F101B91494A00E63C2D /* profiles */,
-				18AD5F0E1B91494A00E63C2D /* myTravel */,
+				180E1D3A1B9B257A002DBF2B /* myTravel */,
 				18AD5F0C1B91494A00E63C2D /* myNotice */,
 				18AD5F0D1B91494A00E63C2D /* mySchedule */,
 				18AD5F0F1B91494A00E63C2D /* payment */,
@@ -1056,6 +1096,10 @@
 		18AD5F0C1B91494A00E63C2D /* myNotice */ = {
 			isa = PBXGroup;
 			children = (
+				180E1D361B9B2537002DBF2B /* IBActionSheet */,
+				180E1D301B9B2459002DBF2B /* messageViewController.h */,
+				180E1D311B9B2459002DBF2B /* messageViewController.m */,
+				180E1D321B9B2459002DBF2B /* messageViewController.xib */,
 			);
 			path = myNotice;
 			sourceTree = "<group>";
@@ -1065,15 +1109,6 @@
 			children = (
 			);
 			path = mySchedule;
-			sourceTree = "<group>";
-		};
-		18AD5F0E1B91494A00E63C2D /* myTravel */ = {
-			isa = PBXGroup;
-			children = (
-				180E1D071B982584002DBF2B /* myTravelViewController.h */,
-				180E1D081B982584002DBF2B /* myTravelViewController.m */,
-			);
-			path = myTravel;
 			sourceTree = "<group>";
 		};
 		18AD5F0F1B91494A00E63C2D /* payment */ = {
@@ -1415,8 +1450,10 @@
 				18741F671B9081D90090DEA5 /* wodexiaoxi@3x.png in Resources */,
 				18FD074B1B8F3484006545AC /* 背景@2x.png in Resources */,
 				18FD06E01B8DC89F006545AC /* 新浪1@2x.png in Resources */,
+				180E1D2F1B9B2428002DBF2B /* showDetailsViewController.xib in Resources */,
 				18741F681B9081D90090DEA5 /* wodezuji.png in Resources */,
 				18741F511B9081D90090DEA5 /* fabu@2x.png in Resources */,
+				180E1D3F1B9B26AB002DBF2B /* myTravelViewController.xib in Resources */,
 				189DD3981B95B69D0083B52C /* profilesTableViewCell.xib in Resources */,
 				180E1CE41B971FF4002DBF2B /* placeTableViewCell.xib in Resources */,
 				18741F5F1B9081D90090DEA5 /* tuichudenglu.png in Resources */,
@@ -1435,6 +1472,7 @@
 				18FD06F41B8DC89F006545AC /* zisu10.1.png in Resources */,
 				18741F821B9082820090DEA5 /* xitongshezhi@3x.png in Resources */,
 				18741F5B1B9081D90090DEA5 /* hewomenliaoliao@3x.png in Resources */,
+				180E1D441B9B26EC002DBF2B /* nearbyViewController.xib in Resources */,
 				18FD072C1B8E8F9F006545AC /* gongyi@3x.png in Resources */,
 				18FD06D51B8DC89F006545AC /* 个人设置1@2x.png in Resources */,
 				18AD5F2A1B91494A00E63C2D /* addressViewController.xib in Resources */,
@@ -1469,6 +1507,7 @@
 				180E1D161B99CCFB002DBF2B /* AMap.bundle in Resources */,
 				18741F551B9081D90090DEA5 /* gerenxiaoxi@3x.png in Resources */,
 				18FD06E31B8DC89F006545AC /* 支付宝1@2x.png in Resources */,
+				180E1D341B9B2459002DBF2B /* messageViewController.xib in Resources */,
 				18741F541B9081D90090DEA5 /* gerenxiaoxi@2x.png in Resources */,
 				18FD07231B8E8F9F006545AC /* 男符号1@3x.png in Resources */,
 				180E1D0F1B99B497002DBF2B /* addImg@3x.png in Resources */,
@@ -1492,6 +1531,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18FFE5B91B7F49AE004FBC82 /* SlideNavigationContorllerAnimatorFade.m in Sources */,
+				180E1D431B9B26EC002DBF2B /* nearbyViewController.m in Sources */,
 				18FD07931B8F49A6006545AC /* AFHTTPRequestOperation.m in Sources */,
 				181231761B8B49BC007E06B7 /* userConfiguration.m in Sources */,
 				182CDB8B1B7392DB005FE865 /* MJRefreshAutoFooter.m in Sources */,
@@ -1499,7 +1539,6 @@
 				18FD07971B8F49A6006545AC /* AFSecurityPolicy.m in Sources */,
 				182CDB951B7392DB005FE865 /* MJRefreshBackStateFooter.m in Sources */,
 				18AD5F2F1B91494A00E63C2D /* modifySexViewController.m in Sources */,
-				182CDC291B774070005FE865 /* nearbyViewController.m in Sources */,
 				182CDB981B7392DB005FE865 /* MJRefreshStateHeader.m in Sources */,
 				182CDB9D1B7392DB005FE865 /* UIView+MJExtension.m in Sources */,
 				182CDC2A1B774070005FE865 /* settingViewController.m in Sources */,
@@ -1521,6 +1560,8 @@
 				182CDBA21B75C73C005FE865 /* homeDetailsTableViewCell.m in Sources */,
 				18AD5F291B91494A00E63C2D /* addressViewController.m in Sources */,
 				18AD5F371B91494A00E63C2D /* profilesViewController.m in Sources */,
+				180E1D2E1B9B2428002DBF2B /* showDetailsViewController.m in Sources */,
+				180E1D3E1B9B26AB002DBF2B /* myTravelViewController.m in Sources */,
 				182CDB911B7392DB005FE865 /* MJRefreshAutoNormalFooter.m in Sources */,
 				18AD5F3C1B914A1900E63C2D /* systemSettingView.m in Sources */,
 				182CDB041B72286F005FE865 /* AppDelegate.m in Sources */,
@@ -1533,6 +1574,7 @@
 				182CDB8E1B7392DB005FE865 /* MJRefreshFooter.m in Sources */,
 				180E1CE11B971FF4002DBF2B /* labelsTableViewCell.m in Sources */,
 				18AD5F2D1B91494A00E63C2D /* modifyNameViewController.m in Sources */,
+				180E1D331B9B2459002DBF2B /* messageViewController.m in Sources */,
 				182CDB9C1B7392DB005FE865 /* UIScrollView+MJRefresh.m in Sources */,
 				18FFE5BB1B7F49AE004FBC82 /* SlideNavigationContorllerAnimatorScaleAndFade.m in Sources */,
 				189DD3971B95B69D0083B52C /* profilesTableViewCell.m in Sources */,
@@ -1541,11 +1583,11 @@
 				180E1D061B982403002DBF2B /* slidePush.m in Sources */,
 				182CDB9A1B7392DB005FE865 /* MJRefreshConst.m in Sources */,
 				182CDBAD1B7617A1005FE865 /* JScrollView+PageControl+AutoScroll.m in Sources */,
+				180E1D391B9B2537002DBF2B /* IBActionSheet.m in Sources */,
 				18AD5F0A1B9147FA00E63C2D /* KLCPopup.m in Sources */,
 				18AD5F351B91494A00E63C2D /* telephoneViewController.m in Sources */,
 				182CDB931B7392DB005FE865 /* MJRefreshBackGifFooter.m in Sources */,
 				18AD5F6F1B91DF6800E63C2D /* VPImageCropperViewController.m in Sources */,
-				180E1D091B982584002DBF2B /* myTravelViewController.m in Sources */,
 				18AD5F331B91494A00E63C2D /* signatureViewController.m in Sources */,
 				18FD07951B8F49A6006545AC /* AFHTTPSessionManager.m in Sources */,
 				18FFE5BC1B7F49AE004FBC82 /* SlideNavigationContorllerAnimatorSlide.m in Sources */,

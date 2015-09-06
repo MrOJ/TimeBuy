@@ -299,7 +299,7 @@
             catagoryView.backgroundColor = [UIColor whiteColor];
             [cell addSubview:catagoryView];
             
-            NSArray *logoImageName = [[NSArray alloc] initWithObjects:@"qiuzhu",@"组局(1)",@"paotui",@"gongyi(1)", nil];
+            NSArray *logoImageName = [[NSArray alloc] initWithObjects:@"qiuzhu",@"组局(1)",@"paotui",@"gongyi", nil];
             NSArray *logoTitle = [[NSArray alloc] initWithObjects:@"求助",@"组局",@"跑腿",@"公益", nil];
             
             for (int i = 0; i < 4 ; i++) {
@@ -430,6 +430,17 @@
 {
     //testViewController *testVC = [[testViewController alloc] init];
     //[self.navigationController pushViewController:testVC animated:YES];
+    switch (indexPath.row) {
+        case 2:
+        {
+            showDetailsViewController *showDetailsVC=[[showDetailsViewController alloc]init];
+            [self.navigationController pushViewController:showDetailsVC animated:YES];
+        }
+            break;
+            
+        default:
+            break;
+    }
 }
 
 - (void)didReceiveMemoryWarning {
