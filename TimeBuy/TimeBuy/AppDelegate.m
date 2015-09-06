@@ -71,12 +71,11 @@
         NSLog(@"Opened %@", menu);
         
         [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationSlide];
-        //[SlideNavigationController sharedInstance].rightBarButtonItem.width  = 0.01;
         
         shadowView.hidden = NO;
         
         if ([menu isEqualToString:@"left"]) {
-
+            NSLog(@"left");
         }
         
     }];
