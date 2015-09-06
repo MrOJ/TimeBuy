@@ -282,8 +282,6 @@
 		180E1D0A1B99B497002DBF2B /* addImg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addImg.png; sourceTree = "<group>"; };
 		180E1D0B1B99B497002DBF2B /* addImg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "addImg@2x.png"; sourceTree = "<group>"; };
 		180E1D0C1B99B497002DBF2B /* addImg@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "addImg@3x.png"; sourceTree = "<group>"; };
-		180E1D111B99CCDC002DBF2B /* AMapSearchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AMapSearchKit.framework; path = "../../开源库/AMapSearchKit.framework"; sourceTree = "<group>"; };
-		180E1D121B99CCDC002DBF2B /* MAMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MAMapKit.framework; path = "../../开源库/MAMapKit.framework"; sourceTree = "<group>"; };
 		180E1D151B99CCFB002DBF2B /* AMap.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AMap.bundle; sourceTree = "<group>"; };
 		180E1D171B99CD10002DBF2B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		180E1D191B99CD17002DBF2B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -644,8 +642,6 @@
 				180E1D1B1B99CD3A002DBF2B /* CoreGraphics.framework */,
 				180E1D191B99CD17002DBF2B /* Foundation.framework */,
 				180E1D171B99CD10002DBF2B /* UIKit.framework */,
-				180E1D111B99CCDC002DBF2B /* AMapSearchKit.framework */,
-				180E1D121B99CCDC002DBF2B /* MAMapKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
