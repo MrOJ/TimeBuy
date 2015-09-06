@@ -75,7 +75,7 @@
         shadowView.hidden = NO;
         
         if ([menu isEqualToString:@"left"]) {
-            //NSLog(@"left");
+            NSLog(@"left");
         }
         
     }];
