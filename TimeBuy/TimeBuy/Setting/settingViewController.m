@@ -182,18 +182,22 @@
 
 //我的行程
 - (IBAction)myTravel:(id)sender {
+    /*
     myTravelViewController *vc = [[myTravelViewController alloc] init];
     [[SlideNavigationController sharedInstance] popToRootAndSwitchToViewController:vc
                                                              withSlideOutAnimation:NO
                                                                      andCompletion:nil];
+    */
 }
 
 //我的消息
 - (IBAction)myNotice:(id)sender {
+    /*
     messageViewController *vc=[[messageViewController alloc]init];
     [[SlideNavigationController sharedInstance] popToRootAndSwitchToViewController:vc
                                                              withSlideOutAnimation:NO
                                                                      andCompletion:nil];
+    */
 }
 
 //我的日程

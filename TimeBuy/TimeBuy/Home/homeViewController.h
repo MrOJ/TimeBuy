@@ -20,7 +20,6 @@
 
 #import "loginViewController.h"
 #import "registerViewController.h"
-#import "showDetailsViewController.h"
 
 //#import "testViewController.h"
 

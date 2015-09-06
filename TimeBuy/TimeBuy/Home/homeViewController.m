@@ -433,8 +433,10 @@
     switch (indexPath.row) {
         case 2:
         {
+            /*
             showDetailsViewController *showDetailsVC=[[showDetailsViewController alloc]init];
             [self.navigationController pushViewController:showDetailsVC animated:YES];
+            */
         }
             break;
             

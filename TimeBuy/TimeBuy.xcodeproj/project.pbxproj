@@ -38,15 +38,7 @@
 		180E1D261B99CD65002DBF2B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 180E1D251B99CD65002DBF2B /* libz.dylib */; };
 		180E1D281B99CD74002DBF2B /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 180E1D271B99CD74002DBF2B /* libstdc++.6.0.9.dylib */; };
 		180E1D2A1B99CD7A002DBF2B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 180E1D291B99CD7A002DBF2B /* Security.framework */; };
-		180E1D2E1B9B2428002DBF2B /* showDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180E1D2C1B9B2428002DBF2B /* showDetailsViewController.m */; };
-		180E1D2F1B9B2428002DBF2B /* showDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 180E1D2D1B9B2428002DBF2B /* showDetailsViewController.xib */; };
-		180E1D331B9B2459002DBF2B /* messageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180E1D311B9B2459002DBF2B /* messageViewController.m */; };
-		180E1D341B9B2459002DBF2B /* messageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 180E1D321B9B2459002DBF2B /* messageViewController.xib */; };
-		180E1D391B9B2537002DBF2B /* IBActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 180E1D381B9B2537002DBF2B /* IBActionSheet.m */; };
-		180E1D3E1B9B26AB002DBF2B /* myTravelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180E1D3C1B9B26AB002DBF2B /* myTravelViewController.m */; };
-		180E1D3F1B9B26AB002DBF2B /* myTravelViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 180E1D3D1B9B26AB002DBF2B /* myTravelViewController.xib */; };
 		180E1D431B9B26EC002DBF2B /* nearbyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180E1D411B9B26EC002DBF2B /* nearbyViewController.m */; };
-		180E1D441B9B26EC002DBF2B /* nearbyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 180E1D421B9B26EC002DBF2B /* nearbyViewController.xib */; };
 		180E1D4B1B9C6FDF002DBF2B /* AMapSearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 180E1D491B9C6FDE002DBF2B /* AMapSearchKit.framework */; };
 		180E1D4C1B9C6FDF002DBF2B /* MAMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 180E1D4A1B9C6FDE002DBF2B /* MAMapKit.framework */; };
 		1812314C1B8B460A007E06B7 /* loginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1812314A1B8B460A007E06B7 /* loginViewController.m */; };
@@ -298,20 +290,8 @@
 		180E1D251B99CD65002DBF2B /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		180E1D271B99CD74002DBF2B /* libstdc++.6.0.9.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.0.9.dylib"; path = "usr/lib/libstdc++.6.0.9.dylib"; sourceTree = SDKROOT; };
 		180E1D291B99CD7A002DBF2B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		180E1D2B1B9B2428002DBF2B /* showDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = showDetailsViewController.h; sourceTree = "<group>"; };
-		180E1D2C1B9B2428002DBF2B /* showDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = showDetailsViewController.m; sourceTree = "<group>"; };
-		180E1D2D1B9B2428002DBF2B /* showDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = showDetailsViewController.xib; sourceTree = "<group>"; };
-		180E1D301B9B2459002DBF2B /* messageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = messageViewController.h; sourceTree = "<group>"; };
-		180E1D311B9B2459002DBF2B /* messageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = messageViewController.m; sourceTree = "<group>"; };
-		180E1D321B9B2459002DBF2B /* messageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = messageViewController.xib; sourceTree = "<group>"; };
-		180E1D371B9B2537002DBF2B /* IBActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBActionSheet.h; sourceTree = "<group>"; };
-		180E1D381B9B2537002DBF2B /* IBActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBActionSheet.m; sourceTree = "<group>"; };
-		180E1D3B1B9B26AB002DBF2B /* myTravelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myTravelViewController.h; sourceTree = "<group>"; };
-		180E1D3C1B9B26AB002DBF2B /* myTravelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myTravelViewController.m; sourceTree = "<group>"; };
-		180E1D3D1B9B26AB002DBF2B /* myTravelViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = myTravelViewController.xib; sourceTree = "<group>"; };
 		180E1D401B9B26EC002DBF2B /* nearbyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nearbyViewController.h; sourceTree = "<group>"; };
 		180E1D411B9B26EC002DBF2B /* nearbyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = nearbyViewController.m; sourceTree = "<group>"; };
-		180E1D421B9B26EC002DBF2B /* nearbyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = nearbyViewController.xib; sourceTree = "<group>"; };
 		180E1D491B9C6FDE002DBF2B /* AMapSearchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AMapSearchKit.framework; path = TimeBuy/AMapSearchKit.framework; sourceTree = "<group>"; };
 		180E1D4A1B9C6FDE002DBF2B /* MAMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MAMapKit.framework; path = TimeBuy/MAMapKit.framework; sourceTree = "<group>"; };
 		181231491B8B460A007E06B7 /* loginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loginViewController.h; sourceTree = "<group>"; };
@@ -666,8 +646,6 @@
 		180E1D361B9B2537002DBF2B /* IBActionSheet */ = {
 			isa = PBXGroup;
 			children = (
-				180E1D371B9B2537002DBF2B /* IBActionSheet.h */,
-				180E1D381B9B2537002DBF2B /* IBActionSheet.m */,
 			);
 			path = IBActionSheet;
 			sourceTree = "<group>";
@@ -675,9 +653,6 @@
 		180E1D3A1B9B257A002DBF2B /* myTravel */ = {
 			isa = PBXGroup;
 			children = (
-				180E1D3B1B9B26AB002DBF2B /* myTravelViewController.h */,
-				180E1D3C1B9B26AB002DBF2B /* myTravelViewController.m */,
-				180E1D3D1B9B26AB002DBF2B /* myTravelViewController.xib */,
 			);
 			path = myTravel;
 			sourceTree = "<group>";
@@ -773,9 +748,6 @@
 				182CDBA01B75C73C005FE865 /* homeDetailsTableViewCell.m */,
 				182CDB9F1B75C73C005FE865 /* homeDetailsTableViewCell.h */,
 				182CDBA11B75C73C005FE865 /* homeDetailsTableViewCell.xib */,
-				180E1D2B1B9B2428002DBF2B /* showDetailsViewController.h */,
-				180E1D2C1B9B2428002DBF2B /* showDetailsViewController.m */,
-				180E1D2D1B9B2428002DBF2B /* showDetailsViewController.xib */,
 				181231491B8B460A007E06B7 /* loginViewController.h */,
 				1812314A1B8B460A007E06B7 /* loginViewController.m */,
 				1812314B1B8B460A007E06B7 /* loginViewController.xib */,
@@ -1023,7 +995,6 @@
 			children = (
 				180E1D401B9B26EC002DBF2B /* nearbyViewController.h */,
 				180E1D411B9B26EC002DBF2B /* nearbyViewController.m */,
-				180E1D421B9B26EC002DBF2B /* nearbyViewController.xib */,
 			);
 			path = Nearby;
 			sourceTree = "<group>";
@@ -1097,9 +1068,6 @@
 			isa = PBXGroup;
 			children = (
 				180E1D361B9B2537002DBF2B /* IBActionSheet */,
-				180E1D301B9B2459002DBF2B /* messageViewController.h */,
-				180E1D311B9B2459002DBF2B /* messageViewController.m */,
-				180E1D321B9B2459002DBF2B /* messageViewController.xib */,
 			);
 			path = myNotice;
 			sourceTree = "<group>";
@@ -1450,10 +1418,8 @@
 				18741F671B9081D90090DEA5 /* wodexiaoxi@3x.png in Resources */,
 				18FD074B1B8F3484006545AC /* 背景@2x.png in Resources */,
 				18FD06E01B8DC89F006545AC /* 新浪1@2x.png in Resources */,
-				180E1D2F1B9B2428002DBF2B /* showDetailsViewController.xib in Resources */,
 				18741F681B9081D90090DEA5 /* wodezuji.png in Resources */,
 				18741F511B9081D90090DEA5 /* fabu@2x.png in Resources */,
-				180E1D3F1B9B26AB002DBF2B /* myTravelViewController.xib in Resources */,
 				189DD3981B95B69D0083B52C /* profilesTableViewCell.xib in Resources */,
 				180E1CE41B971FF4002DBF2B /* placeTableViewCell.xib in Resources */,
 				18741F5F1B9081D90090DEA5 /* tuichudenglu.png in Resources */,
@@ -1472,7 +1438,6 @@
 				18FD06F41B8DC89F006545AC /* zisu10.1.png in Resources */,
 				18741F821B9082820090DEA5 /* xitongshezhi@3x.png in Resources */,
 				18741F5B1B9081D90090DEA5 /* hewomenliaoliao@3x.png in Resources */,
-				180E1D441B9B26EC002DBF2B /* nearbyViewController.xib in Resources */,
 				18FD072C1B8E8F9F006545AC /* gongyi@3x.png in Resources */,
 				18FD06D51B8DC89F006545AC /* 个人设置1@2x.png in Resources */,
 				18AD5F2A1B91494A00E63C2D /* addressViewController.xib in Resources */,
@@ -1507,7 +1472,6 @@
 				180E1D161B99CCFB002DBF2B /* AMap.bundle in Resources */,
 				18741F551B9081D90090DEA5 /* gerenxiaoxi@3x.png in Resources */,
 				18FD06E31B8DC89F006545AC /* 支付宝1@2x.png in Resources */,
-				180E1D341B9B2459002DBF2B /* messageViewController.xib in Resources */,
 				18741F541B9081D90090DEA5 /* gerenxiaoxi@2x.png in Resources */,
 				18FD07231B8E8F9F006545AC /* 男符号1@3x.png in Resources */,
 				180E1D0F1B99B497002DBF2B /* addImg@3x.png in Resources */,
@@ -1560,8 +1524,6 @@
 				182CDBA21B75C73C005FE865 /* homeDetailsTableViewCell.m in Sources */,
 				18AD5F291B91494A00E63C2D /* addressViewController.m in Sources */,
 				18AD5F371B91494A00E63C2D /* profilesViewController.m in Sources */,
-				180E1D2E1B9B2428002DBF2B /* showDetailsViewController.m in Sources */,
-				180E1D3E1B9B26AB002DBF2B /* myTravelViewController.m in Sources */,
 				182CDB911B7392DB005FE865 /* MJRefreshAutoNormalFooter.m in Sources */,
 				18AD5F3C1B914A1900E63C2D /* systemSettingView.m in Sources */,
 				182CDB041B72286F005FE865 /* AppDelegate.m in Sources */,
@@ -1574,7 +1536,6 @@
 				182CDB8E1B7392DB005FE865 /* MJRefreshFooter.m in Sources */,
 				180E1CE11B971FF4002DBF2B /* labelsTableViewCell.m in Sources */,
 				18AD5F2D1B91494A00E63C2D /* modifyNameViewController.m in Sources */,
-				180E1D331B9B2459002DBF2B /* messageViewController.m in Sources */,
 				182CDB9C1B7392DB005FE865 /* UIScrollView+MJRefresh.m in Sources */,
 				18FFE5BB1B7F49AE004FBC82 /* SlideNavigationContorllerAnimatorScaleAndFade.m in Sources */,
 				189DD3971B95B69D0083B52C /* profilesTableViewCell.m in Sources */,
@@ -1583,7 +1544,6 @@
 				180E1D061B982403002DBF2B /* slidePush.m in Sources */,
 				182CDB9A1B7392DB005FE865 /* MJRefreshConst.m in Sources */,
 				182CDBAD1B7617A1005FE865 /* JScrollView+PageControl+AutoScroll.m in Sources */,
-				180E1D391B9B2537002DBF2B /* IBActionSheet.m in Sources */,
 				18AD5F0A1B9147FA00E63C2D /* KLCPopup.m in Sources */,
 				18AD5F351B91494A00E63C2D /* telephoneViewController.m in Sources */,
 				182CDB931B7392DB005FE865 /* MJRefreshBackGifFooter.m in Sources */,
