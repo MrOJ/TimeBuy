@@ -10,10 +10,14 @@
 
 @implementation labelsTableViewCell
 
+@synthesize labelStr1;
+@synthesize labelStr2;
+
 - (void)awakeFromNib {
     // Initialization code
     
     self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
