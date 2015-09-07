@@ -13,8 +13,8 @@
 #import "profilesViewController.h"
 #import "systemSetting/systemSettingView.h"
 #import "releaseInfoViewController.h"
-//#import "myTravelViewController.h"
-//#import "messageViewController.h"
+#import "myTravelViewController.h"
+#import "messageViewController.h"
 
 @interface settingViewController : UIViewController <UIAlertViewDelegate>
 {
