@@ -76,6 +76,13 @@
 		182CDBF01B772312005FE865 /* portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 182CDBEF1B772312005FE865 /* portrait.png */; };
 		182CDC2A1B774070005FE865 /* settingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182CDC281B774070005FE865 /* settingViewController.m */; };
 		184FFD4A1B9D1C9800942180 /* nearbyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 184FFD491B9D1C9800942180 /* nearbyViewController.xib */; };
+		184FFD4F1B9DAAEA00942180 /* mySheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184FFD4D1B9DAAEA00942180 /* mySheduleViewController.m */; };
+		184FFD501B9DAAEA00942180 /* mySheduleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 184FFD4E1B9DAAEA00942180 /* mySheduleViewController.xib */; };
+		184FFD521B9DB77000942180 /* 我的日程 background.png in Resources */ = {isa = PBXBuildFile; fileRef = 184FFD511B9DB77000942180 /* 我的日程 background.png */; };
+		184FFD571B9DBEC400942180 /* infoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 184FFD551B9DBEC400942180 /* infoTableViewCell.m */; };
+		184FFD581B9DBEC400942180 /* infoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 184FFD561B9DBEC400942180 /* infoTableViewCell.xib */; };
+		184FFD5C1B9DD07F00942180 /* timeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 184FFD5A1B9DD07F00942180 /* timeTableViewCell.m */; };
+		184FFD5D1B9DD07F00942180 /* timeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 184FFD5B1B9DD07F00942180 /* timeTableViewCell.xib */; };
 		18741F1B1B9072290090DEA5 /* logo200x56-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 18741F1A1B9072290090DEA5 /* logo200x56-01.png */; };
 		18741F221B9074DD0090DEA5 /* 导航条320x64.png in Resources */ = {isa = PBXBuildFile; fileRef = 18741F1C1B9074DD0090DEA5 /* 导航条320x64.png */; };
 		18741F231B9074DD0090DEA5 /* 导航条320x64@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18741F1D1B9074DD0090DEA5 /* 导航条320x64@2x.png */; };
@@ -367,6 +374,16 @@
 		182CDC271B774070005FE865 /* settingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = settingViewController.h; sourceTree = "<group>"; };
 		182CDC281B774070005FE865 /* settingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = settingViewController.m; sourceTree = "<group>"; };
 		184FFD491B9D1C9800942180 /* nearbyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = nearbyViewController.xib; sourceTree = "<group>"; };
+		184FFD4C1B9DAAEA00942180 /* mySheduleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mySheduleViewController.h; sourceTree = "<group>"; };
+		184FFD4D1B9DAAEA00942180 /* mySheduleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = mySheduleViewController.m; sourceTree = "<group>"; };
+		184FFD4E1B9DAAEA00942180 /* mySheduleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = mySheduleViewController.xib; sourceTree = "<group>"; };
+		184FFD511B9DB77000942180 /* 我的日程 background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "我的日程 background.png"; sourceTree = "<group>"; };
+		184FFD541B9DBEC400942180 /* infoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = infoTableViewCell.h; sourceTree = "<group>"; };
+		184FFD551B9DBEC400942180 /* infoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = infoTableViewCell.m; sourceTree = "<group>"; };
+		184FFD561B9DBEC400942180 /* infoTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = infoTableViewCell.xib; sourceTree = "<group>"; };
+		184FFD591B9DD07F00942180 /* timeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = timeTableViewCell.h; sourceTree = "<group>"; };
+		184FFD5A1B9DD07F00942180 /* timeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = timeTableViewCell.m; sourceTree = "<group>"; };
+		184FFD5B1B9DD07F00942180 /* timeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = timeTableViewCell.xib; sourceTree = "<group>"; };
 		18741F1A1B9072290090DEA5 /* logo200x56-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo200x56-01.png"; sourceTree = "<group>"; };
 		18741F1C1B9074DD0090DEA5 /* 导航条320x64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "导航条320x64.png"; sourceTree = "<group>"; };
 		18741F1D1B9074DD0090DEA5 /* 导航条320x64@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "导航条320x64@2x.png"; sourceTree = "<group>"; };
@@ -976,6 +993,7 @@
 		182CDBBE1B7722D8005FE865 /* setting */ = {
 			isa = PBXGroup;
 			children = (
+				184FFD511B9DB77000942180 /* 我的日程 background.png */,
 				18AD5F561B91A70800E63C2D /* 个人设置背景250x667.png */,
 				182CDBEF1B772312005FE865 /* portrait.png */,
 				18741F2C1B9081D90090DEA5 /* fabu.png */,
@@ -1041,11 +1059,33 @@
 				18B4CFB31B9D1B8C00CFFB3F /* messageViewController.h */,
 				18B4CFB41B9D1B8C00CFFB3F /* messageViewController.m */,
 				18B4CFB51B9D1B8C00CFFB3F /* messageViewController.xib */,
-				18AD5F0D1B91494A00E63C2D /* mySchedule */,
-				18AD5F0F1B91494A00E63C2D /* payment */,
-				18AD5F0B1B91494A00E63C2D /* logout */,
+				184FFD4B1B9DAAB000942180 /* myShedule */,
 			);
 			path = Setting;
+			sourceTree = "<group>";
+		};
+		184FFD4B1B9DAAB000942180 /* myShedule */ = {
+			isa = PBXGroup;
+			children = (
+				184FFD4C1B9DAAEA00942180 /* mySheduleViewController.h */,
+				184FFD4D1B9DAAEA00942180 /* mySheduleViewController.m */,
+				184FFD4E1B9DAAEA00942180 /* mySheduleViewController.xib */,
+				184FFD531B9DBE0900942180 /* mySheduleTableViewCell */,
+			);
+			path = myShedule;
+			sourceTree = "<group>";
+		};
+		184FFD531B9DBE0900942180 /* mySheduleTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				184FFD541B9DBEC400942180 /* infoTableViewCell.h */,
+				184FFD551B9DBEC400942180 /* infoTableViewCell.m */,
+				184FFD561B9DBEC400942180 /* infoTableViewCell.xib */,
+				184FFD591B9DD07F00942180 /* timeTableViewCell.h */,
+				184FFD5A1B9DD07F00942180 /* timeTableViewCell.m */,
+				184FFD5B1B9DD07F00942180 /* timeTableViewCell.xib */,
+			);
+			path = mySheduleTableViewCell;
 			sourceTree = "<group>";
 		};
 		189DD36C1B9472B00083B52C /* button */ = {
@@ -1089,33 +1129,12 @@
 			path = KLCPopup;
 			sourceTree = "<group>";
 		};
-		18AD5F0B1B91494A00E63C2D /* logout */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = logout;
-			sourceTree = "<group>";
-		};
 		18AD5F0C1B91494A00E63C2D /* myNotice */ = {
 			isa = PBXGroup;
 			children = (
 				180E1D361B9B2537002DBF2B /* IBActionSheet */,
 			);
 			path = myNotice;
-			sourceTree = "<group>";
-		};
-		18AD5F0D1B91494A00E63C2D /* mySchedule */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = mySchedule;
-			sourceTree = "<group>";
-		};
-		18AD5F0F1B91494A00E63C2D /* payment */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = payment;
 			sourceTree = "<group>";
 		};
 		18AD5F101B91494A00E63C2D /* profiles */ = {
@@ -1393,12 +1412,15 @@
 				182CDB991B7392DB005FE865 /* MJRefresh.bundle in Resources */,
 				18FD06DD1B8DC89F006545AC /* 微信1@2x.png in Resources */,
 				18FD06DE1B8DC89F006545AC /* 微信1@3x.png in Resources */,
+				184FFD581B9DBEC400942180 /* infoTableViewCell.xib in Resources */,
 				189DD37D1B9472B00083B52C /* dingwei1.png in Resources */,
 				189DD3811B9472B00083B52C /* xiugai@2x.png in Resources */,
+				184FFD501B9DAAEA00942180 /* mySheduleViewController.xib in Resources */,
 				18FD07201B8E8F9F006545AC /* 爱心1@3x.png in Resources */,
 				18741F851B9082820090DEA5 /* zhifufangshi@3x.png in Resources */,
 				18741F5D1B9081D90090DEA5 /* meiritixing@2x.png in Resources */,
 				18FD07301B8E8F9F006545AC /* qiuzhu.png in Resources */,
+				184FFD521B9DB77000942180 /* 我的日程 background.png in Resources */,
 				18741F581B9081D90090DEA5 /* guanyutimebuy@3x.png in Resources */,
 				189DD3891B9472B00083B52C /* b21c8701a18b87d600927607010828381e30fdd2.jpg.png in Resources */,
 				18FD07081B8DF6F7006545AC /* 附近的人1@3x.png in Resources */,
@@ -1423,6 +1445,7 @@
 				180E1CF61B972AB8002DBF2B /* priceViewController.xib in Resources */,
 				18741F651B9081D90090DEA5 /* wodexiaoxi.png in Resources */,
 				18741F601B9081D90090DEA5 /* tuichudenglu@2x.png in Resources */,
+				184FFD5D1B9DD07F00942180 /* timeTableViewCell.xib in Resources */,
 				18741F611B9081D90090DEA5 /* tuichudenglu@3x.png in Resources */,
 				180E1D0D1B99B497002DBF2B /* addImg.png in Resources */,
 				189DD38B1B9472B00083B52C /* b21c8701a18b87d600927607010828381e30fdd2.jpg@3x.png in Resources */,
@@ -1545,6 +1568,7 @@
 				182CDC2A1B774070005FE865 /* settingViewController.m in Sources */,
 				18FFE5BA1B7F49AE004FBC82 /* SlideNavigationContorllerAnimatorScale.m in Sources */,
 				180E1CEA1B972667002DBF2B /* details2TableViewCell.m in Sources */,
+				184FFD5C1B9DD07F00942180 /* timeTableViewCell.m in Sources */,
 				182CDB961B7392DB005FE865 /* MJRefreshGifHeader.m in Sources */,
 				18FFE5BD1B7F49AE004FBC82 /* SlideNavigationContorllerAnimatorSlideAndFade.m in Sources */,
 				18AD5F5B1B91AAB200E63C2D /* releaseInfoViewController.m in Sources */,
@@ -1562,10 +1586,12 @@
 				182CDBA21B75C73C005FE865 /* homeDetailsTableViewCell.m in Sources */,
 				18AD5F291B91494A00E63C2D /* addressViewController.m in Sources */,
 				18AD5F371B91494A00E63C2D /* profilesViewController.m in Sources */,
+				184FFD4F1B9DAAEA00942180 /* mySheduleViewController.m in Sources */,
 				182CDB911B7392DB005FE865 /* MJRefreshAutoNormalFooter.m in Sources */,
 				18AD5F3C1B914A1900E63C2D /* systemSettingView.m in Sources */,
 				182CDB041B72286F005FE865 /* AppDelegate.m in Sources */,
 				182CDB901B7392DB005FE865 /* MJRefreshAutoGifFooter.m in Sources */,
+				184FFD571B9DBEC400942180 /* infoTableViewCell.m in Sources */,
 				182CDB8C1B7392DB005FE865 /* MJRefreshBackFooter.m in Sources */,
 				180E1CE51B971FF4002DBF2B /* releaseDetailsTableViewCell.m in Sources */,
 				182CDB011B72286F005FE865 /* main.m in Sources */,

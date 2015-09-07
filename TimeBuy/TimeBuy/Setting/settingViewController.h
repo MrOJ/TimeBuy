@@ -15,6 +15,7 @@
 #import "releaseInfoViewController.h"
 #import "myTravelViewController.h"
 #import "messageViewController.h"
+#import "mySheduleViewController.h"
 
 @interface settingViewController : UIViewController <UIAlertViewDelegate>
 {

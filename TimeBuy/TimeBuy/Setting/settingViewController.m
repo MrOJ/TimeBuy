@@ -202,7 +202,8 @@
 
 //我的日程
 - (IBAction)mySchedule:(id)sender {
-    
+    mySheduleViewController *vc = [[mySheduleViewController alloc] init];
+    [[SlideNavigationController sharedInstance] popToRootAndSwitchToViewController:vc withSlideOutAnimation:NO andCompletion:nil];
 }
 
 //退出登录
