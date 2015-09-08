@@ -77,13 +77,18 @@
     [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"导航条375x64"] forBarMetrics:UIBarMetricsDefault];
     self.navigationController.navigationBar.translucent = NO;
     
-    UIView *titleView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 80, 30)];
+    UIView *titleView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 42, 20)];
+    /*
     UILabel *title = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 80, 30)];
     title.text = @"TimeBuy";
     title.font = [UIFont fontWithName:@"Heiti SC" size:20.0f];
     title.textColor = [UIColor whiteColor];
     title.textAlignment = NSTextAlignmentCenter;
     [titleView addSubview:title];
+    */
+    UIImageView *logoImgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 42, 20)];
+    logoImgView.image = [UIImage imageNamed:@"导航字体"];
+    [titleView addSubview:logoImgView];
     [self.navigationItem setTitleView:titleView];
     
     _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -123,21 +128,22 @@
             
         case 1:
         {
-            
-        }
+            forgetPwdViewController *forgetPwdVC = [[forgetPwdViewController alloc] init];
+            [self.navigationController presentViewController:forgetPwdVC animated:YES completion:nil];
             break;
-            
+        }
         case 2:
         {
             registerViewController *registerVC = [[registerViewController alloc] init];
             [self.navigationController presentViewController:registerVC animated:YES completion:nil];
-        }
             break;
+        }
         case 4:
         {
             
             loginViewController *loginVC = [[loginViewController alloc] init];
             [self.navigationController presentViewController:loginVC animated:NO completion:nil];
+            break;
         }
         default:
             break;

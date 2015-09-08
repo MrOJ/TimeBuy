@@ -7,21 +7,21 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>C75C6073-8531-404D-A8DA-CBCA37C3DB57</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>TimeBuy</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>37A10C29D21C08D896584C31FD8B09841C5DB351</key>
-		<string>ssh://github.com/MrOJ/TimeBuy.git</string>
+		<string>https://github.com/MrOJ/TimeBuy</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>TimeBuy/TimeBuy.xcodeproj/project.xcworkspace</string>
+	<string>TimeBuy/TimeBuy.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>37A10C29D21C08D896584C31FD8B09841C5DB351</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>ssh://github.com/MrOJ/TimeBuy.git</string>
+	<string>https://github.com/MrOJ/TimeBuy</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>

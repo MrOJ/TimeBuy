@@ -39,6 +39,8 @@
     
     MBProgressHUD *HUD;
     MBProgressHUD *HUDinSuccess;
+    
+    NSInteger imageChanged;
 }
 
 @property (nonatomic, strong) UIImage *myPortraitImg;

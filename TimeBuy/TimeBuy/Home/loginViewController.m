@@ -52,7 +52,7 @@
     // set View2
     UIColor *color = [UIColor whiteColor];
     
-    phoneTextField = [[UITextField alloc] initWithFrame:CGRectMake(40, 0, [UIScreen mainScreen].bounds.size.width - 40 * 2, 45)];
+    phoneTextField = [[UITextField alloc] initWithFrame:CGRectMake(76, 40, [UIScreen mainScreen].bounds.size.width - 76 * 2, 36)];
     phoneTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"手机号" attributes:@{NSForegroundColorAttributeName: color}];
     phoneTextField.backgroundColor = [UIColor clearColor];
     phoneTextField.textAlignment = NSTextAlignmentCenter;
@@ -60,13 +60,13 @@
     phoneTextField.layer.masksToBounds = YES;
     phoneTextField.layer.borderWidth = 1.0f;
     phoneTextField.layer.borderColor = [UIColor whiteColor].CGColor;
-    phoneTextField.layer.cornerRadius = 45.0f / 2;
+    phoneTextField.layer.cornerRadius = 36.0f / 2;
     //phoneTextField.layer.opacity = 0.7f;
     phoneTextField.keyboardType = UIKeyboardTypeNumberPad;
     phoneTextField.delegate = self;
     
     
-    passwordTextField = [[UITextField alloc] initWithFrame:CGRectMake(40, 0 + 45 + 14, [UIScreen mainScreen].bounds.size.width - 40 * 2, 45)];
+    passwordTextField = [[UITextField alloc] initWithFrame:CGRectMake(76, 40 + 36 + 11, [UIScreen mainScreen].bounds.size.width - 76 * 2, 36)];
     passwordTextField.attributedPlaceholder = [[NSAttributedString alloc] initWithString:@"密码" attributes:@{NSForegroundColorAttributeName: color}];
     passwordTextField.backgroundColor = [UIColor clearColor];
     passwordTextField.textAlignment = NSTextAlignmentCenter;
@@ -74,13 +74,14 @@
     passwordTextField.layer.masksToBounds = YES;
     passwordTextField.layer.borderWidth = 1.0f;
     passwordTextField.layer.borderColor = [UIColor whiteColor].CGColor;
-    passwordTextField.layer.cornerRadius = 45.0f / 2;
+    passwordTextField.layer.cornerRadius = 36.0f / 2;
     //passwordTextField.layer.opacity = 0.7f;
     passwordTextField.delegate = self;
     passwordTextField.secureTextEntry = YES;
     
-    UIButton *loginButton = [[UIButton alloc] initWithFrame:CGRectMake(40, 0 + (45 + 14) * 2, [UIScreen mainScreen].bounds.size.width - 40 * 2, 45)];
+    UIButton *loginButton = [[UIButton alloc] initWithFrame:CGRectMake(76, 40 + (36 + 11) * 2, [UIScreen mainScreen].bounds.size.width - 76 * 2, 36)];
     [loginButton setTitle:@"登录" forState:UIControlStateNormal];
+    //[loginButton setTitleColor:[UIColor colorWithRed:41.0f / 255.0 green:135.0f / 255.0 blue:157.0f / 255.0 alpha:1] forState:UIControlStateNormal];
     [loginButton setTitleColor:[UIColor colorWithRed:41.0f / 255.0 green:135.0f / 255.0 blue:157.0f / 255.0 alpha:1] forState:UIControlStateNormal];
     loginButton.backgroundColor = [UIColor whiteColor];
     [loginButton addTarget:self action:@selector(login:) forControlEvents:UIControlEventTouchUpInside];
@@ -88,7 +89,7 @@
     loginButton.layer.opacity = 0.7f;
     //loginButton.layer.borderWidth = 1.0f;
     //loginButton.layer.borderColor = [UIColor whiteColor].CGColor;
-    loginButton.layer.cornerRadius = 45.0f / 2;
+    loginButton.layer.cornerRadius = 36.0f / 2;
     
     UIButton *forgetPwdButton = [[UIButton alloc] initWithFrame:CGRectMake(14, screenHight - 250 - 16 - 13, 52, 13)];
     [forgetPwdButton setTitle:@"忘记密码" forState:UIControlStateNormal];

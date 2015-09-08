@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -17,20 +17,32 @@
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="背景.png" translatesAutoresizingMaskIntoConstraints="NO" id="Mep-lm-YZO">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo200x56-01.png" translatesAutoresizingMaskIntoConstraints="NO" id="2KK-GC-Bzo">
-                    <rect key="frame" x="28" y="85" width="265" height="74"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="2KK-GC-Bzo">
+                    <rect key="frame" x="72" y="86" width="177" height="84"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="265" id="F1G-EO-Ueo"/>
-                        <constraint firstAttribute="height" constant="74" id="bMr-VA-4ye"/>
+                        <constraint firstAttribute="height" constant="84" id="1Xd-pK-vFh"/>
+                        <constraint firstAttribute="width" constant="177" id="jmz-lw-QXr"/>
                     </constraints>
                 </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="拓 展 人 生 的 宽 度" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QOi-1b-rS8">
+                    <rect key="frame" x="82" y="178" width="156" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="1Ak-Ye-bP9"/>
+                        <constraint firstAttribute="width" constant="156" id="OHF-6x-roX"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="STHeitiTC-Medium" family="Heiti TC" pointSize="18"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="Mep-lm-YZO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="0yA-XB-jLA"/>
+                <constraint firstItem="2KK-GC-Bzo" firstAttribute="centerX" secondItem="QOi-1b-rS8" secondAttribute="centerX" id="1eM-0k-XKC"/>
                 <constraint firstAttribute="bottom" secondItem="Mep-lm-YZO" secondAttribute="bottom" id="67P-vS-Nf1"/>
-                <constraint firstItem="2KK-GC-Bzo" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="85" id="K9m-GC-zya"/>
-                <constraint firstItem="2KK-GC-Bzo" firstAttribute="centerX" secondItem="Mep-lm-YZO" secondAttribute="centerX" id="QmH-AB-FGT"/>
+                <constraint firstItem="2KK-GC-Bzo" firstAttribute="centerX" secondItem="Mep-lm-YZO" secondAttribute="centerX" id="6NY-Ob-js3"/>
+                <constraint firstItem="2KK-GC-Bzo" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="86" id="ED6-bI-4t1"/>
+                <constraint firstItem="QOi-1b-rS8" firstAttribute="top" secondItem="2KK-GC-Bzo" secondAttribute="bottom" constant="8" symbolic="YES" id="EMd-bv-6RQ"/>
                 <constraint firstAttribute="trailing" secondItem="Mep-lm-YZO" secondAttribute="trailing" id="myX-tr-Ty0"/>
                 <constraint firstItem="Mep-lm-YZO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="oAi-Fu-kvR"/>
             </constraints>
@@ -38,7 +50,7 @@
         </view>
     </objects>
     <resources>
-        <image name="logo200x56-01.png" width="833" height="233"/>
+        <image name="logo.png" width="1631" height="773"/>
         <image name="背景.png" width="125" height="222"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

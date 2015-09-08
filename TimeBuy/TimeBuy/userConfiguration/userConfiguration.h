@@ -25,6 +25,6 @@
 
 +(void)setStringValueForConfigurationKey:(NSString *)_objectkey withValue:(NSString *)_value;
 
-+(void)setDataValueForConfigurationKey:(NSData *)_objectkey withValue:(NSString *)_value;
++(void)setDataValueForConfigurationKey:(NSString *)_objectkey withValue:(NSData *)_value;
 
 @end

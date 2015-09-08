@@ -31,6 +31,8 @@
     self.navigationItem.rightBarButtonItem = registerButton;
     self.navigationItem.rightBarButtonItem.enabled = NO;
     
+    imageChanged = 0;
+    
     myTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height) style:UITableViewStyleGrouped];
     myTableView.delegate = self;
     myTableView.dataSource = self;
@@ -420,6 +422,8 @@
 - (void)imageCropper:(VPImageCropperViewController *)cropperViewController didFinished:(UIImage *)editedImage {
     NSLog(@"图片选择成功");
     
+    self.navigationItem.rightBarButtonItem.enabled = YES;
+    
     //上传图片接口
     
     myPortraitImg = editedImage;
@@ -427,7 +431,7 @@
     UITableViewCell *cell= (UITableViewCell *)[myTableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
     for (UIView *view in cell.subviews) {
         if ([view isKindOfClass:[UIImageView class]]) {
-            NSLog(@"view = %@",view);
+            //NSLog(@"view = %@",view);
             [view removeFromSuperview];
         }
     }
@@ -438,9 +442,8 @@
     [cell addSubview:portraitView];
     
     [cropperViewController dismissViewControllerAnimated:YES completion:^{
-        
+        imageChanged = 1;
     }];
-
     
 }
 
@@ -624,6 +627,22 @@
 {
     HUD = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     HUD.delegate = self;
+
+    NSString *fileName = @"";
+    NSData *data = [[NSData alloc] init];
+    
+    if (imageChanged == 1) {
+        data = UIImagePNGRepresentation(myPortraitImg);
+        [userConfiguration setDataValueForConfigurationKey:@"portrait" withValue:data];
+        
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        // 设置时间格式
+        formatter.dateFormat = @"yyyyMMddHHmmss";
+        NSString *str = [formatter stringFromDate:[NSDate date]];
+        fileName = [NSString stringWithFormat:@"portrait_%@.png", str];
+    } else {
+        fileName = @"0";
+    }
     
     //上传至服务器
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
@@ -634,9 +653,8 @@
     [manager.requestSerializer setValue:@"application/json; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
     
     //2.设置登录参数
-
     NSDictionary *dict = @{ @"userId":[userConfiguration getStringValueForConfigurationKey:@"userId"],
-                            @"headIcon":@"123",
+                            @"headIcon":fileName,
                             @"nickName":nameStr,
                             @"sex":sexStr,
                             @"birthDay":ageStr,
@@ -644,21 +662,11 @@
                             @"address":addressStr,
                             @"phone":phoneStr,
                             @"signature":signatuStr};
-
-    /*
-    NSDictionary *dict = @{ @"userId":@"27",
-                            @"headIcon":@"123",
-                            @"nickName":@"oj",
-                            @"sex":@"0",
-                            @"birthDay":@"2011-10-2",
-                            @"profession":@"123",
-                            @"address":@"111",
-                            @"phone":@"18767122229",
-                            @"signature":@"hello"};
-    */
     
     //3.请求
-    [manager GET:@"http://192.168.8.102:8080/timebuy/user/update" parameters:dict success: ^(AFHTTPRequestOperation *operation, id responseObject) {
+    [manager POST:@"http://192.168.8.102:8080/timebuy/user/update" parameters:dict constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+        [formData appendPartWithFileData:data name:@"myfile" fileName:fileName mimeType:@"image/png"];
+    } success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSLog(@"GET --> %@", responseObject); //自动返回主线程
         
         [HUD hide:YES];
@@ -680,8 +688,7 @@
         } else {
             [self showErrorWithTitle:@"修改失败" WithMessage:@"系统错误"];
         }
-        
-    } failure: ^(AFHTTPRequestOperation *operation, NSError *error) {
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"%@", error);
         [HUD hide:YES];
         [self showErrorWithTitle:@"修改失败" WithMessage:@"网络连接失败，请检查网络设置"];
