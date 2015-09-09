@@ -34,6 +34,7 @@
 - (void)viewDidLoad {
     [self createTableviewData];
     [super viewDidLoad];
+    self.tableview.frame=CGRectMake(23, 23, 23, 23);
     self.tableview.delegate=self;
     self.tableview.dataSource=self;
     self.textfield.frame=CGRectMake(14, 585, 347, 45);
