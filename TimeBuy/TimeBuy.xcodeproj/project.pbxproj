@@ -256,6 +256,11 @@
 		702153DA1B9F0F5300F4FF36 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 702153D41B9F0F5300F4FF36 /* logo.png */; };
 		702153DB1B9F0F5300F4FF36 /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 702153D51B9F0F5300F4FF36 /* logo@2x.png */; };
 		702153DC1B9F0F5300F4FF36 /* logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 702153D61B9F0F5300F4FF36 /* logo@3x.png */; };
+		70985E341BA05AFC00893F5E /* sheduleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 70985E321BA05AFC00893F5E /* sheduleTableViewCell.m */; };
+		70985E351BA05AFC00893F5E /* sheduleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70985E331BA05AFC00893F5E /* sheduleTableViewCell.xib */; };
+		70985E391BA0663600893F5E /* 栏.png in Resources */ = {isa = PBXBuildFile; fileRef = 70985E361BA0663600893F5E /* 栏.png */; };
+		70985E3A1BA0663600893F5E /* 栏@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 70985E371BA0663600893F5E /* 栏@2x.png */; };
+		70985E3B1BA0663600893F5E /* 栏@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 70985E381BA0663600893F5E /* 栏@3x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -599,6 +604,12 @@
 		702153D41B9F0F5300F4FF36 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		702153D51B9F0F5300F4FF36 /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@2x.png"; sourceTree = "<group>"; };
 		702153D61B9F0F5300F4FF36 /* logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@3x.png"; sourceTree = "<group>"; };
+		70985E311BA05AFC00893F5E /* sheduleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sheduleTableViewCell.h; sourceTree = "<group>"; };
+		70985E321BA05AFC00893F5E /* sheduleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = sheduleTableViewCell.m; sourceTree = "<group>"; };
+		70985E331BA05AFC00893F5E /* sheduleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = sheduleTableViewCell.xib; sourceTree = "<group>"; };
+		70985E361BA0663600893F5E /* 栏.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "栏.png"; sourceTree = "<group>"; };
+		70985E371BA0663600893F5E /* 栏@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "栏@2x.png"; sourceTree = "<group>"; };
+		70985E381BA0663600893F5E /* 栏@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "栏@3x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1094,6 +1105,9 @@
 				184FFD591B9DD07F00942180 /* timeTableViewCell.h */,
 				184FFD5A1B9DD07F00942180 /* timeTableViewCell.m */,
 				184FFD5B1B9DD07F00942180 /* timeTableViewCell.xib */,
+				70985E311BA05AFC00893F5E /* sheduleTableViewCell.h */,
+				70985E321BA05AFC00893F5E /* sheduleTableViewCell.m */,
+				70985E331BA05AFC00893F5E /* sheduleTableViewCell.xib */,
 			);
 			path = mySheduleTableViewCell;
 			sourceTree = "<group>";
@@ -1101,6 +1115,9 @@
 		189DD36C1B9472B00083B52C /* button */ = {
 			isa = PBXGroup;
 			children = (
+				70985E361BA0663600893F5E /* 栏.png */,
+				70985E371BA0663600893F5E /* 栏@2x.png */,
+				70985E381BA0663600893F5E /* 栏@3x.png */,
 				180E1D0A1B99B497002DBF2B /* addImg.png */,
 				180E1D0B1B99B497002DBF2B /* addImg@2x.png */,
 				180E1D0C1B99B497002DBF2B /* addImg@3x.png */,
@@ -1411,7 +1428,9 @@
 				18741F531B9081D90090DEA5 /* gerenxiaoxi.png in Resources */,
 				18FD072A1B8E8F9F006545AC /* gongyi.png in Resources */,
 				18741F6A1B9081D90090DEA5 /* wodezuji@3x.png in Resources */,
+				70985E351BA05AFC00893F5E /* sheduleTableViewCell.xib in Resources */,
 				18B4CFB71B9D1B8C00CFFB3F /* messageViewController.xib in Resources */,
+				70985E3A1BA0663600893F5E /* 栏@2x.png in Resources */,
 				180E1CEB1B972667002DBF2B /* details2TableViewCell.xib in Resources */,
 				18FD06FF1B8DCE96006545AC /* showImg2.png in Resources */,
 				18741F801B9082820090DEA5 /* xitongshezhi.png in Resources */,
@@ -1487,6 +1506,7 @@
 				18FD074B1B8F3484006545AC /* 背景@2x.png in Resources */,
 				18FD06E01B8DC89F006545AC /* 新浪1@2x.png in Resources */,
 				18B4CFAD1B9D1B3800CFFB3F /* showDetailsViewController.xib in Resources */,
+				70985E391BA0663600893F5E /* 栏.png in Resources */,
 				18741F681B9081D90090DEA5 /* wodezuji.png in Resources */,
 				18741F511B9081D90090DEA5 /* fabu@2x.png in Resources */,
 				189DD3981B95B69D0083B52C /* profilesTableViewCell.xib in Resources */,
@@ -1532,6 +1552,7 @@
 				18FD072F1B8E8F9F006545AC /* paotui@3x.png in Resources */,
 				18B4CFB21B9D1B7800CFFB3F /* myTravelViewController.xib in Resources */,
 				18FD06E41B8DC89F006545AC /* 支付宝1@3x.png in Resources */,
+				70985E3B1BA0663600893F5E /* 栏@3x.png in Resources */,
 				18FD06DB1B8DC89F006545AC /* 推送.png in Resources */,
 				18FD06D61B8DC89F006545AC /* 个人设置1@3x.png in Resources */,
 				189DD3821B9472B00083B52C /* xiugai@3x.png in Resources */,
@@ -1579,6 +1600,7 @@
 				182CDB951B7392DB005FE865 /* MJRefreshBackStateFooter.m in Sources */,
 				18B4CFB11B9D1B7800CFFB3F /* myTravelViewController.m in Sources */,
 				18AD5F2F1B91494A00E63C2D /* modifySexViewController.m in Sources */,
+				70985E341BA05AFC00893F5E /* sheduleTableViewCell.m in Sources */,
 				182CDB981B7392DB005FE865 /* MJRefreshStateHeader.m in Sources */,
 				182CDB9D1B7392DB005FE865 /* UIView+MJExtension.m in Sources */,
 				182CDC2A1B774070005FE865 /* settingViewController.m in Sources */,

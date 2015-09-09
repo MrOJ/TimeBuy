@@ -244,7 +244,8 @@
                                                                 object:self
                                                               userInfo:@{@"state":@"0"}];
             
-            
+            //设置下载后的头像
+            [userConfiguration setDataValueForConfigurationKey:@"portrait" withValue:UIImagePNGRepresentation([UIImage imageNamed:@"portrait.png"])];
             
             
         } else if ([getStatus isEqualToString:@"0"] && [getCode isEqualToString:@"2003"]) {

@@ -31,9 +31,11 @@
 {
     switch (indexPath.row) {
         case 0:
-            return 76.0f;
+            return 70.0f;
             break;
-            
+        case 1:
+            return 39.0f;
+            break;
         default:
             return 50.0f;
             break;
@@ -47,14 +49,14 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    return 3;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSInteger row = indexPath.row;
     NSString *CellTableIdentifier=[[NSString alloc]initWithFormat:@"extentedCell%lu-%lu",(unsigned long)indexPath.section,(unsigned long)row];
-    
+    //NSLog(@"%ld",row);
     
     switch (row) {
         case 0:
@@ -62,8 +64,32 @@
             infoTableViewCell *cell = (infoTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellTableIdentifier];
             cell.contentView.frame = cell.bounds;
             cell.contentView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
-            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            //cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
             cell = [[[NSBundle mainBundle] loadNibNamed:@"infoTableViewCell" owner:self options:nil] lastObject];
+            
+            return cell;
+            
+            break;
+        }
+        case 1:
+        {
+            timeTableViewCell *cell = (timeTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellTableIdentifier];
+            cell.contentView.frame = cell.bounds;
+            cell.contentView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
+            //cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            cell = [[[NSBundle mainBundle] loadNibNamed:@"timeTableViewCell" owner:self options:nil] lastObject];
+            
+            return cell;
+            
+            break;
+        }
+        case 2:
+        {
+            sheduleTableViewCell *cell = (sheduleTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellTableIdentifier];
+            cell.contentView.frame = cell.bounds;
+            cell.contentView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
+            //cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            cell = [[[NSBundle mainBundle] loadNibNamed:@"sheduleTableViewCell" owner:self options:nil] lastObject];
             
             return cell;
             

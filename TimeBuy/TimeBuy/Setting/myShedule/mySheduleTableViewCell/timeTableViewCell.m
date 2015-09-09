@@ -10,8 +10,12 @@
 
 @implementation timeTableViewCell
 
+@synthesize dateLabel;
+
 - (void)awakeFromNib {
     // Initialization code
+    self.backgroundColor = [UIColor clearColor];
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

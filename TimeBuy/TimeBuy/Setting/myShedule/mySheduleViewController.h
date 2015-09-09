@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "infoTableViewCell.h"
+#import "timeTableViewCell.h"
+#import "sheduleTableViewCell.h"
 
 @interface mySheduleViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
 

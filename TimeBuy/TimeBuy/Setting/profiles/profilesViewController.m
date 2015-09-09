@@ -72,7 +72,9 @@
     phoneStr = [detailsArray objectAtIndex:6];
     signatuStr = [detailsArray objectAtIndex:7];
     
-    myPortraitImg = [UIImage imageNamed:@"portrait.png"];
+    NSData *imageData = (NSData *)[userConfiguration getObjectValueForConfigurationKey:@"portrait"];
+    UIImage *image = [UIImage imageWithData:imageData];
+    myPortraitImg = image;
     
 }
 
@@ -633,7 +635,7 @@
     
     if (imageChanged == 1) {
         data = UIImagePNGRepresentation(myPortraitImg);
-        [userConfiguration setDataValueForConfigurationKey:@"portrait" withValue:data];
+        //[userConfiguration setDataValueForConfigurationKey:@"portrait" withValue:data];
         
         NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
         // 设置时间格式
@@ -641,7 +643,7 @@
         NSString *str = [formatter stringFromDate:[NSDate date]];
         fileName = [NSString stringWithFormat:@"portrait_%@.png", str];
     } else {
-        fileName = @"0";
+        fileName = @"666";
     }
     
     //上传至服务器
@@ -651,10 +653,11 @@
     [manager.requestSerializer setValue:@"d6089681f79c7627bbac829307e041a7" forHTTPHeaderField:@"x-timebuy-sid"];
     [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
     [manager.requestSerializer setValue:@"application/json; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
+    [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"multipart/form-data"];
     
     //2.设置登录参数
     NSDictionary *dict = @{ @"userId":[userConfiguration getStringValueForConfigurationKey:@"userId"],
-                            @"headIcon":fileName,
+                            //@"headIcon":fileName,
                             @"nickName":nameStr,
                             @"sex":sexStr,
                             @"birthDay":ageStr,
@@ -663,9 +666,12 @@
                             @"phone":phoneStr,
                             @"signature":signatuStr};
     
+    NSLog(@"%@",fileName);
+    
     //3.请求
+    //formData
     [manager POST:@"http://192.168.8.102:8080/timebuy/user/update" parameters:dict constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
-        [formData appendPartWithFileData:data name:@"myfile" fileName:fileName mimeType:@"image/png"];
+        [formData appendPartWithFileData:data name:@"headIcon" fileName:fileName mimeType:@"image/png"];
     } success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSLog(@"GET --> %@", responseObject); //自动返回主线程
         
@@ -682,6 +688,17 @@
             HUDinSuccess.labelText = @"修改成功";
             [HUDinSuccess show:YES];
             [HUDinSuccess hide:YES afterDelay:1];
+            
+            if (imageChanged == 1) {
+                [userConfiguration setDataValueForConfigurationKey:@"portrait" withValue:data];
+            }
+            [userConfiguration setStringValueForConfigurationKey:@"nickName" withValue:nameStr];
+            [userConfiguration setStringValueForConfigurationKey:@"sex" withValue:sexStr];
+            [userConfiguration setStringValueForConfigurationKey:@"birthDay" withValue:ageStr];
+            [userConfiguration setStringValueForConfigurationKey:@"profession" withValue:occupationStr];
+            [userConfiguration setStringValueForConfigurationKey:@"address" withValue:addressStr];
+            [userConfiguration setStringValueForConfigurationKey:@"phone" withValue:phoneStr];
+            [userConfiguration setStringValueForConfigurationKey:@"signature" withValue:signatuStr];
             
         } else if ([getStatus isEqualToString:@"0"] && [getCode isEqualToString:@"2005"]) {
             [self showErrorWithTitle:@"修改失败" WithMessage:@"错误"];
