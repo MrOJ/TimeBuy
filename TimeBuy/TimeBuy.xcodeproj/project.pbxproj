@@ -39,8 +39,6 @@
 		180E1D281B99CD74002DBF2B /* libstdc++.6.0.9.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 180E1D271B99CD74002DBF2B /* libstdc++.6.0.9.dylib */; };
 		180E1D2A1B99CD7A002DBF2B /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 180E1D291B99CD7A002DBF2B /* Security.framework */; };
 		180E1D431B9B26EC002DBF2B /* nearbyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180E1D411B9B26EC002DBF2B /* nearbyViewController.m */; };
-		180E1D4B1B9C6FDF002DBF2B /* AMapSearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 180E1D491B9C6FDE002DBF2B /* AMapSearchKit.framework */; };
-		180E1D4C1B9C6FDF002DBF2B /* MAMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 180E1D4A1B9C6FDE002DBF2B /* MAMapKit.framework */; };
 		1812314C1B8B460A007E06B7 /* loginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1812314A1B8B460A007E06B7 /* loginViewController.m */; };
 		1812314D1B8B460A007E06B7 /* loginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1812314B1B8B460A007E06B7 /* loginViewController.xib */; };
 		181231761B8B49BC007E06B7 /* userConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 181231751B8B49BC007E06B7 /* userConfiguration.m */; };
@@ -313,8 +311,6 @@
 		180E1D291B99CD7A002DBF2B /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		180E1D401B9B26EC002DBF2B /* nearbyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = nearbyViewController.h; sourceTree = "<group>"; };
 		180E1D411B9B26EC002DBF2B /* nearbyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = nearbyViewController.m; sourceTree = "<group>"; };
-		180E1D491B9C6FDE002DBF2B /* AMapSearchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AMapSearchKit.framework; path = TimeBuy/AMapSearchKit.framework; sourceTree = "<group>"; };
-		180E1D4A1B9C6FDE002DBF2B /* MAMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MAMapKit.framework; path = TimeBuy/MAMapKit.framework; sourceTree = "<group>"; };
 		181231491B8B460A007E06B7 /* loginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loginViewController.h; sourceTree = "<group>"; };
 		1812314A1B8B460A007E06B7 /* loginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loginViewController.m; sourceTree = "<group>"; };
 		1812314B1B8B460A007E06B7 /* loginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = loginViewController.xib; sourceTree = "<group>"; };
@@ -610,8 +606,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				180E1D4B1B9C6FDF002DBF2B /* AMapSearchKit.framework in Frameworks */,
-				180E1D4C1B9C6FDF002DBF2B /* MAMapKit.framework in Frameworks */,
 				180E1D2A1B99CD7A002DBF2B /* Security.framework in Frameworks */,
 				180E1D281B99CD74002DBF2B /* libstdc++.6.0.9.dylib in Frameworks */,
 				180E1D261B99CD65002DBF2B /* libz.dylib in Frameworks */,
@@ -676,8 +670,6 @@
 		180E1D101B99CC8D002DBF2B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				180E1D491B9C6FDE002DBF2B /* AMapSearchKit.framework */,
-				180E1D4A1B9C6FDE002DBF2B /* MAMapKit.framework */,
 				180E1D291B99CD7A002DBF2B /* Security.framework */,
 				180E1D271B99CD74002DBF2B /* libstdc++.6.0.9.dylib */,
 				180E1D251B99CD65002DBF2B /* libz.dylib */,
