@@ -496,9 +496,9 @@
 		18B4CFAE1B9D1B7800CFFB3F /* myTravelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = myTravelViewController.h; sourceTree = "<group>"; };
 		18B4CFAF1B9D1B7800CFFB3F /* myTravelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = myTravelViewController.m; sourceTree = "<group>"; };
 		18B4CFB01B9D1B7800CFFB3F /* myTravelViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = myTravelViewController.xib; sourceTree = "<group>"; };
-		18B4CFB31B9D1B8C00CFFB3F /* messageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = messageViewController.h; path = myNotice/messageViewController.h; sourceTree = "<group>"; };
-		18B4CFB41B9D1B8C00CFFB3F /* messageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = messageViewController.m; path = myNotice/messageViewController.m; sourceTree = "<group>"; };
-		18B4CFB51B9D1B8C00CFFB3F /* messageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = messageViewController.xib; path = myNotice/messageViewController.xib; sourceTree = "<group>"; };
+		18B4CFB31B9D1B8C00CFFB3F /* messageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = messageViewController.h; sourceTree = "<group>"; };
+		18B4CFB41B9D1B8C00CFFB3F /* messageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = messageViewController.m; sourceTree = "<group>"; };
+		18B4CFB51B9D1B8C00CFFB3F /* messageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = messageViewController.xib; sourceTree = "<group>"; };
 		18B4CFB81B9D1B9500CFFB3F /* IBActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IBActionSheet.h; sourceTree = "<group>"; };
 		18B4CFB91B9D1B9500CFFB3F /* IBActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IBActionSheet.m; sourceTree = "<group>"; };
 		18FD06A51B8DC89F006545AC /* 蔡依林.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "蔡依林.png"; sourceTree = "<group>"; };
@@ -1082,9 +1082,6 @@
 				18AD5F101B91494A00E63C2D /* profiles */,
 				180E1D3A1B9B257A002DBF2B /* myTravel */,
 				18AD5F0C1B91494A00E63C2D /* myNotice */,
-				18B4CFB31B9D1B8C00CFFB3F /* messageViewController.h */,
-				18B4CFB41B9D1B8C00CFFB3F /* messageViewController.m */,
-				18B4CFB51B9D1B8C00CFFB3F /* messageViewController.xib */,
 				184FFD4B1B9DAAB000942180 /* myShedule */,
 			);
 			path = Setting;
@@ -1167,6 +1164,9 @@
 		18AD5F0C1B91494A00E63C2D /* myNotice */ = {
 			isa = PBXGroup;
 			children = (
+				18B4CFB31B9D1B8C00CFFB3F /* messageViewController.h */,
+				18B4CFB41B9D1B8C00CFFB3F /* messageViewController.m */,
+				18B4CFB51B9D1B8C00CFFB3F /* messageViewController.xib */,
 				180E1D361B9B2537002DBF2B /* IBActionSheet */,
 			);
 			path = myNotice;

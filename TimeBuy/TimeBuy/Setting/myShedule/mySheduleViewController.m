@@ -48,6 +48,9 @@
         case 5:
             return 46.0f;
             break;
+        case 6:
+            return 39.0f;
+            break;
         default:
             return blankViewHeight;
             break;
@@ -61,7 +64,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 6;
+    return 7;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -130,6 +133,20 @@
             cell = [[[NSBundle mainBundle] loadNibNamed:@"backScheduleTableViewCell" owner:self options:nil] lastObject];
             
             //cell.timeLabel.text = @"12:45";
+            
+            return cell;
+            
+            break;
+        }
+        case 6:
+        {
+            timeTableViewCell *cell = (timeTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellTableIdentifier];
+            cell.contentView.frame = cell.bounds;
+            cell.contentView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
+            //cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            cell = [[[NSBundle mainBundle] loadNibNamed:@"timeTableViewCell" owner:self options:nil] lastObject];
+            
+            cell.dateLabel.text = @"";
             
             return cell;
             
