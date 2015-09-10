@@ -14,7 +14,6 @@
 
 - (void)drawRect:(CGRect)rect
 {
-    NSLog(@"Hello");
     backgoundImgView.frame = CGRectMake(85, 10, [UIScreen mainScreen].bounds.size.width - 120, 32);
     
     modifyButton.frame = CGRectMake((85 + [UIScreen mainScreen].bounds.size.width - 120) - 15 - 8, 18, 15, 15);
@@ -29,6 +28,9 @@
     
     roundView.layer.masksToBounds = YES;
     roundView.layer.cornerRadius = roundView.bounds.size.height / 2;
+    
+    portraitImgView.layer.masksToBounds = YES;
+    portraitImgView.layer.cornerRadius = portraitImgView.bounds.size.height / 2;
     
     //backgoundImgView.frame = CGRectMake(85, 10, [UIScreen mainScreen].bounds.size.width - 80, 32);
     //[backgoundImgView setFrame:CGRectMake(85, 10, [UIScreen mainScreen].bounds.size.width - 80, 32)];

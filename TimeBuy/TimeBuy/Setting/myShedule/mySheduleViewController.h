@@ -10,8 +10,12 @@
 #import "infoTableViewCell.h"
 #import "timeTableViewCell.h"
 #import "sheduleTableViewCell.h"
+#import "backScheduleTableViewCell.h"
 
 @interface mySheduleViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
+{
+    float blankViewHeight;
+}
 
 @property (strong, nonatomic) IBOutlet UITableView *myTableView;
 @end
