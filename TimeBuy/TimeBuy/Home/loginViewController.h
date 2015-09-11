@@ -12,6 +12,7 @@
 #import "AFNetworking.h"
 #import "userConfiguration.h"
 #import "NSString+MD5.h"
+#import "UIImageView+WebCache.h"
 
 @interface loginViewController : UIViewController<JScrollViewViewDelegate,UITextFieldDelegate,MBProgressHUDDelegate>
 {

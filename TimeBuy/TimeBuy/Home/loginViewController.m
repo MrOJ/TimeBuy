@@ -245,7 +245,27 @@
                                                               userInfo:@{@"state":@"0"}];
             
             //设置下载后的头像
-            [userConfiguration setDataValueForConfigurationKey:@"portrait" withValue:UIImagePNGRepresentation([UIImage imageNamed:@"portrait.png"])];
+            //[userConfiguration setDataValueForConfigurationKey:@"portrait" withValue:UIImagePNGRepresentation([UIImage imageNamed:@"portrait.png"])];
+            
+            //利用SDWenImage下载图片
+            NSString *headIdStr = [userConfiguration getStringValueForConfigurationKey:@"headIcon"];
+            NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://192.168.8.102:8080/timebuy/upload/%@",headIdStr]];
+            SDWebImageManager *manager = [SDWebImageManager sharedManager];
+            [manager downloadImageWithURL:url options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+                // progression tracking code
+            } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
+                if (error) {
+                    NSLog(@"头像下载出错error %@",error);
+                } else {
+                    if (image) {
+                        NSLog(@"头像下载成功！");
+                        //将图片数据存入NSUserDefaults中
+                        [userConfiguration setDataValueForConfigurationKey:@"portrait" withValue:UIImagePNGRepresentation(image)];
+                        
+                    }
+                }
+            }];
+            
             
             
         } else if ([getStatus isEqualToString:@"0"] && [getCode isEqualToString:@"2003"]) {
