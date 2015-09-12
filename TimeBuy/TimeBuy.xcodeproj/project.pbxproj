@@ -252,7 +252,6 @@
 		70AC21231BA3B925008ED491 /* UIImageView+HighlightedWebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 70AC21111BA3B925008ED491 /* UIImageView+HighlightedWebCache.m */; };
 		70AC21241BA3B925008ED491 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 70AC21131BA3B925008ED491 /* UIImageView+WebCache.m */; };
 		70AC21251BA3B925008ED491 /* UIView+WebCacheOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 70AC21151BA3B925008ED491 /* UIView+WebCacheOperation.m */; };
-		70AC212A1BA3BA7F008ED491 /* addressDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73F493F41BA2AD740030D77E /* addressDetailViewController.m */; };
 		70AC212E1BA3BC7E008ED491 /* mySheduleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70AC212C1BA3BC7E008ED491 /* mySheduleViewController.m */; };
 		70AC212F1BA3BC7E008ED491 /* mySheduleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70AC212D1BA3BC7E008ED491 /* mySheduleViewController.xib */; };
 		70AC213A1BA3BC87008ED491 /* backScheduleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 70AC21311BA3BC87008ED491 /* backScheduleTableViewCell.m */; };
@@ -268,16 +267,16 @@
 		70AC214B1BA3BEA2008ED491 /* 导航字体.png in Resources */ = {isa = PBXBuildFile; fileRef = 70AC21481BA3BEA2008ED491 /* 导航字体.png */; };
 		70AC214C1BA3BEA2008ED491 /* 导航字体@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 70AC21491BA3BEA2008ED491 /* 导航字体@2x.png */; };
 		70AC214D1BA3BEA2008ED491 /* 导航字体@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 70AC214A1BA3BEA2008ED491 /* 导航字体@3x.png */; };
-		738C30EC1B9C6BCD00E69452 /* detailHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 738C30EA1B9C6BCD00E69452 /* detailHistoryViewController.m */; };
-		738C30ED1B9C6BCD00E69452 /* detailHistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 738C30EB1B9C6BCD00E69452 /* detailHistoryViewController.xib */; };
-		738FF6BB1B9E9E9400F5318E /* TalkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 738FF6B91B9E9E9400F5318E /* TalkViewController.m */; };
-		738FF6BC1B9E9E9400F5318E /* TalkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 738FF6BA1B9E9E9400F5318E /* TalkViewController.xib */; };
-		738FF6C51B9EC97900F5318E /* changeTelephoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 738FF6C31B9EC97900F5318E /* changeTelephoneViewController.m */; };
-		738FF6C61B9EC97900F5318E /* changeTelephoneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 738FF6C41B9EC97900F5318E /* changeTelephoneViewController.xib */; };
-		73F493F11BA1C3130030D77E /* city.plist in Resources */ = {isa = PBXBuildFile; fileRef = 73F493EF1BA1C3130030D77E /* city.plist */; };
-		73F493F21BA1C3130030D77E /* area.plist in Resources */ = {isa = PBXBuildFile; fileRef = 73F493F01BA1C3130030D77E /* area.plist */; };
-		73F493F61BA2AD740030D77E /* addressDetailViewController.m in Resources */ = {isa = PBXBuildFile; fileRef = 73F493F41BA2AD740030D77E /* addressDetailViewController.m */; };
-		73F493F71BA2AD740030D77E /* addressDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 73F493F51BA2AD740030D77E /* addressDetailViewController.xib */; };
+		70AC21511BA3C549008ED491 /* TalkViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70AC214F1BA3C549008ED491 /* TalkViewController.m */; };
+		70AC21521BA3C549008ED491 /* TalkViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70AC21501BA3C549008ED491 /* TalkViewController.xib */; };
+		70AC21591BA3C565008ED491 /* addressDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70AC21541BA3C565008ED491 /* addressDetailViewController.m */; };
+		70AC215A1BA3C565008ED491 /* addressDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70AC21551BA3C565008ED491 /* addressDetailViewController.xib */; };
+		70AC215B1BA3C565008ED491 /* changeTelephoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70AC21571BA3C565008ED491 /* changeTelephoneViewController.m */; };
+		70AC215C1BA3C565008ED491 /* changeTelephoneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70AC21581BA3C565008ED491 /* changeTelephoneViewController.xib */; };
+		70AC21601BA3C57D008ED491 /* detailHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70AC215E1BA3C57D008ED491 /* detailHistoryViewController.m */; };
+		70AC21611BA3C57D008ED491 /* detailHistoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70AC215F1BA3C57D008ED491 /* detailHistoryViewController.xib */; };
+		70AC21641BA3C5B1008ED491 /* area.plist in Resources */ = {isa = PBXBuildFile; fileRef = 70AC21621BA3C5B1008ED491 /* area.plist */; };
+		70AC21651BA3C5B1008ED491 /* city.plist in Resources */ = {isa = PBXBuildFile; fileRef = 70AC21631BA3C5B1008ED491 /* city.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -661,20 +660,20 @@
 		70AC21481BA3BEA2008ED491 /* 导航字体.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "导航字体.png"; sourceTree = "<group>"; };
 		70AC21491BA3BEA2008ED491 /* 导航字体@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "导航字体@2x.png"; sourceTree = "<group>"; };
 		70AC214A1BA3BEA2008ED491 /* 导航字体@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "导航字体@3x.png"; sourceTree = "<group>"; };
-		738C30E91B9C6BCC00E69452 /* detailHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = detailHistoryViewController.h; sourceTree = "<group>"; };
-		738C30EA1B9C6BCD00E69452 /* detailHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = detailHistoryViewController.m; sourceTree = "<group>"; };
-		738C30EB1B9C6BCD00E69452 /* detailHistoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = detailHistoryViewController.xib; sourceTree = "<group>"; };
-		738FF6B81B9E9E9400F5318E /* TalkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TalkViewController.h; sourceTree = "<group>"; };
-		738FF6B91B9E9E9400F5318E /* TalkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TalkViewController.m; sourceTree = "<group>"; };
-		738FF6BA1B9E9E9400F5318E /* TalkViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TalkViewController.xib; sourceTree = "<group>"; };
-		738FF6C21B9EC97900F5318E /* changeTelephoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = changeTelephoneViewController.h; sourceTree = "<group>"; };
-		738FF6C31B9EC97900F5318E /* changeTelephoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = changeTelephoneViewController.m; sourceTree = "<group>"; };
-		738FF6C41B9EC97900F5318E /* changeTelephoneViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = changeTelephoneViewController.xib; sourceTree = "<group>"; };
-		73F493EF1BA1C3130030D77E /* city.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = city.plist; path = Image/city.plist; sourceTree = "<group>"; };
-		73F493F01BA1C3130030D77E /* area.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = area.plist; path = Image/area.plist; sourceTree = "<group>"; };
-		73F493F31BA2AD740030D77E /* addressDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = addressDetailViewController.h; sourceTree = "<group>"; };
-		73F493F41BA2AD740030D77E /* addressDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = addressDetailViewController.m; sourceTree = "<group>"; };
-		73F493F51BA2AD740030D77E /* addressDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = addressDetailViewController.xib; sourceTree = "<group>"; };
+		70AC214E1BA3C549008ED491 /* TalkViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TalkViewController.h; sourceTree = "<group>"; };
+		70AC214F1BA3C549008ED491 /* TalkViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TalkViewController.m; sourceTree = "<group>"; };
+		70AC21501BA3C549008ED491 /* TalkViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TalkViewController.xib; sourceTree = "<group>"; };
+		70AC21531BA3C565008ED491 /* addressDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = addressDetailViewController.h; sourceTree = "<group>"; };
+		70AC21541BA3C565008ED491 /* addressDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = addressDetailViewController.m; sourceTree = "<group>"; };
+		70AC21551BA3C565008ED491 /* addressDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = addressDetailViewController.xib; sourceTree = "<group>"; };
+		70AC21561BA3C565008ED491 /* changeTelephoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = changeTelephoneViewController.h; sourceTree = "<group>"; };
+		70AC21571BA3C565008ED491 /* changeTelephoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = changeTelephoneViewController.m; sourceTree = "<group>"; };
+		70AC21581BA3C565008ED491 /* changeTelephoneViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = changeTelephoneViewController.xib; sourceTree = "<group>"; };
+		70AC215D1BA3C57D008ED491 /* detailHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = detailHistoryViewController.h; sourceTree = "<group>"; };
+		70AC215E1BA3C57D008ED491 /* detailHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = detailHistoryViewController.m; sourceTree = "<group>"; };
+		70AC215F1BA3C57D008ED491 /* detailHistoryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = detailHistoryViewController.xib; sourceTree = "<group>"; };
+		70AC21621BA3C5B1008ED491 /* area.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = area.plist; sourceTree = "<group>"; };
+		70AC21631BA3C5B1008ED491 /* city.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = city.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -777,9 +776,9 @@
 				180E1D3B1B9B26AB002DBF2B /* myTravelViewController.h */,
 				180E1D3C1B9B26AB002DBF2B /* myTravelViewController.m */,
 				180E1D3D1B9B26AB002DBF2B /* myTravelViewController.xib */,
-				738C30E91B9C6BCC00E69452 /* detailHistoryViewController.h */,
-				738C30EA1B9C6BCD00E69452 /* detailHistoryViewController.m */,
-				738C30EB1B9C6BCD00E69452 /* detailHistoryViewController.xib */,
+				70AC215D1BA3C57D008ED491 /* detailHistoryViewController.h */,
+				70AC215E1BA3C57D008ED491 /* detailHistoryViewController.m */,
+				70AC215F1BA3C57D008ED491 /* detailHistoryViewController.xib */,
 			);
 			path = myTravel;
 			sourceTree = "<group>";
@@ -841,8 +840,8 @@
 		182CDAFE1B72286F005FE865 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				73F493EF1BA1C3130030D77E /* city.plist */,
-				73F493F01BA1C3130030D77E /* area.plist */,
+				70AC21621BA3C5B1008ED491 /* area.plist */,
+				70AC21631BA3C5B1008ED491 /* city.plist */,
 				182CDB341B737F25005FE865 /* Image */,
 				182CDAFF1B72286F005FE865 /* Info.plist */,
 				182CDB001B72286F005FE865 /* main.m */,
@@ -1297,12 +1296,12 @@
 				18AD5F241B91494A00E63C2D /* telephoneViewController.h */,
 				18AD5F251B91494A00E63C2D /* telephoneViewController.m */,
 				18AD5F261B91494A00E63C2D /* telephoneViewController.xib */,
-				738FF6C21B9EC97900F5318E /* changeTelephoneViewController.h */,
-				738FF6C31B9EC97900F5318E /* changeTelephoneViewController.m */,
-				738FF6C41B9EC97900F5318E /* changeTelephoneViewController.xib */,
-				73F493F31BA2AD740030D77E /* addressDetailViewController.h */,
-				73F493F41BA2AD740030D77E /* addressDetailViewController.m */,
-				73F493F51BA2AD740030D77E /* addressDetailViewController.xib */,
+				70AC21531BA3C565008ED491 /* addressDetailViewController.h */,
+				70AC21541BA3C565008ED491 /* addressDetailViewController.m */,
+				70AC21551BA3C565008ED491 /* addressDetailViewController.xib */,
+				70AC21561BA3C565008ED491 /* changeTelephoneViewController.h */,
+				70AC21571BA3C565008ED491 /* changeTelephoneViewController.m */,
+				70AC21581BA3C565008ED491 /* changeTelephoneViewController.xib */,
 			);
 			path = profilesDetails;
 			sourceTree = "<group>";
@@ -1325,9 +1324,9 @@
 				18AD5F3A1B914A1900E63C2D /* systemSettingView.h */,
 				18AD5F3B1B914A1900E63C2D /* systemSettingView.m */,
 				18AD5F3F1B91564A00E63C2D /* systemSettingView.xib */,
-				738FF6B81B9E9E9400F5318E /* TalkViewController.h */,
-				738FF6B91B9E9E9400F5318E /* TalkViewController.m */,
-				738FF6BA1B9E9E9400F5318E /* TalkViewController.xib */,
+				70AC214E1BA3C549008ED491 /* TalkViewController.h */,
+				70AC214F1BA3C549008ED491 /* TalkViewController.m */,
+				70AC21501BA3C549008ED491 /* TalkViewController.xib */,
 			);
 			path = systemSetting;
 			sourceTree = "<group>";
@@ -1564,7 +1563,6 @@
 				18741F2B1B907BBA0090DEA5 /* 37x-Checkmark@2x.png in Resources */,
 				18741F5C1B9081D90090DEA5 /* meiritixing.png in Resources */,
 				189DD38A1B9472B00083B52C /* b21c8701a18b87d600927607010828381e30fdd2.jpg@2x.png in Resources */,
-				738FF6C61B9EC97900F5318E /* changeTelephoneViewController.xib in Resources */,
 				18AD5F571B91A70800E63C2D /* 个人设置背景250x667.png in Resources */,
 				180E1CF11B972AA9002DBF2B /* placeViewController.xib in Resources */,
 				18741F231B9074DD0090DEA5 /* 导航条320x64@2x.png in Resources */,
@@ -1574,6 +1572,7 @@
 				18FD07291B8E8F9F006545AC /* 组局(1)@3x.png in Resources */,
 				18741F531B9081D90090DEA5 /* gerenxiaoxi.png in Resources */,
 				18FD072A1B8E8F9F006545AC /* gongyi.png in Resources */,
+				70AC215A1BA3C565008ED491 /* addressDetailViewController.xib in Resources */,
 				18741F6A1B9081D90090DEA5 /* wodezuji@3x.png in Resources */,
 				180E1CEB1B972667002DBF2B /* details2TableViewCell.xib in Resources */,
 				18FD06FF1B8DCE96006545AC /* showImg2.png in Resources */,
@@ -1606,6 +1605,7 @@
 				189DD37E1B9472B00083B52C /* dingwei1@2x.png in Resources */,
 				1812314D1B8B460A007E06B7 /* loginViewController.xib in Resources */,
 				18FD06D01B8DC89F006545AC /* 蔡依林.png in Resources */,
+				70AC215C1BA3C565008ED491 /* changeTelephoneViewController.xib in Resources */,
 				18FD06FD1B8DCE96006545AC /* showImg3.png in Resources */,
 				18741F5E1B9081D90090DEA5 /* meiritixing@3x.png in Resources */,
 				180E1CFB1B972AC9002DBF2B /* phoneViewController.xib in Resources */,
@@ -1614,23 +1614,24 @@
 				18FD07251B8E8F9F006545AC /* 女@2x.png in Resources */,
 				18FD06EE1B8DC89F006545AC /* QQ1.png in Resources */,
 				18741F631B9081D90090DEA5 /* wodericheng@2x.png in Resources */,
-				738C30ED1B9C6BCD00E69452 /* detailHistoryViewController.xib in Resources */,
 				18741F261B9074DD0090DEA5 /* 导航条375x64@2x.png in Resources */,
 				180E1CF61B972AB8002DBF2B /* priceViewController.xib in Resources */,
 				180E1D2F1B9B2428002DBF2B /* showDetailsViewController.xib in Resources */,
 				18741F611B9081D90090DEA5 /* tuichudenglu@3x.png in Resources */,
+				70AC21611BA3C57D008ED491 /* detailHistoryViewController.xib in Resources */,
 				180E1D0D1B99B497002DBF2B /* addImg.png in Resources */,
 				189DD38B1B9472B00083B52C /* b21c8701a18b87d600927607010828381e30fdd2.jpg@3x.png in Resources */,
 				18FD06EF1B8DC89F006545AC /* QQ1@2x.png in Resources */,
 				70AC213B1BA3BC87008ED491 /* backScheduleTableViewCell.xib in Resources */,
 				18FFE5BF1B7F49AE004FBC82 /* menu-button@2x.png in Resources */,
 				18741F271B9074DD0090DEA5 /* 导航条375x64@3x.png in Resources */,
+				70AC21651BA3C5B1008ED491 /* city.plist in Resources */,
 				70AC214B1BA3BEA2008ED491 /* 导航字体.png in Resources */,
 				18FD072D1B8E8F9F006545AC /* paotui.png in Resources */,
 				180E1D0E1B99B497002DBF2B /* addImg@2x.png in Resources */,
 				70AC21471BA3BE6C008ED491 /* 我的日程 background.png in Resources */,
 				189DD3801B9472B00083B52C /* xiugai.png in Resources */,
-				73F493F71BA2AD740030D77E /* addressDetailViewController.xib in Resources */,
+				70AC21521BA3C549008ED491 /* TalkViewController.xib in Resources */,
 				18741F661B9081D90090DEA5 /* wodexiaoxi@2x.png in Resources */,
 				18AD5F5C1B91AAB200E63C2D /* releaseInfoViewController.xib in Resources */,
 				189DD3881B9472B00083B52C /* 7-140223103130591@3x.png in Resources */,
@@ -1674,13 +1675,13 @@
 				180E1D441B9B26EC002DBF2B /* nearbyViewController.xib in Resources */,
 				18FD072C1B8E8F9F006545AC /* gongyi@3x.png in Resources */,
 				18FD06D51B8DC89F006545AC /* 个人设置1@2x.png in Resources */,
-				73F493F21BA1C3130030D77E /* area.plist in Resources */,
 				18AD5F2A1B91494A00E63C2D /* addressViewController.xib in Resources */,
 				18FD073C1B8F226B006545AC /* back@2x.png in Resources */,
 				18FD06F01B8DC89F006545AC /* QQ1@3x.png in Resources */,
 				18AD5F361B91494A00E63C2D /* telephoneViewController.xib in Resources */,
 				189DD37F1B9472B00083B52C /* dingwei1@3x.png in Resources */,
 				18FD06E21B8DC89F006545AC /* 支付宝1.png in Resources */,
+				70AC21641BA3C5B1008ED491 /* area.plist in Resources */,
 				18FD06E11B8DC89F006545AC /* 新浪1@3x.png in Resources */,
 				18AD5F321B91494A00E63C2D /* occupationViewController.xib in Resources */,
 				18FD07321B8E8F9F006545AC /* qiuzhu@3x.png in Resources */,
@@ -1697,16 +1698,13 @@
 				189DD3821B9472B00083B52C /* xiugai@3x.png in Resources */,
 				18AD5F301B91494A00E63C2D /* modifySexViewController.xib in Resources */,
 				18741F641B9081D90090DEA5 /* wodericheng@3x.png in Resources */,
-				73F493F61BA2AD740030D77E /* addressDetailViewController.m in Resources */,
 				18741F621B9081D90090DEA5 /* wodericheng.png in Resources */,
 				18FD07311B8E8F9F006545AC /* qiuzhu@2x.png in Resources */,
 				189DD3851B9472B00083B52C /* yes@3x.png in Resources */,
-				73F493F11BA1C3130030D77E /* city.plist in Resources */,
 				18741F501B9081D90090DEA5 /* fabu.png in Resources */,
 				18FFE5BE1B7F49AE004FBC82 /* menu-button.png in Resources */,
 				180E1D161B99CCFB002DBF2B /* AMap.bundle in Resources */,
 				18741F551B9081D90090DEA5 /* gerenxiaoxi@3x.png in Resources */,
-				738FF6BC1B9E9E9400F5318E /* TalkViewController.xib in Resources */,
 				18FD06E31B8DC89F006545AC /* 支付宝1@2x.png in Resources */,
 				180E1D341B9B2459002DBF2B /* messageViewController.xib in Resources */,
 				18741F541B9081D90090DEA5 /* gerenxiaoxi@2x.png in Resources */,
@@ -1732,7 +1730,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				70AC213F1BA3BC87008ED491 /* timeTableViewCell.m in Sources */,
-				70AC212A1BA3BA7F008ED491 /* addressDetailViewController.m in Sources */,
 				18FFE5B91B7F49AE004FBC82 /* SlideNavigationContorllerAnimatorFade.m in Sources */,
 				180E1D431B9B26EC002DBF2B /* nearbyViewController.m in Sources */,
 				18FD07931B8F49A6006545AC /* AFHTTPRequestOperation.m in Sources */,
@@ -1770,8 +1767,8 @@
 				180E1D3E1B9B26AB002DBF2B /* myTravelViewController.m in Sources */,
 				70AC21171BA3B925008ED491 /* NSData+ImageContentType.m in Sources */,
 				182CDB911B7392DB005FE865 /* MJRefreshAutoNormalFooter.m in Sources */,
+				70AC21601BA3C57D008ED491 /* detailHistoryViewController.m in Sources */,
 				18AD5F3C1B914A1900E63C2D /* systemSettingView.m in Sources */,
-				738FF6BB1B9E9E9400F5318E /* TalkViewController.m in Sources */,
 				182CDB041B72286F005FE865 /* AppDelegate.m in Sources */,
 				182CDB901B7392DB005FE865 /* MJRefreshAutoGifFooter.m in Sources */,
 				182CDB8C1B7392DB005FE865 /* MJRefreshBackFooter.m in Sources */,
@@ -1781,6 +1778,7 @@
 				70AC21221BA3B925008ED491 /* UIImage+WebP.m in Sources */,
 				18FD07961B8F49A6006545AC /* AFNetworkReachabilityManager.m in Sources */,
 				70AC213D1BA3BC87008ED491 /* sheduleTableViewCell.m in Sources */,
+				70AC21591BA3C565008ED491 /* addressDetailViewController.m in Sources */,
 				182CDB8E1B7392DB005FE865 /* MJRefreshFooter.m in Sources */,
 				180E1CE11B971FF4002DBF2B /* labelsTableViewCell.m in Sources */,
 				18AD5F2D1B91494A00E63C2D /* modifyNameViewController.m in Sources */,
@@ -1800,7 +1798,6 @@
 				70AC211E1BA3B925008ED491 /* SDWebImagePrefetcher.m in Sources */,
 				70AC21191BA3B925008ED491 /* SDWebImageCompat.m in Sources */,
 				182CDBAD1B7617A1005FE865 /* JScrollView+PageControl+AutoScroll.m in Sources */,
-				738C30EC1B9C6BCD00E69452 /* detailHistoryViewController.m in Sources */,
 				70AC21251BA3B925008ED491 /* UIView+WebCacheOperation.m in Sources */,
 				180E1D391B9B2537002DBF2B /* IBActionSheet.m in Sources */,
 				70AC21211BA3B925008ED491 /* UIImage+MultiFormat.m in Sources */,
@@ -1818,11 +1815,12 @@
 				180E1CFA1B972AC9002DBF2B /* phoneViewController.m in Sources */,
 				180E1CDF1B971FF4002DBF2B /* detailsTableViewCell.m in Sources */,
 				18AD5F311B91494A00E63C2D /* occupationViewController.m in Sources */,
+				70AC215B1BA3C565008ED491 /* changeTelephoneViewController.m in Sources */,
 				180E1CE31B971FF4002DBF2B /* placeTableViewCell.m in Sources */,
+				70AC21511BA3C549008ED491 /* TalkViewController.m in Sources */,
 				18FD07981B8F49A6006545AC /* AFURLConnectionOperation.m in Sources */,
 				70AC212E1BA3BC7E008ED491 /* mySheduleViewController.m in Sources */,
 				182CDB8F1B7392DB005FE865 /* MJRefreshHeader.m in Sources */,
-				738FF6C51B9EC97900F5318E /* changeTelephoneViewController.m in Sources */,
 				18FD07941B8F49A6006545AC /* AFHTTPRequestOperationManager.m in Sources */,
 				18FD077E1B8F47CF006545AC /* NSString+MD5.m in Sources */,
 				182CDB971B7392DB005FE865 /* MJRefreshNormalHeader.m in Sources */,
