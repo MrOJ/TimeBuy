@@ -9,6 +9,7 @@
 #import "selectTimeTableViewCell.h"
 
 @implementation selectTimeTableViewCell
+@synthesize timeLabel;
 
 - (void)awakeFromNib {
     // Initialization code

@@ -10,6 +10,8 @@
 
 @implementation changePriceTableViewCell
 
+@synthesize priceSlider;
+
 - (void)awakeFromNib {
     // Initialization code
 }

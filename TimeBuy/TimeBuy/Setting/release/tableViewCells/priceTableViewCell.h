@@ -10,4 +10,5 @@
 
 @interface priceTableViewCell : UITableViewCell
 
+@property (assign, nonatomic) IBOutlet UILabel *priceLabel;
 @end

@@ -10,4 +10,5 @@
 
 @interface changePriceTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UISlider *priceSlider;
 @end

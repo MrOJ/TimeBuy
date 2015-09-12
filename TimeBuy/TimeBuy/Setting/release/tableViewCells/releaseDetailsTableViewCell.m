@@ -14,6 +14,7 @@
 @synthesize addButton;
 @synthesize imageView1;
 @synthesize imageView2;
+@synthesize placeButton;
 
 - (void)awakeFromNib {
     // Initialization code
@@ -27,6 +28,11 @@
 }
 
 - (IBAction)addImage:(id)sender
+{
+    
+}
+
+- (IBAction)location:(id)sender
 {
     
 }

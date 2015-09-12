@@ -40,6 +40,9 @@
                     <constraint firstAttribute="trailing" secondItem="eA9-Nq-YuB" secondAttribute="trailing" id="o9b-kR-kli"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="titleTextField" destination="tzM-aS-eMG" id="WRb-RV-cRC"/>
+            </connections>
             <point key="canvasLocation" x="305" y="363.5"/>
         </tableViewCell>
     </objects>

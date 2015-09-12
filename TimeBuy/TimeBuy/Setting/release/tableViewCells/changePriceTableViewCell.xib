@@ -49,6 +49,9 @@
                     <constraint firstItem="MHl-8r-8nw" firstAttribute="centerY" secondItem="k5E-Om-Wp6" secondAttribute="centerY" id="hat-gI-GfC"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="priceSlider" destination="k5E-Om-Wp6" id="qMd-a3-MOL"/>
+            </connections>
         </tableViewCell>
     </objects>
 </document>

@@ -14,7 +14,9 @@
 @property (strong, nonatomic) IBOutlet UIButton *addButton;
 @property (strong, nonatomic) IBOutlet UIImageView *imageView1;
 @property (strong, nonatomic) IBOutlet UIImageView *imageView2;
+@property (weak, nonatomic) IBOutlet UIButton *placeButton;
 
 - (IBAction)addImage:(id)sender;
+- (IBAction)location:(id)sender;
 
 @end

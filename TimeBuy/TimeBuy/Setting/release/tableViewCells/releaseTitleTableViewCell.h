@@ -10,4 +10,5 @@
 
 @interface releaseTitleTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UITextField *titleTextField;
 @end

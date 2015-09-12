@@ -27,6 +27,9 @@
                     </label>
                 </subviews>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="timeLabel" destination="6sK-3k-14k" id="t97-Y7-CPx"/>
+            </connections>
         </tableViewCell>
     </objects>
 </document>

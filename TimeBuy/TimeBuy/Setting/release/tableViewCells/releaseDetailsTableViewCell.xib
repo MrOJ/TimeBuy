@@ -60,6 +60,9 @@
                                     <color key="titleColor" red="0.31372549019607843" green="0.8901960784313725" blue="0.76078431372549016" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="location:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="kIi-iq-fcQ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -99,6 +102,7 @@
                 <outlet property="detailsTextView" destination="bdi-Xi-aOS" id="MIu-Xv-K7Z"/>
                 <outlet property="imageView1" destination="XvV-Go-JdL" id="Peq-sW-DDg"/>
                 <outlet property="imageView2" destination="4OB-45-6qJ" id="xgB-kY-Ayu"/>
+                <outlet property="placeButton" destination="Tfg-jR-tMR" id="sUM-cS-FV6"/>
             </connections>
             <point key="canvasLocation" x="305" y="363.5"/>
         </tableViewCell>

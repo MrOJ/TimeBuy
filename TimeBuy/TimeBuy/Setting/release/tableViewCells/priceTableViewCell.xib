@@ -56,6 +56,9 @@
                     <constraint firstItem="pkP-Rb-BSw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="rJT-cD-7Ac"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="priceLabel" destination="cby-D1-Vnw" id="ZTE-I0-q0K"/>
+            </connections>
         </tableViewCell>
     </objects>
 </document>

@@ -10,6 +10,7 @@
 
 @implementation releaseTitleTableViewCell
 
+@synthesize titleTextField;
 - (void)awakeFromNib {
     // Initialization code
 }

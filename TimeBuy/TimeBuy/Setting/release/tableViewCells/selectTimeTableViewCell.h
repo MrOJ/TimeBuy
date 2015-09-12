@@ -10,4 +10,5 @@
 
 @interface selectTimeTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 @end
