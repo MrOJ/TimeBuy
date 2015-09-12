@@ -24,7 +24,7 @@
     float screenHight = [UIScreen mainScreen].bounds.size.height;
     
     JScrollView_PageControl_AutoScroll *view = [[JScrollView_PageControl_AutoScroll alloc] initWithFrame:CGRectMake(0, 250, screenWeidth, screenHight - 250)];
-    view.autoScrollDelayTime = 10000.0f;
+    view.autoScrollDelayTime = 200000.0f;
     view.delegate = self;
     
     view.pageControl.center = CGPointMake([UIScreen mainScreen].bounds.size.width / 2, (screenHight - 250) - 143);

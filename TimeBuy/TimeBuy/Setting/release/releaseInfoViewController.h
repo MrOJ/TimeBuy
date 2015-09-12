@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "releaseDetailsTableViewCell.h"
-#import "placeTableViewCell.h"
-#import "details2TableViewCell.h"
-#import "detailsTableViewCell.h"
+#import "priceViewController.h"
 #import "labelsTableViewCell.h"
+#import "releaseTitleTableViewCell.h"
+#import "changePriceTableViewCell.h"
+#import "priceTableViewCell.h"
+#import "selectTimeTableViewCell.h"
 
 #import "placeViewController.h"
 #import "priceViewController.h"
@@ -20,6 +22,7 @@
 #import "AFNetworking.h"
 #import "MBProgressHUD.h"
 #import "userConfiguration.h"
+#import "SlideNavigationController.h"
 
 @interface releaseInfoViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,MBProgressHUDDelegate>
 {
@@ -38,7 +41,10 @@
     
     UIView *shadowView;
     
-    NSInteger row;
+    NSInteger myRow;
+    NSInteger mySection;
+    
+    UIButton *sendButton;
 }
 
 @property (strong, nonatomic) IBOutlet UITableView *releaseTableView;

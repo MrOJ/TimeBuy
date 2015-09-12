@@ -1,21 +1,17 @@
 //
-//  details2TableViewCell.m
+//  changePriceTableViewCell.m
 //  TimeBuy
 //
-//  Created by Mr.OJ on 15/9/2.
+//  Created by CraftDream on 15/9/12.
 //  Copyright (c) 2015年 Mr.OJ. All rights reserved.
 //
 
-#import "details2TableViewCell.h"
+#import "changePriceTableViewCell.h"
 
-@implementation details2TableViewCell
-
-@synthesize myTitleLabel;
-@synthesize myDetailLabel;
+@implementation changePriceTableViewCell
 
 - (void)awakeFromNib {
     // Initialization code
-    self.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

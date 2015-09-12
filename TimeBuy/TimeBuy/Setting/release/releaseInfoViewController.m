@@ -23,13 +23,15 @@
     self.navigationController.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],NSForegroundColorAttributeName,[UIFont systemFontOfSize:24.0f], NSFontAttributeName, nil];
     self.navigationItem.title = @"发布";
     
+    /*
     UIBarButtonItem *registerButton = [[UIBarButtonItem alloc] initWithTitle:@"发送" style:UIBarButtonItemStylePlain target:self action:@selector(send:)];
     self.navigationItem.rightBarButtonItem = registerButton;
     //self.navigationItem.rightBarButtonItem.enabled = NO;
+    */
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(recModify:) name:@"passModifyInRelease" object:nil];
     
-    row = -1;
+    myRow = -1;
     
     placeStr = @"杭州小和山";
     startTimeStr = @"";
@@ -46,6 +48,8 @@
     
     [shadowView addGestureRecognizer:tapGesture];
     
+    releaseTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    
     datePicker = [[UIDatePicker alloc] initWithFrame:CGRectMake(0, [UIScreen mainScreen].bounds.size.height - 275, [UIScreen mainScreen].bounds.size.width, 275)];
     datePicker.datePickerMode = UIDatePickerModeDateAndTime;
     datePicker.minuteInterval = 30;
@@ -60,6 +64,43 @@
     //testView.backgroundColor = [UIColor blackColor];
     
     //[datePicker addSubview:testView];
+    UIView *sendView = [[UIView alloc] initWithFrame:CGRectMake(0, [UIScreen mainScreen].bounds.size.height - 64 - 64, [UIScreen mainScreen].bounds.size.width, 64)];
+    sendView.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:sendView];
+    
+    sendButton = [[UIButton alloc] initWithFrame:CGRectMake(13, 12, [UIScreen mainScreen].bounds.size.width - 13 * 2, 40)];
+    [sendButton setTitle:@"确定发布" forState:UIControlStateNormal];
+    [sendButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    //[sendButton setBackgroundColor:[UIColor colorWithRed:80.0 / 255.0f green:227.0 / 255.0f blue:194.0 / 255.0f alpha:1]];
+    //[sendButton setTintColor:[UIColor colorWithRed:80.0 / 255.0f green:227.0 / 255.0f blue:194.0 / 255.0f alpha:1]];
+    [sendButton setBackgroundImage:[self imageWithColor:[UIColor colorWithRed:80.0 / 255.0f green:227.0 / 255.0f blue:194.0 / 255.0f alpha:1] size:sendButton.bounds.size] forState:UIControlStateNormal];
+    [sendButton setBackgroundImage:[self imageWithColor:[UIColor lightGrayColor] size:sendButton.bounds.size] forState:UIControlStateDisabled];
+    
+    [sendButton addTarget:self action:@selector(send:) forControlEvents:UIControlEventTouchUpInside];
+    [sendView addSubview:sendButton];
+    sendButton.layer.masksToBounds = YES;
+    sendButton.layer.cornerRadius = 3;
+    
+    [sendButton setEnabled:YES];
+}
+
+- (UIImage *)imageWithColor:(UIColor *)color size:(CGSize)size {
+    
+    CGRect rect = CGRectMake(0, 0, size.width, size.height);
+
+    UIGraphicsBeginImageContext(rect.size);
+
+    CGContextRef context = UIGraphicsGetCurrentContext();
+
+    CGContextSetFillColorWithColor(context, [color CGColor]);
+
+    CGContextFillRect(context, rect);
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+
+    UIGraphicsEndImageContext();
+
+    return image;
+
 }
 
 - (void)send:(id)sender {
@@ -75,17 +116,21 @@
     [formatter setDateFormat:@"yyyy-MM-dd HH:mm"];
     NSString *curDateTime = [formatter stringFromDate:date];
     
-    if (row == 2) {
+    if (myRow == 2) {
         startTimeStr = curDateTime;
         
+        /*
         detailsTableViewCell *cell= (detailsTableViewCell *)[releaseTableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:2 inSection:0]];
         cell.timeLabel.text = curDateTime;
+        */
         
     } else {
         finishTimeStr = curDateTime;
         
+        /*
         detailsTableViewCell *cell= (detailsTableViewCell *)[releaseTableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:3 inSection:0]];
         cell.timeLabel.text = curDateTime;
+        */
     }
     
 }
@@ -100,22 +145,25 @@
         
         placeStr = getValue;
         
-        placeTableViewCell *cell= (placeTableViewCell *)[releaseTableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0]];
-        [cell.placeButton setTitle:getValue forState:UIControlStateNormal];
+        //placeTableViewCell *cell= (placeTableViewCell *)[releaseTableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0]];
+        //[cell.placeButton setTitle:getValue forState:UIControlStateNormal];
         
     } else if ([getType isEqualToString:@"price"]) {
-        NSString *str = @"￥";
+        //NSString *str = @"￥";
         priceStr = getValue;
         
+        /*
         details2TableViewCell *cell= (details2TableViewCell *)[releaseTableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:4 inSection:0]];
         cell.myDetailLabel.text = [str stringByAppendingString:getValue];
-        
+        */
     } else if ([getType isEqualToString:@"phone"]) {
         
         phoneStr = getValue;
         
+        /*
         details2TableViewCell *cell= (details2TableViewCell *)[releaseTableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:5 inSection:0]];
         cell.myDetailLabel.text = getValue;
+        */
     }
     //self.navigationItem.rightBarButtonItem.enabled = YES;
 }
@@ -129,151 +177,136 @@
 #pragma mark - tableViewDelegate
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 7;
+    switch (section) {
+        case 0:
+            return 2;
+            break;
+        case 1:
+            return 3;
+            break;
+        case 2:
+            return 1;
+            break;
+        default:
+            return 0;
+    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-    return 10.0f;
+    if (section == 0) {
+        return 4.0f;
+    } else
+    {
+        return 6.0f;
+    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
 {
-    return 4.0f;
+    if (section == 2) {
+        return 67.0f;
+    } else {
+        return 1.0f;
+    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    switch (indexPath.row) {
+    switch (indexPath.section) {
         case 0:
-            return 270.0f;
+        {
+            if (indexPath.row == 0) {
+                return 48.0f;
+            } else {
+                return 235.0f;
+            }
             break;
-        case 6:
-            return 47.0f;
-            break;
+        }
         default:
-            return 47.0f;
-            break;
+            return 48.0f;
     }
+    
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSString *CellTableIdentifier=[[NSString alloc] initWithFormat:@"extentedCell%lu",(unsigned long)indexPath.row];
-    
-    switch (indexPath.row) {
+    NSString *CellTableIdentifier=[[NSString alloc] initWithFormat:@"extentedCell%lu-%lu",(unsigned long)indexPath.section,(unsigned long)indexPath.row];
+
+    switch (indexPath.section) {
         case 0:
         {
-            releaseDetailsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellTableIdentifier];
-            if (cell == nil) {
-                cell.contentView.frame = cell.bounds;
-                cell.contentView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
-                //cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-                cell.selectionStyle = UITableViewCellSelectionStyleNone;
-                cell = [[[NSBundle mainBundle] loadNibNamed:@"releaseDetailsTableViewCell" owner:self options:nil] lastObject];
+            if (indexPath.row == 0) {
+                releaseTitleTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellTableIdentifier];
+                if (cell == nil) {
+                    cell.contentView.frame = cell.bounds;
+                    cell.contentView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
+                    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+                    cell = [[[NSBundle mainBundle] loadNibNamed:@"releaseTitleTableViewCell" owner:self options:nil] lastObject];
+                }
+                
+                return cell;
+            } else {
+                releaseDetailsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellTableIdentifier];
+                if (cell == nil) {
+                    cell.contentView.frame = cell.bounds;
+                    cell.contentView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
+                    //cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+                    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+                    cell = [[[NSBundle mainBundle] loadNibNamed:@"releaseDetailsTableViewCell" owner:self options:nil] lastObject];
+                }
+                
+                return cell;
             }
-            
-            return cell;
-            
             break;
         }
         case 1:
         {
-            placeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellTableIdentifier];
-            
-            if (cell == nil) {
-                cell.contentView.frame = cell.bounds;
-                cell.contentView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
-                //cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-                cell.selectionStyle = UITableViewCellSelectionStyleNone;
-                cell = [[[NSBundle mainBundle] loadNibNamed:@"placeTableViewCell" owner:self options:nil] lastObject];
+            if (indexPath.row == 0) {
+                changePriceTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellTableIdentifier];
+                
+                if (cell == nil) {
+                    cell.contentView.frame = cell.bounds;
+                    cell.contentView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
+                    //cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+                    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+                    cell = [[[NSBundle mainBundle] loadNibNamed:@"changePriceTableViewCell" owner:self options:nil] lastObject];
+                }
+                
+                return cell;
+                
+            } else if (indexPath.row == 1) {
+                priceTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellTableIdentifier];
+                
+                if (cell == nil) {
+                    cell.contentView.frame = cell.bounds;
+                    cell.contentView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
+                    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+                    cell = [[[NSBundle mainBundle] loadNibNamed:@"priceTableViewCell" owner:self options:nil] lastObject];
+                }
+                
+                return cell;
+                
+            } else if (indexPath.row == 2) {
+                selectTimeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellTableIdentifier];
+                
+                if (cell == nil) {
+                    cell.contentView.frame = cell.bounds;
+                    cell.contentView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
+                    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+                    cell = [[[NSBundle mainBundle] loadNibNamed:@"selectTimeTableViewCell" owner:self options:nil] lastObject];
+                }
+                
+                return cell;
             }
-            
-            return cell;
             break;
         }
         case 2:
-        {
-            detailsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellTableIdentifier];
-            
-            if (cell == nil) {
-                cell.contentView.frame = cell.bounds;
-                cell.contentView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
-                //cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-                cell.selectionStyle = UITableViewCellSelectionStyleNone;
-                cell = [[[NSBundle mainBundle] loadNibNamed:@"detailsTableViewCell" owner:self options:nil] lastObject];
-            }
-            
-            cell.timeTitleLabel.text = @"时间";
-            cell.statusLabel.text = @"开始";
-            cell.timeLabel.text = startTimeStr;
-            
-            return cell;
-            break;
-        }
-        case 3:
-        {
-            
-            detailsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellTableIdentifier];
-            
-            if (cell == nil) {
-                cell.contentView.frame = cell.bounds;
-                cell.contentView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
-                //cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-                cell.selectionStyle = UITableViewCellSelectionStyleNone;
-                cell = [[[NSBundle mainBundle] loadNibNamed:@"detailsTableViewCell" owner:self options:nil] lastObject];
-            }
-            
-            cell.timeTitleLabel.hidden = YES;
-            cell.statusLabel.text = @"结束";
-            cell.timeLabel.text = finishTimeStr;
-            
-            return cell;
-            break;
-        }
-        case 4:
-        {
-            details2TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellTableIdentifier];
-            
-            if (cell == nil) {
-                cell.contentView.frame = cell.bounds;
-                cell.contentView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
-                //cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-                cell.selectionStyle = UITableViewCellSelectionStyleNone;
-                cell = [[[NSBundle mainBundle] loadNibNamed:@"details2TableViewCell" owner:self options:nil] lastObject];
-            }
-            
-            NSString *str = @"￥";
-            cell.myTitleLabel.text = @"金额";
-            cell.myDetailLabel.text = [str stringByAppendingString:priceStr];
-            
-            return cell;
-            break;
-        }
-        case 5:
-        {
-            details2TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellTableIdentifier];
-            
-            if (cell == nil) {
-                cell.contentView.frame = cell.bounds;
-                cell.contentView.autoresizingMask = UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth;
-                //cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-                cell.selectionStyle = UITableViewCellSelectionStyleNone;
-                cell = [[[NSBundle mainBundle] loadNibNamed:@"details2TableViewCell" owner:self options:nil] lastObject];
-            }
-            
-            cell.myTitleLabel.text = @"电话";
-            cell.myDetailLabel.text = phoneStr;
-            
-            return cell;
-            break;
-        }
-        case 6:
         {
             labelsTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellTableIdentifier];
             
@@ -289,20 +322,40 @@
             break;
         }
         default:
-        {
-            
-            return nil;
             break;
-        }
     }
+    
     
     return nil;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    row = indexPath.row;
+    myRow = indexPath.row;
+    mySection = indexPath.section;
     
+    switch (mySection) {
+        case 1:
+        {
+            if (myRow == 1) {
+                priceViewController *priceVC = [[priceViewController alloc] init];
+                priceVC.price = priceStr;
+                
+                [self.navigationController pushViewController:priceVC animated:YES];
+            } else if (myRow == 2) {
+                
+            }
+            break;
+        }
+        case 2:
+        {
+            break;
+        }
+        default:
+            break;
+    }
+    
+    /*
     switch (row) {
         case 1:
         {
@@ -319,10 +372,7 @@
             
             NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
             [formatter setDateFormat:@"yyyy-MM-dd HH:mm"];
-            NSString *curDateTime = [formatter stringFromDate:[NSDate date]];
-            
-            detailsTableViewCell *cell= (detailsTableViewCell *)[releaseTableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:2 inSection:0]];
-            cell.timeLabel.text = curDateTime;
+            //NSString *curDateTime = [formatter stringFromDate:[NSDate date]];
             
             break;
         }
@@ -333,10 +383,7 @@
             
             NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
             [formatter setDateFormat:@"yyyy-MM-dd HH:mm"];
-            NSString *curDateTime = [formatter stringFromDate:[NSDate date]];
-            
-            detailsTableViewCell *cell= (detailsTableViewCell *)[releaseTableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:3 inSection:0]];
-            cell.timeLabel.text = curDateTime;
+            //NSString *curDateTime = [formatter stringFromDate:[NSDate date]];
             
             break;
         }
@@ -359,6 +406,8 @@
         default:
             break;
     }
+    */
+    
 }
 
 // 点击编辑区以外的地方 取消键盘
