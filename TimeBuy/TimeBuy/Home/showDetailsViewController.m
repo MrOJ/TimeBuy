@@ -7,13 +7,23 @@
 //
 
 #import "showDetailsViewController.h"
-
+typedef NS_ENUM(NSInteger, FieldTag) {
+    FieldTagHorizontalLayout = 1001,
+    FieldTagVerticalLayout,
+    FieldTagMaskType,
+    FieldTagShowType,
+    FieldTagDismissType,
+    FieldTagBackgroundDismiss,
+    FieldTagContentDismiss,
+    FieldTagTimedDismiss,
+};
 @interface showDetailsViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *textfield;
 @property (weak, nonatomic) IBOutlet UITableView *tableview;
 @property (weak, nonatomic) IBOutlet UIImageView *head;
 @property (weak, nonatomic) IBOutlet UILabel *labelname;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollviewcontrol;
+@property (weak, nonatomic) IBOutlet UILabel *textLabel;
 @end
 
 @implementation showDetailsViewController
@@ -50,9 +60,67 @@
     
     self.scrollviewcontrol.contentSize=CGSizeMake(375,800);
     NSLog(@"suc3");
-    
+    //textlabel行距设置
+    self.textLabel.numberOfLines=2;
+    //设置行间距
+    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc]init];
+    paragraphStyle.lineSpacing = 5;
+    NSDictionary *attributes = @{ NSFontAttributeName:[UIFont systemFontOfSize:13],
+                                  NSParagraphStyleAttributeName:paragraphStyle};
+    self.textLabel.attributedText = [[NSAttributedString alloc]initWithString:self.textLabel.text attributes:attributes];
     // Do any additional setup after loading the view from its nib.
 }
+-(void)keyboardDidChange{
+    NSString *newString = [NSString stringWithFormat:@"%lu%@",(unsigned long)textview.text.length,@"/20"];
+    
+    //NSLog(@"%lu",(unsigned long)textview.text.length);
+    label.text=newString;
+}
+-(void)keyboardDidHidden{
+    NSLog(@"结束");
+    self.textfield.text=textview.text;
+}
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text{
+    if ([text isEqualToString:@"\n"]) {
+        [textView resignFirstResponder];
+        [popup dismiss:true];
+        return NO;
+    }
+    return YES;
+}
+//弹出框设置
+- (IBAction)pressdown:(id)sender {
+    NSLog(@"输入框");
+    // Generate content view to present
+    UIView *contentView = [[UIView alloc] init];
+    contentView.translatesAutoresizingMaskIntoConstraints = NO;
+    contentView.backgroundColor = [UIColor whiteColor];
+    contentView.layer.cornerRadius = 12.0;
+    contentView.frame=CGRectMake(45, 208, 285, 179);
+    textview=[[UITextView alloc]init];
+    textview.frame=CGRectMake(0, 0, 285, 179);
+    textview.text=@"想对Ta说点什么";
+    textview.font=[UIFont fontWithName:@"Arial" size:18];
+    [textview setTextColor:[UIColor lightGrayColor]];
+    textview.keyboardType=UIKeyboardTypeDefault;
+    textview.layer.cornerRadius=12.0;
+    textview.delegate=self;
+    textview.editable=true;
+    [textview becomeFirstResponder];
+    [[NSNotificationCenter
+      defaultCenter] addObserver:self selector:@selector(keyboardDidChange)name:UITextViewTextDidChangeNotification object:textview];
+    [[NSNotificationCenter
+      defaultCenter] addObserver:self selector:@selector(keyboardDidHidden)name:UITextViewTextDidEndEditingNotification object:textview];
+    label=[[UILabel alloc]initWithFrame:CGRectMake(233, 140, 50, 19)];
+    label.text=@"8/20";
+    label.font=[UIFont fontWithName:@"Arial" size:18];
+    [label setTextColor:[UIColor lightGrayColor]];
+    [contentView addSubview:textview];
+    [contentView addSubview:label];
+    popup = [KLCPopup popupWithContentView:contentView showType:KLCPopupShowTypeSlideInFromTop dismissType:KLCPopupDismissTypeSlideOutToBottom maskType:KLCPopupMaskTypeDimmed dismissOnBackgroundTouch:YES dismissOnContentTouch:NO];
+    [popup show];
+}
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {

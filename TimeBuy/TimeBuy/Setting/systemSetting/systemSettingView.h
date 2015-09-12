@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TalkViewController.h"
+#import "KLCPopup.h"
 
 @interface systemSettingView : UIView
 
 - (void)initSubViews;
-
 @end

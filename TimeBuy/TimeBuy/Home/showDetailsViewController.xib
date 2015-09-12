@@ -10,6 +10,7 @@
                 <outlet property="labelname" destination="LAh-iQ-v7W" id="PV5-Ny-i2a"/>
                 <outlet property="scrollviewcontrol" destination="OLH-yV-KH2" id="Bgf-lN-x7F"/>
                 <outlet property="tableview" destination="nAm-o9-AIg" id="Chl-bY-Hm5"/>
+                <outlet property="textLabel" destination="gES-Mr-7CG" id="HPb-R5-fez"/>
                 <outlet property="textfield" destination="OE6-Ne-MSc" id="CPD-Hz-Nq7"/>
                 <outlet property="view" destination="fQ8-Da-Jvw" id="H8d-gV-obT"/>
             </connections>
@@ -20,14 +21,17 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="说点什么吧" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OE6-Ne-MSc">
-                    <rect key="frame" x="14" y="555" width="347" height="45"/>
+                    <rect key="frame" x="14" y="545" width="347" height="45"/>
                     <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                    <connections>
+                        <action selector="pressdown:" destination="-1" eventType="touchDown" id="8hv-VL-Uea"/>
+                    </connections>
                 </textField>
                 <scrollView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OLH-yV-KH2">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="550"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="540"/>
                     <subviews>
                         <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="portrait.png" translatesAutoresizingMaskIntoConstraints="NO" id="wwq-Q7-iMi" customClass="show">
                             <rect key="frame" x="15" y="21" width="39" height="39"/>
@@ -108,7 +112,7 @@
                             <color key="backgroundColor" red="0.96470588239999999" green="0.96470588239999999" blue="0.96470588239999999" alpha="1" colorSpace="calibratedRGB"/>
                         </view>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gES-Mr-7CG">
-                            <rect key="frame" x="14" y="132" width="348" height="34"/>
+                            <rect key="frame" x="14" y="132" width="348" height="38"/>
                             <string key="text">[跑腿]买买买买买买买买买早饭！！！！在学校二楼食堂，买
 一笼小笼包，一袋豆浆到24号楼寝室305叫我.谢谢~</string>
                             <fontDescription key="fontDescription" type="system" pointSize="13"/>

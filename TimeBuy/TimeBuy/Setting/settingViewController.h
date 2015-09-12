@@ -9,13 +9,14 @@
 #import <UIKit/UIKit.h>
 
 #import "SlideNavigationController.h"
-
+#import "KLCPopup.h"
 #import "profilesViewController.h"
 #import "systemSetting/systemSettingView.h"
 #import "releaseInfoViewController.h"
 #import "myTravelViewController.h"
 #import "messageViewController.h"
 #import "mySheduleViewController.h"
+
 
 @interface settingViewController : UIViewController <UIAlertViewDelegate>
 {

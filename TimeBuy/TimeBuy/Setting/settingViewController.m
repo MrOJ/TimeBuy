@@ -164,7 +164,6 @@
     
     systemSettingView *systemSetting = [[systemSettingView alloc] initWithFrame:CGRectMake(10, 163, 355, 311)];
     [systemSetting initSubViews];
-    
     KLCPopup *popup = [KLCPopup popupWithContentView:systemSetting showType:KLCPopupShowTypeGrowIn dismissType:KLCPopupDismissTypeGrowOut maskType:KLCPopupMaskTypeDimmed dismissOnBackgroundTouch:YES dismissOnContentTouch:NO];
     [popup show];
 }
@@ -182,28 +181,26 @@
 
 //我的行程
 - (IBAction)myTravel:(id)sender {
-    
     myTravelViewController *vc = [[myTravelViewController alloc] init];
     [[SlideNavigationController sharedInstance] popToRootAndSwitchToViewController:vc
                                                              withSlideOutAnimation:NO
                                                                      andCompletion:nil];
-    
 }
 
 //我的消息
 - (IBAction)myNotice:(id)sender {
-    
     messageViewController *vc=[[messageViewController alloc]init];
     [[SlideNavigationController sharedInstance] popToRootAndSwitchToViewController:vc
                                                              withSlideOutAnimation:NO
                                                                      andCompletion:nil];
-    
 }
 
 //我的日程
 - (IBAction)mySchedule:(id)sender {
-    mySheduleViewController *vc = [[mySheduleViewController alloc] init];
-    [[SlideNavigationController sharedInstance] popToRootAndSwitchToViewController:vc withSlideOutAnimation:NO andCompletion:nil];
+    mySheduleViewController *vc=[[mySheduleViewController alloc]init];
+    [[SlideNavigationController sharedInstance] popToRootAndSwitchToViewController:vc
+                                                             withSlideOutAnimation:NO
+                                                                     andCompletion:nil];
 }
 
 //退出登录

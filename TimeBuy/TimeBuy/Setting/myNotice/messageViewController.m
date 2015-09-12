@@ -46,7 +46,6 @@
     self.navigationController.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],NSForegroundColorAttributeName,[UIFont systemFontOfSize:24.0f], NSFontAttributeName, nil];
     self.navigationItem.title = @"我的消息";
     [self.messageSearchBar setContentMode:UIViewContentModeCenter];
-    
     //配置dataview
     self.messageTableview.delegate=self;
     self.messageTableview.dataSource=self;
@@ -59,6 +58,12 @@
     NSLog(@"开始搜索");
     NSString *text=self.messageSearchBar.text;
     NSLog(@"%@",text);
+    [self.messageTableview reloadData];
+}
+//点击tableviewcell
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [[self.messageData objectAtIndex:indexPath.row]setObject:@"0" forKey:@"message"];
     [self.messageTableview reloadData];
 }
 //cell动态创建
@@ -118,11 +123,16 @@
         UILabel *label4=[[UILabel alloc] initWithFrame:CGRectMake(40, 7, 16, 16)];
         label4.textColor=[UIColor whiteColor];
         label4.font=[UIFont fontWithName:@"Arial" size:11];
-        [label4 setText:[[self.messageData objectAtIndex:indexPath.row]objectForKey:@"message"]];
+        NSString *label4text=[[self.messageData objectAtIndex:indexPath.row]objectForKey:@"message"];
+        [label4 setText:label4text];
         [label4 setBackgroundColor:[UIColor redColor]];
         label4.layer.masksToBounds=true;
         label4.layer.cornerRadius=8;
         label4.textAlignment=NSTextAlignmentCenter;
+        if([label4text isEqualToString:@"0"])
+        {
+            return cell;
+        }
         [cell.contentView addSubview:label4];
         return cell;
     }

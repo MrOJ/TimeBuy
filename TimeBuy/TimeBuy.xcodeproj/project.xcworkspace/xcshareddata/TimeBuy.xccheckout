@@ -5,13 +5,13 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>C75C6073-8531-404D-A8DA-CBCA37C3DB57</string>
+	<string>E55EDE19-E9C6-423D-B6EF-A4512B66FD93</string>
 	<key>IDESourceControlProjectName</key>
 	<string>TimeBuy</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>37A10C29D21C08D896584C31FD8B09841C5DB351</key>
-		<string>https://github.com/MrOJ/TimeBuy</string>
+		<string>https://github.com/WeizeYu/TimeBuy.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>TimeBuy/TimeBuy.xcodeproj</string>
@@ -21,7 +21,7 @@
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/MrOJ/TimeBuy</string>
+	<string>https://github.com/WeizeYu/TimeBuy.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
@@ -34,7 +34,7 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>37A10C29D21C08D896584C31FD8B09841C5DB351</string>
 			<key>IDESourceControlWCCName</key>
-			<string>TimeBuy</string>
+			<string>MyBranch</string>
 		</dict>
 	</array>
 </dict>

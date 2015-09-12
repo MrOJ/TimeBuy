@@ -22,7 +22,23 @@
     // Do any additional setup after loading the view from its nib.
     self.navigationController.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],NSForegroundColorAttributeName,[UIFont systemFontOfSize:20.0f], NSFontAttributeName, nil];
     self.navigationItem.title = @"手机";
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(recModify:) name:@"passModify" object:nil];
+    [self.telTableView reloadData];
+    
 }
+- (void)recModify:(NSNotification *)notification
+{
+    NSDictionary *getDic = [notification userInfo];
+    NSLog(@"phone");
+    if([[getDic objectForKey:@"type"]isEqualToString: @"phone"])
+    {
+        telephone = [getDic objectForKey:@"value"];
+        [self.telTableView reloadData];
+
+    }
+    
+}
+
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -47,12 +63,18 @@
     }
     
     if (indexPath.row == 0) {
-        cell.textLabel.text = @"绑定号码";
+        NSString *newString = [NSString stringWithFormat:@"绑定手机                                  %@",telephone];
+        cell.textLabel.text = newString;
     } else {
-        cell.textLabel.text = @"修改绑定号码";
+        cell.textLabel.text = @"更换绑定手机";
     }
     
     return cell;
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    changeTelephoneViewController *VC=[[changeTelephoneViewController alloc]init];
+            [self.navigationController pushViewController:VC animated:YES];            
 }
 
 - (void)didReceiveMemoryWarning {

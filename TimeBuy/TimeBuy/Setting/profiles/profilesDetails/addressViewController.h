@@ -7,9 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface addressViewController : UIViewController<UITextFieldDelegate>
+#import "addressDetailViewController.h"
+@interface addressViewController : UIViewController<UITextFieldDelegate,UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic, strong) NSString *address;
-
+@property (nonatomic) NSMutableArray *area;
 @end

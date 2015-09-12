@@ -102,7 +102,7 @@
     }];
     
     // 马上进入刷新状态
-    //[self.tableView.header beginRefreshing];
+    //[self.tableView.heade r beginRefreshing];
     //NSLog(@"witdth = %f;height = %f",self.view.bounds.size.width,self.view.bounds.size.height);
     [SlideNavigationController sharedInstance].enableShadow = NO;
     
@@ -439,10 +439,8 @@
     switch (indexPath.row) {
         case 2:
         {
-            
             showDetailsViewController *showDetailsVC=[[showDetailsViewController alloc]init];
             [self.navigationController pushViewController:showDetailsVC animated:YES];
-            
         }
             break;
             

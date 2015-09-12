@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "detailHistoryViewController.h"
 @interface myTravelViewController : UIViewController<UITableViewDataSource,UITableViewDelegate>
 @property (nonatomic) NSMutableArray *dealData;
 @property (nonatomic) NSMutableArray *responseData;
 @property (nonatomic) NSMutableArray *favoriteData;
 @property (nonatomic) NSMutableArray *data;
+@property (nonatomic) NSInteger *x;
 @end
