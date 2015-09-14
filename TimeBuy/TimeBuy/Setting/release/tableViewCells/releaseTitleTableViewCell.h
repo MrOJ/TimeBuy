@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface releaseTitleTableViewCell : UITableViewCell
+@interface releaseTitleTableViewCell : UITableViewCell<UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
 @end

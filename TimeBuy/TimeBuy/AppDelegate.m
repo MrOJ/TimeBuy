@@ -33,8 +33,7 @@
     settingViewController *leftMenu = (settingViewController *)[mainStoryboard
                                                                 instantiateViewControllerWithIdentifier: @"left"];
     
-    nearbyViewController *rightMenu = (nearbyViewController *)[mainStoryboard
-                                                               instantiateViewControllerWithIdentifier: @"right"];
+    nearbyViewController *rightMenu = [(nearbyViewController *)[nearbyViewController alloc] init];
     
     [SlideNavigationController sharedInstance].rightMenu = rightMenu;
     [SlideNavigationController sharedInstance].leftMenu = leftMenu;
@@ -45,12 +44,14 @@
     [button addTarget:[SlideNavigationController sharedInstance] action:@selector(toggleLeftMenu) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button];
     [SlideNavigationController sharedInstance].leftBarButtonItem = leftBarButtonItem;
-    
+
     UIButton *button2  = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 30, 30)];
     [button2 setImage:[UIImage imageNamed:@"附近的人1"] forState:UIControlStateNormal];
-    [button2 addTarget:[SlideNavigationController sharedInstance] action:@selector(toggleRightMenu) forControlEvents:UIControlEventTouchUpInside];
+    //[button2 addTarget:[SlideNavigationController sharedInstance] action:@selector(toggleRightMenu) forControlEvents:UIControlEventTouchUpInside];
+    [button2 addTarget:self action:@selector(openRight:) forControlEvents:UIControlEventTouchUpInside];
     UIBarButtonItem *rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:button2];
     [SlideNavigationController sharedInstance].rightBarButtonItem = rightBarButtonItem;
+
     
     shadowView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height)];
     shadowView.backgroundColor = [UIColor blackColor];
@@ -70,13 +71,13 @@
         NSString *menu = note.userInfo[@"menu"];
         NSLog(@"Opened %@", menu);
         
-        [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationSlide];
         //[SlideNavigationController sharedInstance].rightBarButtonItem.width  = 0.01;
         
         shadowView.hidden = NO;
         
         if ([menu isEqualToString:@"left"]) {
-
+            [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationSlide];
+            [SlideNavigationController sharedInstance].leftBarButtonItem.width  = 0.01;
         }
         
     }];
@@ -89,6 +90,11 @@
     
 }
 
+- (void)openRight:(id)sender {
+    NSLog(@"Hello！！！");
+    nearbyViewController *vc = [[nearbyViewController alloc] init];
+    [[SlideNavigationController sharedInstance] popToRootAndSwitchToViewController:vc withCompletion:nil];
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

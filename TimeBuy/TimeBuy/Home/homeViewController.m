@@ -106,9 +106,6 @@
     //NSLog(@"witdth = %f;height = %f",self.view.bounds.size.width,self.view.bounds.size.height);
     [SlideNavigationController sharedInstance].enableShadow = NO;
     
-    float offset = self.view.bounds.size.width;
-    [SlideNavigationController sharedInstance].portraitSlideOffset = offset - 249.0f;
-    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(recState:) name:@"passState" object:nil];
     
 }
@@ -309,6 +306,7 @@
             if (cell == nil) {
                 
                 cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellTableIdentifier];
+                cell.selectionStyle = UITableViewCellSelectionStyleNone;
             }
             
             cell.backgroundColor = [UIColor groupTableViewBackgroundColor];

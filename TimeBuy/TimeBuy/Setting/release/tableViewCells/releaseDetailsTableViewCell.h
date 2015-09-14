@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface releaseDetailsTableViewCell : UITableViewCell<UITextViewDelegate>
+{
+    NSString *defaultStr;
+}
 
 @property (strong, nonatomic) IBOutlet UITextView *detailsTextView;
 @property (strong, nonatomic) IBOutlet UIButton *addButton;

@@ -81,6 +81,8 @@
 		18672CA71BA6DBB5001056A8 /* getHelpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18672CA01BA6DBB5001056A8 /* getHelpViewController.xib */; };
 		18672CA81BA6DBB5001056A8 /* helpDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18672CA21BA6DBB5001056A8 /* helpDetailTableViewCell.m */; };
 		18672CA91BA6DBB5001056A8 /* helpDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18672CA31BA6DBB5001056A8 /* helpDetailTableViewCell.xib */; };
+		18672CAD1BA708D8001056A8 /* selectTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18672CAB1BA708D8001056A8 /* selectTimeViewController.m */; };
+		18672CAE1BA708D8001056A8 /* selectTimeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18672CAC1BA708D8001056A8 /* selectTimeViewController.xib */; };
 		18741F1B1B9072290090DEA5 /* logo200x56-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 18741F1A1B9072290090DEA5 /* logo200x56-01.png */; };
 		18741F221B9074DD0090DEA5 /* 导航条320x64.png in Resources */ = {isa = PBXBuildFile; fileRef = 18741F1C1B9074DD0090DEA5 /* 导航条320x64.png */; };
 		18741F231B9074DD0090DEA5 /* 导航条320x64@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18741F1D1B9074DD0090DEA5 /* 导航条320x64@2x.png */; };
@@ -421,6 +423,9 @@
 		18672CA11BA6DBB5001056A8 /* helpDetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = helpDetailTableViewCell.h; sourceTree = "<group>"; };
 		18672CA21BA6DBB5001056A8 /* helpDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = helpDetailTableViewCell.m; sourceTree = "<group>"; };
 		18672CA31BA6DBB5001056A8 /* helpDetailTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = helpDetailTableViewCell.xib; sourceTree = "<group>"; };
+		18672CAA1BA708D8001056A8 /* selectTimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = selectTimeViewController.h; sourceTree = "<group>"; };
+		18672CAB1BA708D8001056A8 /* selectTimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = selectTimeViewController.m; sourceTree = "<group>"; };
+		18672CAC1BA708D8001056A8 /* selectTimeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = selectTimeViewController.xib; sourceTree = "<group>"; };
 		18741F1A1B9072290090DEA5 /* logo200x56-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo200x56-01.png"; sourceTree = "<group>"; };
 		18741F1C1B9074DD0090DEA5 /* 导航条320x64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "导航条320x64.png"; sourceTree = "<group>"; };
 		18741F1D1B9074DD0090DEA5 /* 导航条320x64@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "导航条320x64@2x.png"; sourceTree = "<group>"; };
@@ -764,6 +769,9 @@
 				180E1CF71B972AC9002DBF2B /* phoneViewController.h */,
 				180E1CF81B972AC9002DBF2B /* phoneViewController.m */,
 				180E1CF91B972AC9002DBF2B /* phoneViewController.xib */,
+				18672CAA1BA708D8001056A8 /* selectTimeViewController.h */,
+				18672CAB1BA708D8001056A8 /* selectTimeViewController.m */,
+				18672CAC1BA708D8001056A8 /* selectTimeViewController.xib */,
 			);
 			path = releaseDetails;
 			sourceTree = "<group>";
@@ -1681,6 +1689,7 @@
 				18741F7E1B9082820090DEA5 /* xianshikongxian@2x.png in Resources */,
 				18741F7F1B9082820090DEA5 /* xianshikongxian@3x.png in Resources */,
 				18FD071F1B8E8F9F006545AC /* 爱心1@2x.png in Resources */,
+				18672CAE1BA708D8001056A8 /* selectTimeViewController.xib in Resources */,
 				182CDBF01B772312005FE865 /* portrait.png in Resources */,
 				18741F2A1B907BBA0090DEA5 /* 37x-Checkmark.png in Resources */,
 				18FD073B1B8F226B006545AC /* back.png in Resources */,
@@ -1772,6 +1781,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				70AC213F1BA3BC87008ED491 /* timeTableViewCell.m in Sources */,
+				18672CAD1BA708D8001056A8 /* selectTimeViewController.m in Sources */,
 				18FFE5B91B7F49AE004FBC82 /* SlideNavigationContorllerAnimatorFade.m in Sources */,
 				180E1D431B9B26EC002DBF2B /* nearbyViewController.m in Sources */,
 				18FD07931B8F49A6006545AC /* AFHTTPRequestOperation.m in Sources */,

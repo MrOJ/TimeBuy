@@ -36,7 +36,7 @@
     placeStr = @"杭州小和山";
     startTimeStr = @"";
     finishTimeStr = @"";
-    priceStr = @"10.0";
+    priceStr = @"0.0";
     phoneStr = @"18767122229";
     
     shadowView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height - 275 + 64)];
@@ -104,7 +104,13 @@
 }
 
 - (void)send:(id)sender {
-    [self sendMgs];
+    //[self sendMgs];
+    
+    titleTextField = (UITextField *)[releaseTableView viewWithTag:1];
+    NSLog(@"get text = %@",titleTextField.text);
+    
+    detailsTextView = (UITextView *)[releaseTableView viewWithTag:2];
+    NSLog(@"get text from textview = %@", detailsTextView.text);
 }
 
 - (void)dateChanged:(id)sender {
@@ -149,13 +155,12 @@
         //[cell.placeButton setTitle:getValue forState:UIControlStateNormal];
         
     } else if ([getType isEqualToString:@"price"]) {
-        //NSString *str = @"￥";
+        NSString *str = @"￥";
         priceStr = getValue;
         
-        /*
-        details2TableViewCell *cell= (details2TableViewCell *)[releaseTableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:4 inSection:0]];
-        cell.myDetailLabel.text = [str stringByAppendingString:getValue];
-        */
+        priceTableViewCell *cell= (priceTableViewCell *)[releaseTableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:1]];
+        cell.priceLabel.text = [str stringByAppendingString:getValue];
+
     } else if ([getType isEqualToString:@"phone"]) {
         
         phoneStr = getValue;
@@ -290,6 +295,9 @@
                     cell = [[[NSBundle mainBundle] loadNibNamed:@"priceTableViewCell" owner:self options:nil] lastObject];
                 }
                 
+                NSString *str = @"￥";
+                cell.priceLabel.text = [str stringByAppendingString:priceStr];
+                
                 return cell;
                 
             } else if (indexPath.row == 2) {
@@ -343,7 +351,10 @@
                 
                 [self.navigationController pushViewController:priceVC animated:YES];
             } else if (myRow == 2) {
+                selectTimeViewController *selectTimeVC = [[selectTimeViewController alloc] init];
                 
+                [self.navigationController pushViewController:selectTimeVC animated:YES];
+                break;
             }
             break;
         }

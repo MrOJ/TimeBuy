@@ -13,6 +13,9 @@
 @synthesize titleTextField;
 - (void)awakeFromNib {
     // Initialization code
+    
+    titleTextField.tag = 1;  //根据tag获取当前的uitextfield
+    titleTextField.delegate = self;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
