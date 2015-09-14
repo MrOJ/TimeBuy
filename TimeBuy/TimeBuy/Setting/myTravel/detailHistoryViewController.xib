@@ -9,7 +9,6 @@
                 <outlet property="head" destination="Vh9-OQ-ku8" id="kpH-bj-VR0"/>
                 <outlet property="labelname" destination="9MK-Lt-TXq" id="5bI-Nk-LGw"/>
                 <outlet property="scrollviewcontrol" destination="KQC-cB-dFV" id="vtc-kd-Ryy"/>
-                <outlet property="tableview" destination="h9T-eL-tMX" id="IDl-nt-af4"/>
                 <outlet property="textLabel" destination="VL1-Uy-zJe" id="7cd-Gr-uFX"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -20,7 +19,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KQC-cB-dFV">
-                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="677"/>
                     <subviews>
                         <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="portrait.png" translatesAutoresizingMaskIntoConstraints="NO" id="Vh9-OQ-ku8" customClass="show">
                             <rect key="frame" x="15" y="21" width="39" height="39"/>
@@ -134,14 +133,6 @@
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="showImg3.png" translatesAutoresizingMaskIntoConstraints="NO" id="lQw-Fp-oja">
                             <rect key="frame" x="190" y="422" width="171" height="121"/>
                         </imageView>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ugr-q4-Znn">
-                            <rect key="frame" x="0.0" y="563" width="375" height="20"/>
-                            <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="calibratedRGB"/>
-                        </imageView>
-                        <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="83" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="h9T-eL-tMX">
-                            <rect key="frame" x="0.0" y="583" width="375" height="250"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </tableView>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </scrollView>

@@ -8,7 +8,5 @@
 
 #import <UIKit/UIKit.h>
 
-@interface detailHistoryViewController :UIViewController<UITableViewDataSource,UITableViewDelegate>
-@property(nonatomic) NSMutableArray *repeatData;
-- (void)createTableviewData;
+@interface detailHistoryViewController :UIViewController
 @end

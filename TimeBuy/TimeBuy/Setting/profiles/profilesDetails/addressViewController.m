@@ -46,6 +46,7 @@
         {
             addressDetailViewController *addressDetailVC = [[addressDetailViewController alloc] init];
             addressDetailVC.cities = cities;
+            addressDetailVC.province=[[self.area objectAtIndex:indexPath.row] objectForKey:@"state"];
             [self.navigationController pushViewController:addressDetailVC animated:YES];
         }
     }

@@ -10,5 +10,5 @@
 
 @interface addressDetailViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic) NSMutableArray *cities;
-
+@property (nonatomic) NSString *province;
 @end

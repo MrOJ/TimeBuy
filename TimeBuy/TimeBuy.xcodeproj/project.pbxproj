@@ -73,6 +73,14 @@
 		182CDBAD1B7617A1005FE865 /* JScrollView+PageControl+AutoScroll.m in Sources */ = {isa = PBXBuildFile; fileRef = 182CDBAC1B7617A1005FE865 /* JScrollView+PageControl+AutoScroll.m */; };
 		182CDBF01B772312005FE865 /* portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 182CDBEF1B772312005FE865 /* portrait.png */; };
 		182CDC2A1B774070005FE865 /* settingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182CDC281B774070005FE865 /* settingViewController.m */; };
+		18672C991BA6DB9E001056A8 /* wujiaoxing.png in Resources */ = {isa = PBXBuildFile; fileRef = 18672C971BA6DB9E001056A8 /* wujiaoxing.png */; };
+		18672C9A1BA6DB9E001056A8 /* xiangqing xiaoxi.png in Resources */ = {isa = PBXBuildFile; fileRef = 18672C981BA6DB9E001056A8 /* xiangqing xiaoxi.png */; };
+		18672CA41BA6DBB5001056A8 /* getDealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18672C9C1BA6DBB5001056A8 /* getDealViewController.m */; };
+		18672CA51BA6DBB5001056A8 /* getDealViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18672C9D1BA6DBB5001056A8 /* getDealViewController.xib */; };
+		18672CA61BA6DBB5001056A8 /* getHelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18672C9F1BA6DBB5001056A8 /* getHelpViewController.m */; };
+		18672CA71BA6DBB5001056A8 /* getHelpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18672CA01BA6DBB5001056A8 /* getHelpViewController.xib */; };
+		18672CA81BA6DBB5001056A8 /* helpDetailTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18672CA21BA6DBB5001056A8 /* helpDetailTableViewCell.m */; };
+		18672CA91BA6DBB5001056A8 /* helpDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18672CA31BA6DBB5001056A8 /* helpDetailTableViewCell.xib */; };
 		18741F1B1B9072290090DEA5 /* logo200x56-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 18741F1A1B9072290090DEA5 /* logo200x56-01.png */; };
 		18741F221B9074DD0090DEA5 /* 导航条320x64.png in Resources */ = {isa = PBXBuildFile; fileRef = 18741F1C1B9074DD0090DEA5 /* 导航条320x64.png */; };
 		18741F231B9074DD0090DEA5 /* 导航条320x64@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 18741F1D1B9074DD0090DEA5 /* 导航条320x64@2x.png */; };
@@ -402,6 +410,17 @@
 		182CDBEF1B772312005FE865 /* portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = portrait.png; sourceTree = "<group>"; };
 		182CDC271B774070005FE865 /* settingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = settingViewController.h; sourceTree = "<group>"; };
 		182CDC281B774070005FE865 /* settingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = settingViewController.m; sourceTree = "<group>"; };
+		18672C971BA6DB9E001056A8 /* wujiaoxing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wujiaoxing.png; sourceTree = "<group>"; };
+		18672C981BA6DB9E001056A8 /* xiangqing xiaoxi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "xiangqing xiaoxi.png"; sourceTree = "<group>"; };
+		18672C9B1BA6DBB5001056A8 /* getDealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getDealViewController.h; sourceTree = "<group>"; };
+		18672C9C1BA6DBB5001056A8 /* getDealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getDealViewController.m; sourceTree = "<group>"; };
+		18672C9D1BA6DBB5001056A8 /* getDealViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = getDealViewController.xib; sourceTree = "<group>"; };
+		18672C9E1BA6DBB5001056A8 /* getHelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getHelpViewController.h; sourceTree = "<group>"; };
+		18672C9F1BA6DBB5001056A8 /* getHelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getHelpViewController.m; sourceTree = "<group>"; };
+		18672CA01BA6DBB5001056A8 /* getHelpViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = getHelpViewController.xib; sourceTree = "<group>"; };
+		18672CA11BA6DBB5001056A8 /* helpDetailTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = helpDetailTableViewCell.h; sourceTree = "<group>"; };
+		18672CA21BA6DBB5001056A8 /* helpDetailTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = helpDetailTableViewCell.m; sourceTree = "<group>"; };
+		18672CA31BA6DBB5001056A8 /* helpDetailTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = helpDetailTableViewCell.xib; sourceTree = "<group>"; };
 		18741F1A1B9072290090DEA5 /* logo200x56-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo200x56-01.png"; sourceTree = "<group>"; };
 		18741F1C1B9074DD0090DEA5 /* 导航条320x64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "导航条320x64.png"; sourceTree = "<group>"; };
 		18741F1D1B9074DD0090DEA5 /* 导航条320x64@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "导航条320x64@2x.png"; sourceTree = "<group>"; };
@@ -498,9 +517,6 @@
 		18AD5F5A1B91AAB200E63C2D /* releaseInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = releaseInfoViewController.xib; sourceTree = "<group>"; };
 		18AD5F6D1B91DF6800E63C2D /* VPImageCropperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VPImageCropperViewController.h; sourceTree = "<group>"; };
 		18AD5F6E1B91DF6800E63C2D /* VPImageCropperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VPImageCropperViewController.m; sourceTree = "<group>"; };
-		18B4CFB31B9D1B8C00CFFB3F /* messageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = messageViewController.h; sourceTree = "<group>"; };
-		18B4CFB41B9D1B8C00CFFB3F /* messageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = messageViewController.m; sourceTree = "<group>"; };
-		18B4CFB51B9D1B8C00CFFB3F /* messageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = messageViewController.xib; sourceTree = "<group>"; };
 		18FD06A51B8DC89F006545AC /* 蔡依林.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "蔡依林.png"; sourceTree = "<group>"; };
 		18FD06A81B8DC89F006545AC /* 高挺.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "高挺.png"; sourceTree = "<group>"; };
 		18FD06A91B8DC89F006545AC /* 个人设置1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "个人设置1.png"; sourceTree = "<group>"; };
@@ -898,6 +914,15 @@
 				18FD073E1B8F2F63006545AC /* forgetPwdViewController.h */,
 				18FD073F1B8F2F63006545AC /* forgetPwdViewController.m */,
 				18FD07401B8F2F63006545AC /* forgetPwdViewController.xib */,
+				18672C9B1BA6DBB5001056A8 /* getDealViewController.h */,
+				18672C9C1BA6DBB5001056A8 /* getDealViewController.m */,
+				18672C9D1BA6DBB5001056A8 /* getDealViewController.xib */,
+				18672C9E1BA6DBB5001056A8 /* getHelpViewController.h */,
+				18672C9F1BA6DBB5001056A8 /* getHelpViewController.m */,
+				18672CA01BA6DBB5001056A8 /* getHelpViewController.xib */,
+				18672CA11BA6DBB5001056A8 /* helpDetailTableViewCell.h */,
+				18672CA21BA6DBB5001056A8 /* helpDetailTableViewCell.m */,
+				18672CA31BA6DBB5001056A8 /* helpDetailTableViewCell.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -917,6 +942,8 @@
 		182CDB351B737F25005FE865 /* home */ = {
 			isa = PBXGroup;
 			children = (
+				18672C971BA6DB9E001056A8 /* wujiaoxing.png */,
+				18672C981BA6DB9E001056A8 /* xiangqing xiaoxi.png */,
 				70AC21441BA3BDEF008ED491 /* 3首页-07.jpg */,
 				70AC21481BA3BEA2008ED491 /* 导航字体.png */,
 				70AC21491BA3BEA2008ED491 /* 导航字体@2x.png */,
@@ -1244,9 +1271,6 @@
 		18AD5F0C1B91494A00E63C2D /* myNotice */ = {
 			isa = PBXGroup;
 			children = (
-				18B4CFB31B9D1B8C00CFFB3F /* messageViewController.h */,
-				18B4CFB41B9D1B8C00CFFB3F /* messageViewController.m */,
-				18B4CFB51B9D1B8C00CFFB3F /* messageViewController.xib */,
 				180E1D361B9B2537002DBF2B /* IBActionSheet */,
 				180E1D301B9B2459002DBF2B /* messageViewController.h */,
 				180E1D311B9B2459002DBF2B /* messageViewController.m */,
@@ -1566,6 +1590,7 @@
 				18FD06E51B8DC89F006545AC /* 周杰伦.png in Resources */,
 				18FD074C1B8F3484006545AC /* 背景@3x.png in Resources */,
 				18741F7D1B9082820090DEA5 /* xianshikongxian.png in Resources */,
+				18672C991BA6DB9E001056A8 /* wujiaoxing.png in Resources */,
 				18FD06FE1B8DCE96006545AC /* showImg4.png in Resources */,
 				180E1CE21B971FF4002DBF2B /* labelsTableViewCell.xib in Resources */,
 				70AC213E1BA3BC87008ED491 /* sheduleTableViewCell.xib in Resources */,
@@ -1606,8 +1631,10 @@
 				18FD07301B8E8F9F006545AC /* qiuzhu.png in Resources */,
 				18741F581B9081D90090DEA5 /* guanyutimebuy@3x.png in Resources */,
 				189DD3891B9472B00083B52C /* b21c8701a18b87d600927607010828381e30fdd2.jpg.png in Resources */,
+				18672CA51BA6DBB5001056A8 /* getDealViewController.xib in Resources */,
 				18FD07081B8DF6F7006545AC /* 附近的人1@3x.png in Resources */,
 				18FD07281B8E8F9F006545AC /* 组局(1)@2x.png in Resources */,
+				18672C9A1BA6DB9E001056A8 /* xiangqing xiaoxi.png in Resources */,
 				70AC21BF1BA3F479008ED491 /* releaseTitleTableViewCell.xib in Resources */,
 				180E1CE61B971FF4002DBF2B /* releaseDetailsTableViewCell.xib in Resources */,
 				18FD06D41B8DC89F006545AC /* 个人设置1.png in Resources */,
@@ -1691,6 +1718,7 @@
 				18FD06D51B8DC89F006545AC /* 个人设置1@2x.png in Resources */,
 				18AD5F2A1B91494A00E63C2D /* addressViewController.xib in Resources */,
 				18FD073C1B8F226B006545AC /* back@2x.png in Resources */,
+				18672CA71BA6DBB5001056A8 /* getHelpViewController.xib in Resources */,
 				18FD06F01B8DC89F006545AC /* QQ1@3x.png in Resources */,
 				18AD5F361B91494A00E63C2D /* telephoneViewController.xib in Resources */,
 				189DD37F1B9472B00083B52C /* dingwei1@3x.png in Resources */,
@@ -1725,6 +1753,7 @@
 				180E1D0F1B99B497002DBF2B /* addImg@3x.png in Resources */,
 				182CDBA31B75C73C005FE865 /* homeDetailsTableViewCell.xib in Resources */,
 				189DD3861B9472B00083B52C /* 7-140223103130591.png in Resources */,
+				18672CA91BA6DBB5001056A8 /* helpDetailTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1766,6 +1795,7 @@
 				1812314C1B8B460A007E06B7 /* loginViewController.m in Sources */,
 				18FD079A1B8F49A6006545AC /* AFURLResponseSerialization.m in Sources */,
 				182CDB9B1B7392DB005FE865 /* UIScrollView+MJExtension.m in Sources */,
+				18672CA81BA6DBB5001056A8 /* helpDetailTableViewCell.m in Sources */,
 				18AD5F2B1B91494A00E63C2D /* modifyAgeViewController.m in Sources */,
 				18FD07791B8F449F006545AC /* MBProgressHUD.m in Sources */,
 				182CDB941B7392DB005FE865 /* MJRefreshBackNormalFooter.m in Sources */,
@@ -1788,6 +1818,7 @@
 				180E1CE51B971FF4002DBF2B /* releaseDetailsTableViewCell.m in Sources */,
 				182CDB011B72286F005FE865 /* main.m in Sources */,
 				18FD07361B8F1E68006545AC /* registerViewController.m in Sources */,
+				18672CA61BA6DBB5001056A8 /* getHelpViewController.m in Sources */,
 				70AC21221BA3B925008ED491 /* UIImage+WebP.m in Sources */,
 				18FD07961B8F49A6006545AC /* AFNetworkReachabilityManager.m in Sources */,
 				70AC213D1BA3BC87008ED491 /* sheduleTableViewCell.m in Sources */,
@@ -1813,6 +1844,7 @@
 				70AC211E1BA3B925008ED491 /* SDWebImagePrefetcher.m in Sources */,
 				70AC21191BA3B925008ED491 /* SDWebImageCompat.m in Sources */,
 				182CDBAD1B7617A1005FE865 /* JScrollView+PageControl+AutoScroll.m in Sources */,
+				18672CA41BA6DBB5001056A8 /* getDealViewController.m in Sources */,
 				70AC21251BA3B925008ED491 /* UIView+WebCacheOperation.m in Sources */,
 				180E1D391B9B2537002DBF2B /* IBActionSheet.m in Sources */,
 				70AC21211BA3B925008ED491 /* UIImage+MultiFormat.m in Sources */,

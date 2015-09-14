@@ -22,7 +22,8 @@
 #import "registerViewController.h"
 #import "forgetPwdViewController.h"
 #import "showDetailsViewController.h"
-
+#import "getDealViewController.h"
+#import "getHelpViewController.h"
 //#import "testViewController.h"
 
 typedef NS_ENUM(NSInteger, HomeTableViewSectionType){

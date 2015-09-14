@@ -250,6 +250,18 @@
     return nil;
 }
 */
+-(void)help
+{
+    getHelpViewController *vc=[[getHelpViewController alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
+
+}
+-(void)deal
+{
+    getDealViewController *vc=[[getDealViewController alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
+    
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -316,6 +328,21 @@
                 UILabel *logoLabel = [[UILabel alloc] initWithFrame:CGRectMake(32 + i * (34 +59), 71, 34, 18)];
                 logoLabel.text = [logoTitle objectAtIndex:i];
                 logoLabel.font = [UIFont systemFontOfSize:17.0f];
+                if(i==0)
+                {
+                    [logoButton addTarget:self
+                                action:@selector(help)
+                      forControlEvents:UIControlEventTouchUpInside
+                     ];
+                }
+                else if(i==2)
+                {
+                    [logoButton addTarget:self
+                                   action:@selector(deal)
+                         forControlEvents:UIControlEventTouchUpInside
+                     ];
+
+                }
                 [catagoryView addSubview:logoLabel];
             }
             

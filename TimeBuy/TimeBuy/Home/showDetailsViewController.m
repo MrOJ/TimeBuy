@@ -24,6 +24,7 @@ typedef NS_ENUM(NSInteger, FieldTag) {
 @property (weak, nonatomic) IBOutlet UILabel *labelname;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollviewcontrol;
 @property (weak, nonatomic) IBOutlet UILabel *textLabel;
+@property (nonatomic)UIView *footview;
 @end
 
 @implementation showDetailsViewController
@@ -40,15 +41,47 @@ typedef NS_ENUM(NSInteger, FieldTag) {
     NSLog(@"数目%lu",(unsigned long)[self.repeatData count]);
     NSLog(@"suc");
 }
-
+-(void) MClick{
+    self.footview.hidden=true;
+    self.textfield.hidden=false;
+    self.tableview.hidden=false;
+    //self.textfield.frame=CGRectMake(14, 2*83+10, 347, 45);
+    [self.textfield setFrame:CGRectMake(14, 2*83+10, 347, 45)];
+}
 - (void)viewDidLoad {
     [self createTableviewData];
+    self.textfield.delegate=self;
     [super viewDidLoad];
     self.tableview.frame=CGRectMake(23, 23, 23, 23);
     self.tableview.delegate=self;
     self.tableview.dataSource=self;
     self.textfield.frame=CGRectMake(14, 585, 347, 45);
-    //设置标题
+    self.textfield.hidden=true;
+    self.tableview.hidden=true;
+    //设置底部
+    self.footview=[[UIView alloc]initWithFrame:CGRectMake(0,570,375,40)];
+    UIButton *favorButton=[[UIButton alloc]initWithFrame:CGRectMake(14, 6, 22, 22)];
+    [favorButton setImage:[UIImage imageNamed:@"wujiaoxing.png"]forState:UIControlStateNormal];
+    [self.footview addSubview:favorButton];
+    UILabel *favorLabel=[[UILabel alloc]initWithFrame:CGRectMake(37, 13, 7, 11)];
+    favorLabel.text=@"7";
+    favorLabel.font=[UIFont fontWithName:@"Heiti TC" size:11];
+    favorLabel.textColor=[UIColor lightGrayColor];
+    [self.footview addSubview:favorLabel];
+    UIButton *MButton=[[UIButton alloc]initWithFrame:CGRectMake(58, 6, 22, 22)];
+    [MButton setImage:[UIImage imageNamed:@"xiangqing xiaoxi.png"]forState:UIControlStateNormal];
+    [self.footview addSubview:MButton];
+    [MButton addTarget:self
+                action:@selector(MClick)
+      forControlEvents:UIControlEventTouchUpInside
+     ];
+    UILabel *MLabel=[[UILabel alloc]initWithFrame:CGRectMake(83, 13, 7, 11)];
+    MLabel.text=@"8";
+    MLabel.font=[UIFont fontWithName:@"Heiti TC" size:11];
+    MLabel.textColor=[UIColor lightGrayColor];
+    [self.footview addSubview:MLabel];
+    [self.view addSubview:self.footview];
+        //设置标题
     self.navigationItem.title=@"详情";
     self.navigationController.navigationBar.titleTextAttributes = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor],NSForegroundColorAttributeName,[UIFont systemFontOfSize:20.0f], NSFontAttributeName, nil];
     self.labelname.text=@"余维泽";
@@ -70,15 +103,40 @@ typedef NS_ENUM(NSInteger, FieldTag) {
     self.textLabel.attributedText = [[NSAttributedString alloc]initWithString:self.textLabel.text attributes:attributes];
     // Do any additional setup after loading the view from its nib.
 }
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    if(textField==self.textfield)
+    {
+        NSLog(@"开始");
+        [self animateTextField: textField up: YES];
+    }
+}
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    [self animateTextField: textField up: NO];
+}
+- (void) animateTextField: (UITextField*) textField up: (BOOL) up
+{
+    const int movementDistance = 200; // tweak as needed
+    const float movementDuration = 0.3f; // tweak as needed
+    int movement = (up ? -movementDistance : movementDistance);
+    [UIView beginAnimations: @"anim" context: nil];
+    [UIView setAnimationBeginsFromCurrentState: YES];
+    [UIView setAnimationDuration: movementDuration];
+    self.view.frame = CGRectOffset(self.view.frame, 0, movement);
+    [UIView commitAnimations];
+}
 -(void)keyboardDidChange{
     NSString *newString = [NSString stringWithFormat:@"%lu%@",(unsigned long)textview.text.length,@"/20"];
-    
-    //NSLog(@"%lu",(unsigned long)textview.text.length);
     label.text=newString;
 }
 -(void)keyboardDidHidden{
     NSLog(@"结束");
-    self.textfield.text=textview.text;
+    //self.textfield.text=textview.text;
+}
+-(void)keyboardDidBegin{
+    textview.text=nil;
 }
 - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text{
     if ([text isEqualToString:@"\n"]) {
@@ -102,11 +160,12 @@ typedef NS_ENUM(NSInteger, FieldTag) {
     textview.text=@"想对Ta说点什么";
     textview.font=[UIFont fontWithName:@"Arial" size:18];
     [textview setTextColor:[UIColor lightGrayColor]];
-    textview.keyboardType=UIKeyboardTypeDefault;
+    //textview.keyboardType=UIKeyboardTypeDefault;
     textview.layer.cornerRadius=12.0;
     textview.delegate=self;
     textview.editable=true;
-    [textview becomeFirstResponder];
+    [[NSNotificationCenter
+      defaultCenter] addObserver:self selector:@selector(keyboardDidBegin)name:UITextViewTextDidBeginEditingNotification object:textview];
     [[NSNotificationCenter
       defaultCenter] addObserver:self selector:@selector(keyboardDidChange)name:UITextViewTextDidChangeNotification object:textview];
     [[NSNotificationCenter

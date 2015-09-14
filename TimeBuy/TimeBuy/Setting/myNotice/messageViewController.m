@@ -77,7 +77,7 @@
     
     if(tableView==self.messageTableview && [self.messageData objectAtIndex:indexPath.row]!=nil)
     {
-        static NSString *CellIdentifier = @"Cell2";
+        NSString *CellIdentifier =[NSString stringWithFormat:@"Cell%ld",indexPath.row];
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
         if (cell == nil) {
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];

@@ -26,7 +26,7 @@
     
     //[self.superview removeFromSuperview];
     [[SlideNavigationController sharedInstance] popToRootAndSwitchToViewController:vc
-                                                             withSlideOutAnimation:NO
+                                                             withSlideOutAnimation:YES
                                                                      andCompletion:nil];
     //UIView *talkview=[[UIView alloc]init];
     //[self pre :showDetailsVC animated:YES];

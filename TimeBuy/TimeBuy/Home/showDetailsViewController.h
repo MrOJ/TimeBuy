@@ -8,7 +8,7 @@
 #import "KLCPopup.h"
 #import <UIKit/UIKit.h>
 
-@interface showDetailsViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,UITextViewDelegate>
+@interface showDetailsViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,UITextViewDelegate,UITextFieldDelegate>
 {
     //NSMutableArray *repeatData;
     NSMutableArray *Sections;

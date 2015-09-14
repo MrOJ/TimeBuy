@@ -29,13 +29,14 @@
 //设置cell的点击和数据的返回
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
     UIViewController *viewCtl = self.navigationController.viewControllers[1];
     [self.navigationController popToViewController:viewCtl animated:YES];
     NSString *celltext=[tableView cellForRowAtIndexPath:indexPath].textLabel.text;
-    NSLog(@"点击detailcell");
+    NSLog(@"%@",[NSString stringWithFormat:@"%@%@",self.province,celltext]);
     [[NSNotificationCenter defaultCenter] postNotificationName:@"passModify"
                                                         object:self
-                                                      userInfo:@{@"type":@"address",@"value":celltext}];
+                                                      userInfo:@{@"type":@"address",@"value":[NSString stringWithFormat:@"%@%@",self.province,celltext]}];
 }
 //设置tableview的cell和数据
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
