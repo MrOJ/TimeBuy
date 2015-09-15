@@ -15,8 +15,6 @@
 		180E1CF11B972AA9002DBF2B /* placeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 180E1CEF1B972AA9002DBF2B /* placeViewController.xib */; };
 		180E1CF51B972AB8002DBF2B /* priceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180E1CF31B972AB8002DBF2B /* priceViewController.m */; };
 		180E1CF61B972AB8002DBF2B /* priceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 180E1CF41B972AB8002DBF2B /* priceViewController.xib */; };
-		180E1CFA1B972AC9002DBF2B /* phoneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 180E1CF81B972AC9002DBF2B /* phoneViewController.m */; };
-		180E1CFB1B972AC9002DBF2B /* phoneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 180E1CF91B972AC9002DBF2B /* phoneViewController.xib */; };
 		180E1D061B982403002DBF2B /* slidePush.m in Sources */ = {isa = PBXBuildFile; fileRef = 180E1D051B982403002DBF2B /* slidePush.m */; };
 		180E1D0D1B99B497002DBF2B /* addImg.png in Resources */ = {isa = PBXBuildFile; fileRef = 180E1D0A1B99B497002DBF2B /* addImg.png */; };
 		180E1D0E1B99B497002DBF2B /* addImg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 180E1D0B1B99B497002DBF2B /* addImg@2x.png */; };
@@ -291,6 +289,7 @@
 		70AC21CB1BA42563008ED491 /* priceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70AC21C91BA42563008ED491 /* priceTableViewCell.xib */; };
 		70AC21CF1BA42575008ED491 /* selectTimeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 70AC21CD1BA42575008ED491 /* selectTimeTableViewCell.m */; };
 		70AC21D01BA42575008ED491 /* selectTimeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70AC21CE1BA42575008ED491 /* selectTimeTableViewCell.xib */; };
+		70E1A21F1BA830A600CA0A31 /* ZJSwitch.m in Sources */ = {isa = PBXBuildFile; fileRef = 70E1A21E1BA830A600CA0A31 /* ZJSwitch.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -316,9 +315,6 @@
 		180E1CF21B972AB8002DBF2B /* priceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = priceViewController.h; sourceTree = "<group>"; };
 		180E1CF31B972AB8002DBF2B /* priceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = priceViewController.m; sourceTree = "<group>"; };
 		180E1CF41B972AB8002DBF2B /* priceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = priceViewController.xib; sourceTree = "<group>"; };
-		180E1CF71B972AC9002DBF2B /* phoneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = phoneViewController.h; sourceTree = "<group>"; };
-		180E1CF81B972AC9002DBF2B /* phoneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = phoneViewController.m; sourceTree = "<group>"; };
-		180E1CF91B972AC9002DBF2B /* phoneViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = phoneViewController.xib; sourceTree = "<group>"; };
 		180E1D041B982403002DBF2B /* slidePush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = slidePush.h; sourceTree = "<group>"; };
 		180E1D051B982403002DBF2B /* slidePush.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = slidePush.m; sourceTree = "<group>"; };
 		180E1D0A1B99B497002DBF2B /* addImg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addImg.png; sourceTree = "<group>"; };
@@ -702,6 +698,8 @@
 		70AC21CC1BA42575008ED491 /* selectTimeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = selectTimeTableViewCell.h; sourceTree = "<group>"; };
 		70AC21CD1BA42575008ED491 /* selectTimeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = selectTimeTableViewCell.m; sourceTree = "<group>"; };
 		70AC21CE1BA42575008ED491 /* selectTimeTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = selectTimeTableViewCell.xib; sourceTree = "<group>"; };
+		70E1A21D1BA830A600CA0A31 /* ZJSwitch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZJSwitch.h; sourceTree = "<group>"; };
+		70E1A21E1BA830A600CA0A31 /* ZJSwitch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZJSwitch.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -735,6 +733,7 @@
 		180E1CCD1B971FF4002DBF2B /* tableViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				70E1A21C1BA830A600CA0A31 /* ZJSwitch */,
 				70AC21BB1BA3F479008ED491 /* releaseTitleTableViewCell.h */,
 				70AC21BC1BA3F479008ED491 /* releaseTitleTableViewCell.m */,
 				70AC21BD1BA3F479008ED491 /* releaseTitleTableViewCell.xib */,
@@ -766,9 +765,6 @@
 				180E1CF21B972AB8002DBF2B /* priceViewController.h */,
 				180E1CF31B972AB8002DBF2B /* priceViewController.m */,
 				180E1CF41B972AB8002DBF2B /* priceViewController.xib */,
-				180E1CF71B972AC9002DBF2B /* phoneViewController.h */,
-				180E1CF81B972AC9002DBF2B /* phoneViewController.m */,
-				180E1CF91B972AC9002DBF2B /* phoneViewController.xib */,
 				18672CAA1BA708D8001056A8 /* selectTimeViewController.h */,
 				18672CAB1BA708D8001056A8 /* selectTimeViewController.m */,
 				18672CAC1BA708D8001056A8 /* selectTimeViewController.xib */,
@@ -1512,6 +1508,15 @@
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
+		70E1A21C1BA830A600CA0A31 /* ZJSwitch */ = {
+			isa = PBXGroup;
+			children = (
+				70E1A21D1BA830A600CA0A31 /* ZJSwitch.h */,
+				70E1A21E1BA830A600CA0A31 /* ZJSwitch.m */,
+			);
+			path = ZJSwitch;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1656,7 +1661,6 @@
 				70AC215C1BA3C565008ED491 /* changeTelephoneViewController.xib in Resources */,
 				18FD06FD1B8DCE96006545AC /* showImg3.png in Resources */,
 				18741F5E1B9081D90090DEA5 /* meiritixing@3x.png in Resources */,
-				180E1CFB1B972AC9002DBF2B /* phoneViewController.xib in Resources */,
 				70AC21451BA3BDEF008ED491 /* 3首页-07.jpg in Resources */,
 				18741F831B9082820090DEA5 /* zhifufangshi.png in Resources */,
 				18FD07251B8E8F9F006545AC /* 女@2x.png in Resources */,
@@ -1868,9 +1872,9 @@
 				18AD5F6F1B91DF6800E63C2D /* VPImageCropperViewController.m in Sources */,
 				18AD5F331B91494A00E63C2D /* signatureViewController.m in Sources */,
 				18FD07951B8F49A6006545AC /* AFHTTPSessionManager.m in Sources */,
+				70E1A21F1BA830A600CA0A31 /* ZJSwitch.m in Sources */,
 				18FFE5BC1B7F49AE004FBC82 /* SlideNavigationContorllerAnimatorSlide.m in Sources */,
 				18FD079B1B8F49A6006545AC /* AFURLSessionManager.m in Sources */,
-				180E1CFA1B972AC9002DBF2B /* phoneViewController.m in Sources */,
 				18AD5F311B91494A00E63C2D /* occupationViewController.m in Sources */,
 				70AC215B1BA3C565008ED491 /* changeTelephoneViewController.m in Sources */,
 				70AC21511BA3C549008ED491 /* TalkViewController.m in Sources */,

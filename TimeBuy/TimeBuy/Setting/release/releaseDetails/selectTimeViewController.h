@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface selectTimeViewController : UIViewController
+@interface selectTimeViewController : UIViewController<UITextFieldDelegate>
+{
+    NSInteger flag;
+}
+
+@property (strong, nonatomic) IBOutlet UITextField *startTimeTextField;
+@property (strong, nonatomic) IBOutlet UITextField *endTimeTextField;
+@property (strong, nonatomic) UIDatePicker *datePicker;
 
 @end

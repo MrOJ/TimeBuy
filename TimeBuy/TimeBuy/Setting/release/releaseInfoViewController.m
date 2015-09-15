@@ -49,6 +49,7 @@
     [shadowView addGestureRecognizer:tapGesture];
     
     releaseTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    releaseTableView.tag = 0;
     
     datePicker = [[UIDatePicker alloc] initWithFrame:CGRectMake(0, [UIScreen mainScreen].bounds.size.height - 275, [UIScreen mainScreen].bounds.size.width, 275)];
     datePicker.datePickerMode = UIDatePickerModeDateAndTime;
@@ -161,7 +162,12 @@
         priceTableViewCell *cell= (priceTableViewCell *)[releaseTableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:1]];
         cell.priceLabel.text = [str stringByAppendingString:getValue];
 
-    } else if ([getType isEqualToString:@"phone"]) {
+    } else if ([getType isEqualToString:@"time"]) {
+        
+        NSString *getValue2 = [getDic objectForKey:@"value2"];
+        
+        startTimeStr = getValue;
+        finishTimeStr = getValue2;
         
         phoneStr = getValue;
         
@@ -283,6 +289,8 @@
                     cell = [[[NSBundle mainBundle] loadNibNamed:@"changePriceTableViewCell" owner:self options:nil] lastObject];
                 }
                 
+                cell.myTableView = releaseTableView;
+                
                 return cell;
                 
             } else if (indexPath.row == 1) {
@@ -345,11 +353,20 @@
     switch (mySection) {
         case 1:
         {
-            if (myRow == 1) {
-                priceViewController *priceVC = [[priceViewController alloc] init];
-                priceVC.price = priceStr;
+            if (myRow == 0) {
                 
-                [self.navigationController pushViewController:priceVC animated:YES];
+                //NSLog(@"get %d",changePriceSwitch.on);
+                
+            } else if (myRow == 1) {
+                
+                UISwitch *changePriceSwitch = (UISwitch *)[releaseTableView viewWithTag:3];
+                if (changePriceSwitch.on == 0) {
+                    priceViewController *priceVC = [[priceViewController alloc] init];
+                    priceVC.price = priceStr;
+                    
+                    [self.navigationController pushViewController:priceVC animated:YES];
+                }
+                
             } else if (myRow == 2) {
                 selectTimeViewController *selectTimeVC = [[selectTimeViewController alloc] init];
                 

@@ -18,39 +18,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="45"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="出个价" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MHl-8r-8nw">
-                        <rect key="frame" x="44" y="13" width="51" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="不谈钱" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ekj-dL-IAf">
-                        <rect key="frame" x="225" y="13" width="51" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="k5E-Om-Wp6">
-                        <rect key="frame" x="101" y="8" width="118" height="31"/>
-                    </slider>
                 </subviews>
                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                 <constraints>
                     <constraint firstAttribute="bottomMargin" secondItem="Z3f-Ch-DaF" secondAttribute="bottom" constant="-6" id="59S-94-ObS"/>
-                    <constraint firstItem="k5E-Om-Wp6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="5ue-mY-Z3u"/>
-                    <constraint firstItem="MHl-8r-8nw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="36" id="9xm-1G-ZX7"/>
                     <constraint firstItem="Z3f-Ch-DaF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Hc8-lG-C19"/>
-                    <constraint firstItem="k5E-Om-Wp6" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="J2v-Vj-PD4"/>
-                    <constraint firstItem="Z3f-Ch-DaF" firstAttribute="centerX" secondItem="k5E-Om-Wp6" secondAttribute="centerX" id="JOd-cJ-Gbh"/>
-                    <constraint firstItem="k5E-Om-Wp6" firstAttribute="leading" secondItem="MHl-8r-8nw" secondAttribute="trailing" constant="8" symbolic="YES" id="Kj9-f8-MZE"/>
-                    <constraint firstItem="ekj-dL-IAf" firstAttribute="leading" secondItem="k5E-Om-Wp6" secondAttribute="trailing" constant="8" symbolic="YES" id="NDC-f7-6ms"/>
+                    <constraint firstAttribute="trailing" secondItem="Z3f-Ch-DaF" secondAttribute="trailing" id="Rpa-39-Ofp"/>
                     <constraint firstItem="Z3f-Ch-DaF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="TYt-Bc-byo"/>
-                    <constraint firstItem="ekj-dL-IAf" firstAttribute="baseline" secondItem="MHl-8r-8nw" secondAttribute="baseline" id="b53-4q-Oy7"/>
-                    <constraint firstItem="MHl-8r-8nw" firstAttribute="centerY" secondItem="k5E-Om-Wp6" secondAttribute="centerY" id="hat-gI-GfC"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="priceSlider" destination="k5E-Om-Wp6" id="qMd-a3-MOL"/>
+                <outlet property="backgroudView" destination="Z3f-Ch-DaF" id="YVK-cv-ab4"/>
             </connections>
         </tableViewCell>
     </objects>
