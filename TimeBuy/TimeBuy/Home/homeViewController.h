@@ -10,6 +10,9 @@
 
 #import "MJRefresh.h"
 #import "JScrollView+PageControl+AutoScroll.h"
+#import "AFNetworking.h"
+#import "MBProgressHUD.h"
+
 #import "homeDetailsTableViewCell.h"
 #import "settingViewController.h"
 #import "nearbyViewController.h"
@@ -38,9 +41,12 @@ typedef NS_ENUM(NSInteger, HomeTableViewRowType){
     HomeTableViewRowTypeSelects
 };
 
-@interface homeViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate,JScrollViewViewDelegate,SlideNavigationControllerDelegate>
+@interface homeViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,UIScrollViewDelegate,JScrollViewViewDelegate,SlideNavigationControllerDelegate,MBProgressHUDDelegate>
 {
     NSString *getState;
+    
+    MBProgressHUD *HUD;
+    MBProgressHUD *HUDinSuccess;
 }
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 

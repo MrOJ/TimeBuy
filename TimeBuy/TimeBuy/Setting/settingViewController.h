@@ -17,7 +17,7 @@
 #import "messageViewController.h"
 #import "mySheduleViewController.h"
 
-@interface settingViewController : UIViewController <UIAlertViewDelegate>
+@interface settingViewController : UIViewController <UIAlertViewDelegate,SlideNavigationControllerDelegate>
 {
     UIView *shadowView;
 }

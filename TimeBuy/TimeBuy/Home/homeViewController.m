@@ -155,6 +155,7 @@
 
 - (BOOL)slideNavigationControllerShouldDisplayLeftMenu
 {
+    //NSLog(@"left!!");
     return YES;
 }
 
@@ -168,6 +169,7 @@
 - (void)loadNewData
 {
     NSLog(@"下拉");
+    
     //结束刷新
     [_tableView.header endRefreshing];
 }
@@ -313,8 +315,8 @@
             if (cell == nil) {
                 
                 cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellTableIdentifier];
+                cell.selectionStyle = UITableViewCellSelectionStyleNone;
             }
-            
             cell.backgroundColor = [UIColor groupTableViewBackgroundColor];
             
             UIView *catagoryView = [[UIView alloc] initWithFrame:CGRectMake(0, 10, self.view.bounds.size.width, 102)];
@@ -486,6 +488,122 @@
             break;
     }
 }
+
+#pragma mark - load new news
+- (void)loadNews
+{
+
+    HUD = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    HUD.delegate = self;
+    
+    //上传至服务器
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
+    manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    [manager.requestSerializer setValue:@"d6089681f79c7627bbac829307e041a7" forHTTPHeaderField:@"x-timebuy-sid"];
+    [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    [manager.requestSerializer setValue:@"application/json; charset=UTF-8" forHTTPHeaderField:@"Content-Type"];
+    
+    //2.设置登录参数
+    NSDictionary *dict = @{ @"userId":[userConfiguration getStringValueForConfigurationKey:@"userId"]};
+    
+    //3.请求
+    [manager GET:@"http://192.168.8.102:8080/timebuy/login/user" parameters:dict success: ^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"GET --> %@", responseObject); //自动返回主线程
+        [HUD hide:YES];
+        
+        NSString *getStatus = [NSString stringWithFormat:@"%@",[responseObject objectForKey:@"success"]];
+        NSString *getCode = [NSString stringWithFormat:@"%@",[responseObject objectForKey:@"code"]];
+        if ([getStatus isEqualToString:@"1"] && [getCode isEqualToString:@"1000"]) {
+            
+            //[self dismissViewControllerAnimated:YES completion:nil];
+            
+            HUDinSuccess = [[MBProgressHUD alloc] initWithView:self.view];
+            [self.view addSubview:HUDinSuccess];
+            HUDinSuccess.customView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"37x-Checkmark.png"]];
+            HUDinSuccess.mode = MBProgressHUDModeCustomView;
+            HUDinSuccess.delegate = self;
+            HUDinSuccess.labelText = @"登录成功";
+            [HUDinSuccess show:YES];
+            [HUDinSuccess hide:YES afterDelay:1];
+            
+            /*
+            // 将得到的数据存在本地
+            getData = [responseObject objectForKey:@"data"];
+            
+            [self storeInUserDefault:@"headIcon"];
+            [self storeInUserDefault:@"userId"];
+            [self storeInUserDefault:@"nickName"];
+            [self storeInUserDefault:@"sex"];
+            [self storeInUserDefault:@"age"];
+            [self storeInUserDefault:@"profession"];
+            [self storeInUserDefault:@"address"];
+            [self storeInUserDefault:@"phone"];
+            [self storeInUserDefault:@"birthDay"];
+            [self storeInUserDefault:@"signature"];
+            
+ 
+            
+            //利用SDWenImage下载图片
+            NSString *headIdStr           [[NSNotificationCenter defaultCenter] postNotificationName:@"passState"
+                                                                object:self
+                                                              userInfo:@{@"state":@"0"}];
+            
+            //设置下载后的头像
+            //[userConfiguration setDataValueForConfigurationKey:@"portrait" withValue:UIImagePNGRepresentation([UIImage imageNamed:@"portrait.png"])]; = [userConfiguration getStringValueForConfigurationKey:@"headIcon"];
+            NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://192.168.8.102:8080/timebuy/upload/%@",headIdStr]];
+            SDWebImageManager *manager = [SDWebImageManager sharedManager];
+            [manager downloadImageWithURL:url options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+                // progression tracking code
+            } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
+                if (error) {
+                    NSLog(@"头像下载出错error %@",error);
+                } else {
+                    if (image) {
+                        NSLog(@"头像下载成功！");
+                        //将图片数据存入NSUserDefaults中
+                        [userConfiguration setDataValueForConfigurationKey:@"portrait" withValue:UIImagePNGRepresentation(image)];
+                        
+                    }
+                }
+            }];
+            */
+            
+            
+        } else if ([getStatus isEqualToString:@"0"] && [getCode isEqualToString:@"2003"]) {
+            [self showErrorWithTitle:@"登录失败" WithMessage:@"用户名不存在"];
+        } else if ([getStatus isEqualToString:@"0"] && [getCode isEqualToString:@"2004"]) {
+            [self showErrorWithTitle:@"登录失败" WithMessage:@"密码错误"];
+        } else {
+            [self showErrorWithTitle:@"登录失败" WithMessage:@"系统错误"];
+        }
+        
+    } failure: ^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"%@", error);
+        [HUD hide:YES];
+        [self showErrorWithTitle:@"登录失败" WithMessage:@"网络连接失败，请检查网络设置"];
+    }];
+    
+    
+}
+
+#pragma mark - MBProgressHUDDelegate
+- (void)hudWasHidden:(MBProgressHUD *)hud {
+    // Remove HUD from screen when the HUD was hidded
+    [hud removeFromSuperview];
+    if ([hud isEqual:HUDinSuccess]) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
+    //[HUDinSuccess removeFromSuperview];
+    
+}
+
+-(void)showErrorWithTitle:(NSString *)titile WithMessage:(NSString *)msg
+{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:titile message:msg delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+    [alert show];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

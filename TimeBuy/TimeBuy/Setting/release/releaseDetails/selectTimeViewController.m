@@ -44,7 +44,6 @@
                                                         object:self
                                                       userInfo:@{@"type":@"time",@"value":startTimeTextField.text,
                                                                  @"value2":endTimeTextField.text}];
-    
 }
 
 - (void)dateChanged:(id)sender {
