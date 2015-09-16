@@ -13,6 +13,7 @@
 @synthesize titleTextField;
 - (void)awakeFromNib {
     // Initialization code
+    titleTextField.tag = 1;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

@@ -19,6 +19,7 @@
 - (void)awakeFromNib {
     // Initialization code
     self.selectionStyle = UITableViewCellSelectionStyleNone;
+    detailsTextView.tag = 2;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

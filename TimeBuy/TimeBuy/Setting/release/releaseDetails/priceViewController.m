@@ -32,11 +32,18 @@
 }
 
 - (void)save:(id)sender {
-    [self.navigationController popViewControllerAnimated:YES];
     
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"passModifyInRelease"
-                                                        object:self
-                                                      userInfo:@{@"type":@"price",@"value":priceTextField.text}];
+    //[self checkNum:priceTextField.text];
+    if ([self checkNum:priceTextField.text]) {
+        [self.navigationController popViewControllerAnimated:YES];
+        
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"passModifyInRelease"
+                                                            object:self
+                                                          userInfo:@{@"type":@"price",@"value":priceTextField.text}];
+    } else {
+        [self showErrorWithTitle:@"修改失败" WithMessage:@"请输入正确的价格"];
+    }
+    
 }
 
 #pragma mark - TextField delegate
@@ -64,6 +71,27 @@
     if (![priceTextField isExclusiveTouch]) {
         [priceTextField resignFirstResponder];
     }
+}
+
+//判断数字正确
+- (BOOL)checkNum:(NSString *)str
+{
+    NSString *regex =  @"\\d{1,10}(?:\\.\\d{1,2})?";
+    NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
+    BOOL isMatch = [pred evaluateWithObject:str];
+    if (!isMatch) {
+        //NSLog(@"价格只能输入数字");
+        return NO;
+    }
+    //NSLog(@"数字正确！");
+    return YES;
+    
+}
+
+-(void)showErrorWithTitle:(NSString *)titile WithMessage:(NSString *)msg
+{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:titile message:msg delegate:self cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
+    [alert show];
 }
 
 - (void)didReceiveMemoryWarning {
