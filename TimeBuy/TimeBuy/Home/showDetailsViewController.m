@@ -18,7 +18,6 @@ typedef NS_ENUM(NSInteger, FieldTag) {
     FieldTagTimedDismiss,
 };
 @interface showDetailsViewController ()
-@property (weak, nonatomic) IBOutlet UITextField *textfield;
 @property (weak, nonatomic) IBOutlet UITableView *tableview;
 @property (weak, nonatomic) IBOutlet UIImageView *head;
 @property (weak, nonatomic) IBOutlet UILabel *labelname;
@@ -41,22 +40,35 @@ typedef NS_ENUM(NSInteger, FieldTag) {
     NSLog(@"数目%lu",(unsigned long)[self.repeatData count]);
     NSLog(@"suc");
 }
+//分享按钮
+-(void)fenXiang{
+    
+}
+//留言按钮
 -(void) MClick{
     self.footview.hidden=true;
-    self.textfield.hidden=false;
+    //清楚footview中原有的控件缓存
+    /*NSArray *subviews = [[NSArray alloc] initWithArray:self.footview.subviews];
+    for (UIView *subview in subviews) {
+        [subview removeFromSuperview];
+    }*/
+    UITextField *repeat=[[UITextField alloc]initWithFrame:CGRectMake(14, 583+83*self.repeatData.count+10, 347, 45)];
+    repeat.delegate=self;
+    repeat.placeholder=@"说点什么吧";
+    repeat.textColor=[UIColor colorWithRed:170.f/255 green:170.f/255  blue:170.f/255  alpha:100];
+    repeat.backgroundColor=[UIColor colorWithRed:246.f/255 green:246.f/255  blue:246.f/255  alpha:100];
+    [self.scrollviewcontrol addSubview: repeat];
     self.tableview.hidden=false;
-    //self.textfield.frame=CGRectMake(14, 2*83+10, 347, 45);
-    [self.textfield setFrame:CGRectMake(14, 2*83+10, 347, 45)];
+    self.scrollviewcontrol.delegate=self;
+    [self.scrollviewcontrol setContentOffset:CGPointMake(0,283+83*self.repeatData.count) animated:NO];
+    [repeat becomeFirstResponder];
 }
 - (void)viewDidLoad {
     [self createTableviewData];
-    self.textfield.delegate=self;
     [super viewDidLoad];
     self.tableview.frame=CGRectMake(23, 23, 23, 23);
     self.tableview.delegate=self;
     self.tableview.dataSource=self;
-    self.textfield.frame=CGRectMake(14, 585, 347, 45);
-    self.textfield.hidden=true;
     self.tableview.hidden=true;
     //设置底部
     self.footview=[[UIView alloc]initWithFrame:CGRectMake(0,570,375,40)];
@@ -79,7 +91,19 @@ typedef NS_ENUM(NSInteger, FieldTag) {
     MLabel.text=@"8";
     MLabel.font=[UIFont fontWithName:@"Heiti TC" size:11];
     MLabel.textColor=[UIColor lightGrayColor];
-    [self.footview addSubview:MLabel];
+    UIButton *fenxButton=[[UIButton alloc]initWithFrame:CGRectMake(102, 6, 22, 22)];
+    [fenxButton setImage:[UIImage imageNamed:@"fengxiang.png"]forState:UIControlStateNormal];
+    [self.footview addSubview:fenxButton];
+    [fenxButton addTarget:self
+                action:@selector(fenXiang)
+      forControlEvents:UIControlEventTouchUpInside
+     ];
+    UILabel *fengxLabel=[[UILabel alloc]initWithFrame:CGRectMake(129, 13, 7, 11)];
+    fengxLabel.text=@"7";
+    fengxLabel.font=[UIFont fontWithName:@"Heiti TC" size:11];
+    fengxLabel.textColor=[UIColor lightGrayColor];
+    [self.footview addSubview:fenxButton];
+    [self.footview addSubview:fengxLabel];
     [self.view addSubview:self.footview];
         //设置标题
     self.navigationItem.title=@"详情";
@@ -90,8 +114,7 @@ typedef NS_ENUM(NSInteger, FieldTag) {
     self.head.layer.cornerRadius=20;
     //设置滚动
     self.automaticallyAdjustsScrollViewInsets = NO;
-    
-    self.scrollviewcontrol.contentSize=CGSizeMake(375,800);
+    self.scrollviewcontrol.contentSize=CGSizeMake(375,583+83*self.repeatData.count+70 );
     NSLog(@"suc3");
     //textlabel行距设置
     self.textLabel.numberOfLines=2;
@@ -103,30 +126,30 @@ typedef NS_ENUM(NSInteger, FieldTag) {
     self.textLabel.attributedText = [[NSAttributedString alloc]initWithString:self.textLabel.text attributes:attributes];
     // Do any additional setup after loading the view from its nib.
 }
-
-- (void)textFieldDidBeginEditing:(UITextField *)textField
+//点击textfield上移
+/*- (void)textFieldDidBeginEditing:(UITextField *)textField
 {
-    if(textField==self.textfield)
-    {
-        NSLog(@"开始");
-        [self animateTextField: textField up: YES];
+    NSLog(@"开始");
+    CGRect frame = textField.frame;
+    //在这里我多加了62，（加上了输入中文选择文字的view高度）这个依据自己需求而定
+    int offset = (frame.origin.y+62)-(self.scrollviewcontrol.frame.size.height-216.0);//键盘高度216
+    [UIView beginAnimations:@"ResizeForKeyboard" context:nil];
+    [UIView setAnimationDuration:0.30f];//动画持续时间
+    NSLog(@"offset= %d",offset);
+    if (offset>0) {
+        //将视图的Y坐标向上移动offset个单位，以使下面腾出地方用于软键盘的显示
+        self.scrollviewcontrol.frame = CGRectMake(0.0f, -700, self.view.frame.size.width, self.view.frame.size.height);
+        [UIView commitAnimations];
     }
-}
-- (void)textFieldDidEndEditing:(UITextField *)textField
+}*/
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
-    [self animateTextField: textField up: NO];
+    [textField resignFirstResponder];
+    self.footview.hidden=false;
+    return true;
 }
-- (void) animateTextField: (UITextField*) textField up: (BOOL) up
-{
-    const int movementDistance = 200; // tweak as needed
-    const float movementDuration = 0.3f; // tweak as needed
-    int movement = (up ? -movementDistance : movementDistance);
-    [UIView beginAnimations: @"anim" context: nil];
-    [UIView setAnimationBeginsFromCurrentState: YES];
-    [UIView setAnimationDuration: movementDuration];
-    self.view.frame = CGRectOffset(self.view.frame, 0, movement);
-    [UIView commitAnimations];
-}
+
+//弹出框计数变动
 -(void)keyboardDidChange{
     NSString *newString = [NSString stringWithFormat:@"%lu%@",(unsigned long)textview.text.length,@"/20"];
     label.text=newString;
@@ -138,6 +161,7 @@ typedef NS_ENUM(NSInteger, FieldTag) {
 -(void)keyboardDidBegin{
     textview.text=nil;
 }
+//弹框结束输入
 - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text{
     if ([text isEqualToString:@"\n"]) {
         [textView resignFirstResponder];

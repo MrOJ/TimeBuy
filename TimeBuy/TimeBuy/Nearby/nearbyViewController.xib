@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="nearbyViewController">
@@ -16,11 +16,11 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="65" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="E6z-so-pfw">
-                    <rect key="frame" x="0.0" y="45" width="375" height="622"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="65" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="E6z-so-pfw">
+                    <rect key="frame" x="0.0" y="45" width="375" height="559"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
-                <searchBar contentMode="redraw" placeholder="搜索" translatesAutoresizingMaskIntoConstraints="NO" id="Lfp-3u-89y">
+                <searchBar contentMode="redraw" fixedFrame="YES" placeholder="搜索" translatesAutoresizingMaskIntoConstraints="NO" id="Lfp-3u-89y">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                     <textInputTraits key="textInputTraits"/>
                     <connections>
@@ -29,15 +29,6 @@
                 </searchBar>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-            <constraints>
-                <constraint firstItem="Lfp-3u-89y" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="8ux-Oa-ZWw"/>
-                <constraint firstItem="Lfp-3u-89y" firstAttribute="trailing" secondItem="E6z-so-pfw" secondAttribute="trailing" id="Bnv-Wz-tRK"/>
-                <constraint firstAttribute="trailing" secondItem="Lfp-3u-89y" secondAttribute="trailing" id="O94-Td-Kb2"/>
-                <constraint firstAttribute="bottom" secondItem="E6z-so-pfw" secondAttribute="bottom" id="Vhr-bs-RaE"/>
-                <constraint firstItem="Lfp-3u-89y" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="epE-nR-qhw"/>
-                <constraint firstItem="E6z-so-pfw" firstAttribute="top" secondItem="Lfp-3u-89y" secondAttribute="bottom" constant="1" id="tUe-ee-yMJ"/>
-                <constraint firstItem="Lfp-3u-89y" firstAttribute="leading" secondItem="E6z-so-pfw" secondAttribute="leading" id="wLp-6D-oM7"/>
-            </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
         </view>
     </objects>

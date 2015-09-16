@@ -19,10 +19,6 @@
 - (void)awakeFromNib {
     // Initialization code
     self.selectionStyle = UITableViewCellSelectionStyleNone;
-    
-    defaultStr = @"内容、要求，注明确切地点";
-    detailsTextView.tag = 2;
-    detailsTextView.delegate = self;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -44,12 +40,7 @@
 #pragma mark - TextView delegate
 - (void)textViewDidBeginEditing:(UITextView *)textView
 {
-    if ([textView.text isEqualToString:@""]) {
-        textView.text = defaultStr;
-    } else {
-        textView.text = @"";
-    }
-    
+
 }
 
 // 点击编辑区以外的地方 取消键盘

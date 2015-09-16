@@ -24,6 +24,7 @@
 #import "showDetailsViewController.h"
 #import "getDealViewController.h"
 #import "getHelpViewController.h"
+#import "zuJuViewController.h"
 //#import "testViewController.h"
 
 typedef NS_ENUM(NSInteger, HomeTableViewSectionType){

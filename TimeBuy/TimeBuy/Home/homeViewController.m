@@ -106,6 +106,9 @@
     //NSLog(@"witdth = %f;height = %f",self.view.bounds.size.width,self.view.bounds.size.height);
     [SlideNavigationController sharedInstance].enableShadow = NO;
     
+    float offset = self.view.bounds.size.width;
+    [SlideNavigationController sharedInstance].portraitSlideOffset = offset - 249.0f;
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(recState:) name:@"passState" object:nil];
     
 }
@@ -259,7 +262,11 @@
     [self.navigationController pushViewController:vc animated:YES];
     
 }
-
+-(void)zuju
+{
+    zuJuViewController *vc=[[zuJuViewController alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSUInteger row=[indexPath row];
@@ -306,7 +313,6 @@
             if (cell == nil) {
                 
                 cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellTableIdentifier];
-                cell.selectionStyle = UITableViewCellSelectionStyleNone;
             }
             
             cell.backgroundColor = [UIColor groupTableViewBackgroundColor];
@@ -331,6 +337,13 @@
                     [logoButton addTarget:self
                                 action:@selector(help)
                       forControlEvents:UIControlEventTouchUpInside
+                     ];
+                }
+                else if(i==1)
+                {
+                    [logoButton addTarget:self
+                                   action:@selector(zuju)
+                         forControlEvents:UIControlEventTouchUpInside
                      ];
                 }
                 else if(i==2)

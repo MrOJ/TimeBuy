@@ -200,7 +200,7 @@
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
     [manager.requestSerializer setValue:@"d6089681f79c7627bbac829307e041a7" forHTTPHeaderField:@"x-timebuy-sid"];
     [manager.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
-    [manager.requestSerializer setValue:@"application/json; charset=utf-8" forHTTPHeaderField:@"Content-Type"];
+    [manager.requestSerializer setValue:@"application/json; charset=UTF-8" forHTTPHeaderField:@"Content-Type"];
     
     //2.设置登录参数
     NSDictionary *dict = @{ @"phone":phoneTextField.text,
@@ -306,7 +306,7 @@
     NSString *getStr = @"";
     if ([[getData valueForKey:target] isKindOfClass:[NSString class]]) {
         NSString *str = [NSString stringWithFormat:@"%@",[getData valueForKey:target]];
-        getStr = [NSString stringWithString:[str stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+        getStr = [NSString stringWithString:[str stringByReplacingPercentEscapesUsingEncoding: NSUTF8StringEncoding]];
         
     } else {
         getStr = [(NSNumber *)[getData valueForKey:target] stringValue];

@@ -17,7 +17,6 @@
 
 #import "placeViewController.h"
 #import "priceViewController.h"
-#import "selectTimeViewController.h"
 
 #import "AFNetworking.h"
 #import "MBProgressHUD.h"
@@ -45,9 +44,6 @@
     NSInteger mySection;
     
     UIButton *sendButton;
-    
-    UITextField *titleTextField;
-    UITextView *detailsTextView;
 }
 
 @property (strong, nonatomic) IBOutlet UITableView *releaseTableView;

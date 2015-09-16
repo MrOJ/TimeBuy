@@ -11,7 +11,6 @@
                 <outlet property="scrollviewcontrol" destination="OLH-yV-KH2" id="Bgf-lN-x7F"/>
                 <outlet property="tableview" destination="nAm-o9-AIg" id="Chl-bY-Hm5"/>
                 <outlet property="textLabel" destination="gES-Mr-7CG" id="HPb-R5-fez"/>
-                <outlet property="textfield" destination="OE6-Ne-MSc" id="CPD-Hz-Nq7"/>
                 <outlet property="view" destination="fQ8-Da-Jvw" id="H8d-gV-obT"/>
             </connections>
         </placeholder>
@@ -150,13 +149,6 @@
                                 <outlet property="delegate" destination="-1" id="vu3-SY-3RC"/>
                             </connections>
                         </tableView>
-                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="说点什么吧" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OE6-Ne-MSc">
-                            <rect key="frame" x="14" y="622" width="347" height="45"/>
-                            <color key="backgroundColor" red="0.96470588235294119" green="0.96470588235294119" blue="0.96470588235294119" alpha="1" colorSpace="calibratedRGB"/>
-                            <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                            <textInputTraits key="textInputTraits"/>
-                        </textField>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>

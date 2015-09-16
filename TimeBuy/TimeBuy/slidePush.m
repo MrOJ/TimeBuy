@@ -13,7 +13,6 @@
 - (void)perform {
     
     UIViewController *desVC = (UIViewController *)self.destinationViewController;
-    
     [[SlideNavigationController sharedInstance] popToRootAndSwitchToViewController:desVC
                                                              withSlideOutAnimation:NO
                                                                      andCompletion:nil];

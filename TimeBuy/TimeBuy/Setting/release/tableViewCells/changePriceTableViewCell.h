@@ -7,14 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ZJSwitch.h"
-#import "priceTableViewCell.h"
 
 @interface changePriceTableViewCell : UITableViewCell
 
-
-@property (retain, nonatomic) IBOutlet UIView *backgroudView;
-@property (retain, nonatomic) ZJSwitch *changePriceSwitch;
-@property (retain, nonatomic) UITableView *myTableView;
-
+@property (weak, nonatomic) IBOutlet UISlider *priceSlider;
 @end

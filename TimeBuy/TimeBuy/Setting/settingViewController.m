@@ -48,9 +48,6 @@
     [[SlideNavigationController sharedInstance].view addSubview:shadowView];
     shadowView.hidden = NO;
     */
-    
-    float offset = self.view.bounds.size.width;
-    [SlideNavigationController sharedInstance].portraitSlideOffset = offset - 249.0f;
 }
 
 - (void)viewWillDisappear:(BOOL)animated
